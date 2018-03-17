@@ -26,7 +26,6 @@ class BlogPostTemplate extends React.Component {
           title={`${title} | ${siteTitle}`}
           meta={[
             { name: 'twitter:card', content: 'summary' },
-            { name: 'twitter:site', content: `@${get(site, 'meta.twitter')}` },
             { property: 'og:title', content: get(post, 'frontmatter.title') },
             { property: 'og:type', content: 'article' },
             {
@@ -55,9 +54,7 @@ export const pageQuery = graphql`
       meta: siteMetadata {
         title
         description
-        url: siteUrl
         author
-        twitter
       }
     }
     post: markdownRemark(frontmatter: { path: { eq: $path } }) {
