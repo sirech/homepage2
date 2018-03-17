@@ -1,27 +1,13 @@
-import get from 'lodash/get'
 import React from 'react'
-import Helmet from 'react-helmet'
-import { siteMetadata } from '../../gatsby-config'
+import standardHelmet from '../util/standardHelmet'
 
 class Profile extends React.Component {
   render() {
     const pathPrefix =
       process.env.NODE_ENV === 'development' ? '' : __PATH_PREFIX__
-    const title = 'Profile'
     return (
       <div>
-        <Helmet
-          title={`${title} | ${get(siteMetadata, 'title')}`}
-          meta={[
-            { name: 'twitter:card', content: 'summary' },
-            { property: 'og:title', content: title },
-            { property: 'og:type', content: 'website' },
-            {
-              property: 'og:description',
-              content: get(siteMetadata, 'description'),
-            },
-          ]}
-        />
+        {standardHelmet('Profile')}
         <section className="text-center">
           <div className="container">
             <img
