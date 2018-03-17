@@ -5,7 +5,6 @@ module.exports = {
     siteUrl: 'https://gatstrap.netlify.com',
     author: 'jaxx2104',
     twitter: 'jaxx2104',
-    adsense: '',
   },
   pathPrefix: '/',
   plugins: [

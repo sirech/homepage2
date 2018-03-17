@@ -3,7 +3,6 @@ import Link from 'gatsby-link'
 import forEach from 'lodash/forEach'
 import get from 'lodash/get'
 import size from 'lodash/size'
-import Adsense from '../Adsense'
 import ReadNext from '../ReadNext'
 import './style.scss'
 
@@ -54,11 +53,6 @@ class SitePost extends React.Component {
     const cate =
       get(data, 'frontmatter.category') || get(data, 'frontmatter.categories')
     const isMore = isIndex && !!html.match('<!--more-->')
-    const ad = isIndex ? (
-      ''
-    ) : (
-      <Adsense clientId={site.meta.adsense} slotId="" format="auto" />
-    )
 
     return (
       <div className="container">
@@ -71,13 +65,11 @@ class SitePost extends React.Component {
               </Link>
               {this.categories(cate)}
             </div>
-            {ad}
             <div
               className="page-content"
               dangerouslySetInnerHTML={{ __html: isMore ? description : html }}
             />
             {isMore ? this.more(path) : ''}
-            {ad}
             {isIndex ? '' : <ReadNext data={site} />}
           </div>
         </div>
