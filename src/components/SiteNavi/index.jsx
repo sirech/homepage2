@@ -8,7 +8,9 @@ class SiteNavi extends React.Component {
     return (
       <li
         key={name}
-        className={location.pathname === url ? 'nav-item active' : 'nav-item'}
+        className={
+          this.props.location.pathname === url ? 'nav-item active' : 'nav-item'
+        }
       >
         <Link to={url} className="nav-link">
           {name}
@@ -18,7 +20,7 @@ class SiteNavi extends React.Component {
   }
 
   render() {
-    const { location, title } = this.props
+    const { title } = this.props
     return (
       <nav className="navbar navbar-expand navbar-dark flex-column flex-md-row bg-dark">
         <div className="container">
