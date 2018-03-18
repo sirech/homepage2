@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import HTML from './HTML'
+import HTML from './html'
 import Helmet from 'react-helmet'
 
 describe('components', () => {
