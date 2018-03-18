@@ -2,7 +2,7 @@ import React from 'react'
 import talks from './talks'
 
 const talkItem = ([url, title]) => (
-  <li className="list-group-item">
+  <li key={title} className="list-group-item">
     <a key={title} href={url}>
       {title}
     </a>

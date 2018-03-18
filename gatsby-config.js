@@ -40,7 +40,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Mario Fernandezjj',
+        name: 'Mario Fernandez',
         short_name: 'hceris',
         description: 'My personal website',
         start_url: '/',
@@ -65,14 +65,6 @@ module.exports = {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: '',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-netlify',
-      options: {
-        mergeSecurityHeaders: true,
-        mergeLinkHeaders: true,
-        mergeCachingHeaders: true,
       },
     },
     'gatsby-plugin-catch-links',

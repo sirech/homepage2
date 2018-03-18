@@ -9,7 +9,7 @@ class Profile extends React.Component {
   render() {
     return (
       <div>
-        {standardHelmet('Profile')}
+        {standardHelmet('About me')}
 
         <section>
           <About />

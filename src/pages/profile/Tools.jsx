@@ -3,7 +3,9 @@ import React from 'react'
 import tools from './toolList'
 
 const toolItem = name => (
-  <div className="mr-1 mb-1 badge badge-secondary badge-pill">{name}</div>
+  <div key={name} className="mr-1 mb-1 badge badge-secondary badge-pill">
+    {name}
+  </div>
 )
 
 export default () => (
