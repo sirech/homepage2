@@ -3,6 +3,7 @@ module.exports = {
     title: 'Mario Fernandez',
     description: 'My personal website',
     author: 'Mario Fernandez',
+    siteUrl: process.env.SITE_URL,
   },
   pathPrefix: '/',
   plugins: [
@@ -67,13 +68,18 @@ module.exports = {
         trackingId: '',
       },
     },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: [`/dev-404-page`],
+      },
+    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-next',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-sitemap',
     'gatsby-plugin-twitter',
     'gatsby-transformer-sharp',
   ],
