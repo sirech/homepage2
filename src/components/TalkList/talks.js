@@ -1,4 +1,4 @@
-export default [
+export const talks = [
   [
     'https://github.com/sirech/talks/raw/master/2016-02-rubygroupmunich-mediumapps.pdf',
     'Ruby at XING',

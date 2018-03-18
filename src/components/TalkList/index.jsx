@@ -1,5 +1,5 @@
 import React from 'react'
-import talks from './talks'
+import { talks } from './talks'
 
 const talkItem = ([url, title]) => (
   <li key={title} className="list-group-item">
@@ -9,6 +9,8 @@ const talkItem = ([url, title]) => (
   </li>
 )
 
-export default () => (
+const TalkList = () => (
   <ul className="list-group">{talks.map(talk => talkItem(talk))}</ul>
 )
+
+export default TalkList
