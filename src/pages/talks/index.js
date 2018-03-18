@@ -11,7 +11,7 @@ class Talks extends React.Component {
     return (
       <div>
         {standardHelmet('Talks')}
-        <section className="text-center">
+        <section>
           <div className="container">
             I used to hate talking in front of people, but after doing
             presentations for a while, at some point I started to like it. Still
