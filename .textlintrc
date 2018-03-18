@@ -5,7 +5,6 @@
       "ja-space-between-half-and-full-width": {
         "space": "always"
       }
-    },
-    "preset-japanese": true
+    }
   }
 }
