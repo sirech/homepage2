@@ -33,7 +33,7 @@ export default () => (
     </div>
 
     <div className="container">
-      <div className="row">
+      <div className="row text-center">
         <div className="col-lg-12">{tools.map(tool => toolItem(tool))}</div>
       </div>
     </div>
