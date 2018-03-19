@@ -22,34 +22,6 @@ class Profile extends React.Component {
         <section id="tools">
           <Tools />
         </section>
-
-        <section
-          id="links"
-          className="bg-primary text-white text-center color-inverse"
-        >
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-md-6 text-center">
-                <h2 className="section-heading">Links</h2>
-              </div>
-              <div className="col-md-6 text-left">
-                <li>
-                  <a className="text-dark" href="https://github.com/sirech">
-                    Github Repositories
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="text-dark"
-                    href="https://stackoverflow.com/users/3785/mario-f"
-                  >
-                    Stackoverflow
-                  </a>
-                </li>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     )
   }
