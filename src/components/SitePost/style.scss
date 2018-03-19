@@ -53,4 +53,11 @@
       }
     }
   }
+
+  .gatsby-highlight {
+    code {
+      font-size: 0.8rem;
+      white-space: pre-wrap;
+    }
+  }
 }
