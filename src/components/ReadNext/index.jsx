@@ -9,18 +9,7 @@ class ReadNext extends React.Component {
     const title = get(data, 'meta.title')
     const author = get(data, 'meta.author')
 
-    return (
-      <div className="footer">
-        <hr className="border-primary" />
-        <p>
-          {title}
-          <Link to="/profile/">
-            <br />
-            <strong>{author}</strong> on Profile
-          </Link>
-        </p>
-      </div>
-    )
+    return <div className="footer" />
   }
 }
 
