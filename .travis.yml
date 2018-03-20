@@ -14,6 +14,8 @@ stages:
 - security
 - name: docker
   if: branch = master
+- name: deploy
+  if: branch = master
 jobs:
   include:
   - stage: Lint
