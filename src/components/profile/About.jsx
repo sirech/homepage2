@@ -8,8 +8,7 @@ export default () => (
       studying, it has been over ten years already. If{' '}
       <a href="http://norvig.com/21-days.html">Peter Norvig is correct</a> I
       should know by now what I am doing, although I often get the feeling I
-      don't know anything (which seems to be a widespread problem if you see the
-      job applications we get).
+      don't know anything.
     </p>
 
     <p>
