@@ -3,7 +3,7 @@ module.exports = {
     title: 'Mario Fernandez',
     description: 'My personal website',
     author: 'Mario Fernandez',
-    siteUrl: process.env.SITE_URL,
+    siteUrl: process.env.SITE_URL || 'example.com',
   },
   pathPrefix: '/',
   plugins: [

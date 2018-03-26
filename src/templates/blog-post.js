@@ -55,6 +55,7 @@ export const pageQuery = graphql`
         title
         description
         author
+        url: siteUrl
       }
     }
     post: markdownRemark(frontmatter: { path: { eq: $path } }) {
