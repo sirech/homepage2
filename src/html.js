@@ -41,7 +41,7 @@ export default class HTML extends React.Component {
           />
           <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
         </head>
-        <body>
+        <body itemScope itemType="http://schema.org/WebPage">
           <div
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
