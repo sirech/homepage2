@@ -9,7 +9,7 @@ class ReadNext extends React.Component {
     const title = get(data, 'meta.title')
     const author = get(data, 'meta.author')
 
-    return <div className="footer" />
+    return <footer />
   }
 }
 

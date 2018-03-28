@@ -11,7 +11,7 @@ class Talks extends React.Component {
     return (
       <div>
         {standardHelmet('Talks')}
-        <section>
+        <section class="horizontal-section">
           <div className="container">
             I used to hate talking in front of people, but after doing
             presentations for a while, at some point I started to like it. Still
@@ -19,7 +19,10 @@ class Talks extends React.Component {
           </div>
         </section>
 
-        <section id="features" className="bg-dark text-white text-center">
+        <section
+          id="features"
+          className="horizontal-section bg-dark text-white text-center"
+        >
           <div className="container">
             <TalkList />
           </div>

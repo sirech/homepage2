@@ -11,15 +11,18 @@ class Profile extends React.Component {
       <div>
         {standardHelmet('About me')}
 
-        <section>
+        <section class="horizontal-section">
           <About />
         </section>
 
-        <section id="techs" className="bg-primary text-white">
+        <section
+          id="techs"
+          className="horizontal-section bg-primary text-white"
+        >
           <Techs />
         </section>
 
-        <section id="tools">
+        <section id="tools" className="horizontal-section">
           <Tools />
         </section>
       </div>

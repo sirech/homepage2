@@ -57,21 +57,21 @@ class SitePost extends React.Component {
     return (
       <div className="container">
         <div className="articles col-md-12">
-          <div className="article-wrap" key={path}>
-            <div className="page-header">
+          <article key={path}>
+            <header>
               <Link style={{ boxShadow: 'none' }} to={path}>
                 <h1>{title}</h1>
                 <time dateTime={date}>{date}</time>
               </Link>
               {this.categories(cate)}
-            </div>
-            <div
+            </header>
+            <section
               className="page-content"
               dangerouslySetInnerHTML={{ __html: isMore ? description : html }}
             />
             {isMore ? this.more(path) : ''}
             {isIndex ? '' : <ReadNext data={site} />}
-          </div>
+          </article>
         </div>
       </div>
     )
