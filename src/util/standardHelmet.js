@@ -3,7 +3,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import { siteMetadata } from '../../gatsby-config'
 
-export default title => (
+export default ({ title, description }) => (
   <Helmet
     title={`${title} | ${get(siteMetadata, 'title')}`}
     meta={[
@@ -12,7 +12,7 @@ export default title => (
       { property: 'og:type', content: 'website' },
       {
         property: 'og:description',
-        content: get(siteMetadata, 'description'),
+        content: description,
       },
     ]}
   />
