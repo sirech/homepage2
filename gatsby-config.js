@@ -1,9 +1,11 @@
+const siteUrl = process.env.SITE_URL || 'example.com'
+
 module.exports = {
   siteMetadata: {
     title: 'Mario Fernandez',
     description: 'My personal website',
     author: 'Mario Fernandez',
-    siteUrl: process.env.SITE_URL || 'example.com',
+    siteUrl: siteUrl,
   },
   pathPrefix: '/',
   plugins: [
@@ -62,6 +64,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: siteUrl,
+      },
+    },
+
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
