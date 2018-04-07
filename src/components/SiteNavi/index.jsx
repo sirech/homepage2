@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const links = [['/', 'About'], ['/talks', 'Talks'], ['/blog', 'Blog']]
+const links = [['/', 'About'], ['/talks/', 'Talks'], ['/blog/', 'Blog']]
 
 class SiteNavi extends React.Component {
   link(url, name) {
