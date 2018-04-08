@@ -15,7 +15,7 @@ class Talks extends React.Component {
           description:
             'I used to hate talking in front of people, but after doing presentations for a while, at some point I started to like it. Still have plenty to learn though.',
         })}
-        <section class="horizontal-section">
+        <section className="horizontal-section">
           <div className="container">
             I used to hate talking in front of people, but after doing
             presentations for a while, at some point I started to like it. Still
