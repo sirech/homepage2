@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import Link from 'gatsby-link'
 import forEach from 'lodash/forEach'
 import get from 'lodash/get'
@@ -76,6 +78,19 @@ class SitePost extends React.Component {
       </div>
     )
   }
+}
+
+SitePost.propTypes = {
+  data: PropTypes.shape({
+    frontmatter: PropTypes.shape({
+      categories: PropTypes.arrayOf(PropTypes.string),
+      date: PropTypes.string,
+      layout: PropTypes.string,
+      path: PropTypes.string,
+      title: PropTypes.string,
+    }).isRequired,
+    html: PropTypes.string.isRequired,
+  }).isRequired,
 }
 
 export default SitePost
