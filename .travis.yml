@@ -16,6 +16,8 @@ stages:
   if: branch = master
 - name: deploy
   if: branch = master
+- name: healthcheck
+  if: branch = master
 jobs:
   include:
   - stage: Lint
@@ -41,6 +43,8 @@ jobs:
       provider: script
       skip_cleanup: true
       script: ssh -i deploy_rsa $DEPLOY_USER@$DEPLOY_HOST "sh ${DEPLOY_PATH}/bin/update homepage"
+  - stage: healthcheck
+    script: curl --connect-timeout 60 -s -f -o /dev/null "${SITE_URL}"
 env:
   global:
   - secure: iV+70zGlALP+h+VYy/ZOaN25UJM7jNloxoJjQXnH9JZYvwXtyninH4grS8cSHkBU/oqtlNoADRvlqvI4Zw8YxdEtLVA4FdOROSU6AwVIOOQlWfI/saHAfCdy6SF6Y02sMEpBu15cmELBn4Np/2bQUrgZIFv1RCJ3q+hxlWmjOsTrsg4QZ2AZub7m2X2I5pjU8yNDYXIWPQV4f2fd0zvvm3xcuEXS0goNOKte4GqP2YjUTXck1sS0bM0H07BAhUftiqTSSRAocNoFOalPPcBKn7g4KIdrk/071mr1mspQlTSbxJdKHr/0/YeaBlZOewY7x42Jru9MweaAcfiZgZzdjBaZJPNOBDrbSXa8Wbo0ep/Phax2y38kDiu6AvWIra5xnRyk7rqwYnmwtjdRcxoA/smXzqW70VOht7jQslUdS99d1Jr3N4xtA2R3k4fW2JzpB0A98vQiohJ1aA3jMw0IfxgUu934ShrziuzGxnUvXvJWMsHRKjo+KMfOJb7okkBshBfO4SHrY7kJAhc79aTaDntKBqX27fPlF8zLzG8NUQkpjlU5Hgl2KWsxmYBJ5sOGQsgMfLNpKxq0wlpnTMueKFqsvfe0rAcA01biK256MBaLs/Y/4JFuonlopcraoSP8p2UFwfSz7vUur9lnwfVFe/c3stdIVrJnope5ZE/bX0U=
