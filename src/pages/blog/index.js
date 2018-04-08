@@ -39,10 +39,6 @@ class BlogIndex extends React.Component {
             { property: 'og:type', content: 'website' },
             { property: 'og:description', content: get(site, 'description') },
             { property: 'og:url', content: get(site, 'url') },
-            {
-              property: 'og:image',
-              content: `${get(site, 'url')}/img/profile.jpg`,
-            },
           ]}
         />
         {pageLinks}
