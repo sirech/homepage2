@@ -6,6 +6,7 @@ module.exports = {
     description: 'My personal website',
     author: 'Mario Fernandez',
     siteUrl: siteUrl,
+    twitter: '@sirech',
   },
   pathPrefix: '/',
   plugins: [

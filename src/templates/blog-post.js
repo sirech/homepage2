@@ -5,41 +5,24 @@ import React from 'react'
 
 import SitePost from '../components/SitePost'
 import SitePage from '../components/SitePage'
+import SEO from '../components/SEO'
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this, 'props.data.post')
     const site = get(this, 'props.data.site')
     const layout = get(post, 'frontmatter.layout')
-    const title = get(post, 'frontmatter.title')
-    const siteTitle = get(site, 'meta.title')
+    const isBlogPost = layout !== 'page'
 
     let template = ''
-    if (layout != 'page') {
+    if (isBlogPost) {
       template = <SitePost data={post} site={site} isIndex={false} />
     } else {
       template = <SitePage {...this.props} />
     }
     return (
       <div>
-        <Helmet
-          title={`${title} | ${siteTitle}`}
-          meta={[
-            { name: 'twitter:card', content: 'summary' },
-            { property: 'og:title', content: get(post, 'frontmatter.title') },
-            { property: 'og:type', content: 'article' },
-            {
-              property: 'og:description',
-              content: get(post, 'html')
-                .replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '')
-                .substr(0, 200),
-            },
-            {
-              property: 'og:url',
-              content: get(site, 'meta.url') + get(post, 'frontmatter.path'),
-            },
-          ]}
-        />
+        <SEO isBlogPost={isBlogPost} post={post} site={site} />
         {template}
       </div>
     )
@@ -56,6 +39,7 @@ export const pageQuery = graphql`
         description
         author
         url: siteUrl
+        twitter
       }
     }
     post: markdownRemark(frontmatter: { path: { eq: $path } }) {

@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components SEO renders correctly for a blogpost 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+  title="title | site title"
+>
+  <meta
+    content="this is the content"
+    name="description"
+  />
+  <script
+    type="application/ld+json"
+  >
+    [{"@context":"http://schema.org","@type":"WebSite","url":"http://example.com/post","name":"title","alternateName":"site title"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/post","name":"title"}}]},{"@context":"http://schema.org","@type":"BlogPosting","url":"http://example.com/post","name":"title","alternateName":"site title","headline":"title","description":"this is the content","author":{"@type":"Person","name":"me"},"publisher":{"@type":"Organization","url":"http://example.com","name":"me"},"mainEntityOfPage":{"@type":"WebSite","@id":"http://example.com"}}]
+  </script>
+  <meta
+    content="http://example.com/post"
+    property="og:url"
+  />
+  <meta
+    content="article"
+    property="og:type"
+  />
+  <meta
+    content="title"
+    property="og:title"
+  />
+  <meta
+    content="this is the content"
+    property="og:description"
+  />
+  <meta
+    content="summary_large_image"
+    name="twitter:card"
+  />
+  <meta
+    content="@handle"
+    name="twitter:creator"
+  />
+  <meta
+    content="title"
+    name="twitter:title"
+  />
+  <meta
+    content="this is the content"
+    name="twitter:description"
+  />
+</HelmetWrapper>
+`;
+
+exports[`components SEO renders correctly for a normal page 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+  title="title | site title"
+>
+  <meta
+    content="this is the content"
+    name="description"
+  />
+  <script
+    type="application/ld+json"
+  >
+    [{"@context":"http://schema.org","@type":"WebSite","url":"http://example.com/post","name":"title","alternateName":"site title"}]
+  </script>
+  <meta
+    content="http://example.com/post"
+    property="og:url"
+  />
+  <meta
+    content="title"
+    property="og:title"
+  />
+  <meta
+    content="this is the content"
+    property="og:description"
+  />
+  <meta
+    content="summary_large_image"
+    name="twitter:card"
+  />
+  <meta
+    content="@handle"
+    name="twitter:creator"
+  />
+  <meta
+    content="title"
+    name="twitter:title"
+  />
+  <meta
+    content="this is the content"
+    name="twitter:description"
+  />
+</HelmetWrapper>
+`;
