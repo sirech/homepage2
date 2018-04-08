@@ -7,6 +7,8 @@ categories:
   - JavaScript
   - React
   - Angular
+  - TypeScript
+  - angular-cli
 ---
 
 I have using [React](https://reactjs.org/) in personal and work projects for about two years already. I like it so much that I wanted to change my middle name to _React_, but then I realized that I do not have a middle name.
@@ -54,13 +56,23 @@ It is _very_ opinionated, though. It seems there is a strong consensus in the co
 
 ## TypeScript
 
-I remember back in my old company there were some internal discussions regarding typing in JS. One camp favored [TypeScript](http://www.typescriptlang.org/), the other _JavaScript_ and [Flow](https://flow.org/). I ended up going with _flow_, but I always had the feeling that it was not catching a lot of errors, and that I was spending a lot of time making it sort of work, like with [flow-typed](https://github.com/flowtype/flow-typed).
+I remember back in my old company there were some internal discussions regarding typing in JS. One camp favored [TypeScript](http://www.typescriptlang.org/), the other _JavaScript_ and [Flow](https://flow.org/). I ended up going with _flow_, but I always had the feeling that it was not catching a lot of errors, and that I was spending a lot of time making it sort of work, like with [flow-typed](https://github.com/flowtype/flow-typed). I haven't yet fully understood the whole type system that _TypeScript_ provides, yet you can see that there is one important difference with flow. It is much more integrated with the core language itself, which makes it a lot more reliable in my impression.
 
 _TypeScript_ is refreshing in a sense because things seem to work more naturally. The tooling seems to be very mature as well, from what I have seen from other people using _Visual Studio Code_ or _IntelliJ_ (not that I would know anything about that, I remain loyal to _Emacs_). In any case, I have found it pretty enjoyable thus far to work with.
 
+In a sense, it feels like it is bringing _JavaScript_ closer to _Java_. This might sound like treason, but it can allow you to build more resilient software. Things like [interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html) or [private modifiers for class members](https://www.typescriptlang.org/docs/handbook/classes.html#public-private-and-protected-modifiers) help to avoid surprises and to build more isolated components. For projects with multiple developers working on the same codebase I can see this leading to a better overall architecture.
+
+_TypeScript_ is being driven pretty heavily by _Microsoft_. They are actively developing features themselves, but also porting the [proposals](https://github.com/tc39/proposals) that come into _EcmasScript_. I was a bit confused in the beginning about that, but you only have to remember that only stage 3 proposals or above seem to be supported. I found [this](http://kangax.github.io/compat-table/es2016plus/#typescript2_8) site that allows you to check exactly which features are supported. 
+
+## Linting
+
+I am a big fan of linting, and `ng` delivers by including a config for [tslint](https://palantir.github.io/tslint/) out of the box. You just run `ng lint` and you get instant feedback.
+
+Lately, however, I have been thinking about the role of a linter in general. After seeing how well [gofmt](https://golang.org/cmd/gofmt/) works, I am starting to think that a linter should not be concerned with the formatting of the code, just avoiding bad practices or possible bugs. In the case of _JavaScript_, I have experimented a bit with [prettier](https://github.com/prettier/prettier) to automatically format my code, although I have only used it thus far in personal projects. That is something I want to check in more detail in the future.
+
 ## Next
 
-First impression was good, but other things have not worked that well. One is testing. I plan to talk about that in a further post.
+First impression was good, but other things have not worked that well. The next part will be about testing.
 
 
 
