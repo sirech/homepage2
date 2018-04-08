@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components SitePost renders correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="articles col-md-12"
+  >
+    <article
+      key="/the-post"
+    >
+      <header>
+        <Component
+          style={
+            Object {
+              "boxShadow": "none",
+            }
+          }
+          to="/the-post"
+        >
+          <h1>
+            My Post
+          </h1>
+          <time
+            dateTime="2018/03/01"
+          >
+            2018/03/01
+          </time>
+        </Component>
+        <span
+          className="badge badge-primary text-white"
+          key="0"
+        >
+          JavaScript
+        </span>
+        <span
+          className="badge badge-primary text-white"
+          key="1"
+        >
+          React
+        </span>
+      </header>
+      <section
+        className="page-content"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<div>content</div>",
+          }
+        }
+      />
+      <ReadNext />
+    </article>
+  </div>
+</div>
+`;
