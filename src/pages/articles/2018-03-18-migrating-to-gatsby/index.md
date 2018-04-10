@@ -6,6 +6,7 @@ path: "/migrating-to-gatsby"
 categories:
   - React
   - Gatsby
+draft: false
 ---
 
 Some months ago, I decided to rewrite my website using [React](https://reactjs.org/), to experiment with a bunch of new features of _React_ that I wanted to use at work. To spare myself the trouble of bootstrapping the whole thing, I used the awesome [Create React App](https://github.com/facebook/create-react-app) from _Facebook_.

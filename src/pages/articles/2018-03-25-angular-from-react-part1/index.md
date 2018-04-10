@@ -9,6 +9,7 @@ categories:
   - Angular
   - TypeScript
   - angular-cli
+draft: false
 ---
 
 I have using [React](https://reactjs.org/) in personal and work projects for about two years already. I like it so much that I wanted to change my middle name to _React_, but then I realized that I do not have a middle name.

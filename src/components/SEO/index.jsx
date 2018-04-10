@@ -82,6 +82,8 @@ const SEO = ({ isBlogPost, post, site }) => {
   const siteUrl = get(site, 'meta.url')
   const url = siteUrl + get(post, 'frontmatter.path')
 
+  const draft = get(post, 'frontmatter.draft')
+
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
     isBlogPost,
     url,
@@ -102,6 +104,9 @@ const SEO = ({ isBlogPost, post, site }) => {
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJSONLD)}
       </script>
+
+      {/* hide drafts for google */}
+      {draft ? <meta name="robots" content="noindex" /> : ''}
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url} />
@@ -127,6 +132,7 @@ SEO.propTypes = {
       layout: PropTypes.string,
       path: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
+      draft: PropTypes.bool.isRequired,
     }).isRequired,
     html: PropTypes.string.isRequired,
   }).isRequired,

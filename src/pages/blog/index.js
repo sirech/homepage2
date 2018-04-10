@@ -58,7 +58,9 @@ export const pageQuery = graphql`
         author
       }
     }
-    remark: allMarkdownRemark {
+    remark: allMarkdownRemark(
+      filter: { frontmatter: { draft: { eq: false } } }
+    ) {
       posts: edges {
         post: node {
           html
@@ -68,6 +70,7 @@ export const pageQuery = graphql`
             path
             categories
             date(formatString: "YYYY/MM/DD")
+            draft
           }
         }
       }
