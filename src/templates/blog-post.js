@@ -21,10 +21,10 @@ class BlogPostTemplate extends React.Component {
       template = <SitePage {...this.props} />
     }
     return (
-      <div>
+      <main>
         <SEO isBlogPost={isBlogPost} post={post} site={site} />
         {template}
-      </div>
+      </main>
     )
   }
 }

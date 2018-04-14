@@ -8,7 +8,7 @@ import Tools from '../components/profile/Tools'
 class Profile extends React.Component {
   render() {
     return (
-      <div>
+      <main>
         {standardHelmet({
           title: 'About me',
           description:
@@ -26,7 +26,7 @@ class Profile extends React.Component {
         <section id="tools" className="horizontal-section">
           <Tools />
         </section>
-      </div>
+      </main>
     )
   }
 }

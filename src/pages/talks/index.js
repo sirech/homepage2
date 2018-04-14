@@ -9,7 +9,7 @@ class Talks extends React.Component {
     const pathPrefix =
       process.env.NODE_ENV === 'development' ? '' : __PATH_PREFIX__
     return (
-      <div>
+      <main>
         {standardHelmet({
           title: 'Talks',
           description:
@@ -31,7 +31,7 @@ class Talks extends React.Component {
             <TalkList />
           </div>
         </section>
-      </div>
+      </main>
     )
   }
 }
