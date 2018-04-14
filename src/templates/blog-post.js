@@ -51,6 +51,7 @@ export const pageQuery = graphql`
         path
         categories
         date(formatString: "YYYY/MM/DD")
+        draft
       }
     }
   }
