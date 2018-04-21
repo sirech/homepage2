@@ -9,7 +9,7 @@ categories:
 draft: false
 ---
 
-When you are working within a team, you tend to have a bunch of passwords that you need to share, such as the credentials that your app needs to start for example. Or maybe you need to share an account for some service.
+When you are working in a team, you tend to have a bunch of passwords that you need to share, such as the credentials that your app needs to start for example. Or maybe you need to share an account for some service.
 
 Everybody kind of knows that posting their own passwords in the open is not a great idea. Yet, team passwords are often not subjected to the same courtesy. These are some practices that I have observed recently:
 
@@ -27,34 +27,76 @@ Leaking sensitive information is something that I personally don't want to attac
 
 ### What are you even talking about?
 
-Quoting the website of the project, gopass is a rewrite of the pass password manager in Go. In other words, it is a password manager that can be easily used by multiple people. It is very command line friendly, which allows you to include it in scripts. Very easy to install as well with [brew](https://brew.sh/):
+Quoting the website of the project, `gopass` is a rewrite of the pass password manager in Go. In other words, it is a password manager that can be easily used by multiple people. It is very command line friendly, which allows you to include it in scripts. Very easy to install as well with [brew](https://brew.sh/). We will be installing [GPG](https://www.gnupg.org/) as well, since that is what actually provides the security:
 
 ```bash
-brew install gopass
-```
-
-you can commit the store to a `git` repository, and have every developer sync with it in order to access the secrets. It could look like this:
-
-```bash
-gopass setup --remote ssh://git@bitbucket.internal.instance.org/your-team/password-store --alias teams-store
-gopass sync
+brew install gopass gpg2
 ```
 
 ## GPG keys are still a PITA
 
-`gopass` itself is quite easy to use, but it works with _GPG_ keys to allow users to access the data. Everybody who has dealt with them knows that they are everything but user friendly. One shortcut is to use [Keybase](https://keybase.io/). This is a tool that makes creating keys significantly easier, as explained [here](https://github.com/pstadler/keybase-gpg-github). For the security paranoid, you might have reservations about uploading the private key, and might prefer to do it the hard way.
+`gopass` itself is quite easy to use, but the encryption is done with _GPG_. Everybody who has dealt with that knows that it is everything but user friendly. One shortcut is to use [Keybase](https://keybase.io/). This is a tool that makes creating keys significantly easier, as explained [here](https://github.com/pstadler/keybase-gpg-github). 
+
+This is a rough summary of the steps you need to follow in order to get your _GPG_ up and running with _Keybase_ for OS X:
+
+- Install _Keybase_:
+
+```
+brew cask install keybase
+```
+
+- Open the app and create an account
+- Create a key through the _CLI_:
+
+```bash
+keybase login
+keybase pgp gen
+```
+
+You will be asked if you want to push the secret key to keybase.io. That is more convenient, but you have to be aware that this puts your key in somebody's else server.
+
+Also it is a good idea to set a passphrase when the key is exported to the GnuPG keychain.
+
+- They you just created is not trusted by default. You do this with `gpg` itself:
+
+```bash
+gpg --edit-key ${YOUR_EMAIL}
+gpg> trust (ultimate level)
+gpg> 5
+gpg> save
+```
+
+In order for _GPG_ to work properly, you need to run this:
+
+```bash
+export GPG_TTY=$(tty)
+```
+
+adding it to your `~/.bashrc` will ensure that you don't have to do it manually every time.
+
+## Initializing a new password store
+
+The sharing part happens through a `git` repository. Every developer syncs with it in order to access the secrets. The first step is to initialize `gopass` itself:
+
+```bash
+gopass init
+```
+
+It will ask for a key, which we just created. It should for the passphrase that you set up for your _GPG_ key. After that, you can set up the store for the team:
+
+```bash
+gopass setup --remote ssh://git@bitbucket.internal.instance.org/your-team/password-store --alias team-store
+gopass sync
+```
 
 ## Adding/Removing people
 
-Once you have the whole thing set up, you can add your fellow developers to the repository. First you need to import the _GPG_ key and trust it, otherwise `gopass` will give an error when you try to add the new recipient. 
+Once you have the whole thing set up, you can add your fellow developers to the repository. For every developer, you need to import her _GPG_ key and trust it, otherwise will fail when trying to add new recipients
 
 ```bash
-# Import (Keybase)
 curl https://keybase.io/${keybase_user}/pgp_keys.asc | gpg --import
-# Import (self created key)
-gpg --keyserver ${cert_server} --recv-key ${KEYID}
 # Trust
-gpg --edit-key ${KEYID}
+gpg --edit-key ${EMAIL_OF_THE_DEV}
 gpg> lsign
 gpg> trust (level 4)
 gpg> save
@@ -65,6 +107,14 @@ After that adding somebody to the repository is a piece of cake.
 ```bash
 gopass recipients add --store=team-store ${KEYID}
 ``` 
+
+your fellow developers don't need to create a new repository. Instead, once they key has been added to the recipients list, they can just clone it:
+
+```bash
+gopass clone ssh://git@bitbucket.internal.instance.org/your-team/password-store team-store
+```
+
+Note that if you don't add them to the recipients list first, cloning the repo will result in an error.
 
 ## Using passwords from the command line
 
