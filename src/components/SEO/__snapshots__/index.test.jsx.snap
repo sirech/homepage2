@@ -7,6 +7,10 @@ exports[`components SEO does not index draft posts 1`] = `
   title="title | site title"
 >
   <meta
+    content="title | site title"
+    name="title"
+  />
+  <meta
     content="this is the content"
     name="description"
   />
@@ -61,6 +65,10 @@ exports[`components SEO renders correctly for a blogpost 1`] = `
   title="title | site title"
 >
   <meta
+    content="title | site title"
+    name="title"
+  />
+  <meta
     content="this is the content"
     name="description"
   />
@@ -69,6 +77,10 @@ exports[`components SEO renders correctly for a blogpost 1`] = `
   >
     [{"@context":"http://schema.org","@type":"WebSite","url":"http://example.com/post","name":"title","alternateName":"site title"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/post","name":"title"}}]},{"@context":"http://schema.org","@type":"BlogPosting","url":"http://example.com/post","name":"title","alternateName":"site title","headline":"title","description":"this is the content","author":{"@type":"Person","name":"me"},"publisher":{"@type":"Organization","url":"http://example.com","name":"me"},"mainEntityOfPage":{"@type":"WebSite","@id":"http://example.com"}}]
   </script>
+  <meta
+    content="index, follow"
+    name="robots"
+  />
   <meta
     content="http://example.com/post"
     property="og:url"
@@ -111,6 +123,10 @@ exports[`components SEO renders correctly for a normal page 1`] = `
   title="title | site title"
 >
   <meta
+    content="title | site title"
+    name="title"
+  />
+  <meta
     content="this is the content"
     name="description"
   />
@@ -119,6 +135,10 @@ exports[`components SEO renders correctly for a normal page 1`] = `
   >
     [{"@context":"http://schema.org","@type":"WebSite","url":"http://example.com/post","name":"title","alternateName":"site title"}]
   </script>
+  <meta
+    content="index, follow"
+    name="robots"
+  />
   <meta
     content="http://example.com/post"
     property="og:url"

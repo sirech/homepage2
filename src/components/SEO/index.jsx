@@ -98,6 +98,7 @@ const SEO = ({ isBlogPost, post, site }) => {
   return (
     <Helmet title={`${title} | ${siteTitle}`}>
       {/* General tags */}
+      <meta name="title" content={`${title} | ${siteTitle}`} />
       <meta name="description" content={description} />
 
       {/* Schema.org tags */}
@@ -106,7 +107,11 @@ const SEO = ({ isBlogPost, post, site }) => {
       </script>
 
       {/* hide drafts for google */}
-      {draft ? <meta name="robots" content="noindex" /> : ''}
+      {draft ? (
+        <meta name="robots" content="noindex" />
+      ) : (
+        <meta name="robots" content="index, follow" />
+      )}
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url} />
