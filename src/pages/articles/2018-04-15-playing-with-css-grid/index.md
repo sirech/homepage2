@@ -2,7 +2,7 @@
 title: Playing with CSS Grid
 date: "2018-04-15"
 layout: post
-path: "/playing-with-css-grid"
+path: "/playing-with-css-grid/"
 categories:
   - CSS
   - CSS Grid

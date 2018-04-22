@@ -2,7 +2,7 @@
 title: Angular from the perspective of a React fan - Part 1
 date: "2018-03-25"
 layout: post
-path: "/angular-from-react-part1"
+path: "/angular-from-react-part1/"
 categories:
   - JavaScript
   - React

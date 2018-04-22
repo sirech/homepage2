@@ -2,7 +2,7 @@
 title: Migrating to Gatsby
 date: "2018-03-18"
 layout: post
-path: "/migrating-to-gatsby"
+path: "/migrating-to-gatsby/"
 categories:
   - React
   - Gatsby

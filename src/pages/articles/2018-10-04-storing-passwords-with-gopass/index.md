@@ -2,7 +2,7 @@
 title: Storing team passwords with gopass
 date: "2018-04-15"
 layout: post
-path: "/storing-passwords-with-gopass"
+path: "/storing-passwords-with-gopass/"
 categories:
   - Security
   - gopass
