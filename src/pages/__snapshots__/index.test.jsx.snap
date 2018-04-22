@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Profile renders correctly for a blogpost 1`] = `
+<main>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    meta={
+      Array [
+        Object {
+          "content": "About me | Mario Fernandez",
+          "name": "title",
+        },
+        Object {
+          "content": "I have been programming for a while already. Counting the time when I was studying, it has been over ten years already. If Peter Norvig is correct I should know by now what I am doing, although I often get the feeling I do not know anything.",
+          "name": "description",
+        },
+        Object {
+          "content": "summary",
+          "name": "twitter:card",
+        },
+        Object {
+          "content": "About me",
+          "property": "og:title",
+        },
+        Object {
+          "content": "website",
+          "property": "og:type",
+        },
+        Object {
+          "content": "I have been programming for a while already. Counting the time when I was studying, it has been over ten years already. If Peter Norvig is correct I should know by now what I am doing, although I often get the feeling I do not know anything.",
+          "property": "og:description",
+        },
+      ]
+    }
+    title="About me | Mario Fernandez"
+  />
+  <section
+    className="horizontal-section"
+  >
+    <Component />
+  </section>
+  <section
+    className="horizontal-section bg-primary text-white"
+    id="techs"
+  >
+    <Component />
+  </section>
+  <section
+    className="horizontal-section"
+    id="tools"
+  >
+    <Component />
+  </section>
+</main>
+`;
