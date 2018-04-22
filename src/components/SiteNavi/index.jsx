@@ -33,6 +33,11 @@ class SiteNavi extends React.Component {
         </div>
         <ul className="navbar-nav flex-row ml-md-auto d-md-flex">
           <li className="nav-item">
+            <a href="/rss.xml" className="nav-link" aria-label="RSS Feed">
+              <i className="fa fa-rss fa-lg" />
+            </a>
+          </li>
+          <li className="nav-item">
             <a
               href="https://github.com/sirech"
               className="nav-link"
