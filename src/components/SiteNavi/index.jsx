@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import './style.scss'
 
 const links = [['/', 'About'], ['/talks/', 'Talks'], ['/blog/', 'Blog']]
 
@@ -31,7 +32,7 @@ class SiteNavi extends React.Component {
             {links.map(([url, name]) => this.link(url, name))}
           </ul>
         </div>
-        <ul className="navbar-nav flex-row ml-md-auto d-md-flex">
+        <ul className="navbar-icons navbar-nav flex-row ml-md-auto d-md-flex">
           <li className="nav-item">
             <a href="/rss.xml" className="nav-link" aria-label="RSS Feed">
               <i className="fa fa-rss fa-lg" />
