@@ -1,12 +1,12 @@
 ---
 title: Playing with CSS Grid
-date: "2018-04-15"
+date: "2018-04-28"
 layout: post
 path: "/playing-with-css-grid/"
 categories:
   - CSS
   - CSS Grid
-draft: true
+draft: false
 ---
 
 I heard about the _CSS Grid_ layout for the first time at the [Full Stack Fest 2016](https://2016.fullstackfest.com/), in a talk from [Jen Kramer](http://www.jenkramer.org/). I remember thinking at the time that it was a cool idea. However, it seemed that the support was just not there and thus we had to remain with classical grids.
@@ -25,6 +25,8 @@ In order to get a better feeling I had a look at some very good guides:
 It feels a bit like when I learnt about _flexboxes_ for the first time. There are a lot of options and complexity, but I get the impression that once you get used to it you will use it everywhere. So maybe we will finally get rid of all the rows and columns we have building for the last years.
 
 I have built some small examples to showcase what you can do with it.
+
+<!--more-->
 
 ## _Example 1_: Main Structure
 
@@ -73,7 +75,8 @@ That is a 3x3 grid with pictures of different sizes that are aligned automatical
 
 _CSS Grid_ is quite flexible regarding alignments. It supports many of the properties that a flexbox supports, such as `justify-items`, `align-items`, `justify-content` and `align-content` for the main container, or the equivalent ones for single items.
 
-// TODO: example
+<iframe height='445 scrolling='no' title='CSS Grid Alignment' src='//codepen.io/sirech/embed/aGpvWg/?height=265&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sirech/pen/aGpvWg/'>CSS Grid Alignment</a> by Mario Fernández (<a href='https://codepen.io/sirech'>@sirech</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Gimme the Grid!
 
