@@ -29,6 +29,7 @@
     "gatsby-transformer-remark": "^1.7.24",
     "gatsby-transformer-sharp": "^1.6.16",
     "lodash": "^4.17.4",
+    "prismjs": "^1.13.0",
     "react-helmet": "^5.2.0",
     "react-lazyload": "^2.3.0"
   },
@@ -100,7 +101,8 @@
     "test": "jest"
   },
   "peerDependencies": {
-    "react": "15.6.2",
+    "prismjs": "^1.13.0",
+    "react": "^15.6.2",
     "react-dom": "15.6.2"
   }
 }
