@@ -2,7 +2,7 @@
 @import '../../layouts/fonts.scss';
 
 section.horizontal-section {
-  padding: 100px 0;
+  padding: 4rem 0;
 
   &.jumboimage {
     background-size: cover;
@@ -30,11 +30,11 @@ section.horizontal-section {
   }
 
   .service-box {
-    margin: 50px auto 0;
+    margin: 2.5rem auto 0;
 
     i {
       font-size: $display4-size;
-      margin-bottom: 20px;
+      margin-bottom: 1rem;
 
       &[data-emergence='visible'] {
         opacity: 1;
