@@ -9,6 +9,7 @@ cache:
   directories:
   - node_modules
 stages:
+- build
 - lint
 - test
 - security
@@ -20,6 +21,8 @@ stages:
   if: branch = master AND type IN (push)
 jobs:
   include:
+  - stage: Build
+    script: npm run build
   - stage: Lint
     script: npm run lint:js
   - script: npm run lint:text
