@@ -65,7 +65,7 @@ In a sense, it feels like it is bringing _JavaScript_ closer to _Java_. This mig
 
 _TypeScript_ is being driven pretty heavily by _Microsoft_. They are actively developing features themselves, but also porting the [proposals](https://github.com/tc39/proposals) that come into _EcmasScript_. I was a bit confused in the beginning about that, but you only have to remember that only stage 3 proposals or above seem to be supported. I found [this](http://kangax.github.io/compat-table/es2016plus/#typescript2_8) site that allows you to check exactly which features are supported. 
 
-## Linting
+## Linting <a name="linting"></a>
 
 I am a big fan of linting, and `ng` delivers by including a config for [tslint](https://palantir.github.io/tslint/) out of the box. You just run `ng lint` and you get instant feedback.
 
