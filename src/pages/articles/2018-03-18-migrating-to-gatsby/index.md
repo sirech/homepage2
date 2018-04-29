@@ -111,4 +111,4 @@ The steps are implemented using `npm` scripts. I included some security checks u
 
 ## Summary
 
-It took me some effort to understand and deploy to my server, but I am pretty pleased with the result, which is [on Github](github.com/sirech/homepage2). It is quite easy to set up, and pretty flexible to modify to your own liking. The only thing I didn't manage to do was to leverage [Reactstrap](reactstrap.github.io) to get Bootstrap aware React components. As I understood it is related to [this issue](https://github.com/gatsbyjs/gatsby/issues/2714), which will get hopefully fixed sometime soon.
+It took me some effort to understand and deploy to my server, but I am pretty pleased with the result, which is [on Github](https://github.com/sirech/homepage2). It is quite easy to set up, and pretty flexible to modify to your own liking. The only thing I didn't manage to do was to leverage [Reactstrap](https://reactstrap.github.io/) to get Bootstrap aware React components. As I understood it is related to [this issue](https://github.com/gatsbyjs/gatsby/issues/2714), which will get hopefully fixed sometime soon.
