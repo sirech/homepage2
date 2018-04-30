@@ -25,13 +25,17 @@ The first part of the series was about the first steps when setting up _Angular_
 
 ## The importance of testing
 
-I have been to focus much more on [TDD](https://en.wikipedia.org/wiki/Test-driven_development) lately. This is a good practice in general to fllow, but when you are working with a technology that you are not familiar with, that can give you a lot more confidence to touch things without being afraid of it blowing up.
+I have been trying to focus much more on [TDD](https://en.wikipedia.org/wiki/Test-driven_development) lately. This is a good practice in general to fllow, but when you are working with a technology that you are not familiar with, that can give you a lot more confidence to touch things without being afraid of it blowing up.
 
 <!--more-->
 
 ## Speed
 
+When developing, specially when doing _TDD_, it is very important to have a very quick feedback loop, in order to move quickly with small changes. This is the point where _Angular_ has droppped th
+
 ## Unit Tests
+
+For me, one of the biggest points 
 
 ### Testing components
 
