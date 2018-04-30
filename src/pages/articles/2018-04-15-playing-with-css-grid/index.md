@@ -33,7 +33,7 @@ I have built some small examples to showcase what you can do with it.
 <iframe height='445' scrolling='no' title='Main + Sidebar layout' src='//codepen.io/sirech/embed/wmLbby/?height=365&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sirech/pen/wmLbby/'>Main + Sidebar layout</a> by Mario Fernández (<a href='https://codepen.io/sirech'>@sirech</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Most websites follow a similar structure, with a main content, and then maybe a navigation bar and a sidebar. With the _CSS Grid_ you can build this in a very flexible way, and adapt it for mobile by using media queries. What I love the most about this is that you can do it with a very compact and semantic html layout. If you use somethhing like _Bootstrap_, the same layout as above could look like this:
+Most websites follow a similar structure, with a main content, and then maybe a navigation bar and a sidebar. With the _CSS Grid_ you can build this in a very flexible way, and adapt it for mobile by using media queries. What I love the most about this is that you can do it with a very compact and semantic html layout. If you use something like _Bootstrap_, the same layout as above could look like this:
 
 ```html
 <div class="container-fluid">
