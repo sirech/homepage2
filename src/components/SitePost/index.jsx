@@ -6,7 +6,9 @@ import forEach from 'lodash/forEach'
 import get from 'lodash/get'
 import size from 'lodash/size'
 import ReadNext from '../ReadNext'
+
 import './style.scss'
+import './images.scss'
 
 class SitePost extends React.Component {
   more(path) {

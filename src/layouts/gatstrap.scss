@@ -70,13 +70,3 @@ $link-hover-decoration: none !default;
 @import 'node_modules/bootstrap/scss/close';
 @import 'node_modules/bootstrap/scss/utilities';
 @import 'node_modules/bootstrap/scss/print';
-
-img {
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
-  max-width: 100%;
-}
-
-img:hover {
-  animation: pulse 0.5s;
-}

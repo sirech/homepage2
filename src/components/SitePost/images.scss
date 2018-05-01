@@ -1,0 +1,60 @@
+@import '../../layouts/colors.scss';
+@import '../../layouts/fonts.scss';
+
+.figure {
+  width: 100%;
+
+  &--left,
+  &--right {
+    max-width: 315px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &--left {
+    float: left;
+    margin-right: 1rem;
+  }
+
+  &--right {
+    float: right;
+    margin-left: 1rem;
+  }
+
+  img {
+    border: 1px solid $gray-700;
+  }
+
+  &--no-border img {
+    border: none;
+  }
+
+  &__image-wrap {
+    border: 1px solid $gray-700;
+    margin-bottom: 0;
+  }
+
+  &__image-link {
+    border: 0;
+  }
+
+  &__caption {
+    font-size: $font-size-xs;
+    margin-top: 0.5rem;
+    padding: 0 0 0.5rem;
+    border-bottom: 1px solid $gray-700;
+
+    blockquote & {
+      border-bottom: none;
+    }
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__attribution {
+    display: block;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+}
