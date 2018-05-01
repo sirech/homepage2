@@ -39,7 +39,7 @@
     "babel-jest": "^22.4.3",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.1.1",
     "coveralls": "^3.0.0",
     "devicon-2.2": "^2.2.0",
     "emergence.js": "^1.1.2",
