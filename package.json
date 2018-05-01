@@ -72,7 +72,7 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "prettier --write",
-      "npm run lint:js",
+      "npm run linter:js",
       "git add"
     ],
     "*.json": [
@@ -81,11 +81,11 @@
     ],
     "*.scss": [
       "prettier --write",
-      "npm run lint:css -- --fix",
+      "npm run linter:css -- --fix",
       "git add"
     ],
     "*.md": [
-      "npm run lint:textfix",
+      "npm run linter:textfix",
       "git add"
     ]
   },
@@ -94,10 +94,10 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
-    "lint:js": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "lint:css": "node_modules/.bin/stylelint \"src/**/*.scss\"",
-    "lint:text": "textlint \"src/pages/**/index.md\"",
-    "lint:textfix": "textlint --fix \"src/pages/**/index.md\"",
+    "linter:js": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "linter:css": "node_modules/.bin/stylelint \"src/**/*.scss\"",
+    "linter:text": "textlint \"src/pages/**/index.md\"",
+    "linter:textfix": "textlint --fix \"src/pages/**/index.md\"",
     "precommit": "lint-staged",
     "test": "jest"
   },
