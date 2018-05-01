@@ -9,6 +9,18 @@ categories:
 draft: false
 ---
 
+<figure class="figure figure--left">
+  <img src="./images/grid.jpg" alt="Pre-Twitter Grid" />
+  <figcaption class="figure__caption">
+     <a href="https://www.flickr.com/photos/jrladia/7151535423">Power Grid | Winnipeg</a>
+    <small class="figure__attribution">
+      <span class="figure__attribution-link">
+        by Justin Ladia / <a href="https://creativecommons.org/licenses/by/2.0/">CC BY</a>
+      </span>
+    </small>
+  </figcaption>
+</figure>
+
 I heard about the _CSS Grid_ layout for the first time at the [Full Stack Fest 2016](https://2016.fullstackfest.com/), in a talk from [Jen Kramer](http://www.jenkramer.org/). I remember thinking at the time that it was a cool idea. However, it seemed that the support was just not there and thus we had to remain with classical grids.
 
 In the meantime, grids have been slowly moving from floats to _flexboxes_, like [Bootstrap](https://getbootstrap.com/). So that's progress, I guess. I am always surprised to find a self written grid implementation whenever I join a new project. That has happened to me a bunch of times already. I guess people just get attached to their grids.
