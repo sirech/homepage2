@@ -6,7 +6,7 @@
 //
 // Color system
 //
-@import './colors.scss';
+@import './colors';
 
 // Options
 //
@@ -46,7 +46,7 @@ $link-hover-decoration: none !default;
 
 // Fonts
 //
-@import './fonts.scss';
+@import './fonts';
 
 /* @import 'node_modules/bootstrap/scss/bootstrap.scss'; */
 @import 'node_modules/bootstrap/scss/functions';

@@ -1,17 +1,17 @@
-@import '../../layouts/colors.scss';
-@import '../../layouts/fonts.scss';
+@import '../../layouts/colors';
+@import '../../layouts/fonts';
 
-section.horizontal-section {
+.horizontal-section {
   padding: 4rem 0;
 
   &.jumboimage {
-    background-size: cover;
     background-position: center;
+    background-size: cover;
 
     h1 {
       color: $white;
       font-weight: 700;
-      text-shadow: 0px 1px 8px rgba(100, 100, 100, 0.3);
+      text-shadow: 0 1px 8px rgba(100, 100, 100, 0.3);
     }
   }
 
@@ -37,8 +37,8 @@ section.horizontal-section {
       margin-bottom: 1rem;
 
       &[data-emergence='visible'] {
-        opacity: 1;
         animation: bounceIn 2s;
+        opacity: 1;
       }
 
       &[data-emergence='hidden'] {
@@ -49,8 +49,8 @@ section.horizontal-section {
 
   .slide-left {
     &[data-emergence='visible'] {
-      opacity: 1;
       animation: slideInLeft 1s;
+      opacity: 1;
     }
 
     &[data-emergence='hidden'] {
@@ -60,8 +60,8 @@ section.horizontal-section {
 
   .slide-right {
     &[data-emergence='visible'] {
-      opacity: 1;
       animation: slideInRight 1s;
+      opacity: 1;
     }
 
     &[data-emergence='hidden'] {

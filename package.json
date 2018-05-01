@@ -57,6 +57,9 @@
     "lint-staged": "^7.0.4",
     "prettier": "^1.9.1",
     "react-test-renderer": "15.6.2",
+    "stylelint": "^9.2.0",
+    "stylelint-config-sass-guidelines": "^5.0.0",
+    "stylelint-scss": "^3.1.0",
     "textlint": "^10.2.1",
     "textlint-rule-preset-ja-spacing": "^2.0.1"
   },
@@ -75,12 +78,9 @@
       "prettier --write",
       "git add"
     ],
-    "*.css": [
-      "prettier --write",
-      "git add"
-    ],
     "*.scss": [
       "prettier --write",
+      "npm run lint:css -- --fix",
       "git add"
     ],
     "*.md": [
@@ -94,8 +94,9 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
     "lint:js": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "lint:text": "textlint src/pages/**/index.md",
-    "lint:textfix": "textlint --fix src/pages/**/index.md",
+    "lint:css": "node_modules/.bin/stylelint \"src/**/*.scss\"",
+    "lint:text": "textlint \"src/pages/**/index.md\"",
+    "lint:textfix": "textlint --fix \"src/pages/**/index.md\"",
     "precommit": "lint-staged",
     "test": "jest"
   },

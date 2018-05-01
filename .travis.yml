@@ -26,6 +26,7 @@ jobs:
   - stage: Lint
     script: npm run lint:js
   - script: npm run lint:text
+  - script: npm run lint:css
   - stage: Test
     script: npm test -- --coverage
     after_script: cat coverage/lcov.info | node_modules/.bin/coveralls
