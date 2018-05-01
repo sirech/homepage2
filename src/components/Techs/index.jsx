@@ -10,13 +10,16 @@ const techItem = ([title, name]) => (
       data-placement="top"
       title={title}
     >
-      <i className={`devicon-${name}-plain`} data-emergence="hidden" />
+      <i
+        className={`tech-icon devicon-${name}-plain`}
+        data-emergence="hidden"
+      />
     </div>
   </div>
 )
 
 export default () => (
-  <div>
+  <div className="technologies">
     <div className="container">
       <div className="row">
         <div className="col-lg-12">
