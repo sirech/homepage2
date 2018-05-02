@@ -8,6 +8,8 @@ categories:
   - Linter
   - prettier
   - eslint
+  - stylelint
+  - CSS
 draft: true
 ---
 
@@ -23,7 +25,9 @@ As I mentioned [while talking about Angular](angular-from-react-part1/#linting),
 
 // why use linters
 
-## What is the purpose of a linter?
+## Different kinds of linting
+
+## The limit of a linter
 
 
 ## Act instead of tell
