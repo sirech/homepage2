@@ -120,7 +120,7 @@ const SEO = ({ isBlogPost, post, site }) => {
       <meta property="og:description" content={description} />
 
       {/* Twitter Card tags */}
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content={get(site, 'meta.twitter')} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
