@@ -54,7 +54,9 @@ In any case, this is a pretty big drawback. Having to wait for your simple test 
 
 ## Unit Tests
 
-// TODO: testing in general, service tests
+There are two main types of unit tests that I have been writing: Services and components. Services are fairly straightforward, as they tend to be pure functions that can be easily tested. Remote calls can be mocked fairly easily with [Jasmine](https://jasmine.github.io/).
+
+Components need their own section.
 
 ### Testing components
 
@@ -127,5 +129,5 @@ What is there to say about this? Just read [the testing pyramid](https://martinf
 
 ## Next
 
-// TODO: state management
+Testing has been pretty rough thus far. Working on an app that is poorly architected does not help, but it is still more painful that you would expect nonetheless. Another area that was very important to me, coming from _React_, was state management. I will talk about that in the next entry.
 
