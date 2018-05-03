@@ -40,7 +40,7 @@ exports[`components SEO does not index draft posts 1`] = `
     property="og:description"
   />
   <meta
-    content="summary_large_image"
+    content="summary"
     name="twitter:card"
   />
   <meta
@@ -98,7 +98,7 @@ exports[`components SEO renders correctly for a blogpost 1`] = `
     property="og:description"
   />
   <meta
-    content="summary_large_image"
+    content="summary"
     name="twitter:card"
   />
   <meta
@@ -152,7 +152,7 @@ exports[`components SEO renders correctly for a normal page 1`] = `
     property="og:description"
   />
   <meta
-    content="summary_large_image"
+    content="summary"
     name="twitter:card"
   />
   <meta
