@@ -1,0 +1,66 @@
+@import '../../layouts/colors';
+@import '../../layouts/fonts';
+
+.articles {
+  padding-top: 2rem;
+}
+
+.article {
+  padding-bottom: 0.5rem;
+
+  header {
+    border-bottom: 1px solid $gray-200;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    word-break: break-word;
+
+    h1 {
+      color: $gray-600;
+    }
+
+    time {
+      color: $gray-500;
+      display: inline;
+      font-size: $font-size-xs;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.pageContent {
+  padding-bottom: 0.5rem;
+
+  h2 {
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+
+  blockquote {
+    background-color: $gray-100;
+    border-left: 5px solid $gray-200;
+    padding: 0.25rem 1.5rem;
+  }
+}
+
+:global(.gatsby-highlight) {
+  code {
+    font-size: 0.8rem;
+    white-space: pre-wrap;
+  }
+}
+
+:global(.guide) {
+  background-color: $gray-100;
+  border: 1px solid $gray-300;
+  border-radius: 15px;
+
+  padding: 1rem;
+
+  ul {
+    margin-bottom: 0;
+  }
+}

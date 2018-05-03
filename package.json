@@ -4,6 +4,7 @@
   "version": "0.2.0",
   "author": "Mario Fernandez",
   "dependencies": {
+    "classnames": "^2.2.5",
     "gatsby": "^1.9.255",
     "gatsby-link": "^1.6.31",
     "gatsby-plugin-canonical-urls": "^1.0.18",

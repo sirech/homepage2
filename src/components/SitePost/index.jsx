@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 
 import Link from 'gatsby-link'
 import forEach from 'lodash/forEach'
@@ -7,7 +8,7 @@ import get from 'lodash/get'
 import size from 'lodash/size'
 import ReadNext from '../ReadNext'
 
-import './style.scss'
+import styles from './style.module.scss'
 import './images.scss'
 
 class SitePost extends React.Component {
@@ -38,7 +39,7 @@ class SitePost extends React.Component {
     const categories = []
     forEach(data, (item, i) => {
       categories.push(
-        <span className="badge badge-primary text-white" key={i}>
+        <span className="badge badge-primary text-white mr-1" key={i}>
           {item}
         </span>
       )
@@ -60,8 +61,8 @@ class SitePost extends React.Component {
 
     return (
       <div className="container">
-        <div className="articles col-md-12">
-          <article key={path}>
+        <div className={cx(`${styles.articles}`, 'col-md-12')}>
+          <article key={path} className={cx(`${styles.article}`)}>
             <header>
               <Link style={{ boxShadow: 'none' }} to={path}>
                 <h1>{title}</h1>
@@ -70,7 +71,7 @@ class SitePost extends React.Component {
               {this.categories(cate)}
             </header>
             <section
-              className="page-content"
+              className={cx(`${styles.pageContent}`)}
               dangerouslySetInnerHTML={{ __html: isMore ? description : html }}
             />
             {isMore ? this.more(path) : ''}

@@ -8,6 +8,7 @@
     "selector-no-qualifying-type": [true, { "ignore": ["class", "attribute"]}],
     "max-nesting-depth": 4,
     "selector-max-compound-selectors": 4,
+    "selector-class-pattern": "^[a-z][a-zA-Z-]*$",
 
     "declaration-property-unit-whitelist": {
       "font-size": ["rem"],

@@ -1,0 +1,19 @@
+@import '../../layouts/fonts';
+
+.serviceBox {
+  margin: 2.5rem auto 0;
+
+  i {
+    font-size: $display4-size;
+    margin-bottom: 1rem;
+
+    &[data-emergence='visible'] {
+      animation: bounceIn 2s;
+      opacity: 1;
+    }
+
+    &[data-emergence='hidden'] {
+      opacity: 0;
+    }
+  }
+}

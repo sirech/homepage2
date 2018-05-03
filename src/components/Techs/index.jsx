@@ -1,11 +1,13 @@
 import React from 'react'
+import cx from 'classnames'
 
+import styles from './style.module.scss'
 import techs from './techList'
 
 const techItem = ([title, name]) => (
   <div key={name} className="col-sm-3 col-6">
     <div
-      className="service-box"
+      className={cx(`${styles.serviceBox}`)}
       data-toggle="tooltip"
       data-placement="top"
       title={title}

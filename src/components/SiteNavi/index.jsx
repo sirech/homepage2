@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import './style.scss'
+import cx from 'classnames'
+
+import styles from './style.module.scss'
 
 const links = [['/', 'About'], ['/talks/', 'Talks'], ['/blog/', 'Blog']]
 
@@ -33,12 +35,12 @@ class SiteNavi extends React.Component {
           </ul>
         </div>
         <ul className="navbar-icons navbar-nav flex-row ml-md-auto d-md-flex">
-          <li className="nav-item">
+          <li className={cx(`${styles.icon}`, 'nav-item')}>
             <a href="/rss.xml" className="nav-link" aria-label="RSS Feed">
               <i className="fa fa-rss fa-lg" />
             </a>
           </li>
-          <li className="nav-item">
+          <li className={cx(`${styles.icon}`, 'nav-item')}>
             <a
               href="https://github.com/sirech"
               className="nav-link"
@@ -48,7 +50,7 @@ class SiteNavi extends React.Component {
               <i className="fa fa-github-square fa-lg" />
             </a>
           </li>
-          <li className="nav-item">
+          <li className={cx(`${styles.icon}`, 'nav-item')}>
             <a
               href="https://stackoverflow.com/users/3785/mario-f"
               className="nav-link"
