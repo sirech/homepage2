@@ -28,7 +28,7 @@
     "gatsby-remark-smartypants": "^1.4.10",
     "gatsby-source-filesystem": "^1.5.10",
     "gatsby-transformer-remark": "^1.7.24",
-    "gatsby-transformer-sharp": "^1.6.16",
+    "gatsby-transformer-sharp": "^1.6.24",
     "lodash": "^4.17.4",
     "prismjs": "^1.13.0",
     "react-helmet": "^5.2.0",
