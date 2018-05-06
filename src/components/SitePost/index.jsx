@@ -6,6 +6,7 @@ import Link from 'gatsby-link'
 import forEach from 'lodash/forEach'
 import get from 'lodash/get'
 import ReadNext from '../ReadNext'
+import Container from '../Container'
 
 import styles from './style.module.scss'
 import './images.scss'
@@ -59,8 +60,8 @@ class SitePost extends React.Component {
     const isMore = isIndex && !!html.match('<!--more-->')
 
     return (
-      <div className="container">
-        <div className={cx(`${styles.articles}`, 'col-md-12')}>
+      <Container>
+        <div className={styles.articles}>
           <article key={path} className={cx(`${styles.article}`)}>
             <header>
               <Link style={{ boxShadow: 'none' }} to={path}>
@@ -77,7 +78,7 @@ class SitePost extends React.Component {
             {isIndex ? '' : <ReadNext data={site} />}
           </article>
         </div>
-      </div>
+      </Container>
     )
   }
 }
