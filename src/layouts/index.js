@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import PropTypes from 'prop-types'
 import { siteMetadata } from '../../gatsby-config'
 import SiteNavi from '../components/SiteNavi'
 import emergence from 'emergence.js'
@@ -20,7 +20,7 @@ class Template extends React.Component {
   }
 
   render() {
-    const { location, children } = this.props
+    const { children } = this.props
     return (
       <div>
         <SiteNavi title={siteMetadata.title} {...this.props} />
@@ -28,6 +28,10 @@ class Template extends React.Component {
       </div>
     )
   }
+}
+
+Template.propTypes = {
+  children: PropTypes.func.isRequired,
 }
 
 export default Template

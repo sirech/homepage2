@@ -1,6 +1,4 @@
 import get from 'lodash/get'
-import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
 import React from 'react'
 
 import SitePost from '../components/SitePost'

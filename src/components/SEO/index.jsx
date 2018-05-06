@@ -2,7 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
-import path from 'path'
 import get from 'lodash/get'
 
 const getSchemaOrgJSONLD = ({

@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import get from 'lodash/get'
 import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
@@ -22,8 +21,8 @@ class BlogIndex extends React.Component {
       const path = get(data, 'post.path')
       if (layout === 'post' && path !== '/404/') {
         pageLinks.push(
-          <LazyLoad height={500} offset={500} once={true} key={i}>
-            <SitePost data={data.post} site={site} isIndex={true} key={i} />
+          <LazyLoad height={500} offset={500} once key={i}>
+            <SitePost data={data.post} site={site} isIndex key={i} />
           </LazyLoad>
         )
       }

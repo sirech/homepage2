@@ -1,16 +1,18 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 let stylesStr
 if (process.env.NODE_ENV === 'production') {
   try {
+    // eslint-disable-next-line
     stylesStr = require('!raw-loader!../public/styles.css')
   } catch (e) {
     console.log(e)
   }
 }
 
-export default class HTML extends React.Component {
+class HTML extends React.Component {
   render() {
     const head = Helmet.rewind()
     let css
@@ -52,3 +54,11 @@ export default class HTML extends React.Component {
     )
   }
 }
+
+HTML.propTypes = {
+  body: PropTypes.string.isRequired,
+  headComponents: PropTypes.node,
+  postBodyComponents: PropTypes.node,
+}
+
+export default HTML

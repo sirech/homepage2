@@ -1,11 +1,15 @@
 {
   "extends": [
+    "standard",
+    "standard-react",
     "prettier",
-    "prettier/react"
+    "prettier/react",
+    "prettier/standard"
   ],
   "plugins": [
     "react",
-    "prettier"
+    "prettier",
+    "jest"
   ],
   "parserOptions": {
     "ecmaVersion": 2016,
@@ -17,7 +21,8 @@
   },
   "env": {
     "es6": true,
-    "node": true
+    "node": true,
+    "jest/globals": true
   },
   "rules": {
     "prettier/prettier": [
@@ -28,5 +33,8 @@
         "semi": false
       }
     ]
+  },
+  "globals": {
+    "graphql": true
   }
 }

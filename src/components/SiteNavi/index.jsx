@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import cx from 'classnames'
 
@@ -64,6 +65,13 @@ class SiteNavi extends React.Component {
       </nav>
     )
   }
+}
+
+SiteNavi.propTypes = {
+  title: PropTypes.string.isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
 }
 
 export default SiteNavi

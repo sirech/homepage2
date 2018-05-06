@@ -6,7 +6,7 @@ describe('components', () => {
   describe('SiteNavi', () => {
     it('renders correctly', () => {
       const location = { pathname: '/' }
-      const component = shallow(<SiteNavi location={location} />)
+      const component = shallow(<SiteNavi title="title" location={location} />)
       expect(component).toHaveLength(1)
     })
   })

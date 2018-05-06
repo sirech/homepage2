@@ -10,7 +10,7 @@ describe('components', () => {
 
   describe('HTML', () => {
     it('renders correctly', () => {
-      const component = shallow(<HTML />)
+      const component = shallow(<HTML body="stuff" />)
       expect(component).toHaveLength(1)
     })
   })

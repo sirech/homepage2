@@ -5,7 +5,6 @@ import cx from 'classnames'
 import Link from 'gatsby-link'
 import forEach from 'lodash/forEach'
 import get from 'lodash/get'
-import size from 'lodash/size'
 import ReadNext from '../ReadNext'
 
 import styles from './style.module.scss'
@@ -94,6 +93,8 @@ SitePost.propTypes = {
     }).isRequired,
     html: PropTypes.string.isRequired,
   }).isRequired,
+  site: PropTypes.object,
+  isIndex: PropTypes.bool,
 }
 
 export default SitePost
