@@ -1,8 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import Container from '../Container'
+
 export default () => (
-  <div className="container">
+  <Container>
     <p>
       I have been programming for a while already. Counting the time when I was
       studying, it has been over ten years already. If{' '}
@@ -37,5 +39,5 @@ export default () => (
       foundations are important, they are not the only thing needed to deliver
       high quality software.
     </p>
-  </div>
+  </Container>
 )
