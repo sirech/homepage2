@@ -1,11 +1,27 @@
 @import '../../layouts/fonts';
 
+.techList {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  padding: 0;
+  place-items: center;
+
+  @media (min-width: 700px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .tech {
-  margin: 2.5rem auto 0;
+  list-style: none;
 
   i {
     font-size: $display4-size;
-    margin-bottom: 1rem;
 
     &[data-emergence='visible'] {
       animation: bounceIn 2s;
