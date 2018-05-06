@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Tools from './Tools'
+import Tools from './index'
 
 describe('components', () => {
   describe('Tools', () => {

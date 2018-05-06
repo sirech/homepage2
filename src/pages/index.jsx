@@ -3,7 +3,7 @@ import standardHelmet from '../util/standardHelmet'
 
 import About from '../components/profile/About'
 import Techs from '../components/Techs'
-import Tools from '../components/profile/Tools'
+import Tools from '../components/Tools'
 
 class Profile extends React.Component {
   render() {
