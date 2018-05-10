@@ -12,6 +12,15 @@ categories:
 draft: false
 ---
 
+<div class="guide">
+
+### Angular Series
+
+- [**Part 1 - Bootstrapping and TypeScript**](../angular-from-react-part1/)
+- [Part 2 - Testing](../angular-from-react-part2/)
+
+</div>
+
 I have using [React](https://reactjs.org/) in personal and work projects for about two years already. I like it so much that I wanted to change my middle name to _React_, but then I realized that I do not have a middle name.
 
 Anyways, I recently started on a new project, and they built the frontend using ... [Angular](https://angular.io/). Rewriting it from scratch just because the new guy really likes something else is frowned upon by people who like delivering software to customers and stuff like that, so I found myself with no other option than finally digging into it.
