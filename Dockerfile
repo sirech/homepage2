@@ -7,13 +7,13 @@ ARG SITE_URL=''
 COPY . .
 
 RUN apt-get update \
-    && apt-get install -y build-essential libpng-dev zlib1g-dev \
+    && apt-get install -y build-essential libpng-dev zlib1g-dev python \
     && yarn \
     && yarn run build \
     && yarn cache clean \
     && find public -regextype posix-basic -regex '.*\.\(js\|css\)\(.map\)\?$' | xargs -I@ sh -c "gzip -c @ > @.gz" \
     && rm -Rf node_modules \
-    && apt-get remove -y build-essential libpng-dev zlib1g-dev \
+    && apt-get remove -y build-essential libpng-dev zlib1g-dev python \
     && apt-get clean
 
 FROM alpine:3.7
