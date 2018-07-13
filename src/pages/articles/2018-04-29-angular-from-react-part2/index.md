@@ -18,6 +18,7 @@ draft: false
 
 - [Part 1 - Bootstrapping and TypeScript](../angular-from-react-part1/)
 - [**Part 2 - Testing**](../angular-from-react-part2/)
+- [Part 3 - State Management](../angular-from-react-part3/)
 
 </div>
 
