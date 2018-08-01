@@ -27,4 +27,8 @@ export const talks = [
     'https://github.com/sirech/talks/raw/master/2018-02-tdd_infrastructure.pdf',
     'TDD for Infrastructure',
   ],
+  [
+    'https://github.com/sirech/talks/raw/master/2018-08-angular_state.pdf',
+    'Angular state management',
+  ],
 ].reverse()
