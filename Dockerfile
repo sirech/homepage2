@@ -1,4 +1,4 @@
-FROM node:10.5-slim as builder
+FROM node:10.8-slim as builder
 
 WORKDIR /app
 
@@ -6,12 +6,15 @@ ARG SITE_URL=''
 
 COPY . .
 
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+# hadolint ignore=DL3008
 RUN apt-get update \
-    && apt-get install -y build-essential libpng-dev zlib1g-dev python \
+    && apt-get install -y --no-install-recommends build-essential libpng-dev zlib1g-dev python \
     && yarn \
     && yarn run build \
     && yarn cache clean \
-    && find public -regextype posix-basic -regex '.*\.\(js\|css\)\(.map\)\?$' | xargs -I@ sh -c "gzip -c @ > @.gz" \
+    && find public -regextype posix-basic -regex '.*\.\(js\|css\)\(.map\)\?$' -print0 | xargs -I@ sh -c "gzip -c @ > @.gz" \
     && rm -Rf node_modules \
     && apt-get remove -y build-essential libpng-dev zlib1g-dev python \
     && apt-get clean
@@ -22,4 +25,5 @@ WORKDIR /app
 
 COPY --from=builder /app/public build
 
-CMD cp -a build/* public/ && echo 'Build done'
+# hadolint ignore=DL3025
+CMD cp -a build/* public/
