@@ -44,7 +44,7 @@
     "coveralls": "^3.0.0",
     "devicon-2.2": "^2.2.0",
     "emergence.js": "^1.1.2",
-    "enzyme": "^3.3.0",
+    "enzyme": "^3.4.4",
     "enzyme-adapter-react-15": "^1.0.5",
     "enzyme-to-json": "^3.3.4",
     "eslint": "^5.3.0",
