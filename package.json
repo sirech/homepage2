@@ -58,6 +58,7 @@
     "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-standard": "^3.1.0",
     "font-awesome": "^4.7.0",
+    "hawkeye-scanner": "^1.0.4",
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.4.2",
@@ -107,7 +108,8 @@
     "linter:text": "textlint \"src/pages/**/index.md\"",
     "linter:textfix": "textlint --fix \"src/pages/**/index.md\"",
     "precommit": "lint-staged",
-    "test": "jest"
+    "test": "jest",
+    "audit": "node_modules/.bin/hawkeye scan"
   },
   "peerDependencies": {
     "prismjs": "^1.13.0",

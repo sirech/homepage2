@@ -31,7 +31,7 @@ jobs:
     script: npm test -- --coverage
     after_script: cat coverage/lcov.info | node_modules/.bin/coveralls
   - stage: security
-    script: docker run --rm -v $PWD:/target stono/hawkeye
+    script: npm run audit
   - stage: Docker
     script:
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD $DOCKER_REGISTRY
