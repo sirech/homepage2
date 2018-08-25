@@ -1,4 +1,4 @@
-FROM node:10.8-slim as builder
+FROM node:10.9-slim as builder
 
 WORKDIR /app
 
@@ -19,7 +19,7 @@ RUN apt-get update \
     && apt-get remove -y build-essential libpng-dev zlib1g-dev python \
     && apt-get clean
 
-FROM alpine:3.7
+FROM alpine:3.8
 
 WORKDIR /app
 
