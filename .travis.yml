@@ -8,18 +8,16 @@ cache:
   directories:
   - node_modules
 stages:
-- build
 - lint
 - test
 - security
+- build
 - name: deploy
   if: branch = master AND type IN (push)
 - name: healthcheck
   if: branch = master AND type IN (push)
 jobs:
   include:
-  - stage: Build
-    script: SITE_URL=$SITE_URL npm run build
   - stage: Lint
     script: npm run linter:js
   - script: npm run linter:text
@@ -29,6 +27,15 @@ jobs:
     after_script: cat coverage/lcov.info | node_modules/.bin/coveralls
   - stage: security
     script: npm run audit
+  - stage: Build
+    before_script:
+    - openssl aes-256-cbc -K $encrypted_109e9b48b55f_key -iv $encrypted_109e9b48b55f_iv
+      -in deploy_rsa.enc -out deploy_rsa -d
+    - chmod 600 deploy_rsa
+    script: |
+      SITE_URL=$SITE_URL npm run build
+      find public -regextype posix-basic -regex '.*\.\(js\|css\)\(.map\)\?$' -print0 | xargs --null -I@ sh -c "gzip -c @ > @.gz"
+      scp -i deploy_rsa -r public $DEPLOY_USER@$DEPLOY_HOST:/tmp/homepage2-${TRAVIS_BUILD_NUMBER}
   - stage: Deploy
     before_deploy:
     - openssl aes-256-cbc -K $encrypted_109e9b48b55f_key -iv $encrypted_109e9b48b55f_iv
@@ -38,7 +45,7 @@ jobs:
     deploy:
       provider: script
       skip_cleanup: true
-      script: ssh -i deploy_rsa $DEPLOY_USER@$DEPLOY_HOST "sh ${DEPLOY_PATH}/bin/update homepage"
+      script: ssh -i deploy_rsa $DEPLOY_USER@$DEPLOY_HOST "sh ${DEPLOY_PATH}/bin/promote homepage2-${TRAVIS_BUILD_NUMBER /srv/main"
   - stage: healthcheck
     script: curl --connect-timeout 60 -s -f -o /dev/null "${SITE_URL}"
 env:
