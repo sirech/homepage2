@@ -14,7 +14,7 @@ RUN apt-get update \
     && yarn \
     && yarn run build \
     && yarn cache clean \
-    && find public -regextype posix-basic -regex '.*\.\(js\|css\)\(.map\)\?$' -print0 | xargs -I@ sh -c "gzip -c @ > @.gz" \
+    && find public -regextype posix-basic -regex '.*\.\(js\|css\)\(.map\)\?$' -print0 | xargs --null -I@ sh -c "gzip -c @ > @.gz" \
     && rm -Rf node_modules \
     && apt-get remove -y build-essential libpng-dev zlib1g-dev python \
     && apt-get clean
