@@ -45,7 +45,7 @@ jobs:
     deploy:
       provider: script
       skip_cleanup: true
-      script: ssh -i deploy_rsa $DEPLOY_USER@$DEPLOY_HOST "sh ${DEPLOY_PATH}/bin/promote homepage2-${TRAVIS_BUILD_NUMBER} /srv/main"
+      script: ssh -i deploy_rsa $DEPLOY_USER@$DEPLOY_HOST "sh ${DEPLOY_PATH}/bin/promote /tmp/homepage2-${TRAVIS_BUILD_NUMBER} /srv/main"
   - stage: healthcheck
     script: curl --connect-timeout 60 -s -f -o /dev/null "${SITE_URL}"
 env:
