@@ -103,7 +103,6 @@
     "linter:css": "node_modules/.bin/stylelint \"src/**/*.scss\"",
     "linter:text": "textlint \"src/pages/**/index.md\"",
     "linter:textfix": "textlint --fix \"src/pages/**/index.md\"",
-    "precommit": "lint-staged",
     "test": "jest",
     "audit": "node_modules/.bin/hawkeye scan"
   },
@@ -111,5 +110,10 @@
     "prismjs": "^1.13.0",
     "react": "^15.6.2",
     "react-dom": "15.6.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
