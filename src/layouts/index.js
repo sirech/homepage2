@@ -24,14 +24,14 @@ class Template extends React.Component {
     return (
       <div>
         <SiteNavi title={siteMetadata.title} {...this.props} />
-        {children()}
+        {children}
       </div>
     )
   }
 }
 
 Template.propTypes = {
-  children: PropTypes.func.isRequired,
+  children: PropTypes.object.isRequired,
 }
 
 export default Template

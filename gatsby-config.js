@@ -136,5 +136,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-twitter',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-layout',
   ],
 }
