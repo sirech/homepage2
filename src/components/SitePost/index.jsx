@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { Link } from 'gatsby'
+import Link from 'gatsby-link'
 import forEach from 'lodash/forEach'
 import get from 'lodash/get'
 import ReadNext from '../ReadNext'
