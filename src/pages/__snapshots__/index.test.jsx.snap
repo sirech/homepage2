@@ -38,19 +38,19 @@ exports[`components Profile renders correctly for a blogpost 1`] = `
   <section
     className="horizontal-section"
   >
-    <Component />
+    <_default />
   </section>
   <section
     className="horizontal-section bg-primary text-white"
     id="techs"
   >
-    <Component />
+    <_default />
   </section>
   <section
     className="horizontal-section"
     id="tools"
   >
-    <Component />
+    <_default />
   </section>
 </main>
 `;
