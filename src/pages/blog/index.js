@@ -3,7 +3,6 @@ import get from 'lodash/get'
 import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
-import { graphql } from 'gatsby'
 
 import SitePost from '../../components/SitePost'
 
