@@ -4,9 +4,9 @@ module.exports = {
     '^.*\\.s?css$': 'identity-obj-proxy',
   },
   transform: {
-    '^.+\\.jsx?$': './jest/transformer.js',
+    '^.+\\.jsx?$': '<rootDir>/jest/transformer.js',
   },
-  setupFiles: ['<rootDir>/setupTests.js'],
+  setupFiles: ['<rootDir>/jest/setup.js'],
   testPathIgnorePatterns: ['/node_modules/', '<rootDir>/.cache/'],
   globals: {
     __PATH_PREFIX__: '',

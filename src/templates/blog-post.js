@@ -1,6 +1,8 @@
 import get from 'lodash/get'
 import React from 'react'
 
+import { graphql } from 'gatsby'
+
 import SitePost from '../components/SitePost'
 import SitePage from '../components/SitePage'
 import SEO from '../components/SEO'
