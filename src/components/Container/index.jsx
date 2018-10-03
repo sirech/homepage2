@@ -1,11 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 
-import styles from './styles.module.css'
+import styles from './style.module.scss'
 
 const Container = ({ children }) => (
-  <div className={cx(styles.container)}>{children}</div>
+  <div className={styles.container}>{children}</div>
 )
 
 Container.propTypes = {
