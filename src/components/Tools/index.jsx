@@ -23,8 +23,17 @@ export default () => (
     <p>
       Nowadays I try to at least outsource my configurations a bit, using some
       awesome community driven ones like{' '}
-      <a href="http://spacemacs.org">Spacemacs</a> and{' '}
-      <a href="https://github.com/robbyrussell/oh-my-zsh">Oh My Zsh</a>
+      <a href="http://spacemacs.org" target="_blank" rel="noopener noreferrer">
+        Spacemacs
+      </a>{' '}
+      and{' '}
+      <a
+        href="https://github.com/robbyrussell/oh-my-zsh"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Oh My Zsh
+      </a>
     </p>
 
     <ul className="text-center">{tools.map(tool => toolItem(tool))}</ul>

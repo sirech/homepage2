@@ -8,8 +8,14 @@ export default () => (
     <p>
       I have been programming for a while already. Counting the time when I was
       studying, it has been over ten years already. If{' '}
-      <a href="http://norvig.com/21-days.html">Peter Norvig is correct</a> I
-      should know by now what I am doing, although I often get the feeling I
+      <a
+        href="http://norvig.com/21-days.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Peter Norvig is correct
+      </a>{' '}
+      I should know by now what I am doing, although I often get the feeling I
       don't know anything.
     </p>
 
