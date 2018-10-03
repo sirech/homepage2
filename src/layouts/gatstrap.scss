@@ -26,7 +26,7 @@ $container-max-widths: (
   sm: 640px,
   md: 740px,
   lg: 840px,
-  xl: 940px
+  xl: 940px,
 ) !default;
 
 // Body
@@ -47,6 +47,10 @@ $link-hover-decoration: none !default;
 // Fonts
 //
 @import './fonts';
+
+// Globals
+//
+@import './globals';
 
 /* @import 'node_modules/bootstrap/scss/bootstrap.scss'; */
 @import 'node_modules/bootstrap/scss/functions';

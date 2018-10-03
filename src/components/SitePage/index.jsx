@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './style.scss'
 
 class SitePage extends React.Component {
   render() {
