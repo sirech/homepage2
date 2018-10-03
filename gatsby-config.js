@@ -48,12 +48,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: '',
-      },
-    },
-    {
       resolve: 'gatsby-plugin-sitemap',
       options: {
         exclude: [`/dev-404-page`],
