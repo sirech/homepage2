@@ -30,12 +30,12 @@ export default () => (
 
     <p>
       At some point somebody thought it was a good idea to make me the technical
-      lead of a SCRUM team. I quickly discovered that it is not the same doing
-      something yourself than helping somebody figure it out himself. I learned,
-      somewhat to my surprise, that I really enjoy doing that, and that the
-      people I have coached did as well. At least they don't tend to run away
-      screaming from me, which is, I think, a good thing. Another consequence of
-      this switch is that I have done a lot of interviewing in the last years.
+      lead of an agile team. I quickly discovered that building things yourself
+      is not the same as helping somebody else figure it out. I learned,
+      somewhat to my surprise, that I really enjoy sharing ideas. According to
+      their feedback, other developers have managed to learn something from me.
+      At least they don't tend to run away screaming, which is, I think, a good
+      thing.
     </p>
 
     <p>
