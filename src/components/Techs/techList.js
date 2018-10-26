@@ -9,4 +9,5 @@ export default [
   ['CSS', 'css3'],
   ['Python', 'python'],
   ['Java', 'java'],
+  ['AWS', 'amazonwebservices'],
 ]
