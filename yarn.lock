@@ -6559,10 +6559,10 @@ gatsby-plugin-feed@^2.0.5:
     pify "^3.0.0"
     rss "^1.2.2"
 
-gatsby-plugin-layout@^1.0.2:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-layout/-/gatsby-plugin-layout-1.0.5.tgz#4fe31f03772cc61681dec609cacee1755b0e0e80"
-  integrity sha512-CPm7ASi5rsbD5ELqK1oRcyzxZ3Pcxd96W3AoB2wzrbVN8ll5y5zCp5uACgNabfevgxjXIiDbRWrnzmuo3JG9dQ==
+gatsby-plugin-layout@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-layout/-/gatsby-plugin-layout-1.0.6.tgz#be3e2b6e89baeea27dd2747b4c8e1451fdc7754a"
+  integrity sha512-CexCZdMeSSeSND5bcAKzXB+BWwBkLi3mhBrTv36aomMG14TD/Q+SiGEVhazdiJpjfjBVHt+GtNdpbjojldNasg==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
