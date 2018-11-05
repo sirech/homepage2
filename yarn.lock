@@ -6603,10 +6603,10 @@ gatsby-plugin-sass@^2.0.1:
     "@babel/runtime" "^7.0.0"
     sass-loader "^7.0.1"
 
-gatsby-plugin-sharp@^2.0.5:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.10.tgz#5ce703a1d9bc8f70a84a940914404566e747d6f2"
-  integrity sha512-pUzV/unNX2IFSNlz9u3a/uDevcJMCcril9So7bY+kZrQIb5RbDd2vnZiMebzv7RxfKVa/tpIbPbrZcEaVWVvvQ==
+gatsby-plugin-sharp@^2.0.11:
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.11.tgz#64087b46642f9e4f925072ac82c1ff19610f1313"
+  integrity sha512-XEmAfaiJ4x0uvDdsGxt5i1Kgf7qgvxKgPQIItLBW7Z+5oTnlMf7PpBu5DzcjPIEn9DmBW7EMguc4WtRBbGy8vg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     async "^2.1.2"
