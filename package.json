@@ -17,6 +17,7 @@
     "gatsby-plugin-sharp": "^2.0.5",
     "gatsby-plugin-sitemap": "^2.0.1",
     "gatsby-plugin-twitter": "^2.0.5",
+    "gatsby-plugin-webpack-bundle-analyzer": "^1.0.3",
     "gatsby-remark-copy-linked-files": "^2.0.5",
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images": "^2.0.3",
@@ -36,7 +37,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
-    "animate.css": "^3.7.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "bootstrap": "^4.1.1",

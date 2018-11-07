@@ -5,7 +5,6 @@ import SiteNavi from '../components/SiteNavi'
 import emergence from 'emergence.js'
 
 import './gatstrap.scss'
-import 'animate.css/animate.css'
 import 'prismjs/themes/prism-coy.css'
 import 'devicon-2.2/devicon.min.css'
 import 'font-awesome/css/font-awesome.css'
