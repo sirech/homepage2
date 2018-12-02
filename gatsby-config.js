@@ -1,4 +1,5 @@
 const siteUrl = process.env.SITE_URL || 'example.com'
+const trackingId = process.env.TRACKING_ID || '123'
 
 module.exports = {
   siteMetadata: {
@@ -122,6 +123,15 @@ module.exports = {
             output: '/rss.xml',
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackindId: trackingId,
+        head: false,
+        anonymize: true,
+        respectDNT: true,
       },
     },
     'gatsby-plugin-catch-links',
