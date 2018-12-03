@@ -6721,10 +6721,10 @@ gatsby-plugin-favicon@^3.1.4:
     html-react-parser "^0.4.6"
     lodash "^4.17.10"
 
-gatsby-plugin-feed@^2.0.5:
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.0.9.tgz#fed0908164331910b6299150d27b794d6d2dac90"
-  integrity sha512-Ro4nL6x4V0Z8+q15ceoMXYg41UZWo4/CAFnt0RW5WFuYQZOaqNfhxrHHNMEjI0tp2P2a4t0zLArY6uX8oHgVEQ==
+gatsby-plugin-feed@^2.0.11:
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.0.11.tgz#1baa33565c131415a2c971aa49adea02a08bf935"
+  integrity sha512-YefZwUeKiPd2OVz15XlRtb9LqNA0d66ThVCNwpr1kqyMRQg22pwmE2D+ZVLEWlB6uQv/92kY4hw13W6fKcpTFQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     lodash.merge "^4.6.0"
