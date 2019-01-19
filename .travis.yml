@@ -18,21 +18,21 @@ stages:
 jobs:
   include:
   - stage: Lint
-    script: npm run linter:js
-  - script: npm run linter:text
-  - script: npm run linter:css
+    script: yarn run linter:js
+  - script: yarn run linter:text
+  - script: yarn run linter:css
   - stage: Test
-    script: npm test -- --coverage
+    script: yarn test -- --coverage
     after_script: cat coverage/lcov.info | node_modules/.bin/coveralls
   - stage: security
-    script: npm run audit
+    script: yarn audit
   - stage: Build
     before_script:
     - openssl aes-256-cbc -K $encrypted_109e9b48b55f_key -iv $encrypted_109e9b48b55f_iv
       -in deploy_rsa.enc -out deploy_rsa -d
     - chmod 600 deploy_rsa
     script: |
-      SITE_URL=$SITE_URL TRACKING_ID=$TRACKING_ID npm run build
+      SITE_URL=$SITE_URL TRACKING_ID=$TRACKING_ID yarn run build
       find public -regextype posix-basic -regex '.*\.\(js\|css\)\(.map\)\?$' -print0 | xargs --null -I@ sh -c "gzip -c @ > @.gz"
       scp -i deploy_rsa -r public $DEPLOY_USER@$DEPLOY_HOST:/tmp/homepage2-${TRAVIS_BUILD_NUMBER}
   - stage: Deploy
