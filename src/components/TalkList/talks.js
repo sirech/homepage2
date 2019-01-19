@@ -31,4 +31,12 @@ export const talks = [
     'https://github.com/sirech/talks/raw/master/2018-08-angular_state.pdf',
     'Angular state management',
   ],
+  [
+    'https://github.com/sirech/talks/blob/master/2019-01-tw-concourse_ci.pdf',
+    'Concourse CI',
+  ],
+  [
+    'https://github.com/sirech/talks/blob/master/2019-01-tw-tdd_containers.pdf',
+    'TDD for Containers',
+  ],
 ].reverse()
