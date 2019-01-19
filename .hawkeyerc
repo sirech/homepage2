@@ -1,4 +1,0 @@
-{
-  "modules": ["ccnumber", "contents", "files", "node-chs", "node-crossenv", "node-ncu", "node-nsp"],
-  "failOn": "critical"
-}
