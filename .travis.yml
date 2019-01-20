@@ -25,7 +25,7 @@ jobs:
     script: yarn test -- --coverage
     after_script: cat coverage/lcov.info | node_modules/.bin/coveralls
   - stage: security
-    script: yarn audit
+    script: bin/audit
   - stage: Build
     before_script:
     - openssl aes-256-cbc -K $encrypted_109e9b48b55f_key -iv $encrypted_109e9b48b55f_iv

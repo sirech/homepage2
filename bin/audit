@@ -1,0 +1,7 @@
+#!/bin/sh
+
+yarn audit
+vulnerabilities=$(yarn audit --summary --json | jq '.data.vulnerabilities.high + .data.vulnerabilities.critical')
+
+echo "sum of high and critical vulnerabilities: ${vulnerabilities}"
+exit "$vulnerabilities"
