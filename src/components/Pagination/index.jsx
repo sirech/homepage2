@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import _ from 'lodash'
 import Link from 'gatsby-link'
 
 import Container from '../Container'
@@ -12,15 +13,27 @@ const nextDisabled = (index, pageCount) => index === pageCount
 
 const previous = index => (
   <Link className="page-link" to={url(index - 1)}>
-    Back
+    <i className="fa fa-caret-left" />
   </Link>
 )
 
 const next = index => (
   <Link className="page-link" to={url(index + 1)}>
-    Next
+    <i className="fa fa-caret-right" />
   </Link>
 )
+
+const pages = (index, pageCount) =>
+  _.range(1, pageCount + 1).map(pageNumber => (
+    <li
+      className={cx('page-item', { active: pageNumber === index })}
+      key={pageNumber}
+    >
+      <Link className="page-link" to={url(pageNumber)}>
+        {pageNumber}
+      </Link>
+    </li>
+  ))
 
 const Pagination = ({ index, pageCount }) => (
   <Container>
@@ -29,6 +42,7 @@ const Pagination = ({ index, pageCount }) => (
         <li className={cx('page-item', { disabled: previousDisabled(index) })}>
           {previous(index)}
         </li>
+        {pages(index, pageCount)}
         <li
           className={cx('page-item', {
             disabled: nextDisabled(index, pageCount),

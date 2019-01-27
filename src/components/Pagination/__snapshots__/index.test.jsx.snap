@@ -15,7 +15,64 @@ exports[`components Pagination disables back link if we are on the first page 1`
           className="page-link"
           to="/blog/0"
         >
-          Back
+          <i
+            className="fa fa-caret-left"
+          />
+        </Component>
+      </li>
+      <li
+        className="page-item active"
+        key="1"
+      >
+        <Component
+          className="page-link"
+          to="/blog/"
+        >
+          1
+        </Component>
+      </li>
+      <li
+        className="page-item"
+        key="2"
+      >
+        <Component
+          className="page-link"
+          to="/blog/2"
+        >
+          2
+        </Component>
+      </li>
+      <li
+        className="page-item"
+        key="3"
+      >
+        <Component
+          className="page-link"
+          to="/blog/3"
+        >
+          3
+        </Component>
+      </li>
+      <li
+        className="page-item"
+        key="4"
+      >
+        <Component
+          className="page-link"
+          to="/blog/4"
+        >
+          4
+        </Component>
+      </li>
+      <li
+        className="page-item"
+        key="5"
+      >
+        <Component
+          className="page-link"
+          to="/blog/5"
+        >
+          5
         </Component>
       </li>
       <li
@@ -25,7 +82,9 @@ exports[`components Pagination disables back link if we are on the first page 1`
           className="page-link"
           to="/blog/2"
         >
-          Next
+          <i
+            className="fa fa-caret-right"
+          />
         </Component>
       </li>
     </ul>
@@ -48,7 +107,64 @@ exports[`components Pagination disables next link if we are on the last page 1`]
           className="page-link"
           to="/blog/4"
         >
-          Back
+          <i
+            className="fa fa-caret-left"
+          />
+        </Component>
+      </li>
+      <li
+        className="page-item"
+        key="1"
+      >
+        <Component
+          className="page-link"
+          to="/blog/"
+        >
+          1
+        </Component>
+      </li>
+      <li
+        className="page-item"
+        key="2"
+      >
+        <Component
+          className="page-link"
+          to="/blog/2"
+        >
+          2
+        </Component>
+      </li>
+      <li
+        className="page-item"
+        key="3"
+      >
+        <Component
+          className="page-link"
+          to="/blog/3"
+        >
+          3
+        </Component>
+      </li>
+      <li
+        className="page-item"
+        key="4"
+      >
+        <Component
+          className="page-link"
+          to="/blog/4"
+        >
+          4
+        </Component>
+      </li>
+      <li
+        className="page-item active"
+        key="5"
+      >
+        <Component
+          className="page-link"
+          to="/blog/5"
+        >
+          5
         </Component>
       </li>
       <li
@@ -58,7 +174,9 @@ exports[`components Pagination disables next link if we are on the last page 1`]
           className="page-link"
           to="/blog/6"
         >
-          Next
+          <i
+            className="fa fa-caret-right"
+          />
         </Component>
       </li>
     </ul>
@@ -81,7 +199,64 @@ exports[`components Pagination renders correctly 1`] = `
           className="page-link"
           to="/blog/2"
         >
-          Back
+          <i
+            className="fa fa-caret-left"
+          />
+        </Component>
+      </li>
+      <li
+        className="page-item"
+        key="1"
+      >
+        <Component
+          className="page-link"
+          to="/blog/"
+        >
+          1
+        </Component>
+      </li>
+      <li
+        className="page-item"
+        key="2"
+      >
+        <Component
+          className="page-link"
+          to="/blog/2"
+        >
+          2
+        </Component>
+      </li>
+      <li
+        className="page-item active"
+        key="3"
+      >
+        <Component
+          className="page-link"
+          to="/blog/3"
+        >
+          3
+        </Component>
+      </li>
+      <li
+        className="page-item"
+        key="4"
+      >
+        <Component
+          className="page-link"
+          to="/blog/4"
+        >
+          4
+        </Component>
+      </li>
+      <li
+        className="page-item"
+        key="5"
+      >
+        <Component
+          className="page-link"
+          to="/blog/5"
+        >
+          5
         </Component>
       </li>
       <li
@@ -91,7 +266,9 @@ exports[`components Pagination renders correctly 1`] = `
           className="page-link"
           to="/blog/4"
         >
-          Next
+          <i
+            className="fa fa-caret-right"
+          />
         </Component>
       </li>
     </ul>
@@ -114,7 +291,64 @@ exports[`components Pagination renders correctly if it links to the first page 1
           className="page-link"
           to="/blog/"
         >
-          Back
+          <i
+            className="fa fa-caret-left"
+          />
+        </Component>
+      </li>
+      <li
+        className="page-item"
+        key="1"
+      >
+        <Component
+          className="page-link"
+          to="/blog/"
+        >
+          1
+        </Component>
+      </li>
+      <li
+        className="page-item active"
+        key="2"
+      >
+        <Component
+          className="page-link"
+          to="/blog/2"
+        >
+          2
+        </Component>
+      </li>
+      <li
+        className="page-item"
+        key="3"
+      >
+        <Component
+          className="page-link"
+          to="/blog/3"
+        >
+          3
+        </Component>
+      </li>
+      <li
+        className="page-item"
+        key="4"
+      >
+        <Component
+          className="page-link"
+          to="/blog/4"
+        >
+          4
+        </Component>
+      </li>
+      <li
+        className="page-item"
+        key="5"
+      >
+        <Component
+          className="page-link"
+          to="/blog/5"
+        >
+          5
         </Component>
       </li>
       <li
@@ -124,7 +358,9 @@ exports[`components Pagination renders correctly if it links to the first page 1
           className="page-link"
           to="/blog/3"
         >
-          Next
+          <i
+            className="fa fa-caret-right"
+          />
         </Component>
       </li>
     </ul>
