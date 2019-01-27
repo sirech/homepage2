@@ -2,20 +2,37 @@ const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
 
+const createPaginatedPages = require('gatsby-paginate')
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.js')
     resolve(
       graphql(
         `
           {
-            allMarkdownRemark(limit: 1000) {
-              edges {
-                node {
+            site {
+              siteMetadata {
+                title
+                description
+                author
+              }
+            }
+            allMarkdownRemark(
+              sort: { fields: [frontmatter___date], order: DESC }
+              filter: { frontmatter: { draft: { eq: false } } }
+            ) {
+              posts: edges {
+                post: node {
+                  html
                   frontmatter {
+                    layout
+                    title
                     path
+                    categories
+                    date(formatString: "YYYY/MM/DD")
+                    draft
                   }
                 }
               }
@@ -28,11 +45,20 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
+        createPaginatedPages({
+          edges: result.data.allMarkdownRemark.posts,
+          createPage: createPage,
+          pageTemplate: 'src/templates/blog-index.js',
+          pageLength: 10,
+          pathPrefix: 'blog',
+          context: result.data.site,
+        })
+
         // Create blog posts pages.
-        _.each(result.data.allMarkdownRemark.edges, edge => {
+        _.each(result.data.allMarkdownRemark.posts, edge => {
           createPage({
-            path: edge.node.frontmatter.path,
-            component: blogPost,
+            path: edge.post.frontmatter.path,
+            component: path.resolve('./src/templates/blog-post.js'),
           })
         })
       })

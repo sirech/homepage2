@@ -48,7 +48,6 @@ exports[`components SitePost renders correctly 1`] = `
           }
         }
       />
-      <ReadNext />
     </article>
   </div>
 </Container>

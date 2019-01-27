@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 
 import get from 'lodash/get'
 
+import siteType from '../../prop-types/site'
+
 const getSchemaOrgJSONLD = ({
   isBlogPost,
   url,
@@ -70,15 +72,15 @@ const getSchemaOrgJSONLD = ({
 
 const SEO = ({ isBlogPost, post, site }) => {
   const title = get(post, 'frontmatter.title')
-  const siteTitle = get(site, 'meta.title')
-  const author = get(site, 'meta.author')
+  const siteTitle = get(site, 'siteMetadata.title')
+  const author = get(site, 'siteMetadata.author')
   const date = isBlogPost ? get(post, 'frontmatter.date') : false
 
   const description = get(post, 'html')
     .replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '')
     .substr(0, 200)
 
-  const siteUrl = get(site, 'meta.url')
+  const siteUrl = get(site, 'siteMetadata.url')
   const url = siteUrl + get(post, 'frontmatter.path')
 
   const draft = get(post, 'frontmatter.draft')
@@ -120,7 +122,10 @@ const SEO = ({ isBlogPost, post, site }) => {
 
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content={get(site, 'meta.twitter')} />
+      <meta
+        name="twitter:creator"
+        content={get(site, 'siteMetadata.twitter')}
+      />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
     </Helmet>
@@ -140,14 +145,7 @@ SEO.propTypes = {
     }).isRequired,
     html: PropTypes.string.isRequired,
   }).isRequired,
-  site: PropTypes.shape({
-    meta: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-      twitter: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
+  site: siteType,
 }
 
 SEO.defaultProps = {

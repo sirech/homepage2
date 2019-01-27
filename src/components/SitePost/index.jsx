@@ -5,7 +5,6 @@ import cx from 'classnames'
 import Link from 'gatsby-link'
 import forEach from 'lodash/forEach'
 import get from 'lodash/get'
-import ReadNext from '../ReadNext'
 import Container from '../Container'
 
 import styles from './style.module.scss'
@@ -48,7 +47,7 @@ class SitePost extends React.Component {
   }
 
   render() {
-    const { site, data, isIndex } = this.props
+    const { data, isIndex } = this.props
     const title = get(data, 'frontmatter.title')
     const path = get(data, 'frontmatter.path')
     const date = get(data, 'frontmatter.date')
@@ -75,7 +74,6 @@ class SitePost extends React.Component {
               dangerouslySetInnerHTML={{ __html: isMore ? description : html }}
             />
             {isMore ? this.more(path) : ''}
-            {isIndex ? '' : <ReadNext data={site} />}
           </article>
         </div>
       </Container>
@@ -94,7 +92,6 @@ SitePost.propTypes = {
     }).isRequired,
     html: PropTypes.string.isRequired,
   }).isRequired,
-  site: PropTypes.object,
   isIndex: PropTypes.bool,
 }
 

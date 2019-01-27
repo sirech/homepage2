@@ -32,7 +32,7 @@ export default BlogPostTemplate
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
     site {
-      meta: siteMetadata {
+      siteMetadata {
         title
         description
         author

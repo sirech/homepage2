@@ -16,7 +16,7 @@ describe('components', () => {
     }
 
     const site = {
-      meta: {
+      siteMetadata: {
         author: 'me',
         description: 'description',
         title: 'site title',
