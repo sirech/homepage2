@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components BlogPostTemplate renders correctly 1`] = `
+<main>
+  <SEO
+    isBlogPost={true}
+    post={
+      Object {
+        "frontmatter": Object {
+          "categories": Array [
+            "JavaScript",
+            "React",
+          ],
+          "date": "2018/03/01",
+          "draft": false,
+          "layout": "post",
+          "path": "/the-post",
+          "title": "My Post",
+        },
+        "html": "<div>content</div>",
+      }
+    }
+    site={
+      Object {
+        "siteMetadata": Object {
+          "author": "me",
+          "description": "description",
+          "title": "site title",
+          "twitter": "@handle",
+          "url": "http://example.com",
+        },
+      }
+    }
+  />
+  <SitePost
+    data={
+      Object {
+        "frontmatter": Object {
+          "categories": Array [
+            "JavaScript",
+            "React",
+          ],
+          "date": "2018/03/01",
+          "draft": false,
+          "layout": "post",
+          "path": "/the-post",
+          "title": "My Post",
+        },
+        "html": "<div>content</div>",
+      }
+    }
+    isIndex={false}
+    site={
+      Object {
+        "siteMetadata": Object {
+          "author": "me",
+          "description": "description",
+          "title": "site title",
+          "twitter": "@handle",
+          "url": "http://example.com",
+        },
+      }
+    }
+  />
+</main>
+`;

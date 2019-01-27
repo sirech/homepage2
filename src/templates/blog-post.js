@@ -1,9 +1,13 @@
-import get from 'lodash/get'
 import React from 'react'
+import PropTypes from 'prop-types'
+
+import get from 'lodash/get'
 
 import SitePost from '../components/SitePost'
 import SitePage from '../components/SitePage'
 import SEO from '../components/SEO'
+
+import siteType from '../prop-types/site'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -25,6 +29,12 @@ class BlogPostTemplate extends React.Component {
       </main>
     )
   }
+}
+
+BlogPostTemplate.propTypes = {
+  data: PropTypes.shape({
+    site: siteType,
+  }).isRequired,
 }
 
 export default BlogPostTemplate

@@ -10,6 +10,8 @@ import Container from '../Container'
 import styles from './style.module.scss'
 import './images.scss'
 
+import frontmatterType from '../../prop-types/frontmatter'
+
 class SitePost extends React.Component {
   more(path) {
     return (
@@ -83,13 +85,7 @@ class SitePost extends React.Component {
 
 SitePost.propTypes = {
   data: PropTypes.shape({
-    frontmatter: PropTypes.shape({
-      categories: PropTypes.arrayOf(PropTypes.string),
-      date: PropTypes.string,
-      layout: PropTypes.string,
-      path: PropTypes.string,
-      title: PropTypes.string,
-    }).isRequired,
+    frontmatter: frontmatterType,
     html: PropTypes.string.isRequired,
   }).isRequired,
   isIndex: PropTypes.bool,

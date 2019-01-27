@@ -4,10 +4,10 @@ exports[`components SEO does not index draft posts 1`] = `
 <HelmetWrapper
   defer={true}
   encodeSpecialCharacters={true}
-  title="title | site title"
+  title="My Post | site title"
 >
   <meta
-    content="title | site title"
+    content="My Post | site title"
     name="title"
   />
   <meta
@@ -17,14 +17,14 @@ exports[`components SEO does not index draft posts 1`] = `
   <script
     type="application/ld+json"
   >
-    [{"@context":"http://schema.org","@type":"WebSite","url":"http://example.com/post","name":"title","alternateName":"site title"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/post","name":"title"}}]},{"@context":"http://schema.org","@type":"BlogPosting","url":"http://example.com/post","name":"title","alternateName":"site title","headline":"title","description":"this is the content","author":{"@type":"Person","name":"me"},"publisher":{"@type":"Organization","url":"http://example.com","name":"me"},"mainEntityOfPage":{"@type":"WebSite","@id":"http://example.com"}}]
+    [{"@context":"http://schema.org","@type":"WebSite","url":"http://example.com/the-post","name":"My Post","alternateName":"site title"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/the-post","name":"My Post"}}]},{"@context":"http://schema.org","@type":"BlogPosting","url":"http://example.com/the-post","name":"My Post","alternateName":"site title","headline":"My Post","description":"this is the content","author":{"@type":"Person","name":"me"},"publisher":{"@type":"Organization","url":"http://example.com","name":"me"},"mainEntityOfPage":{"@type":"WebSite","@id":"http://example.com"}}]
   </script>
   <meta
     content="noindex"
     name="robots"
   />
   <meta
-    content="http://example.com/post"
+    content="http://example.com/the-post"
     property="og:url"
   />
   <meta
@@ -32,7 +32,7 @@ exports[`components SEO does not index draft posts 1`] = `
     property="og:type"
   />
   <meta
-    content="title"
+    content="My Post"
     property="og:title"
   />
   <meta
@@ -48,7 +48,7 @@ exports[`components SEO does not index draft posts 1`] = `
     name="twitter:creator"
   />
   <meta
-    content="title"
+    content="My Post"
     name="twitter:title"
   />
   <meta
@@ -62,10 +62,10 @@ exports[`components SEO renders correctly for a blogpost 1`] = `
 <HelmetWrapper
   defer={true}
   encodeSpecialCharacters={true}
-  title="title | site title"
+  title="My Post | site title"
 >
   <meta
-    content="title | site title"
+    content="My Post | site title"
     name="title"
   />
   <meta
@@ -75,14 +75,14 @@ exports[`components SEO renders correctly for a blogpost 1`] = `
   <script
     type="application/ld+json"
   >
-    [{"@context":"http://schema.org","@type":"WebSite","url":"http://example.com/post","name":"title","alternateName":"site title"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/post","name":"title"}}]},{"@context":"http://schema.org","@type":"BlogPosting","url":"http://example.com/post","name":"title","alternateName":"site title","headline":"title","description":"this is the content","author":{"@type":"Person","name":"me"},"publisher":{"@type":"Organization","url":"http://example.com","name":"me"},"mainEntityOfPage":{"@type":"WebSite","@id":"http://example.com"}}]
+    [{"@context":"http://schema.org","@type":"WebSite","url":"http://example.com/the-post","name":"My Post","alternateName":"site title"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/the-post","name":"My Post"}}]},{"@context":"http://schema.org","@type":"BlogPosting","url":"http://example.com/the-post","name":"My Post","alternateName":"site title","headline":"My Post","description":"this is the content","author":{"@type":"Person","name":"me"},"publisher":{"@type":"Organization","url":"http://example.com","name":"me"},"mainEntityOfPage":{"@type":"WebSite","@id":"http://example.com"}}]
   </script>
   <meta
     content="index, follow"
     name="robots"
   />
   <meta
-    content="http://example.com/post"
+    content="http://example.com/the-post"
     property="og:url"
   />
   <meta
@@ -90,7 +90,7 @@ exports[`components SEO renders correctly for a blogpost 1`] = `
     property="og:type"
   />
   <meta
-    content="title"
+    content="My Post"
     property="og:title"
   />
   <meta
@@ -106,7 +106,7 @@ exports[`components SEO renders correctly for a blogpost 1`] = `
     name="twitter:creator"
   />
   <meta
-    content="title"
+    content="My Post"
     name="twitter:title"
   />
   <meta
@@ -120,10 +120,10 @@ exports[`components SEO renders correctly for a normal page 1`] = `
 <HelmetWrapper
   defer={true}
   encodeSpecialCharacters={true}
-  title="title | site title"
+  title="My Post | site title"
 >
   <meta
-    content="title | site title"
+    content="My Post | site title"
     name="title"
   />
   <meta
@@ -133,18 +133,18 @@ exports[`components SEO renders correctly for a normal page 1`] = `
   <script
     type="application/ld+json"
   >
-    [{"@context":"http://schema.org","@type":"WebSite","url":"http://example.com/post","name":"title","alternateName":"site title"}]
+    [{"@context":"http://schema.org","@type":"WebSite","url":"http://example.com/the-post","name":"My Post","alternateName":"site title"}]
   </script>
   <meta
     content="index, follow"
     name="robots"
   />
   <meta
-    content="http://example.com/post"
+    content="http://example.com/the-post"
     property="og:url"
   />
   <meta
-    content="title"
+    content="My Post"
     property="og:title"
   />
   <meta
@@ -160,7 +160,7 @@ exports[`components SEO renders correctly for a normal page 1`] = `
     name="twitter:creator"
   />
   <meta
-    content="title"
+    content="My Post"
     name="twitter:title"
   />
   <meta

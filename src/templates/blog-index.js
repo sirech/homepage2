@@ -7,6 +7,8 @@ import LazyLoad from 'react-lazyload'
 import SitePost from '../components/SitePost'
 import Pagination from '../components/Pagination'
 
+import siteType from '../prop-types/site'
+
 const helmet = site => (
   <Helmet
     title={get(site, 'title')}
@@ -55,7 +57,7 @@ IndexPage.propTypes = {
     index: PropTypes.number,
     pageCount: PropTypes.number,
     group: PropTypes.arrayOf(PropTypes.object),
-    additionalContext: PropTypes.object,
+    additionalContext: siteType,
   }),
 }
 

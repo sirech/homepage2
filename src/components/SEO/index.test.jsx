@@ -3,26 +3,18 @@ import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import SEO from './index'
 
+import frontmatter from '../../fixtures/frontmatter'
+import siteMetadata from '../../fixtures/siteMetadata'
+
 describe('components', () => {
   describe('SEO', () => {
     const post = {
       html: '<p>this is the content</p>',
-      frontmatter: {
-        title: 'title',
-        path: '/post',
-        date: '2018/03/01',
-        draft: false,
-      },
+      frontmatter: frontmatter(),
     }
 
     const site = {
-      siteMetadata: {
-        author: 'me',
-        description: 'description',
-        title: 'site title',
-        twitter: '@handle',
-        url: 'http://example.com',
-      },
+      siteMetadata: siteMetadata(),
     }
 
     it('renders correctly for a blogpost', () => {
