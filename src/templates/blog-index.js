@@ -3,11 +3,13 @@ import PropTypes from 'prop-types'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
+import _ from 'lodash'
 
 import SitePost from '../components/SitePost'
 import Pagination from '../components/Pagination'
 
 import siteType from '../prop-types/site'
+import postType from '../prop-types/post'
 
 const helmet = site => (
   <Helmet
@@ -22,22 +24,18 @@ const helmet = site => (
   />
 )
 
-const posts = (group, site) => {
-  const pageLinks = []
-
-  group.forEach((data, i) => {
+const posts = group => {
+  const filteredPosts = _.filter(group, data => {
     const layout = get(data, 'post.frontmatter.layout')
     const path = get(data, 'post.path')
-    if (layout === 'post' && path !== '/404/') {
-      pageLinks.push(
-        <LazyLoad height={500} offset={500} once key={i}>
-          <SitePost data={data.post} site={site} isIndex key={i} />
-        </LazyLoad>
-      )
-    }
+    return layout === 'post' && path !== '/404/'
   })
 
-  return pageLinks
+  return _.map(filteredPosts, (data, i) => (
+    <LazyLoad height={500} offset={500} once key={i}>
+      <SitePost data={data.post} isIndex key={i} />
+    </LazyLoad>
+  ))
 }
 
 const IndexPage = ({ pageContext }) => {
@@ -45,8 +43,8 @@ const IndexPage = ({ pageContext }) => {
 
   return (
     <div>
-      {helmet(additionalContext)}
-      {posts(group, additionalContext)}
+      {helmet(additionalContext.siteMetadata)}
+      {posts(group)}
       <Pagination index={index} pageCount={pageCount} />
     </div>
   )
@@ -56,7 +54,11 @@ IndexPage.propTypes = {
   pageContext: PropTypes.shape({
     index: PropTypes.number,
     pageCount: PropTypes.number,
-    group: PropTypes.arrayOf(PropTypes.object),
+    group: PropTypes.arrayOf(
+      PropTypes.shape({
+        post: postType,
+      })
+    ),
     additionalContext: siteType,
   }),
 }

@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components IndexPage renders correctly 1`] = `
+<div>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    meta={
+      Array [
+        Object {
+          "content": "summary",
+          "name": "twitter:card",
+        },
+        Object {
+          "content": "site title",
+          "property": "og:title",
+        },
+        Object {
+          "content": "website",
+          "property": "og:type",
+        },
+        Object {
+          "content": "description",
+          "property": "og:description",
+        },
+        Object {
+          "content": "http://example.com",
+          "property": "og:url",
+        },
+      ]
+    }
+    title="site title"
+  />
+  <LazyLoad
+    height={500}
+    key="0"
+    offset={500}
+    once={true}
+    overflow={false}
+    resize={false}
+    scroll={true}
+    unmountIfInvisible={false}
+  >
+    <SitePost
+      data={
+        Object {
+          "frontmatter": Object {
+            "categories": Array [
+              "JavaScript",
+              "React",
+            ],
+            "date": "2018/03/01",
+            "draft": false,
+            "layout": "post",
+            "path": "/the-post",
+            "title": "My Post",
+          },
+          "html": "
+<div>
+  <span>Header</span>
+</div>
+",
+          "id": "id",
+        }
+      }
+      isIndex={true}
+      key="0"
+    />
+  </LazyLoad>
+  <LazyLoad
+    height={500}
+    key="1"
+    offset={500}
+    once={true}
+    overflow={false}
+    resize={false}
+    scroll={true}
+    unmountIfInvisible={false}
+  >
+    <SitePost
+      data={
+        Object {
+          "frontmatter": Object {
+            "categories": Array [
+              "JavaScript",
+              "React",
+            ],
+            "date": "2018/03/01",
+            "draft": false,
+            "layout": "post",
+            "path": "/the-post",
+            "title": "My Post",
+          },
+          "html": "
+<div>
+  <span>Header</span>
+</div>
+",
+          "id": "id",
+        }
+      }
+      isIndex={true}
+      key="1"
+    />
+  </LazyLoad>
+  <Pagination
+    index={3}
+    pageCount={5}
+  />
+</div>
+`;

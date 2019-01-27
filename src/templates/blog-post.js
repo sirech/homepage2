@@ -8,6 +8,7 @@ import SitePage from '../components/SitePage'
 import SEO from '../components/SEO'
 
 import siteType from '../prop-types/site'
+import postType from '../prop-types/post'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -34,6 +35,7 @@ class BlogPostTemplate extends React.Component {
 BlogPostTemplate.propTypes = {
   data: PropTypes.shape({
     site: siteType,
+    post: postType,
   }).isRequired,
 }
 

@@ -44,7 +44,11 @@ exports[`components SitePost renders correctly 1`] = `
         className="pageContent"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<div>content</div>",
+            "__html": "
+<div>
+  <span>Header</span>
+</div>
+",
           }
         }
       />

@@ -7,4 +7,5 @@ export default PropTypes.shape({
   path: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   draft: PropTypes.bool.isRequired,
+  description: PropTypes.string,
 }).isRequired

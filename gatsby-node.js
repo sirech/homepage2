@@ -17,6 +17,8 @@ exports.createPages = ({ graphql, actions }) => {
                 title
                 description
                 author
+                url: siteUrl
+                twitter
               }
             }
             allMarkdownRemark(
