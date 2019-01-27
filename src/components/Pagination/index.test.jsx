@@ -14,5 +14,15 @@ describe('components', () => {
       const component = shallow(<Pagination index={2} pageCount={5} />)
       expect(toJson(component)).toMatchSnapshot()
     })
+
+    it('disables back link if we are on the first page', () => {
+      const component = shallow(<Pagination index={1} pageCount={5} />)
+      expect(toJson(component)).toMatchSnapshot()
+    })
+
+    it('disables next link if we are on the last page', () => {
+      const component = shallow(<Pagination index={5} pageCount={5} />)
+      expect(toJson(component)).toMatchSnapshot()
+    })
   })
 })

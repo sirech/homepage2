@@ -1,5 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`components Pagination disables back link if we are on the first page 1`] = `
+<Container>
+  <nav
+    className="mt-4"
+  >
+    <ul
+      className="pagination justify-content-end"
+    >
+      <li
+        className="page-item disabled"
+      >
+        <Component
+          className="page-link"
+          to="/blog/0"
+        >
+          Back
+        </Component>
+      </li>
+      <li
+        className="page-item"
+      >
+        <Component
+          className="page-link"
+          to="/blog/2"
+        >
+          Next
+        </Component>
+      </li>
+    </ul>
+  </nav>
+</Container>
+`;
+
+exports[`components Pagination disables next link if we are on the last page 1`] = `
+<Container>
+  <nav
+    className="mt-4"
+  >
+    <ul
+      className="pagination justify-content-end"
+    >
+      <li
+        className="page-item"
+      >
+        <Component
+          className="page-link"
+          to="/blog/4"
+        >
+          Back
+        </Component>
+      </li>
+      <li
+        className="page-item disabled"
+      >
+        <Component
+          className="page-link"
+          to="/blog/6"
+        >
+          Next
+        </Component>
+      </li>
+    </ul>
+  </nav>
+</Container>
+`;
+
 exports[`components Pagination renders correctly 1`] = `
 <Container>
   <nav
