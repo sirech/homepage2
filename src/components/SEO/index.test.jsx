@@ -8,14 +8,19 @@ import siteMetadata from '../../fixtures/siteMetadata'
 
 describe('components', () => {
   describe('SEO', () => {
-    const post = {
-      html: '<p>this is the content</p>',
-      frontmatter: frontmatter(),
-    }
+    let post
+    let site
 
-    const site = {
-      siteMetadata: siteMetadata(),
-    }
+    beforeEach(() => {
+      post = {
+        html: '<p>this is the content</p>',
+        frontmatter: frontmatter(),
+      }
+
+      site = {
+        siteMetadata: siteMetadata(),
+      }
+    })
 
     it('renders correctly for a blogpost', () => {
       const component = shallow(<SEO isBlogPost post={post} site={site} />)
@@ -36,6 +41,15 @@ describe('components', () => {
       const component = shallow(
         <SEO isBlogPost={false} post={post} site={site} />
       )
+      expect(toJson(component)).toMatchSnapshot()
+    })
+
+    it('description can be overriden', () => {
+      const description = 'This is another description'
+
+      post.frontmatter.description = description
+
+      const component = shallow(<SEO isBlogPost post={post} site={site} />)
       expect(toJson(component)).toMatchSnapshot()
     })
   })

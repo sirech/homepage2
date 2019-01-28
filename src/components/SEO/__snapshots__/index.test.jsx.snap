@@ -1,5 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`components SEO description can be overriden 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+  title="My Post | site title"
+>
+  <meta
+    content="My Post | site title"
+    name="title"
+  />
+  <meta
+    content="This is another description"
+    name="description"
+  />
+  <script
+    type="application/ld+json"
+  >
+    [{"@context":"http://schema.org","@type":"WebSite","url":"http://example.com/the-post","name":"My Post","alternateName":"site title"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/the-post","name":"My Post"}}]},{"@context":"http://schema.org","@type":"BlogPosting","url":"http://example.com/the-post","name":"My Post","alternateName":"site title","headline":"My Post","description":"This is another description","author":{"@type":"Person","name":"me"},"publisher":{"@type":"Organization","url":"http://example.com","name":"me"},"mainEntityOfPage":{"@type":"WebSite","@id":"http://example.com"}}]
+  </script>
+  <meta
+    content="index, follow"
+    name="robots"
+  />
+  <meta
+    content="http://example.com/the-post"
+    property="og:url"
+  />
+  <meta
+    content="article"
+    property="og:type"
+  />
+  <meta
+    content="My Post"
+    property="og:title"
+  />
+  <meta
+    content="This is another description"
+    property="og:description"
+  />
+  <meta
+    content="summary"
+    name="twitter:card"
+  />
+  <meta
+    content="@handle"
+    name="twitter:creator"
+  />
+  <meta
+    content="My Post"
+    name="twitter:title"
+  />
+  <meta
+    content="This is another description"
+    name="twitter:description"
+  />
+</HelmetWrapper>
+`;
+
 exports[`components SEO does not index draft posts 1`] = `
 <HelmetWrapper
   defer={true}

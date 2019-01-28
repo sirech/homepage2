@@ -35,6 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
                     categories
                     date(formatString: "YYYY/MM/DD")
                     draft
+                    description
                   }
                 }
               }

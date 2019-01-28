@@ -70,15 +70,24 @@ const getSchemaOrgJSONLD = ({
     : schemaOrgJSONLD
 }
 
+const buildDescription = post => {
+  const description = get(post, 'frontmatter.description')
+  return (
+    description ||
+    get(post, 'html')
+      .replace(/<figure>[\s\S]*<\/figure>/s, '')
+      .replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '')
+      .substr(0, 200)
+  )
+}
+
 const SEO = ({ isBlogPost, post, site }) => {
   const title = get(post, 'frontmatter.title')
   const siteTitle = get(site, 'siteMetadata.title')
   const author = get(site, 'siteMetadata.author')
   const date = isBlogPost ? get(post, 'frontmatter.date') : false
 
-  const description = get(post, 'html')
-    .replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '')
-    .substr(0, 200)
+  const description = buildDescription(post)
 
   const siteUrl = get(site, 'siteMetadata.url')
   const url = siteUrl + get(post, 'frontmatter.path')

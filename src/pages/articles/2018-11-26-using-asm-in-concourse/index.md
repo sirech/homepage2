@@ -9,6 +9,7 @@ categories:
   - AWS Secrets Manager
   - Concourse CI
 draft: false
+description: "Connecting Concourse CI with AWS Secrets Manager offers you a way of conveniently using secrets in a safe manner"
 ---
 
 <figure class="figure figure--right">

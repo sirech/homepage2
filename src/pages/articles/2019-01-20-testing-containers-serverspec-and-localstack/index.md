@@ -9,6 +9,7 @@ categories:
   - AWS
   - localstack
 draft: false
+description: "Testing containers with ServerSpec can be augmented through localstack to test more complex setups with dependencies"
 ---
 
 <figure class="figure figure--right">

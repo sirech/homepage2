@@ -62,6 +62,7 @@ export const pageQuery = graphql`
         categories
         date(formatString: "YYYY/MM/DD")
         draft
+        description
       }
     }
   }
