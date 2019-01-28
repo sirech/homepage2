@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import { addIndex, map } from 'ramda'
+
 import Link from 'gatsby-link'
-import forEach from 'lodash/forEach'
-import get from 'lodash/get'
 import Container from '../Container'
 
 import styles from './style.module.scss'
@@ -37,25 +37,18 @@ class SitePost extends React.Component {
   }
 
   categories(data) {
-    const categories = []
-    forEach(data, (item, i) => {
-      categories.push(
-        <span className="badge badge-primary text-white mr-1" key={i}>
-          {item}
-        </span>
-      )
-    })
-    return categories
+    return addIndex(map)((item, i) => (
+      <span className="badge badge-primary text-white mr-1" key={i}>
+        {item}
+      </span>
+    ))(data)
   }
 
   render() {
     const { data, isIndex } = this.props
-    const title = get(data, 'frontmatter.title')
-    const path = get(data, 'frontmatter.path')
-    const date = get(data, 'frontmatter.date')
-    const html = get(data, 'html')
-    const cate =
-      get(data, 'frontmatter.category') || get(data, 'frontmatter.categories')
+    const { frontmatter, html } = data
+    const { title, path, date, category, categories } = frontmatter
+    const cate = category || categories
     const isMore = isIndex && !!html.match('<!--more-->')
 
     return (

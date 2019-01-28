@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import get from 'lodash/get'
+import { path as Rpath } from 'ramda'
 
 import SitePost from '../components/SitePost'
 import SitePage from '../components/SitePage'
@@ -12,9 +12,9 @@ import postType from '../prop-types/post'
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = get(this, 'props.data.post')
-    const site = get(this, 'props.data.site')
-    const layout = get(post, 'frontmatter.layout')
+    const { data } = this.props
+    const { post, site } = data
+    const layout = Rpath(['frontmatter', 'layout'])(post)
     const isBlogPost = layout !== 'page'
 
     let template = ''

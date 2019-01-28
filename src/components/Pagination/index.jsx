@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import _ from 'lodash'
 import Link from 'gatsby-link'
+import { range } from 'ramda'
 
 import Container from '../Container'
 
@@ -24,7 +24,7 @@ const next = index => (
 )
 
 const pages = (index, pageCount) =>
-  _.range(1, pageCount + 1).map(pageNumber => (
+  range(1, pageCount + 1).map(pageNumber => (
     <li
       className={cx('page-item', { active: pageNumber === index })}
       key={pageNumber}

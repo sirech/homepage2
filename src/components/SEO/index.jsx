@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
-import get from 'lodash/get'
+import { path as Rpath } from 'ramda'
 
 import siteType from '../../prop-types/site'
 
@@ -71,10 +71,10 @@ const getSchemaOrgJSONLD = ({
 }
 
 const buildDescription = post => {
-  const description = get(post, 'frontmatter.description')
+  const description = Rpath(['frontmatter', 'description'])(post)
   return (
     description ||
-    get(post, 'html')
+    post.html
       .replace(/<figure>[\s\S]*<\/figure>/s, '')
       .replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '')
       .substr(0, 200)
@@ -82,17 +82,18 @@ const buildDescription = post => {
 }
 
 const SEO = ({ isBlogPost, post, site }) => {
-  const title = get(post, 'frontmatter.title')
-  const siteTitle = get(site, 'siteMetadata.title')
-  const author = get(site, 'siteMetadata.author')
-  const date = isBlogPost ? get(post, 'frontmatter.date') : false
+  const title = Rpath(['frontmatter', 'title'])(post)
+  const siteTitle = Rpath(['siteMetadata', 'title'])(site)
+  const author = Rpath(['siteMetadata', 'author'])(site)
+
+  const date = isBlogPost ? Rpath(['frontmatter', 'date'])(post) : false
 
   const description = buildDescription(post)
 
-  const siteUrl = get(site, 'siteMetadata.url')
-  const url = siteUrl + get(post, 'frontmatter.path')
+  const siteUrl = Rpath(['siteMetadata', 'url'])(site)
+  const url = siteUrl + Rpath(['frontmatter', 'path'])(post)
 
-  const draft = get(post, 'frontmatter.draft')
+  const draft = Rpath(['frontmatter', 'draft'])(post)
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
     isBlogPost,
@@ -133,7 +134,7 @@ const SEO = ({ isBlogPost, post, site }) => {
       <meta name="twitter:card" content="summary" />
       <meta
         name="twitter:creator"
-        content={get(site, 'siteMetadata.twitter')}
+        content={Rpath(['siteMetadata', 'twitter'])(site)}
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />

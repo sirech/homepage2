@@ -1,6 +1,6 @@
-const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
+const R = require('ramda')
 
 const createPaginatedPages = require('gatsby-paginate')
 
@@ -58,12 +58,12 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         // Create blog posts pages.
-        _.each(result.data.allMarkdownRemark.posts, edge => {
+        R.forEach(edge => {
           createPage({
             path: edge.post.frontmatter.path,
             component: path.resolve('./src/templates/blog-post.js'),
           })
-        })
+        })(result.data.allMarkdownRemark.posts)
       })
     )
   })
