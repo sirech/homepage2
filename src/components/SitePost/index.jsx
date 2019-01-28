@@ -54,8 +54,6 @@ class SitePost extends React.Component {
     const path = get(data, 'frontmatter.path')
     const date = get(data, 'frontmatter.date')
     const html = get(data, 'html')
-    const description =
-      get(data, 'frontmatter.description') || this.description(html)
     const cate =
       get(data, 'frontmatter.category') || get(data, 'frontmatter.categories')
     const isMore = isIndex && !!html.match('<!--more-->')
@@ -73,7 +71,9 @@ class SitePost extends React.Component {
             </header>
             <section
               className={cx(`${styles.pageContent}`)}
-              dangerouslySetInnerHTML={{ __html: isMore ? description : html }}
+              dangerouslySetInnerHTML={{
+                __html: isMore ? this.description(html) : html,
+              }}
             />
             {isMore ? this.more(path) : ''}
           </article>
