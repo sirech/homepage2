@@ -1,6 +1,6 @@
 import React from 'react'
 
-import standardHelmet from '../../util/standardHelmet'
+import StandardHelmet from '../../util/StandardHelmet'
 import TalkList from '../../components/TalkList'
 import Container from '../../components/Container'
 
@@ -8,7 +8,7 @@ class Talks extends React.Component {
   render() {
     return (
       <main>
-        {standardHelmet({
+        {StandardHelmet({
           title: 'Talks',
           description:
             'I used to hate talking in front of people, but after doing presentations for a while, at some point I started to like it. Still have plenty to learn though.',
