@@ -1,0 +1,69 @@
+version: 2
+jobs:
+  build:
+
+    working_directory: ~/app
+
+    docker:
+      - image: circleci/node:11.10.1
+
+    steps:
+
+      - checkout
+      - run: yarn
+      - run: yarn run linter:js
+      - run: yarn run linter:css
+      - run: yarn run linter:text
+      - run: yarn test --coverage --runInBand
+      - run:
+          name: Upload coverage results
+          command: |
+            cat coverage/lcov.info | node_modules/.bin/coveralls
+          when: always
+      - run: bin/audit
+      - run:
+          name: Build and package
+          command: |
+            SITE_URL=$SITE_URL TRACKING_ID=$TRACKING_ID yarn run build
+            find public -regextype posix-basic -regex '.*\.\(js\|css\)\(.map\)\?$' -print0 | xargs --null -I@ sh -c "gzip -c @ > @.gz"
+
+      - persist_to_workspace:
+          root: public
+          paths:
+            - "*"
+
+  deploy:
+
+    docker:
+      - image: circleci/node:11.10.1
+
+    steps:
+
+      - add_ssh_keys:
+      - attach_workspace:
+          at: public
+      - run: scp -o StrictHostKeyChecking=no -r public $DEPLOY_USER@$DEPLOY_HOST:/tmp/homepage2-${CIRCLE_BUILD_NUM}
+      - run: ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "sh ${DEPLOY_PATH}/bin/promote /tmp/homepage2-${CIRCLE_BUILD_NUM} /srv/main"
+
+  healthcheck:
+
+    docker:
+      - image: circleci/node:11.10.1
+
+    steps:
+      - run: curl --connect-timeout 60 -s -f -o /dev/null "${SITE_URL}"
+
+workflows:
+  version: 2
+  cd_pipeline:
+    jobs:
+      - build
+      - deploy:
+          filters:
+            branches:
+              only: master
+          requires:
+            - build
+      - healthcheck:
+          requires:
+            - deploy
