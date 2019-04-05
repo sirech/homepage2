@@ -32,11 +32,15 @@ export const talks = [
     'Angular state management',
   ],
   [
-    'https://github.com/sirech/talks/blob/master/2019-01-tw-concourse_ci.pdf',
+    'https://github.com/sirech/talks/raw/master/2019-01-tw-concourse_ci.pdf',
     'Concourse CI',
   ],
   [
-    'https://github.com/sirech/talks/blob/master/2019-01-tw-tdd_containers.pdf',
+    'https://github.com/sirech/talks/raw/master/2019-01-tw-tdd_containers.pdf',
     'TDD for Containers',
+  ],
+  [
+    'https://github.com/sirech/talks/raw/master/2019-04-tw-build_pipelines.pdf',
+    "Build pipelines that don't suck",
   ],
 ].reverse()
