@@ -56,7 +56,7 @@ jobs:
   e2e:
 
     docker:
-      - image: cypress/browsers:chrome67
+      - image: cypress/browsers:node11.13.0-chrome73
 
     steps:
 
