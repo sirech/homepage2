@@ -23,7 +23,7 @@ goal_test-js() {
 }
 
 goal_test-e2e() {
-  CYPRESS_baseUrl=${SITE_URL?Site Url is not defined} npm run e2e
+  CYPRESS_baseUrl=${SITE_URL?Site Url is not defined} npm run e2e -- "$@"
 }
 
 goal_run() {
