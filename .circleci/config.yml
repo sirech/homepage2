@@ -62,7 +62,7 @@ jobs:
 
       - checkout
       - run: yarn
-      - run: ./go test-e2e
+      - run: ./go test-e2e --record
 
 workflows:
   version: 2
