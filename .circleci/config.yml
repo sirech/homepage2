@@ -1,15 +1,14 @@
-version: 2.1
-executors:
-  node-executor:
+version: 2
+jobs:
+  build:
+
     working_directory: ~/app
+
     docker:
       - image: circleci/node:11.13
 
-jobs:
-  build:
-    executor: node-executor
-
     steps:
+
       - checkout
       - run: yarn
       - run: ./go linter-js
@@ -34,9 +33,12 @@ jobs:
             - "*"
 
   deploy:
-    executor: node-executor
+
+    docker:
+      - image: circleci/node:11.13
 
     steps:
+
       - add_ssh_keys:
       - attach_workspace:
           at: public
@@ -44,10 +46,12 @@ jobs:
       - run: ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "sh ${DEPLOY_PATH}/bin/promote /tmp/homepage2-${CIRCLE_BUILD_NUM} /srv/main"
 
   e2e:
+
     docker:
       - image: cypress/browsers:node11.13.0-chrome73
 
     steps:
+
       - checkout
       - run: yarn
       - run: ./go test-e2e --record
