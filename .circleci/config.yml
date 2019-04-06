@@ -45,14 +45,6 @@ jobs:
       - run: scp -o StrictHostKeyChecking=no -r public $DEPLOY_USER@$DEPLOY_HOST:/tmp/homepage2-${CIRCLE_BUILD_NUM}
       - run: ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "sh ${DEPLOY_PATH}/bin/promote /tmp/homepage2-${CIRCLE_BUILD_NUM} /srv/main"
 
-  healthcheck:
-
-    docker:
-      - image: circleci/node:11.10.1
-
-    steps:
-      - run: curl --connect-timeout 60 -s -f -o /dev/null "${SITE_URL}"
-
   e2e:
 
     docker:
@@ -66,7 +58,7 @@ jobs:
 
 workflows:
   version: 2
-  cd_pipeline:
+  pipeline:
     jobs:
       - build
       - deploy:
@@ -75,9 +67,6 @@ workflows:
               only: master
           requires:
             - build
-      - healthcheck:
-          requires:
-            - deploy
       - e2e:
           requires:
-            - healthcheck
+            - deploy
