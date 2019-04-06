@@ -11,9 +11,9 @@ jobs:
 
       - checkout
       - run: yarn
-      - run: yarn run linter:js
-      - run: yarn run linter:css
-      - run: yarn run linter:text
+      - run: ./go linter-js
+      - run: ./go linter-css
+      - run: ./go linter-text
       - run: yarn test --coverage --runInBand
       - run:
           name: Upload coverage results
@@ -62,7 +62,7 @@ jobs:
 
       - checkout
       - run: yarn
-      - run: yarn run e2e
+      - run: ./go test-e2e
 
 workflows:
   version: 2
