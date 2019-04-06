@@ -43,6 +43,7 @@
     "babel-jest": "^24.5.0",
     "bootstrap": "^4.1.1",
     "coveralls": "^3.0.0",
+    "cypress": "^3.2.0",
     "devicon-2.2": "^2.2.0",
     "emergence.js": "^1.1.2",
     "enzyme": "^3.3.0",
@@ -109,7 +110,8 @@
     "linter:css": "node_modules/.bin/stylelint \"src/**/*.scss\"",
     "linter:text": "textlint \"src/pages/**/index.md\"",
     "linter:textfix": "textlint --fix \"src/pages/**/index.md\"",
-    "test": "jest"
+    "test": "jest",
+    "e2e": "cypress run"
   },
   "peerDependencies": {
     "prismjs": "^1.13.0",

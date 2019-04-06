@@ -53,6 +53,17 @@ jobs:
     steps:
       - run: curl --connect-timeout 60 -s -f -o /dev/null "${SITE_URL}"
 
+  e2e:
+
+    docker:
+      - image: cypress/browsers:chrome67
+
+    steps:
+
+      - checkout
+      - run: yarn
+      - run: yarn run e2e
+
 workflows:
   version: 2
   cd_pipeline:
@@ -67,3 +78,6 @@ workflows:
       - healthcheck:
           requires:
             - deploy
+      - e2e:
+          requires:
+            - healthcheck

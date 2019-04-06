@@ -22,6 +22,10 @@ goal_test-js() {
   npm test
 }
 
+goal_test-e2e() {
+  CYPRESS_baseUrl=${SITE_URL?Site Url is not defined} npm run e2e
+}
+
 goal_run() {
   npm run develop
 }
@@ -52,6 +56,7 @@ else
   linter-text              -- Run the linter for text files
 
   test-js                  -- Run unit tests
+  test-e2e                 -- Run e2e tests
 
   run                      -- Run the development server
 
