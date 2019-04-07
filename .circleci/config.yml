@@ -10,7 +10,13 @@ jobs:
     steps:
 
       - checkout
+      - restore_cache:
+          key: npm-{{ checksum "yarn.lock" }}
       - run: yarn
+      - save_cache:
+          key: npm-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
       - run: ./go linter-js
       - run: ./go linter-css
       - run: ./go linter-text
@@ -53,7 +59,13 @@ jobs:
     steps:
 
       - checkout
+      - restore_cache:
+          key: npm-{{ checksum "yarn.lock" }}
       - run: yarn
+      - save_cache:
+          key: npm-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
       - run: ./go test-e2e --record
 
 workflows:
