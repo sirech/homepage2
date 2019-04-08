@@ -69,7 +69,7 @@ You can use a lot more granularity, and have a `{{.Team}}` or `{{.Pipeline}}` in
 
 We are not yet there, though. _Concourse_ needs to be able to access those secrets. You can pass it credentials, but a more secure method is to define an _IAM Role_, as the documentation mentions. This example will work if you are running your CI on EC2. First, the policy
 
-```terraform
+```hcl
 resource "aws_iam_policy" "concourse-ci-web" {
   name   = "${aws_iam_role.concourse-ci-web.name}"
   policy = "${data.aws_iam_policy_document.concourse-ci.json}"
@@ -96,7 +96,7 @@ data "aws_iam_policy_document" "concourse-ci" {
 
 then that policy gets connected to a role that is assumed by EC2
 
-```terraform
+```hcl
 resource "aws_iam_role" "concourse-ci-web" {
   name               = "concourse-ci-web"
   assume_role_policy = "${data.aws_iam_policy_document.assume_role_policy_ec2.json}"
@@ -115,7 +115,7 @@ resource "aws_iam_role_policy_attachment" "concourse-ci-web" {
 
 and finally the policy for assuming the role
 
-```terraform
+```hcl
 data "aws_iam_policy_document" "assume_role_policy_ec2" {
   statement {
     effect  = "Allow"
