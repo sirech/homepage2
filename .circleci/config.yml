@@ -26,7 +26,6 @@ jobs:
           command: |
             cat coverage/lcov.info | node_modules/.bin/coveralls
           when: always
-      - run: bin/audit
       - run:
           name: Build and package
           command: |
