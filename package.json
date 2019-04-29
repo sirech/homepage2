@@ -38,7 +38,7 @@
     "react-lazyload": "^2.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.3",
+    "@babel/core": "^7.4.4",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.7.1",
     "bootstrap": "^4.1.1",
