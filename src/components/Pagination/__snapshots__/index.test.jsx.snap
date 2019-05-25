@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components Pagination disables back link if we are on the first page 1`] = `
-<Container>
+<div
+  className="container"
+>
   <nav
     className="mt-4"
   >
@@ -11,89 +13,86 @@ exports[`components Pagination disables back link if we are on the first page 1`
       <li
         className="page-item disabled"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/0"
+          href="/blog/0"
         >
           <i
             className="fa fa-caret-left"
           />
-        </Component>
+        </a>
       </li>
       <li
         className="page-item active"
-        key="1"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/"
+          href="/blog/"
         >
           1
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
-        key="2"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/2"
+          href="/blog/2"
         >
           2
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
-        key="3"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/3"
+          href="/blog/3"
         >
           3
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
-        key="4"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/4"
+          href="/blog/4"
         >
           4
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
-        key="5"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/5"
+          href="/blog/5"
         >
           5
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/2"
+          href="/blog/2"
         >
           <i
             className="fa fa-caret-right"
           />
-        </Component>
+        </a>
       </li>
     </ul>
   </nav>
-</Container>
+</div>
 `;
 
 exports[`components Pagination disables next link if we are on the last page 1`] = `
-<Container>
+<div
+  className="container"
+>
   <nav
     className="mt-4"
   >
@@ -103,89 +102,86 @@ exports[`components Pagination disables next link if we are on the last page 1`]
       <li
         className="page-item"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/4"
+          href="/blog/4"
         >
           <i
             className="fa fa-caret-left"
           />
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
-        key="1"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/"
+          href="/blog/"
         >
           1
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
-        key="2"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/2"
+          href="/blog/2"
         >
           2
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
-        key="3"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/3"
+          href="/blog/3"
         >
           3
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
-        key="4"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/4"
+          href="/blog/4"
         >
           4
-        </Component>
+        </a>
       </li>
       <li
         className="page-item active"
-        key="5"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/5"
+          href="/blog/5"
         >
           5
-        </Component>
+        </a>
       </li>
       <li
         className="page-item disabled"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/6"
+          href="/blog/6"
         >
           <i
             className="fa fa-caret-right"
           />
-        </Component>
+        </a>
       </li>
     </ul>
   </nav>
-</Container>
+</div>
 `;
 
 exports[`components Pagination renders correctly 1`] = `
-<Container>
+<div
+  className="container"
+>
   <nav
     className="mt-4"
   >
@@ -195,89 +191,86 @@ exports[`components Pagination renders correctly 1`] = `
       <li
         className="page-item"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/2"
+          href="/blog/2"
         >
           <i
             className="fa fa-caret-left"
           />
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
-        key="1"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/"
+          href="/blog/"
         >
           1
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
-        key="2"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/2"
+          href="/blog/2"
         >
           2
-        </Component>
+        </a>
       </li>
       <li
         className="page-item active"
-        key="3"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/3"
+          href="/blog/3"
         >
           3
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
-        key="4"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/4"
+          href="/blog/4"
         >
           4
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
-        key="5"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/5"
+          href="/blog/5"
         >
           5
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/4"
+          href="/blog/4"
         >
           <i
             className="fa fa-caret-right"
           />
-        </Component>
+        </a>
       </li>
     </ul>
   </nav>
-</Container>
+</div>
 `;
 
 exports[`components Pagination renders correctly if it links to the first page 1`] = `
-<Container>
+<div
+  className="container"
+>
   <nav
     className="mt-4"
   >
@@ -287,83 +280,78 @@ exports[`components Pagination renders correctly if it links to the first page 1
       <li
         className="page-item"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/"
+          href="/blog/"
         >
           <i
             className="fa fa-caret-left"
           />
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
-        key="1"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/"
+          href="/blog/"
         >
           1
-        </Component>
+        </a>
       </li>
       <li
         className="page-item active"
-        key="2"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/2"
+          href="/blog/2"
         >
           2
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
-        key="3"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/3"
+          href="/blog/3"
         >
           3
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
-        key="4"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/4"
+          href="/blog/4"
         >
           4
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
-        key="5"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/5"
+          href="/blog/5"
         >
           5
-        </Component>
+        </a>
       </li>
       <li
         className="page-item"
       >
-        <Component
+        <a
           className="page-link"
-          to="/blog/3"
+          href="/blog/3"
         >
           <i
             className="fa fa-caret-right"
           />
-        </Component>
+        </a>
       </li>
     </ul>
   </nav>
-</Container>
+</div>
 `;

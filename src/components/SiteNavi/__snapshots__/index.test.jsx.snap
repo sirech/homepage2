@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components SiteNavi renders correctly 1`] = `
+<nav
+  className="navbar navbar-expand navbar-dark flex-column flex-md-row bg-dark"
+>
+  <a
+    className="text-center"
+    href="/"
+  >
+    <h1
+      className="navbar-brand mb-0 mr-sm-0 mr-md-2"
+    >
+      title
+    </h1>
+  </a>
+  <div
+    className="navbar-nav-scroll"
+  >
+    <ul
+      className="navbar-nav bd-navbar-nav flex-row"
+    >
+      <li
+        className="nav-item active"
+      >
+        <a
+          className="nav-link"
+          href="/"
+        >
+          About
+        </a>
+      </li>
+      <li
+        className="nav-item"
+      >
+        <a
+          className="nav-link"
+          href="/talks/"
+        >
+          Talks
+        </a>
+      </li>
+      <li
+        className="nav-item"
+      >
+        <a
+          className="nav-link"
+          href="/blog/"
+        >
+          Blog
+        </a>
+      </li>
+    </ul>
+  </div>
+  <ul
+    className="navbar-icons navbar-nav flex-row ml-md-auto d-md-flex"
+  >
+    <li
+      className="icon nav-item"
+    >
+      <a
+        aria-label="RSS Feed"
+        className="nav-link"
+        href="/rss.xml"
+      >
+        <i
+          className="fa fa-rss fa-lg"
+        />
+      </a>
+    </li>
+    <li
+      className="icon nav-item"
+    >
+      <a
+        aria-label="StackOverflow Profile"
+        className="nav-link"
+        href="https://github.com/sirech"
+        target="_blank"
+      >
+        <i
+          className="fa fa-github-square fa-lg"
+        />
+      </a>
+    </li>
+    <li
+      className="icon nav-item"
+    >
+      <a
+        aria-label="StackOverflow Profile"
+        className="nav-link"
+        href="https://stackoverflow.com/users/3785/mario-f"
+        target="_blank"
+      >
+        <i
+          className="fa fa-stack-overflow fa-lg"
+        />
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

@@ -1,17 +1,16 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
+import renderer from 'react-test-renderer'
 import Container from './index'
 
 describe('components', () => {
   describe('Container', () => {
     it('renders correctly', () => {
-      const component = shallow(
+      const component = renderer.create(
         <Container>
           <p>Text</p>
         </Container>
       )
-      expect(toJson(component)).toMatchSnapshot()
+      expect(component.toJSON()).toMatchSnapshot()
     })
   })
 })

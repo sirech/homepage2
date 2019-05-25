@@ -1,12 +1,12 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import renderer from 'react-test-renderer'
 import TalkList from './index'
 
 describe('components', () => {
   describe('TalkList', () => {
     it('renders correctly', () => {
-      const component = shallow(<TalkList />)
-      expect(component).toHaveLength(1)
+      const component = renderer.create(<TalkList />)
+      expect(component).not.toBeNull()
     })
   })
 })

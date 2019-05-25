@@ -1,12 +1,12 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import renderer from 'react-test-renderer'
 import Techs from './index'
 
 describe('components', () => {
   describe('Techs', () => {
     it('renders correctly', () => {
-      const component = shallow(<Techs />)
-      expect(component).toHaveLength(1)
+      const component = renderer.create(<Techs />)
+      expect(component).not.toBeNull()
     })
   })
 })

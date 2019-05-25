@@ -1,6 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
+import renderer from 'react-test-renderer'
 import SitePost from './index'
 
 import frontmatter from '../../fixtures/frontmatter'
@@ -10,8 +9,8 @@ describe('components', () => {
   describe('SitePost', () => {
     it('renders correctly', () => {
       const data = { html: html(), frontmatter: frontmatter() }
-      const component = shallow(<SitePost data={data} />)
-      expect(toJson(component)).toMatchSnapshot()
+      const component = renderer.create(<SitePost data={data} />)
+      expect(component.toJSON()).toMatchSnapshot()
     })
   })
 })

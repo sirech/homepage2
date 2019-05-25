@@ -1,6 +1,19 @@
 import React from 'react'
 
-const mockComponent = name => props =>
-  React.createElement(name, props, props.children)
-
-export default mockComponent('MockedLink')
+export default jest.fn().mockImplementation(
+  // these props are invalid for an `a` tag
+  ({
+    activeClassName,
+    activeStyle,
+    getProps,
+    innerRef,
+    ref,
+    replace,
+    to,
+    ...rest
+  }) =>
+    React.createElement('a', {
+      ...rest,
+      href: to,
+    })
+)

@@ -8,6 +8,7 @@ module.exports = {
   },
   setupFiles: ['<rootDir>/setupTests.js'],
   testPathIgnorePatterns: ['/node_modules/', '<rootDir>/.cache/'],
+  transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],
   globals: {
     __PATH_PREFIX__: '',
   },

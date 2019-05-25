@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components SitePage renders correctly 1`] = `
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<div></div>",
+    }
+  }
+/>
+`;

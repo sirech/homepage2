@@ -1,22 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components SitePost renders correctly 1`] = `
-<Container>
+<div
+  className="container"
+>
   <div
     className="articles"
   >
     <article
       className="article"
-      key="/the-post"
     >
       <header>
-        <Component
+        <a
+          href="/the-post"
           style={
             Object {
               "boxShadow": "none",
             }
           }
-          to="/the-post"
         >
           <h1>
             My Post
@@ -26,16 +27,14 @@ exports[`components SitePost renders correctly 1`] = `
           >
             2018/03/01
           </time>
-        </Component>
+        </a>
         <span
           className="badge badge-primary text-white mr-1"
-          key="0"
         >
           JavaScript
         </span>
         <span
           className="badge badge-primary text-white mr-1"
-          key="1"
         >
           React
         </span>
@@ -52,7 +51,8 @@ exports[`components SitePost renders correctly 1`] = `
           }
         }
       />
+      
     </article>
   </div>
-</Container>
+</div>
 `;
