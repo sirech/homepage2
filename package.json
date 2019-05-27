@@ -46,7 +46,7 @@
     "devicon-2.2": "^2.2.0",
     "emergence.js": "^1.1.2",
     "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-adapter-react-16": "^1.13.2",
     "enzyme-to-json": "^3.3.4",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.2.0",
