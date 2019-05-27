@@ -13,13 +13,13 @@ draft: false
 description: "When working with Kotlin you might need to build some non trivial mocks that need to be verified. Here is how to do it by combining MockK and Atrium"
 ---
 
-I have been working with [Kotlin](https://kotlinlang.org/) a lot lately. It is a really awesome language. Elegant, powerful and succint, it fixes most of the annoyances that I had with _Java_, yet it keeps a certain amount of familiarity that allows the transition from it to be very manageable.
+I have been working with [Kotlin](https://kotlinlang.org/) a lot lately. It is a really awesome language. Elegant, powerful and succinct, it fixes most of the annoyances that I had with _Java_, yet it keeps a certain amount of familiarity that allows the transition from it to be very manageable.
 
 Anyhow, I found myself recently having to build a filter in [SpringBoot](https://spring.io/) that I wanted to test. For that I needed to use both a mock and verify that behavior at the same time. _Kotlin_ is evolving quite fast and there are plenty of alternatives to choose from. I will show how to do this with two excellent libraries, [MockK](https://mockk.io/), and [Atrium](https://docs.atriumlib.org/).
 
 <!--more-->
 
-# MockK and Atrium, a powerful combo
+## MockK and Atrium, a powerful combo
 
 In the short time that I have been developing _Kotlin_, I've noticed a pattern. Whenever you need something not provided in the standard library, you tend to start by using the existing _Java_ library that you are familiar with. Then, at some point, you figure out there is a native _Kotlin_ library that leverages the features from the language better.
 
@@ -36,7 +36,7 @@ verify { car.drive(Direction.NORTH) }
 
 Meanwhile, _Atrium_ is less established, but after getting the recommendation from a colleague, I gave it a try. It uses `expect`, so for somebody like me who is used to _RSpec_ it is already a win. Anyhow, the syntax takes some time to get used to, but it can be quite expressive. I particularly like combining it with data classes to have exactly one assertion per test instead of many.
 
-# The problem at hand
+## The problem at hand
 
 What I was trying to build was not particularly complex. I wanted to write a filter for a _SpringBoot_ application that would inject some headers into the request based on some logic. All controllers would use these values transparently, without having to care about the computation. The filter looks like this.
 
@@ -61,7 +61,7 @@ I want to test two things:
 - The `filterChain` should be called with my `wrappedRequest`
 - The `wrappedRequest` should have the correct header in it
 
-## Setting up the test
+### Setting up the test
 
 I am using [JUnit 5](https://junit.org/junit5/) for the test (Speaking of native libraries, I haven't tried something like [Spock](https://dzone.com/articles/testing-kotlin-with-spock-part-1-object) yet). The basic setup of the test requires to set up the filter and the mocks that I need.
 
@@ -84,7 +84,7 @@ internal class FilterTest {
 
 I am using annotations to initialize the mocks (which requires annotating the test with `MockKExtension`). My `filterChain` is a `RelaxedMockK`, which means that its methods will return a default value unless otherwise specified.
 
-## A very simple test
+### A very simple test
 
 If I just want to check that the method is being called, I don't really need much
 
@@ -96,7 +96,7 @@ fun `calls the next step in the filter`() {
 }
 ```
 
-## Testing the wrapped request
+### Testing the wrapped request
 
 The previous test is OK, but it is a bit bland for my taste. I want to make sure that that the `filterChain` is being called with my `wrappedRequest`, and that it contains the header I injected. This test becomes much more interesting
 
