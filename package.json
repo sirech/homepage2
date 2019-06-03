@@ -6,7 +6,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "gatsby": "^2.7.1",
-    "gatsby-paginate": "^1.0.17",
+    "gatsby-paginate": "^1.0.18",
     "gatsby-plugin-canonical-urls": "^2.0.13",
     "gatsby-plugin-catch-links": "^2.0.15",
     "gatsby-plugin-favicon": "^3.1.4",
