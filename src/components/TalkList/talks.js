@@ -43,4 +43,8 @@ export const talks = [
     'https://github.com/sirech/talks/raw/master/2019-04-tw-build_pipelines.pdf',
     "Build pipelines that don't suck",
   ],
+  [
+    'https://github.com/sirech/talks/raw/master/2019-06-cd_as_business_advantage.pdf',
+    'Continuous Delivery as a business advantage',
+  ],
 ].reverse()
