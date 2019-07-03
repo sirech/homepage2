@@ -47,4 +47,8 @@ export const talks = [
     'https://github.com/sirech/talks/raw/master/2019-06-cd_as_business_advantage.pdf',
     'Continuous Delivery as a business advantage',
   ],
+  [
+    'https://github.com/sirech/talks/blob/master/2019-07-tw-kotlin_microservices.pdf',
+    'Building microservices in Kotlin',
+  ],
 ].reverse()
