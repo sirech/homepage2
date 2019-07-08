@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "babel-jest": "^24.7.1",
-    "babel-preset-gatsby": "^0.2.0",
+    "babel-preset-gatsby": "^0.2.1",
     "bootstrap": "^4.1.1",
     "coveralls": "^3.0.0",
     "cypress": "^3.3.2",
