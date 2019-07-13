@@ -38,7 +38,7 @@ goal_all() {
   goal_linter-js
   goal_linter-css
   goal_linter-text
-  goal_test-js
+  CI=t goal_test-js
   SITE_URL=http://test.com goal_build
 }
 
