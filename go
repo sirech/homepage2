@@ -27,7 +27,7 @@ goal_test-e2e() {
 }
 
 goal_run() {
-  npm run develop
+  SITE_URL=http://localhost:8000 npm run develop
 }
 
 goal_build() {
