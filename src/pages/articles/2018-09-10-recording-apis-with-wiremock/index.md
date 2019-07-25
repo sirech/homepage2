@@ -29,7 +29,7 @@ I know this idea from the Ruby world, concretely [VCR](https://github.com/vcr/vc
 
 Following the [Testing Pyramid](https://martinfowler.com/bliki/TestPyramid.html), we want to have most of our tests at the lowest possible level. Unit tests should not be doing network requests. On the other hand, if we use mocks, they should be close to the source, ideally based on actual requests.
 
-If we have these mocks already, why not use them for our local development? I want my app to boot app and quickly show something, agian without the need to connect to the outside.
+If we have these mocks already, why not use them for our local development? I want my app to boot and quickly show something, agian without the need to connect to the outside.
 
 And, I want automation. Editing `.json` files by hand is a recipe for errors and outdated data. I want to avoid friction.
 
@@ -43,7 +43,7 @@ I have this [repository in Github](https://github.com/sirech/example-wiremock-re
   <img src="https://github.com/sirech/example-wiremock-recorder/raw/master/images/diagram.png" alt="Recording the API" />
 </figure>
 
-For the example API, I took this very useful [sample API](jsonplaceholder.typicode.com). There are four pieces to take into account in this setup.
+For the example API, I took this very useful [sample API](https://jsonplaceholder.typicode.com/). There are four pieces to take into account in this setup.
 
 ### Production
 
@@ -83,7 +83,7 @@ public class MockServerInitializer {
 }
 ```
 
-It is important to set `mock.active` to `false` for any non-development environment. Other than that, we configuration points to the local server instead of the real API:
+It is important to set `mock.active` to `false` for any non-development environment. Other than that, the configuration points to the local server instead of the real API:
 
 ```yaml
 serverUrl: http://localhost:${mock.port}
@@ -163,7 +163,7 @@ public abstract class RecordingTest {
 
 This class proxies all the requests to the real API, and stores them in the default folder when configured.
 
-Why not every time? We don't want new files being created each time a test runs. Instead, this is a conscious decission, triggered with this script target:
+Why not every time? We don't want new files being created each time a test runs. Instead, this is a conscious decision, triggered with this script target:
 
 ```bash
 goal_refresh-recordings() {
