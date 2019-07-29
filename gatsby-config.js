@@ -1,5 +1,4 @@
 const siteUrl = process.env.SITE_URL || 'example.com'
-const trackingId = process.env.TRACKING_ID || '123'
 
 module.exports = {
   siteMetadata: {
@@ -126,15 +125,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: trackingId,
-        head: false,
-        anonymize: true,
-        respectDNT: true,
-      },
-    },
-    {
       resolve: `gatsby-plugin-csp`,
       options: {
         disableOnDev: true,
@@ -143,10 +133,10 @@ module.exports = {
         mergeStyleHashes: false, // you can disable styles sha256 hashes
         mergeDefaultDirectives: true,
         directives: {
-          'script-src': "'self' www.google-analytics.com",
+          'script-src': "'self'",
           'style-src': "'self' 'unsafe-inline'",
-          'img-src': "'self' data: www.google-analytics.com",
-          'connect-src': "'self' https://www.google-analytics.com/j/collect",
+          'img-src': "'self'",
+          'connect-src': "'self'",
         },
       },
     },

@@ -29,7 +29,7 @@ jobs:
       - run:
           name: Build and package
           command: |
-            SITE_URL=$SITE_URL TRACKING_ID=$TRACKING_ID yarn run build
+            SITE_URL=$SITE_URL yarn run build
             find public -regextype posix-basic -regex '.*\.\(js\|css\)\(.map\)\?$' -print0 | xargs --null -I@ sh -c "gzip -c @ > @.gz"
 
       - persist_to_workspace:
