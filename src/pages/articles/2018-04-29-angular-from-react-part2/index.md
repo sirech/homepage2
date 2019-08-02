@@ -22,7 +22,7 @@ draft: false
 
 </div>
 
-The first part of the series was about the first steps when setting up _Angular_. In this post I want to talk about testing. This has been the part that has disappointed me the most thus far. Compared to something like [Jest](https://facebook.github.io/jest/), it does not seem to be that straightforward to set up your testing. Writing new tests for _Angular_ reminds me to an old project where we used [QUnit](http://qunitjs.com/), where writing JS Tests was something that everybody actively tried to avoid.
+The first part of the series was about the first steps when setting up _Angular_. In this post I want to talk about testing. This has been the part that has disappointed me the most thus far. Compared to something like [Jest](https://facebook.github.io/jest/), it does not seem to be that straightforward to set up your testing. Writing new tests for _Angular_ reminds me of an old project where we used [QUnit](http://qunitjs.com/), where writing JS Tests was something that everybody actively tried to avoid.
 
 ## The importance of testing
 
@@ -50,7 +50,7 @@ npm t
 
 For reasons that I do not quite understand, even running simple unit tests requires launching an instance of _Headless Chrome_. Coming from _Jest_, having to wait two minutes to run a single test drives me crazy. In theory there is a watch mode, but I was told that, at least on our project, it was not reliable at picking up changes.
 
-And speaking of running single tests, the only way I have found to run single tests is to use `fit` or `fdescribe` blocks, which is quite inconvenient. [It seems](https://stackoverflow.com/a/43669082/3785) that there is no easy way of achieving this, so I might have to give the watch mode another try. For now we had to configure [tslint](https://palantir.github.io/tslint/) so that it fails when you accidentally commit this blocks. Otherwise you might disable most of your test suite by mistake.
+And speaking of running single tests, the only way I have found to run single tests is to use `fit` or `fdescribe` blocks, which is quite inconvenient. [It seems](https://stackoverflow.com/a/43669082/3785) that there is no easy way of achieving this, so I might have to give the watch mode another try. For now we had to configure [tslint](https://palantir.github.io/tslint/) so that it fails when you accidentally commit a test using `fit` or `fdescribe`. Otherwise you might disable most of your test suite by mistake.
 
 In any case, this is a pretty big drawback. Having to wait for your simple test over and over totally takes me out of the flow, and is very tempting to take shortcuts and build a lot of changes at once, instead of testing them separately. I really hope that this is just me using the tool incorrectly, and that enlightment will come when I least expect it. My faith has not been rewarded thus far.
 
@@ -119,7 +119,7 @@ describe('MyComponent', () => {
 });
 ```
 
-That is a lot of cruft just to render a simple component! You need to create a mock component to wrap the one that you one to test, and do a bunch of initializations with `TestBed`. Also, this seems to get more and more complex the more your component grows. Compared to [Enzyme](https://airbnb.io/enzyme/) this feels quite heavyweight. Again, you can actually test everything you want. But the more friction you add the bigger the chance that shortcuts will be taken.
+That is a lot of cruft just to render a simple component! You need to create a mock component to wrap the one that you want to test, and do a bunch of initializations with `TestBed`. Also, this seems to get more and more complex the more your component grows. Compared to [Enzyme](https://airbnb.io/enzyme/) this feels quite heavyweight. Again, you can actually test everything you want. But the more friction you add the bigger the chance that shortcuts will be taken.
 
 Another point of confusion to me is when to use `detectChanges` and `whenStable` in tests. I have seen tests that use them in different combinations. They tend to break easily if you don't use the right order as well.
 
