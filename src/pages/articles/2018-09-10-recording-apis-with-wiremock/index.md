@@ -127,8 +127,7 @@ public abstract class RecordingTest {
     @Value("${record.port}")
     int port;
 
-    @Value("${record.proxyTo}")
-    private String recordingServerUrl;
+    abstract String recordingServerUrl();
 
     @Value("${record.persist}")
     private boolean persistRecordings;
@@ -153,7 +152,7 @@ public abstract class RecordingTest {
 
     private RecordSpec config() {
         return recordSpec()
-                .forTarget(recordingServerUrl)
+                .forTarget(recordingServerUrl())
                 .makeStubsPersistent(persistRecordings)
                 .extractTextBodiesOver(extractBody)
                 .build();
@@ -161,7 +160,7 @@ public abstract class RecordingTest {
 }
 ```
 
-This class proxies all the requests to the real API, and stores them in the default folder when configured.
+This class proxies all the requests to the real API, and stores them in the default folder when configured. The URL of the server that we want to integrate with is defined in the abstract method `recordingServerUrl`. This way each test can define a different endpoint, and we are not limited to a single external endpoint.
 
 Why not every time? We don't want new files being created each time a test runs. Instead, this is a conscious decision, triggered with this script target:
 
@@ -185,3 +184,5 @@ server = new WireMockServer(options()
 ## Summary
 
 The setup contains a bit of magic, but the result is quite simple to use. This way, you can achieve a great testing coverage without compromising the development experience, all while keeping your core unit tests slim and fast. If you have fought with out-of-sync mocks before, you will see the advantage!
+
+*EDIT 05/08/2019:* Added support for multiple external APIs
