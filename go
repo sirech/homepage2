@@ -42,27 +42,25 @@ goal_all() {
   SITE_URL=http://test.com goal_build
 }
 
-TARGET=${1:-}
+validate-args() {
+  acceptable_args="$(declare -F | sed -n "s/declare -f goal_//p" | tr '\n' ' ')"
 
-if [ -n "${TARGET}" ] && type -t "goal_$TARGET" &>/dev/null; then
-  "goal_$TARGET" "${@:2}"
-else
-  echo "usage: $0 <goal>
+  if [[ -z $1 ]]; then
+    echo "usage: $0 <goal>"
+    printf "\n$(declare -F | sed -n "s/declare -f goal_/ - /p")"
+    exit 1
+  fi
 
-  goal:
+  if [[ ! " $acceptable_args " =~ .*\ $1\ .* ]]; then
+    echo "Invalid argument: $1"
+    printf "\n$(declare -F | sed -n "s/declare -f goal_/ - /p")"
+    exit 1
+  fi
+}
 
-  linter-js                -- Run the linter for js files
-  linter-css               -- Run the linter for css files
-  linter-text              -- Run the linter for text files
-
-  test-js                  -- Run unit tests
-  test-e2e                 -- Run e2e tests
-
-  run                      -- Run the development server
-
-  build                    -- Build the bundle
-
-  all                      -- Run all checks
-"
-  exit 1
+CMD=${1:-}
+shift || true
+if validate-args "${CMD}"; then
+  "goal_${CMD}"
+  exit 0
 fi
