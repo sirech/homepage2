@@ -135,7 +135,8 @@ module.exports = {
         directives: {
           'script-src': "'self'",
           'style-src': "'self' 'unsafe-inline'",
-          'img-src': "'self' https://github.com",
+          'img-src':
+            "'self' https://github.com https://raw.githubusercontent.com",
           'connect-src': "'self'",
         },
       },
