@@ -138,6 +138,7 @@ module.exports = {
           'img-src':
             "'self' data: https://github.com https://raw.githubusercontent.com",
           'connect-src': "'self'",
+          'frame-src': 'https://codepen.io',
         },
       },
     },
