@@ -40,7 +40,7 @@ exports[`components SitePost renders correctly 1`] = `
         </span>
       </header>
       <section
-        className="pageContent"
+        className="pageContent clearfix"
         dangerouslySetInnerHTML={
           Object {
             "__html": "
