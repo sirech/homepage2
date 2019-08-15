@@ -63,7 +63,7 @@ class SitePost extends React.Component {
               {this.categories(cate)}
             </header>
             <section
-              className={cx(`${styles.pageContent}`)}
+              className={cx(`${styles.pageContent}`, 'clearfix')}
               dangerouslySetInnerHTML={{
                 __html: isMore ? this.description(html) : html,
               }}
