@@ -57,7 +57,7 @@ You will be asked if you want to push the secret key to keybase.io. That is more
 
 Also it is a good idea to set a passphrase when the key is exported to the GnuPG keychain.
 
-- They you just created is not trusted by default. You do this with `gpg` itself:
+- The key you just created is not trusted by default. You do this with `gpg` itself:
 
 ```bash
 gpg --edit-key ${YOUR_EMAIL}
@@ -126,6 +126,22 @@ gopass show team-store/somewebsite/password
 
 Is that quality of life or what? Notice that if you are running the script on a `CI` pipeline, you can inject the variables beforehand, and the script will work both locally and there, without having to install `gopass` anywhere else and without changing the script.
 
+## Troubleshooting
+
+`gpg` tends to give arcane error messages. I built a [verification script](https://github.com/sirech/gopass-verify) that helps debugging the most common issues. You can run it with:
+
+```
+git clone https://github.com/sirech/gopass-verify.git && cd gopass-verify && ./go verify
+```
+
+Otherwise you can set the debugging flag.
+
+```
+export GOPASS_DEBUG=true
+```
+
+Running any `gopass` command afterwards will produce a lot more output that should send you in the right direction.
+
 ## Summary
 
 In summary, there is no reason to have these passwords laying around when they can be safely stored in something like `gopass`. You know who has access, and can remove the keys when people leave the team. This of course does not fix the need to rotate the keys if somebody had access to them and now shouldn't.
@@ -138,5 +154,9 @@ In summary, there is no reason to have these passwords laying around when they c
 - [1Password for teams](https://1password.com/teams/): I haven't used personally but it was used by some colleagues. It is not free, and the passwords end up in the cloud.
 - [Sheesy](https://github.com/share-secrets-safely/cli): Written by a work colleague.
 - [Vault by HashiCorp](https://www.vaultproject.io/): Introduces an online dependency and it is quite involved to set up and operate. `Vault` works better for providing secrets for applications.
+
+### Revisions
+
+- 08/2019: Added *Troubleshooting* section.
 
 
