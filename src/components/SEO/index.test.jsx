@@ -52,5 +52,15 @@ describe('components', () => {
       const component = shallow(<SEO isBlogPost post={post} site={site} />)
       expect(toJson(component)).toMatchSnapshot()
     })
+
+    it('can override canonical', () => {
+      const draft = {
+        html: post.html,
+        frontmatter: { ...post.frontmatter, canonical: 'http://dude.com' },
+      }
+
+      const component = shallow(<SEO isBlogPost post={draft} site={site} />)
+      expect(toJson(component)).toMatchSnapshot()
+    })
   })
 })

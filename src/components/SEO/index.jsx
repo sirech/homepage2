@@ -94,6 +94,7 @@ const SEO = ({ isBlogPost, post, site }) => {
   const url = siteUrl + Rpath(['frontmatter', 'path'])(post)
 
   const draft = Rpath(['frontmatter', 'draft'])(post)
+  const canonical = Rpath(['frontmatter', 'canonical'])(post)
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
     isBlogPost,
@@ -138,6 +139,11 @@ const SEO = ({ isBlogPost, post, site }) => {
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+
+      {/* Override canonical link */}
+      {canonical ? (
+        <link rel="canonical" key={canonical} href={canonical} />
+      ) : null}
     </Helmet>
   )
 }
@@ -152,6 +158,7 @@ SEO.propTypes = {
       path: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       draft: PropTypes.bool.isRequired,
+      canonical: PropTypes.string,
     }).isRequired,
     html: PropTypes.string.isRequired,
   }).isRequired,
