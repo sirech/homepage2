@@ -21,6 +21,8 @@ canonical: https://www.freecodecamp.org/news/how-to-automate-rest-api-end-to-end
   <img src="./images/introduction.jpg" alt="You got to test it" />
 </figure>
 
+<!--more-->
+
 ## What is an End-to-End test in the context of an API?
 
 Testing nomenclature is a tricky thing. Keeping the [testing pyramid in mind](https://martinfowler.com/bliki/TestPyramid.html), we can picture them as very high level tests. These tests confirm that a particular REST API works as intended, treating the internals as a black box. We don't involve any UI in the process, which helps reduce the flakiness.
