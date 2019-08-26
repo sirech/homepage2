@@ -120,6 +120,7 @@ module.exports = {
               }
             },
             output: '/rss.xml',
+            title: 'Stuff, other stuff and more stuff about software',
           },
         ],
       },
