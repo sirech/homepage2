@@ -46,6 +46,7 @@ class SiteNavi extends React.Component {
               href="https://github.com/sirech"
               className="nav-link"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="StackOverflow Profile"
             >
               <i className="fa fa-github-square fa-lg" />
@@ -56,6 +57,7 @@ class SiteNavi extends React.Component {
               href="https://stackoverflow.com/users/3785/mario-f"
               className="nav-link"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="StackOverflow Profile"
             >
               <i className="fa fa-stack-overflow fa-lg" />

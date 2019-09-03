@@ -12,7 +12,7 @@
     "jest"
   ],
   "parserOptions": {
-    "ecmaVersion": 2016,
+    "ecmaVersion": 2018,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
@@ -32,7 +32,8 @@
         "singleQuote": true,
         "semi": false
       }
-    ]
+    ],
+    "react/jsx-pascal-case": ["error", { "allowAllCaps": true }]
   },
   "globals": {
     "graphql": true,
