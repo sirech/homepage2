@@ -75,6 +75,7 @@ exports[`components SiteNavi renders correctly 1`] = `
         aria-label="StackOverflow Profile"
         className="nav-link"
         href="https://github.com/sirech"
+        rel="noopener noreferrer"
         target="_blank"
       >
         <i
@@ -89,6 +90,7 @@ exports[`components SiteNavi renders correctly 1`] = `
         aria-label="StackOverflow Profile"
         className="nav-link"
         href="https://stackoverflow.com/users/3785/mario-f"
+        rel="noopener noreferrer"
         target="_blank"
       >
         <i
