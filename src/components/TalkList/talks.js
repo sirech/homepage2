@@ -51,4 +51,8 @@ export const talks = [
     'https://github.com/sirech/talks/blob/master/2019-07-tw-kotlin_microservices.pdf',
     'Building microservices in Kotlin',
   ],
+  [
+    'https://github.com/sirech/talks/blob/master/2019-09-tw-kotlin_microservices_why.pdf',
+    'Kotlin for microservices, why?',
+  ],
 ].reverse()
