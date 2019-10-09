@@ -55,4 +55,8 @@ export const talks = [
     'https://github.com/sirech/talks/blob/master/2019-09-tw-kotlin_microservices_why.pdf',
     'Kotlin for microservices, why?',
   ],
+  [
+    'https://github.com/sirech/talks/blob/master/2019-10-get_hooked_react_hooks.pdf',
+    'Get hooked on React hooks',
+  ],
 ].reverse()
