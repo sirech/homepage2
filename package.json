@@ -5,7 +5,7 @@
   "author": "Mario Fernandez",
   "dependencies": {
     "classnames": "^2.2.6",
-    "gatsby": "^2.15.31",
+    "gatsby": "^2.15.36",
     "gatsby-paginate": "^1.1.1",
     "gatsby-plugin-catch-links": "^2.1.12",
     "gatsby-plugin-csp": "^1.1.3",
