@@ -59,4 +59,8 @@ export const talks = [
     'https://github.com/sirech/talks/blob/master/2019-10-get_hooked_react_hooks.pdf',
     'Get hooked on React hooks',
   ],
+  [
+    'https://github.com/sirech/talks/blob/master/2019-10-continuous_delivery_myths_and_realities.pdf',
+    'Continuous delivery, myths and realities',
+  ],
 ].reverse()
