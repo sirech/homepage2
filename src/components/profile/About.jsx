@@ -6,8 +6,19 @@ import Container from '../Container'
 export default () => (
   <Container>
     <p>
-      I have been programming for a while already. Counting the time when I was
-      studying, it has been over ten years already. If{' '}
+      I develop software for a living. Then I go home and continue reading about
+      software because I just can't get enough. At some point, somebody thought
+      it was a good idea to make me the technical lead of an agile team. I
+      quickly discovered that building things myself is not the same as helping
+      somebody else figure it out. I learned, somewhat to my surprise, that I
+      really enjoy sharing ideas. According to their feedback, other developers
+      have managed to learn something from me. At least they don't tend to run
+      away screaming, which is, I think, a good thing.
+    </p>
+
+    <p>
+      I have been working as a professional developer for more than ten years.
+      If{' '}
       <a
         href="http://norvig.com/21-days.html"
         target="_blank"
@@ -20,22 +31,11 @@ export default () => (
     </p>
 
     <p>
-      In this time I have been in a number of companies, mostly focused on web
-      programming. I started as a developer, focused on backend topics. At some
-      point I became frustrated having to wait for somebody else to implement
-      the layouts, so I ended up learning HTML and CSS past the{' '}
-      <i>random pixel assignment part</i>. I guess that qualifies me as a{' '}
-      <b>Full Stack Developer</b>.
-    </p>
-
-    <p>
-      At some point somebody thought it was a good idea to make me the technical
-      lead of an agile team. I quickly discovered that building things yourself
-      is not the same as helping somebody else figure it out. I learned,
-      somewhat to my surprise, that I really enjoy sharing ideas. According to
-      their feedback, other developers have managed to learn something from me.
-      At least they don't tend to run away screaming, which is, I think, a good
-      thing.
+      I specialize in web programming. I started doing backend work, then I got
+      more and more into frontend topics, and lately I have managed to touch
+      infrastructure as well. I don't know if there is such a thing as a{' '}
+      <b>Full Stack Developer</b>, but I definitely try to involve myself in all
+      areas of software delivery.
     </p>
 
     <p>
