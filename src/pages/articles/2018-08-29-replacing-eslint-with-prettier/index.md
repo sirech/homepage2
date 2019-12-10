@@ -10,7 +10,7 @@ categories:
 draft: false
 ---
 
-As I mentioned [while talking about Angular](angular-from-react-part1/#linting), I have been thinking lately about what should be the role of a linter on a project.
+As I mentioned [while talking about Angular](../angular-from-react-part1/#linting), I have been thinking lately about what should be the role of a linter on a project.
 
 I am a huge fan of linters in general. I love the idea of outsourcing pointless discussions about how to style code to a ruthless program that runs automatically. I imagine the pipeline laughing at whoever broke the build last and scolding them:
 
