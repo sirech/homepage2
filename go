@@ -34,7 +34,7 @@ goal_lighthouse() {
         --output html \
         --output-path="./reports/homepage" \
         --quiet \
-        --chrome-flags="--headless"
+        --chrome-flags="--headless --no-sandbox"
 }
 
 goal_run() {
