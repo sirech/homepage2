@@ -26,6 +26,14 @@ goal_test-e2e() {
   CYPRESS_baseUrl=${SITE_URL?Site Url is not defined} npm run e2e -- "$@"
 }
 
+goal_security-check() {
+    docker run \
+           -v "$(pwd)":/zap/wrk/:rw \
+           -t owasp/zap2docker-weekly zap-baseline.py \
+           -t "${SITE_URL?Site Url is not defined}" \
+           -c zap.conf
+}
+
 goal_lighthouse() {
     mkdir -p reports
 
