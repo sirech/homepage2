@@ -53,12 +53,11 @@ jobs:
   security:
 
     docker:
-      - image: circleci/node:12.13.1
+      - image: owasp/zap2docker-weekly
 
     steps:
       - checkout
-      - setup_remote_docker
-      - run: ./go security-check
+      - run: zap-baseline.py -t $SITE_URL -c zap.conf
 
   post-deploy:
 
