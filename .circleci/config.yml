@@ -69,7 +69,7 @@ jobs:
       - run: ./go lighthouse
 
       - store_artifacts:
-          path: ~/reports
+          path: reports
 
 workflows:
   version: 2
