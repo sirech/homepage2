@@ -5,7 +5,7 @@ jobs:
     working_directory: ~/app
 
     docker:
-      - image: circleci/node:12.4
+      - image: circleci/node:12.13.1
 
     steps:
 
@@ -40,7 +40,7 @@ jobs:
   deploy:
 
     docker:
-      - image: circleci/node:12.4
+      - image: circleci/node:12.13.1
 
     steps:
 
@@ -53,7 +53,7 @@ jobs:
   post-deploy:
 
     docker:
-      - image: cypress/browsers:node12.0.0-chrome75
+      - image: cypress/browsers:node12.13.0-chrome78-ff70
 
     steps:
 
