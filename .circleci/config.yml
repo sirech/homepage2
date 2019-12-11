@@ -50,6 +50,16 @@ jobs:
       - run: scp -o StrictHostKeyChecking=no -r public $DEPLOY_USER@$DEPLOY_HOST:/tmp/homepage2-${CIRCLE_BUILD_NUM}
       - run: ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "sh ${DEPLOY_PATH}/bin/promote /tmp/homepage2-${CIRCLE_BUILD_NUM} /srv/main"
 
+  security:
+
+    docker:
+      - image: circleci/node:12.13.1
+
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run: ./go security-check
+
   post-deploy:
 
     docker:
@@ -82,6 +92,9 @@ workflows:
               only: master
           requires:
             - build
+      - security:
+          requires:
+            - deploy
       - post-deploy:
           requires:
             - deploy
