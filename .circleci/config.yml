@@ -56,8 +56,7 @@ jobs:
       - image: owasp/zap2docker-weekly
 
     steps:
-      - checkout
-      - run: zap-baseline.py -t $SITE_URL -c zap.conf
+      - run: zap-baseline.py -t $SITE_URL -u $ZAP_CONF_URL
 
   post-deploy:
 
