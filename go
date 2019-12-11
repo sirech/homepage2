@@ -26,6 +26,17 @@ goal_test-e2e() {
   CYPRESS_baseUrl=${SITE_URL?Site Url is not defined} npm run e2e -- "$@"
 }
 
+goal_lighthouse() {
+    mkdir -p reports
+
+    npx lighthouse "${SITE_URL?Site Url is not defined}" \
+        --output json \
+        --output html \
+        --output-path="./reports/homepage" \
+        --quiet \
+        --chrome-flags="--headless"
+}
+
 goal_run() {
   SITE_URL=http://localhost:8000 npm run develop
 }

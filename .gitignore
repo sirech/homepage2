@@ -8,3 +8,5 @@ public
 coverage/
 
 cypress/videos
+
+reports/
