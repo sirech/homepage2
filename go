@@ -43,6 +43,8 @@ goal_lighthouse() {
         --output-path="./reports/homepage" \
         --quiet \
         --chrome-flags="--headless --no-sandbox"
+
+    node scripts/evaluateLighthouse.js
 }
 
 goal_run() {
