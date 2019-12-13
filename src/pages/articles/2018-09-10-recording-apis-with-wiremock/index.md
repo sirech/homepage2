@@ -16,7 +16,7 @@ draft: false
   <img src="./images/cassette.png" alt="Recording the API" />
 </figure>
 
-When an application depends on a third party API, you always seem to face similar challenges. Do you integrate against it, even in development? What about the tests, won't they be flaky if need it to be present for them to run?
+When an application depends on a third party API, you always seem to face similar challenges. Do you integrate against it, even in development? What about the tests, won't they be flaky if the API needs to be there?
 
 Meanwhile, if you decide to use stubs, how sure are you that the application is, well, working? I can't remember how many times I have had perfectly green tests based on mocks that were not testing anything, because the API had changed in some way.
 
@@ -29,7 +29,7 @@ I know this idea from the Ruby world, concretely [VCR](https://github.com/vcr/vc
 
 Following the [Testing Pyramid](https://martinfowler.com/bliki/TestPyramid.html), we want to have most of our tests at the lowest possible level. Unit tests should not be doing network requests. On the other hand, if we use mocks, they should be close to the source, ideally based on actual requests.
 
-If we have these mocks already, why not use them for our local development? I want my app to boot and quickly show something, agian without the need to connect to the outside.
+If we have these mocks already, why not use them for our local development? I want my app to boot and quickly show something, again without the need to connect to the outside.
 
 And, I want automation. Editing `.json` files by hand is a recipe for errors and outdated data. I want to avoid friction.
 
