@@ -1,6 +1,6 @@
 ---
 title: Comparing Traefik2 with Traefik
-date: "2019-12-14"
+date: "2019-12-15"
 layout: post
 path: "/comparing-traefik2-with-traefik/"
 categories:
