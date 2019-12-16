@@ -31,7 +31,7 @@ the more confidence they can give you.
 
 This is a good thing! In my experience, you write stronger tests once you get used to it. However, if you use this library you probably have seen this error message multiple times:
 
-```console
+```shell
 1: "Warning: An update to %s inside a test was not wrapped in act(...).·
 When testing, code that causes React state updates should be wrapped into act(...):·
 act(() => {
