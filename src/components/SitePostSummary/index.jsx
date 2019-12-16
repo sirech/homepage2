@@ -8,7 +8,6 @@ import Link from 'gatsby-link'
 import Container from '../Container'
 
 import styles from './style.module.scss'
-import './images.scss'
 
 import frontmatterType from '../../prop-types/frontmatter'
 
@@ -23,8 +22,8 @@ class SitePost extends React.Component {
 
   render() {
     const { data } = this.props
-    const { frontmatter, html } = data
-    const { title, path, date, category, categories } = frontmatter
+    const { frontmatter } = data
+    const { title, path, date, category, categories, description } = frontmatter
     const cate = category || categories
 
     return (
@@ -33,17 +32,12 @@ class SitePost extends React.Component {
           <article key={path} className={cx(`${styles.article}`)}>
             <header>
               <Link style={{ boxShadow: 'none' }} to={path}>
-                <h1>{title}</h1>
+                <h2>{title}</h2>
                 <time dateTime={date}>{date}</time>
               </Link>
               {this.categories(cate)}
             </header>
-            <section
-              className={cx(`${styles.pageContent}`, 'clearfix')}
-              dangerouslySetInnerHTML={{
-                __html: html,
-              }}
-            />
+            <section>{description}</section>
           </article>
         </div>
       </Container>

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components SitePost renders correctly 1`] = `
+exports[`components SitePostSummary renders correctly 1`] = `
 <div
   className="container"
 >
@@ -19,9 +19,9 @@ exports[`components SitePost renders correctly 1`] = `
             }
           }
         >
-          <h1>
+          <h2>
             My Post
-          </h1>
+          </h2>
           <time
             dateTime="2018/03/01"
           >
@@ -39,18 +39,7 @@ exports[`components SitePost renders correctly 1`] = `
           React
         </span>
       </header>
-      <section
-        className="pageContent clearfix"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "
-<div>
-  <span>Header</span>
-</div>
-",
-          }
-        }
-      />
+      <section />
     </article>
   </div>
 </div>

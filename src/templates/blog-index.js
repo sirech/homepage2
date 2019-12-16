@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 
 import { path as Rpath, filter, map, addIndex, pipe } from 'ramda'
 
-import SitePost from '../components/SitePost'
+import SitePostSummary from '../components/SitePostSummary'
 import Pagination from '../components/Pagination'
 
 import siteType from '../prop-types/site'
@@ -33,7 +33,9 @@ const posts = group => {
       const path = Rpath(['post', 'path'])(data)
       return layout === 'post' && path !== '/404/'
     }),
-    addIndex(map)((data, i) => <SitePost data={data.post} isIndex key={i} />)
+    addIndex(map)((data, i) => (
+      <SitePostSummary data={data.post} isIndex key={i} />
+    ))
   )(group)
 }
 
