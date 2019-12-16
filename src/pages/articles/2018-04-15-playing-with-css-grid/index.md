@@ -7,6 +7,7 @@ categories:
   - CSS
   - CSS Grid
 draft: false
+description: "CSS Grid is the way to do two dimensional layouts that was promised to us long ago. Let's show some examples of its magic"
 ---
 
 <figure class="figure figure--left">

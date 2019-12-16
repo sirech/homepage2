@@ -7,6 +7,7 @@ categories:
   - React
   - Gatsby
 draft: false
+description: "It all starts here. After using Create React App for a while, I decided to switch to Gatsby for my personal website"
 ---
 
 Some months ago, I decided to rewrite my website using [React](https://reactjs.org/), to experiment with a bunch of new features of _React_ that I wanted to use at work. To spare myself the trouble of bootstrapping the whole thing, I used the awesome [Create React App](https://github.com/facebook/create-react-app) from _Facebook_.

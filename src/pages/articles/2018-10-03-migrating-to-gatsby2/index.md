@@ -7,6 +7,7 @@ categories:
   - React
   - Gatsby
 draft: false
+description: "Gatsby 2 is out! How did the migration go?"
 ---
 
 I have been using [Gatsby](https://www.gatsbyjs.org/) for about 6 months, and I am quite [happy with it](../migrating-to-gatsby).

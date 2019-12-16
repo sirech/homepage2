@@ -10,6 +10,7 @@ categories:
   - TypeScript
   - angular-cli
 draft: false
+description: "Second part of my series on Angular, coming from a React background. This article focus on testing"
 ---
 
 <div class="guide">

@@ -10,6 +10,7 @@ categories:
   - TypeScript
   - angular-cli
 draft: false
+description: "First part of my series on Angular, coming from a React background. This article is about bootstrapping and TypeScript"
 ---
 
 <div class="guide">

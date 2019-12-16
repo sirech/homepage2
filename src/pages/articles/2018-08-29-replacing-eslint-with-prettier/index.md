@@ -8,6 +8,7 @@ categories:
   - prettier
   - eslint
 draft: false
+description: "I've started using Prettier for formatting my code. ESLint is now purely a linter. Both of them work together beautifully"
 ---
 
 As I mentioned [while talking about Angular](../angular-from-react-part1/#linting), I have been thinking lately about what should be the role of a linter on a project.

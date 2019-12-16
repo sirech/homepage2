@@ -6,6 +6,7 @@ path: "/modernizing-your-build-pipelines/"
 categories:
   - Continuous integration 
 draft: false
+description: "This article about modernizing pipelines got published in our blog: www.thoughtworks.com/insights/blog/modernizing-your-build-pipelines"
 ---
 
 I have been writing an article about modernizing build pipelines and it finally got published in our [Insights Blog](https://www.thoughtworks.com/insights): https://www.thoughtworks.com/insights/blog/modernizing-your-build-pipelines

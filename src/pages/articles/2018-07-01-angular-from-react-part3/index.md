@@ -11,6 +11,7 @@ categories:
   - angular-cli
   - redux
 draft: false
+description: "Third part of my series on Angular, coming from a React background. This article focus on state management"
 ---
 
 <div class="guide">

@@ -11,6 +11,7 @@ categories:
   - mTLS
   - Smart Routing
 draft: false
+description: "Traefik is a cloud native reverse proxy. I want to show how to do load balancing, SSL termination, routing and Mutual TLS with it"
 ---
 
 I have been setting up a new cloud based infrastructure for an application lately. As part of it, we had some requirements regarding load balancing, SSL and so on. As part of that I had the opportunity to evaluate [Traefik](https://traefik.io/). This a pretty cool tool that works as a Reverse Proxy (and more).

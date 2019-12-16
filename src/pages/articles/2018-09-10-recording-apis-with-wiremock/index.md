@@ -9,6 +9,7 @@ categories:
   - Spring Boot
   - Testing
 draft: false
+description: "Using WireMock to record third party API calls you can get high quality mocks that reflect reality and are much easier to maintain"
 ---
 
 
