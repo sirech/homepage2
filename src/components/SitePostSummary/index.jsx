@@ -32,7 +32,7 @@ class SitePost extends React.Component {
           <article key={path} className={cx(`${styles.article}`)}>
             <header>
               <Link style={{ boxShadow: 'none' }} to={path}>
-                <h2>{title}</h2>
+                <h3>{title}</h3>
                 <time dateTime={date}>{date}</time>
               </Link>
               {this.categories(cate)}

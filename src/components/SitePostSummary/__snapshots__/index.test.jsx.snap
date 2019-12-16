@@ -19,9 +19,9 @@ exports[`components SitePostSummary renders correctly 1`] = `
             }
           }
         >
-          <h2>
+          <h3>
             My Post
-          </h2>
+          </h3>
           <time
             dateTime="2018/03/01"
           >

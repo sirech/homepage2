@@ -38,7 +38,7 @@ const pages = (index, pageCount) =>
 const Pagination = ({ index, pageCount }) => (
   <Container>
     <nav className="mt-4">
-      <ul className="pagination justify-content-end">
+      <ul className="pagination justify-content-center">
         <li className={cx('page-item', { disabled: previousDisabled(index) })}>
           {previous(index)}
         </li>
