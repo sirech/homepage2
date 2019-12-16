@@ -31,78 +31,56 @@ exports[`components IndexPage renders correctly 1`] = `
     }
     title="site title"
   />
-  <LazyLoad
-    height={500}
+  <SitePost
+    data={
+      Object {
+        "frontmatter": Object {
+          "categories": Array [
+            "JavaScript",
+            "React",
+          ],
+          "date": "2018/03/01",
+          "draft": false,
+          "layout": "post",
+          "path": "/the-post",
+          "title": "My Post",
+        },
+        "html": "
+<div>
+  <span>Header</span>
+</div>
+",
+        "id": "id",
+      }
+    }
+    isIndex={true}
     key="0"
-    offset={500}
-    once={true}
-    overflow={false}
-    resize={false}
-    scroll={true}
-    unmountIfInvisible={false}
-  >
-    <SitePost
-      data={
-        Object {
-          "frontmatter": Object {
-            "categories": Array [
-              "JavaScript",
-              "React",
-            ],
-            "date": "2018/03/01",
-            "draft": false,
-            "layout": "post",
-            "path": "/the-post",
-            "title": "My Post",
-          },
-          "html": "
+  />
+  <SitePost
+    data={
+      Object {
+        "frontmatter": Object {
+          "categories": Array [
+            "JavaScript",
+            "React",
+          ],
+          "date": "2018/03/01",
+          "draft": false,
+          "layout": "post",
+          "path": "/the-post",
+          "title": "My Post",
+        },
+        "html": "
 <div>
   <span>Header</span>
 </div>
 ",
-          "id": "id",
-        }
+        "id": "id",
       }
-      isIndex={true}
-      key="0"
-    />
-  </LazyLoad>
-  <LazyLoad
-    height={500}
+    }
+    isIndex={true}
     key="1"
-    offset={500}
-    once={true}
-    overflow={false}
-    resize={false}
-    scroll={true}
-    unmountIfInvisible={false}
-  >
-    <SitePost
-      data={
-        Object {
-          "frontmatter": Object {
-            "categories": Array [
-              "JavaScript",
-              "React",
-            ],
-            "date": "2018/03/01",
-            "draft": false,
-            "layout": "post",
-            "path": "/the-post",
-            "title": "My Post",
-          },
-          "html": "
-<div>
-  <span>Header</span>
-</div>
-",
-          "id": "id",
-        }
-      }
-      isIndex={true}
-      key="1"
-    />
-  </LazyLoad>
+  />
   <Pagination
     index={3}
     pageCount={5}

@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import LazyLoad from 'react-lazyload'
 
 import { path as Rpath, filter, map, addIndex, pipe } from 'ramda'
 
@@ -34,11 +33,7 @@ const posts = group => {
       const path = Rpath(['post', 'path'])(data)
       return layout === 'post' && path !== '/404/'
     }),
-    addIndex(map)((data, i) => (
-      <LazyLoad height={500} offset={500} once key={i}>
-        <SitePost data={data.post} isIndex key={i} />
-      </LazyLoad>
-    ))
+    addIndex(map)((data, i) => <SitePost data={data.post} isIndex key={i} />)
   )(group)
 }
 

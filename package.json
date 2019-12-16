@@ -34,8 +34,7 @@
     "ramda": "^0.26.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.0",
-    "react-lazyload": "^2.6.5"
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
     "babel-jest": "^24.9.0",
