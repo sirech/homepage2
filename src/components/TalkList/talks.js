@@ -1,3 +1,5 @@
+import { last, groupWith } from 'ramda'
+
 export const talks = [
   [
     'https://github.com/sirech/talks/raw/master/2016-02-rubygroupmunich-mediumapps.pdf',
@@ -64,3 +66,17 @@ export const talks = [
     'Continuous delivery, myths and realities',
   ],
 ].reverse()
+
+const extractYear = item => {
+  const path = last(item.split('/'))
+  return path.split('-')[0]
+}
+
+export const groupedTalks = () =>
+  groupWith((x, y) => x.year === y.year)(
+    talks.map(([url, title]) => ({
+      year: extractYear(url),
+      url,
+      title,
+    }))
+  )
