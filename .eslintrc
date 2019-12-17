@@ -4,10 +4,12 @@
     "standard-react",
     "prettier",
     "prettier/react",
-    "prettier/standard"
+    "prettier/standard",
+    "plugin:css-modules/recommended",
   ],
   "plugins": [
     "react",
+    "css-modules",
     "prettier",
     "jest"
   ],
