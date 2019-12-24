@@ -20,7 +20,7 @@ description: "Traefik2 is a significant change from Traefik. How do the both com
 
 One year ago I experimented with [Traefik](https://traefik.io/) and wrote [about the experience](../setting-up-traefik/). We ended up using it as a reverse proxy in my project at the time. It was remarkably unremarkable, in that it didn't give us much trouble. That is a good thing! I kind of forgot about it, other than the occasional update. 
 
-Anyways, in my current project we need a reverse proxy with automatic discovery again. Thus, *Traefik* is back on the menu. Version 2 has been released since I last touched it. It brings quite a few changes. I decided to adapt my sample setup and compare both.
+Anyways, in my current project, we need a reverse proxy with automatic discovery again. Thus, *Traefik* is back on the menu. Version 2 has been released since I last touched it. It brings quite a few changes. I decided to adapt my sample setup and compare both.
 
 I took the old repository and made a [new one using version 2](https://github.com/sirech/traefik2-test). Let's see how things have changed.
 
@@ -34,7 +34,7 @@ Right of the bat, [TOML](https://github.com/toml-lang/toml) is no longer the onl
 
 ### New concepts
 
-Core notions have [changed significantly](https://docs.traefik.io/migration/v1-to-v2/). Before, we had _entrypoint_, _frontend_ and _backend_. Now we've got _entrypoint_, _router_ and _service_. Modifications of the request happen through _middleware_.
+Core notions have [changed significantly](https://docs.traefik.io/migration/v1-to-v2/). Before, we had _entrypoint_, _frontend_ and _backend_. Now we've got _entrypoint_, _router_, and _service_. Modifications of the request happen through _middleware_.
 
 In terms of functionality, not a lot has changed. The format is not compatible, so you'll have to migrate quite a few things.
 
@@ -81,13 +81,13 @@ labels:
   - "traefik.http.routers.web-secure.rule=Host(`echo.testing.com`) && Path(`/standard`)"
 ```
 
-In theory you can use multiple stores, but I only managed to get my certificate delivered by making it the default one.
+In theory, you can use multiple stores, but I only managed to get my certificate delivered by making it the default one.
 
 I found the whole thing quite confusing. I was getting errors about self-signed certificates in the logs all the time. I was thinking that self-signed certificates were not supported. But then they did. Confusing logs have been a theme during this whole ordeal.
 
 ## Mutual TLS
 
-This was a hard requirement I had when I first tried _Traefik_. In order to get _mTLS_, you have to add a configuration block that is applied to the _TLS_ connection:
+This was a hard requirement I had when I first tried _Traefik_. To get _mTLS_, you have to add a configuration block that is applied to the _TLS_ connection:
 
 ```yaml
 tls:
@@ -99,7 +99,7 @@ tls:
         clientAuthType: RequireAndVerifyClientCert
 ```
 
-I think this has to be dynamic configuration, although I'm not sure. Then it's a matter of activating that configuration for your router (full compose file [here](https://github.com/sirech/traefik2-test/blob/master/docker-compose.app3.yml#L4-L12)):
+I think this has to be a dynamic configuration, although I'm not sure. Then it's a matter of activating that configuration for your router (full compose file [here](https://github.com/sirech/traefik2-test/blob/master/docker-compose.app3.yml#L4-L12)):
 
 ```yaml
 labels:
@@ -115,7 +115,7 @@ The biggest change I've seen so far is that _Traefik_ supports manipulating requ
 
 Operations on the path of the request, like stripping parts or adding a prefix, are now expressed as middleware. Authentication has become middleware as well. I thought for a second this was new functionality. It turns out you could do most of it before, although it is a lot more consistent and organized now.
 
-I like the idea. It is potentially pretty powerful, specially if custom middleware becomes a thing.
+I like the idea. It is potentially pretty powerful, especially if custom middleware becomes a thing.
 
 ## The dashboard
 
@@ -129,8 +129,8 @@ Fancy! I found the dashboard really useful in the beginning, although I didn't c
 
 ## Conclusion
 
-It is a mixed bag for me, to be honest. I'm not sure if I just got used to the old stuff, but I've struggled wrapping my head around how things work now. Where does the config go? In a dynamic file? In labels? Who knows. The debug output could be a lot more helpful with that.
+It is a mixed bag for me, to be honest. I'm not sure if I just got used to the old stuff, but I've struggled to wrap my head around how things work now. Where does the config go? In a dynamic file? In labels? Who knows. The debug output could be a lot more helpful with that.
 
-Maybe doing a direct translation of an existing setup is not the way to go? From my short experience, you have to dig deep into the documentation, and assume that what you knew before no longer applies.
+Maybe doing a direct translation of an existing setup is not the way to go? From my short experience, you have to dig deep into the documentation and assume that what you knew before no longer applies.
 
-My favorite new part is the middleware. For the rest, it feels a bit of a lateral move.
+My favorite new part is middleware. For the rest, it feels a bit of a lateral move.
