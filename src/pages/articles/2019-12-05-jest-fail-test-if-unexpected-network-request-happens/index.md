@@ -24,7 +24,7 @@ Instead, we should be mocking these requests. [React](https://reactjs.org/) and 
 
 <!--more-->
 
-I have been using [react-testing-library](https://testing-library.com/) a lot lately to test _React_ applications. It's core design principle is described like this:
+I have been using [react-testing-library](https://testing-library.com/) a lot lately to test _React_ applications. Its core design principle is described like this:
 
 > The more your tests resemble the way your software is used,
 the more confidence they can give you.
@@ -57,7 +57,7 @@ afterEach(() => {
 afterEach(cleanup)
 ```
 
-It is very useful to fail on `console.error`, because that will show that there were pending requests. However, that output can be fairly confusing. We had a test in my project that was failing because we added a new section to a component. It wasn't obvious that the new section was fetching data from an endpoint, so we actually ended up "fixing" it by adding `await wait()` statements all over the place. 
+It is very useful to fail on `console.error`, because that will show that there were pending requests. However, that output can be fairly confusing. We had a test in my project that was failing because we added a new section to a component. It wasn't obvious that the new section was fetching data from an endpoint. We ended up "fixing" it by adding `await wait()` statements all over the place. 
 
 That didn't address the underlying issue, though. I had to spend quite a bit of time digging into it before I figured out what was going on. We want clearer feedback.
 
@@ -148,6 +148,6 @@ beforeAll(() => {
 
 ## Summary: Make your errors explicit
 
-That all there is to it. A simple, if a bit hacky, solution to make sure that errors surface as quickly as possible and don't get hidden.
+That all there is to it. A simple solution, if a bit hacky, to make sure that errors surface as quickly as possible and don't get hidden.
 
-
+*EDIT 25/12/2019:* Grammar review
