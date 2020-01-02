@@ -6,7 +6,7 @@ import styles from './style.module.scss'
 export default () => (
   <footer className={cx(styles.footer, 'text-center')}>
     <div>
-      Copyright © 2018,{' '}
+      Copyright © {new Date().getFullYear()},{' '}
       <a
         href="http://creativecommons.org/licenses/by/4.0/legalcode"
         target="_blank"
