@@ -5,7 +5,7 @@ jobs:
     working_directory: ~/app
 
     docker:
-      - image: circleci/node:12.13.1
+      - image: circleci/node:13.6.0
 
     steps:
 
@@ -41,7 +41,7 @@ jobs:
   deploy:
 
     docker:
-      - image: circleci/node:12.13.1
+      - image: circleci/node:13.6.0
 
     steps:
 
