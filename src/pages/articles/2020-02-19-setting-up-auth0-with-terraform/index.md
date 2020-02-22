@@ -207,7 +207,7 @@ There is a tab on the API page that has the code to generate a token for it usin
 
 ## Storing the state
 
-    _Terraform_ creates a [state](https://www.terraform.io/docs/state/index.html) when run to know what things are there and in which state. Storing it in your laptop is risky, as it could get lost or even leaked. In our case, the most convenient option is to store it directly in [HashiCorp's own service](https://app.terraform.io/).
+_Terraform_ creates a [state](https://www.terraform.io/docs/state/index.html) when run to know what things are there and in which state. Storing it in your laptop is risky, as it could get lost or even leaked. In our case, the most convenient option is to store it directly in [HashiCorp's own service](https://app.terraform.io/).
 
 ```hcl
 terraform {
