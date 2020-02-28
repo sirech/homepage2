@@ -65,6 +65,10 @@ export const talks = [
     'https://github.com/sirech/talks/blob/master/2019-10-continuous_delivery_myths_and_realities.pdf',
     'Continuous delivery, myths and realities',
   ],
+  [
+    'https://github.com/sirech/talks/blob/master/2020-02-codedays-lean_functional_backends_kotlin.pdf',
+    'Lean backends using functional Kotlin',
+  ],
 ].reverse()
 
 const extractYear = item => {
