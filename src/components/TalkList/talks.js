@@ -69,6 +69,10 @@ export const talks = [
     'https://github.com/sirech/talks/blob/master/2020-02-codedays-lean_functional_backends_kotlin.pdf',
     'Lean backends using functional Kotlin',
   ],
+  [
+    'https://github.com/sirech/talks/blob/master/2020-03-l8-introduction_to_microfrontends.pdf',
+    'Introduction to Microfrontends',
+  ],
 ].reverse()
 
 const extractYear = item => {
