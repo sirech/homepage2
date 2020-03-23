@@ -75,7 +75,7 @@ export const talks = [
   ],
 ].reverse()
 
-const extractYear = item => {
+const extractYear = (item) => {
   const path = last(item.split('/'))
   return path.split('-')[0]
 }

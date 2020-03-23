@@ -83,7 +83,7 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.posts.map(edge => {
+              return allMarkdownRemark.posts.map((edge) => {
                 return Object.assign({}, edge.post.frontmatter, {
                   url: site.meta.url + edge.post.frontmatter.path,
                   guid: site.meta.url + edge.post.frontmatter.path,

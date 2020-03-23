@@ -42,7 +42,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         `
-      ).then(result => {
+      ).then((result) => {
         if (result.errors) {
           console.log(result.errors)
           reject(result.errors)
@@ -58,7 +58,7 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         // Create blog posts pages.
-        R.forEach(edge => {
+        R.forEach((edge) => {
           createPage({
             path: edge.post.frontmatter.path,
             component: path.resolve('./src/templates/blog-post.js'),

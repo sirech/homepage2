@@ -3,7 +3,7 @@ import React from 'react'
 import Container from '../Container'
 import tools from './toolList'
 
-const toolItem = name => (
+const toolItem = (name) => (
   <li key={name} className="mr-1 mb-1 badge badge-secondary badge-pill">
     {name}
   </li>
@@ -36,6 +36,6 @@ export default () => (
       </a>
     </p>
 
-    <ul className="text-center">{tools.map(tool => toolItem(tool))}</ul>
+    <ul className="text-center">{tools.map((tool) => toolItem(tool))}</ul>
   </Container>
 )

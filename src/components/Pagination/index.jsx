@@ -6,25 +6,25 @@ import { range } from 'ramda'
 
 import Container from '../Container'
 
-const url = index => (index === 1 ? '/blog/' : `/blog/${index}`)
+const url = (index) => (index === 1 ? '/blog/' : `/blog/${index}`)
 
-const previousDisabled = index => index === 1
+const previousDisabled = (index) => index === 1
 const nextDisabled = (index, pageCount) => index === pageCount
 
-const previous = index => (
+const previous = (index) => (
   <Link className="page-link" to={url(index - 1)}>
     <i className="fa fa-caret-left" />
   </Link>
 )
 
-const next = index => (
+const next = (index) => (
   <Link className="page-link" to={url(index + 1)}>
     <i className="fa fa-caret-right" />
   </Link>
 )
 
 const pages = (index, pageCount) =>
-  range(1, pageCount + 1).map(pageNumber => (
+  range(1, pageCount + 1).map((pageNumber) => (
     <li
       className={cx('page-item', { active: pageNumber === index })}
       key={pageNumber}

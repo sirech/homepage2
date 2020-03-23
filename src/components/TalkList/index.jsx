@@ -19,7 +19,7 @@ TalkItem.propTypes = {
 const TalkList = ({ list }) => (
   <div className="mb-3">
     <h2>{list[0].year}</h2>
-    <ul className="list-group">{list.map(talk => TalkItem(talk))}</ul>
+    <ul className="list-group">{list.map((talk) => TalkItem(talk))}</ul>
   </div>
 )
 

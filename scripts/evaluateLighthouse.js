@@ -9,7 +9,7 @@ const baseline = reader.parseBaseline(baselineFile)
 console.log('The defined baseline for the ligthouse score is', baseline)
 console.log('The result from running lighthouse was: ', result)
 
-Object.keys(result).forEach(key => {
+Object.keys(result).forEach((key) => {
   const is = result[key]
   const expected = baseline[key]
 

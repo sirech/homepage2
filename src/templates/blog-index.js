@@ -10,7 +10,7 @@ import Pagination from '../components/Pagination'
 import siteType from '../prop-types/site'
 import postType from '../prop-types/post'
 
-const helmet = site => {
+const helmet = (site) => {
   const { title, description, url } = site
   return (
     <Helmet
@@ -26,9 +26,9 @@ const helmet = site => {
   )
 }
 
-const posts = group => {
+const posts = (group) => {
   return pipe(
-    filter(data => {
+    filter((data) => {
       const layout = Rpath(['post', 'frontmatter', 'layout'])(data)
       const path = Rpath(['post', 'path'])(data)
       return layout === 'post' && path !== '/404/'

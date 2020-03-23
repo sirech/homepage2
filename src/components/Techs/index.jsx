@@ -35,7 +35,7 @@ export default () => (
         such as this page itself. A list of them, in no particular order
       </p>
 
-      <ul className={styles.techList}>{techs.map(tech => techItem(tech))}</ul>
+      <ul className={styles.techList}>{techs.map((tech) => techItem(tech))}</ul>
     </Container>
   </div>
 )

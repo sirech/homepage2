@@ -70,7 +70,7 @@ const getSchemaOrgJSONLD = ({
     : schemaOrgJSONLD
 }
 
-const buildDescription = post => {
+const buildDescription = (post) => {
   const description = Rpath(['frontmatter', 'description'])(post)
   return (
     description ||
