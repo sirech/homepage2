@@ -73,6 +73,10 @@ export const talks = [
     'https://github.com/sirech/talks/blob/master/2020-03-l8-introduction_to_microfrontends.pdf',
     'Introduction to Microfrontends',
   ],
+  [
+    'https://github.com/sirech/talks/blob/master/2020-03-codeconf-tdd_against_the_odds.pdf',
+    'TDD against the odds',
+  ],
 ].reverse()
 
 const extractYear = (item) => {
