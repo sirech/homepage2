@@ -42,7 +42,7 @@
     "babel-preset-gatsby": "^0.3.1",
     "bootstrap": "^4.4.1",
     "coveralls": "^3.0.11",
-    "cypress": "^3.8.3",
+    "cypress": "^4.3.0",
     "devicon-2.2": "^2.2.0",
     "emergence.js": "^1.1.2",
     "enzyme": "^3.11.0",
