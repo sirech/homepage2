@@ -106,6 +106,7 @@ module.exports = {
                       path
                       date(formatString: "YYYY/MM/DD")
                       draft
+                      categories
                     }
                   }
                 }
