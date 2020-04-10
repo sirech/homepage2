@@ -129,56 +129,6 @@ module.exports = {
             output: '/rss.xml',
             title: 'Stuff, other stuff and more stuff about software',
           },
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.posts.map((edge) => {
-                return Object.assign({}, edge.post.frontmatter, {
-                  url: site.meta.url + edge.post.frontmatter.path,
-                  guid: site.meta.url + edge.post.frontmatter.path,
-                  custom_elements: [
-                    { 'content:encoded': edge.post.rawMarkdownBody },
-                  ],
-                })
-              })
-            },
-            query: `
-            {
-              allMarkdownRemark(
-                limit: 1000,
-                sort: { order: DESC, fields: [frontmatter___date] },
-                filter: { frontmatter: { draft: { eq: false } } }
-              ) {
-                posts: edges {
-                  post: node {
-                    rawMarkdownBody
-                    frontmatter {
-                      title
-                      path
-                      date(formatString: "YYYY/MM/DD")
-                      draft
-                      categories
-                    }
-                  }
-                }
-              }
-            }
-          `,
-            setup: ({
-              query: {
-                site: { meta },
-              },
-            }) => {
-              return {
-                title: meta.title,
-                description: meta.description,
-                feed_url: meta.url + `/devto.xml`,
-                site_url: meta.url,
-                generator: `GatsbyJS`,
-              }
-            },
-            output: '/devto.xml',
-            title: 'RSS export for devto',
-          },
         ],
       },
     },
