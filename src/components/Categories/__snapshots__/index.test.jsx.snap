@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Categories renders correctly 1`] = `
+Array [
+  <span
+    className="badge badge-primary text-white mr-1"
+  >
+    React
+  </span>,
+  <span
+    className="badge badge-primary text-white mr-1"
+  >
+    SpringBoot
+  </span>,
+  <span
+    className="badge badge-primary text-white mr-1"
+  >
+    SSL Certificates
+  </span>,
+]
+`;

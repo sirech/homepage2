@@ -2,10 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { addIndex, map } from 'ramda'
-
 import Link from 'gatsby-link'
 import Container from '../Container'
+import Categories from '../Categories'
 
 import styles from './style.module.scss'
 import './images.scss'
@@ -13,19 +12,10 @@ import './images.scss'
 import frontmatterType from '../../prop-types/frontmatter'
 
 class SitePost extends React.Component {
-  categories(data) {
-    return addIndex(map)((item, i) => (
-      <span className="badge badge-primary text-white mr-1" key={i}>
-        {item}
-      </span>
-    ))(data)
-  }
-
   render() {
     const { data } = this.props
     const { frontmatter, html } = data
-    const { title, path, date, category, categories } = frontmatter
-    const cate = category || categories
+    const { title, path, date, categories } = frontmatter
 
     return (
       <Container>
@@ -36,7 +26,7 @@ class SitePost extends React.Component {
                 <h1>{title}</h1>
                 <time dateTime={date}>{date}</time>
               </Link>
-              {this.categories(cate)}
+              <Categories categories={categories} />
             </header>
             <section
               className={cx(`${styles.pageContent}`, 'clearfix')}
