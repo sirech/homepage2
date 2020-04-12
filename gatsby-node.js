@@ -1,4 +1,5 @@
 const path = require('path')
+const _ = require('lodash')
 const R = require('ramda')
 
 const createPaginatedPages = require('gatsby-paginate')
@@ -38,6 +39,29 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
           }
         }
+
+        tags: allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          filter: { frontmatter: { draft: { eq: false } } }
+        ) {
+          group(field: frontmatter___categories) {
+            fieldValue
+            edges {
+              post: node {
+                html
+                frontmatter {
+                  layout
+                  title
+                  path
+                  categories
+                  date(formatString: "YYYY/MM/DD")
+                  draft
+                  description
+                }
+              }
+            }
+          }
+        }
       }
     `
   )
@@ -55,6 +79,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     pathPrefix: 'blog',
     context: result.data.site,
   })
+
+  R.forEach(({ fieldValue, edges }) => {
+    const tag = _.kebabCase(fieldValue.toLowerCase())
+    createPaginatedPages({
+      edges: edges,
+      createPage: createPage,
+      pageTemplate: 'src/templates/blog-index.js',
+      pageLength: 10,
+      pathPrefix: `blog/tags/${tag}`,
+      context: result.data.site,
+    })
+  })(result.data.tags.group)
 
   // Create blog posts pages.
   R.forEach((edge) => {
