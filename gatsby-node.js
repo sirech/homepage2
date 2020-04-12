@@ -18,11 +18,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             twitter
           }
         }
-        allMarkdownRemark(
+
+        posts: allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           filter: { frontmatter: { draft: { eq: false } } }
         ) {
-          posts: edges {
+          edges {
             post: node {
               html
               frontmatter {
@@ -47,7 +48,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   createPaginatedPages({
-    edges: result.data.allMarkdownRemark.posts,
+    edges: result.data.posts.edges,
     createPage: createPage,
     pageTemplate: 'src/templates/blog-index.js',
     pageLength: 10,
@@ -61,5 +62,5 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: edge.post.frontmatter.path,
       component: path.resolve('./src/templates/blog-post.js'),
     })
-  })(result.data.allMarkdownRemark.posts)
+  })(result.data.posts.edges)
 }
