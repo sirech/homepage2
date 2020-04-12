@@ -2,20 +2,32 @@
 
 exports[`components Categories renders correctly 1`] = `
 Array [
-  <span
-    className="badge badge-primary text-white mr-1"
+  <a
+    href="/blog/tags/react"
   >
-    React
-  </span>,
-  <span
-    className="badge badge-primary text-white mr-1"
+    <span
+      className="tag badge mr-1"
+    >
+      React
+    </span>
+  </a>,
+  <a
+    href="/blog/tags/springboot"
   >
-    SpringBoot
-  </span>,
-  <span
-    className="badge badge-primary text-white mr-1"
+    <span
+      className="tag badge mr-1"
+    >
+      SpringBoot
+    </span>
+  </a>,
+  <a
+    href="/blog/tags/ssl-certificates"
   >
-    SSL Certificates
-  </span>,
+    <span
+      className="tag badge mr-1"
+    >
+      SSL Certificates
+    </span>
+  </a>,
 ]
 `;

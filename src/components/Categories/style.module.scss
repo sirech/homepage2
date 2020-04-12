@@ -1,0 +1,10 @@
+@import '../../layouts/colors';
+
+.tag {
+  background-color: map-get($theme-colors, 'primary');
+  color: $white;
+
+  &:hover {
+    background-color: map-get($theme-colors, 'info');
+  }
+}

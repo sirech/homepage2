@@ -2,11 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { addIndex, map } from 'ramda'
 
+import Link from 'gatsby-link'
+import cx from 'classnames'
+
+import styles from './style.module.scss'
+
+import formatTag from './format-tag'
+
 const renderCategories = (data) => {
   return addIndex(map)((item, i) => (
-    <span className="badge badge-primary text-white mr-1" key={i}>
-      {item}
-    </span>
+    <Link to={`/blog/tags/${formatTag(item)}`} key={i}>
+      <span className={cx(styles.tag, 'badge', 'mr-1')}>{item}</span>
+    </Link>
   ))(data)
 }
 

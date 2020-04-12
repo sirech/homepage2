@@ -28,16 +28,24 @@ exports[`components SitePost renders correctly 1`] = `
             2018/03/01
           </time>
         </a>
-        <span
-          className="badge badge-primary text-white mr-1"
+        <a
+          href="/blog/tags/javascript"
         >
-          JavaScript
-        </span>
-        <span
-          className="badge badge-primary text-white mr-1"
+          <span
+            className="tag badge mr-1"
+          >
+            JavaScript
+          </span>
+        </a>
+        <a
+          href="/blog/tags/react"
         >
-          React
-        </span>
+          <span
+            className="tag badge mr-1"
+          >
+            React
+          </span>
+        </a>
       </header>
       <section
         className="pageContent clearfix"
