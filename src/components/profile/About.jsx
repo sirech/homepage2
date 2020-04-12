@@ -40,8 +40,8 @@ export default () => (
 
     <p>
       I have managed to work with plenty of{' '}
-      <Link to="#techs">technologies</Link> and <Link to="#tools">tools</Link>.
-      It took my a while to realize, though, that while solid tech and good
+      <Link to="/#techs">technologies</Link> and <Link to="/#tools">tools</Link>
+      . It took my a while to realize, though, that while solid tech and good
       foundations are important, they are not the only thing needed to deliver
       high quality software.
     </p>
