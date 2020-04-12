@@ -11,6 +11,7 @@ $gray-900: #212529 !default;
 $black: #000 !default;
 
 $blue: #03a9f4 !default;
+$darker-blue: #0275a8 !default;
 $indigo: #3f51b5 !default;
 $purple: #673ab7 !default;
 $pink: #e91e63 !default;
@@ -31,4 +32,5 @@ $theme-colors: (
   danger: $red,
   light: $gray-100,
   dark: $gray-800,
+  highlight: $darker-blue,
 ) !default;
