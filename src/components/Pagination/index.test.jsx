@@ -23,5 +23,10 @@ describe('components', () => {
       const component = renderer.create(<Pagination index={5} pageCount={5} />)
       expect(component.toJSON()).toMatchSnapshot()
     })
+
+    it('only renders if there are multiple pages', () => {
+      const component = renderer.create(<Pagination index={1} pageCount={1} />)
+      expect(component.toJSON()).toMatchSnapshot()
+    })
   })
 })

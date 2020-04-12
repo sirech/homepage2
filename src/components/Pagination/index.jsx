@@ -38,19 +38,23 @@ const pages = (index, pageCount) =>
 const Pagination = ({ index, pageCount }) => (
   <Container>
     <nav className="mt-4">
-      <ul className="pagination justify-content-center">
-        <li className={cx('page-item', { disabled: previousDisabled(index) })}>
-          {previous(index)}
-        </li>
-        {pages(index, pageCount)}
-        <li
-          className={cx('page-item', {
-            disabled: nextDisabled(index, pageCount),
-          })}
-        >
-          {next(index)}
-        </li>
-      </ul>
+      {pageCount > 1 && (
+        <ul className="pagination justify-content-center">
+          <li
+            className={cx('page-item', { disabled: previousDisabled(index) })}
+          >
+            {previous(index)}
+          </li>
+          {pages(index, pageCount)}
+          <li
+            className={cx('page-item', {
+              disabled: nextDisabled(index, pageCount),
+            })}
+          >
+            {next(index)}
+          </li>
+        </ul>
+      )}
     </nav>
   </Container>
 )

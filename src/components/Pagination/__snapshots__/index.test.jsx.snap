@@ -178,6 +178,16 @@ exports[`components Pagination disables next link if we are on the last page 1`]
 </div>
 `;
 
+exports[`components Pagination only renders if there are multiple pages 1`] = `
+<div
+  className="container"
+>
+  <nav
+    className="mt-4"
+  />
+</div>
+`;
+
 exports[`components Pagination renders correctly 1`] = `
 <div
   className="container"
