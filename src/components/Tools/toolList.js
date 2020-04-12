@@ -6,4 +6,6 @@ export default [
   'Google Chrome',
   'hammerspoon',
   'Alfred',
+  'Dash',
+  'trello',
 ]
