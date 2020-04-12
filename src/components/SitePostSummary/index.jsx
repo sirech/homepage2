@@ -28,17 +28,21 @@ class SitePost extends React.Component {
 
     return (
       <Container>
-        <div className={styles.articles}>
-          <article key={path} className={cx(`${styles.article}`)}>
-            <header>
-              <Link style={{ boxShadow: 'none' }} to={path}>
-                <h3>{title}</h3>
-                <time dateTime={date}>{date}</time>
-              </Link>
-              {this.categories(cate)}
-            </header>
-            <section>{description}</section>
-          </article>
+        <div className={cx(styles.articles)}>
+          <Link style={{ boxShadow: 'none' }} to={path}>
+            <article key={path} className={cx(styles.article, 'card')}>
+              <div className="card-body">
+                <header>
+                  <h3 className="card-title">{title}</h3>
+                  <time className="card-subtitle" dateTime={date}>
+                    {date}
+                  </time>
+                  {this.categories(cate)}
+                </header>
+                <section className="card-text">{description}</section>
+              </div>
+            </article>
+          </Link>
         </div>
       </Container>
     )

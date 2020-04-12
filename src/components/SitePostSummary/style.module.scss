@@ -2,10 +2,11 @@
 @import '../../layouts/fonts';
 
 .articles {
-  padding-top: 2rem;
+  margin-top: 2rem;
 }
 
 .article {
+  color: $gray-600;
   padding-bottom: 0.5rem;
 
   header {
@@ -14,25 +15,21 @@
     padding-bottom: 0.5rem;
     word-break: break-word;
 
-    h1,
-    h3 {
-      color: $gray-600;
-      padding: 0.275rem 0;
-      transition: all 0.5s ease;
-
-      &:hover {
-        background-color: map-get($theme-colors, 'primary');
-        border-radius: 0.25rem;
-        color: $white;
-        padding: 0.375rem 0.75rem;
-      }
-    }
-
     time {
       color: $gray-500;
       display: inline;
       font-size: $font-size-xs;
       margin-right: 0.5rem;
+    }
+  }
+
+  &:hover {
+    border-color: map-get($theme-colors, 'primary');
+
+    h1,
+    h3 {
+      color: map-get($theme-colors, 'primary');
+      transition: all 0.5s ease;
     }
   }
 }
