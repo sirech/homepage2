@@ -20,7 +20,7 @@ class SiteNavi extends React.Component {
           this.props.location.pathname === url ? 'nav-item active' : 'nav-item'
         }
       >
-        <Link to={url} className="nav-link">
+        <Link to={url} className={cx(styles.underline, 'nav-link')}>
           {name}
         </Link>
       </li>

@@ -24,7 +24,7 @@ exports[`components SiteNavi renders correctly 1`] = `
         className="nav-item active"
       >
         <a
-          className="nav-link"
+          className="underline nav-link"
           href="/"
         >
           About
@@ -34,7 +34,7 @@ exports[`components SiteNavi renders correctly 1`] = `
         className="nav-item"
       >
         <a
-          className="nav-link"
+          className="underline nav-link"
           href="/talks/"
         >
           Talks
@@ -44,7 +44,7 @@ exports[`components SiteNavi renders correctly 1`] = `
         className="nav-item"
       >
         <a
-          className="nav-link"
+          className="underline nav-link"
           href="/blog/"
         >
           Blog

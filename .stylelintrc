@@ -13,7 +13,7 @@
     "declaration-property-unit-whitelist": {
       "font-size": ["rem"],
       "width": ["rem", "%"],
-      "height": ["rem", "%"],
+      "height": ["rem", "%", "px"],
       "/^margin": ["rem"],
       "/^padding": ["rem"]
     },
