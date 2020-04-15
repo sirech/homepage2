@@ -129,7 +129,7 @@ Another alternative is to mock _axios_ directly and add your behavior, which wil
 ```typescript
 jest.mock('axios')
 
-describe('service, () => {
+describe('service', () => {
   beforeEach(() => {
     ;(axios.get as jest.Mock).mockResolvedValue(response)
   })
@@ -151,3 +151,4 @@ beforeAll(() => {
 That all there is to it. A simple solution, if a bit hacky, to make sure that errors surface as quickly as possible and don't get hidden.
 
 *EDIT 25/12/2019:* Grammar review
+*EDIT 15/04/2020:* Fix broken code snippet
