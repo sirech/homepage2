@@ -16,46 +16,37 @@ exports[`components SitePostSummary renders correctly 1`] = `
       }
     >
       <article
-        className="article card"
+        className="article articleBox"
       >
-        <div
-          className="card-body"
-        >
-          <header>
-            <h3
-              className="card-title"
+        <header>
+          <h3>
+            My Post
+          </h3>
+          <time
+            dateTime="2018/03/01"
+          >
+            2018/03/01
+          </time>
+          <a
+            href="/blog/tags/javascript"
+          >
+            <span
+              className="tag badge mr-1"
             >
-              My Post
-            </h3>
-            <time
-              className="card-subtitle"
-              dateTime="2018/03/01"
+              JavaScript
+            </span>
+          </a>
+          <a
+            href="/blog/tags/react"
+          >
+            <span
+              className="tag badge mr-1"
             >
-              2018/03/01
-            </time>
-            <a
-              href="/blog/tags/javascript"
-            >
-              <span
-                className="tag badge mr-1"
-              >
-                JavaScript
-              </span>
-            </a>
-            <a
-              href="/blog/tags/react"
-            >
-              <span
-                className="tag badge mr-1"
-              >
-                React
-              </span>
-            </a>
-          </header>
-          <section
-            className="card-text"
-          />
-        </div>
+              React
+            </span>
+          </a>
+        </header>
+        <section />
       </article>
     </a>
   </div>
