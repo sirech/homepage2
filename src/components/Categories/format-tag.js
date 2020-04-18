@@ -1,5 +1,5 @@
-const _ = require('lodash')
+import { kebabCase } from 'lodash'
 
 export default (tag) => {
-  return _.kebabCase(tag.toLowerCase())
+  return kebabCase(tag.toLowerCase())
 }
