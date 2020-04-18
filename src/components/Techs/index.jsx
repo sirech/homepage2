@@ -21,7 +21,6 @@ export default () => (
   <div className="technologies">
     <Container>
       <h2 className="section-heading text-center">Technologies</h2>
-      <hr className="border-white" />
       <p>
         Following the{' '}
         <a
