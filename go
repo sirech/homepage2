@@ -52,6 +52,8 @@ goal_run() {
 }
 
 goal_build() {
+  # Fail if site url is not provided
+  : "$SITE_URL"
   npm run build
 }
 
