@@ -80,6 +80,6 @@ type User = LoadingUser | LoadedUser;
 
 Thanks to type narrowing (_Item 22_), your code will be a lot tighter and typesafe this way. Once you get used to this style, you'll notice that many libraries don't follow this pattern, making things a lot more brittle than they should be.
 
-## Veredict
+## Verdict
 
 Compact, informative, even eye-opening. _Effective TypeScript_ is a clear ⭐⭐⭐⭐⭐. Now that both _Angular_ and _React_ seem to use _TypeScript_ as their default, you can't afford to miss this one. 
