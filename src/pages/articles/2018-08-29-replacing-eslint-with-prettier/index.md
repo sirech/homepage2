@@ -45,7 +45,7 @@ And that is pretty (duh) much it. Neat and formatted code that you can share wit
 
 ### Play nice with ESLint
 
-Now you don't want your nicely formatted code to trigger a thousand _ESLint__ warnings. Luckily, somebody already thought of this. [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) allows you to turn off these rules, so that both tools keep working together properly.
+Now you don't want your nicely formatted code to trigger a thousand _ESLint_ warnings. Luckily, somebody already thought of this. [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) allows you to turn off these rules, so that both tools keep working together properly.
 
 ### You want more?
 
