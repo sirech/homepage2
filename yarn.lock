@@ -951,7 +951,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   version "7.9.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.2.tgz#d90df0583a3a252f09aaa619665367bae518db06"
   integrity sha512-NE2DtOdufG7R5vnfQUTehdTfNycfUANEtCa9PssN9O/xmTzP4E08UI797ixaei6hBEVL9BI/PsdJS5x7mWoB9Q==
@@ -7826,12 +7826,12 @@ gatsby-plugin-layout@^1.2.4:
   dependencies:
     "@babel/runtime" "^7.8.7"
 
-gatsby-plugin-nprogress@^2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.2.4.tgz#5eaa6ca91c6346c098d9fd70b2ba7e7e66476b2a"
-  integrity sha512-HhcwrpzFoJgywngmraMwvyDxHhIBaa2f+kaMvLA6k2eLpGNatZxr4cAFhr0Vdw7Z3yV9eJNhQeMy1F94mtCWWQ==
+gatsby-plugin-nprogress@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.3.0.tgz#b3b0183d9370cc388b0f582fef39644ad813a4ea"
+  integrity sha512-E4kVr7X0HjhjSRrfwhFGTHYwe2G2MLVKfoPN1ALzm8fVxcQysZ7bGrZKy/swosEkY2b1miegIeHROpgCRK+36Q==
   dependencies:
-    "@babel/runtime" "^7.8.7"
+    "@babel/runtime" "^7.9.2"
     nprogress "^0.2.0"
 
 gatsby-plugin-page-creator@^2.2.4:
