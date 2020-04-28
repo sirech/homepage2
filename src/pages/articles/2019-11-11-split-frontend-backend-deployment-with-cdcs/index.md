@@ -36,7 +36,7 @@ It is not really about any particular technology. There are a bunch of different
 
 First of all, running these tests continuously ensures that they keep working at all times. The big benefit, however, is that we can separate the deployment of frontend and backend. If both sides are fulfilling the contract, it is likely that they work together correctly. Thus, we can consider avoiding expensive integrated tests. They tend to work pretty badly anyways.
 
-## Setting it up some contracts
+## Setting up some contracts
 
 There are two sides to set up, consumer and provider. The tests will run in the pipelines that build the frontend and the backend, respectively. We are going to use the [Pact framework](https://docs.pact.io/) for our examples, which is the tool that I am most familiar with. Because of that, I tend to use pact and contract interchangeably. Our pipelines are written for [CircleCI](https://circleci.com/), but they should be fairly easy to port to other CI Tools.
 
