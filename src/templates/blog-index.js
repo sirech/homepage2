@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 import { path as Rpath, filter, map, addIndex, pipe } from 'ramda'
 
