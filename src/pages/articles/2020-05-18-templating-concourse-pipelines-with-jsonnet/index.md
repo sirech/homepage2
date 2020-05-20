@@ -37,6 +37,7 @@ I know the linting failed. Which part exactly? If the job is nicely split into t
 
 I have a granular breakdown, including every task, and I can directly go to the error without an archeological investigation. The downside, though? A lot of markup. Like really, a lot. This is how this innocent linter task looks like:
 
+<!-- linter-task -->
 ```yaml
 - name: lint
   serial: true
@@ -86,6 +87,7 @@ As you surely know, _YAML_ is a superset of _JSON_. If this tool is outputting _
 
 _Concourse_ has a bunch of basic abstractions. You have [resources](https://concourse-ci.org/resources.html), [jobs](https://concourse-ci.org/jobs.html), and [tasks](https://concourse-ci.org/tasks.html), among others. Each of those is represented by an object with some attributes. We can instantiate one by using functions that receive a configuration and emit a valid object. Here are some examples:
 
+<!-- basic-resources -->
 ```javascript
 {
   DockerResource(name, repository, tag = 'latest', allow_insecure = false):: {
@@ -114,7 +116,8 @@ _Concourse_ has a bunch of basic abstractions. You have [resources](https://conc
 
 You can use them as regular functions inside a `.jsonnet` file after importing the library.
 
-```
+<!-- git-resource -->
+```python
 local concourse = import 'concourse.libsonnet';
 concourse.GitResource(source, 'https://github.com/sirech/example-concourse-pipeline.git')
 ```
@@ -125,6 +128,7 @@ The syntax somehow resembles both _JavaScript_ and _Python_. It's not quite a pr
 
 Let's say we are defining our `resources`. I have a sample project where it looks like this:
 
+<!-- resources -->
 ```yaml
 resources:
 - name: git
@@ -149,6 +153,7 @@ resources:
 
 It's not a lot of code, but you can feel that the structure is pretty repetitive. With the help of our previously defined helpers, we can do better.
 
+<!-- jsonnet-resources -->
 ```python
 local source = 'git';
 local container = 'dev-container';
@@ -168,6 +173,7 @@ Every pipeline is different, which means a generic abstraction is hard to find. 
 
 What if you build a small DSL to express these patterns? I mostly pass the same inputs to every job, so I have a function to fetch them in parallel:
 
+<!-- get-resource -->
 ```python
 local Inputs(dependencies = []) = concourse.Parallel([
   concourse.Get(s, dependencies = dependencies) for s in [source, container]
@@ -178,6 +184,7 @@ You see that through variables, I keep this in sync with the resources I defined
 
 My [tasks definitions](https://concourse-ci.org/tasks.html) follow a defined structure, as well. They are stored in the `source`, in a defined folder. We set some baseline parameters. All that context goes into a pipeline specific way of creating tasks.
 
+<!-- task -->
 ```python
 local Task(name, file = name, image = container, params = {}) = {
   task: name,
@@ -199,6 +206,7 @@ That _linter_ job has a ton of repetition. It's time to compose all these smalle
 
 We have a `Job`, `Inputs`, and some `Tasks`. Let's use all the functions that we defined:
 
+<!-- full-job -->
 ```python
 concourse.Job('lint', plan = [
   Inputs('prepare'),
@@ -214,6 +222,7 @@ I really like this one! Is it too smart for its own good? I think not! You see a
 
 I like to convert the `json` output to _YAML_, and use `fly set-pipeline` with the generated file. This is the script:
 
+<!-- generating-pipeline -->
 ```shell
 json2yaml() {
   python3 -c 'import sys, yaml, json; print(yaml.dump(json.loads(sys.stdin.read())))'
