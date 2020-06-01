@@ -1,17 +1,23 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import SitePost from './index'
+import Share from './index'
 
 import frontmatter from '../../fixtures/frontmatter'
-import html from '../../fixtures/html'
 import siteMetadata from '../../fixtures/siteMetadata'
 
 describe('components', () => {
-  describe('SitePost', () => {
-    it('renders correctly', () => {
-      const data = { html: html(), frontmatter: frontmatter() }
+  describe('Share', () => {
+    let site
+
+    beforeEach(() => {
+      site = {
+        siteMetadata: siteMetadata(),
+      }
+    })
+
+    it('renders the share buttons', () => {
       const component = renderer.create(
-        <SitePost data={data} site={{ siteMetadata: siteMetadata() }} />
+        <Share site={site} path={frontmatter().path} />
       )
       expect(component.toJSON()).toMatchSnapshot()
     })

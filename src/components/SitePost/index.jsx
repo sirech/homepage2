@@ -5,15 +5,17 @@ import cx from 'classnames'
 import Link from 'gatsby-link'
 import Container from '../Container'
 import Categories from '../Categories'
+import Share from '../Share'
 
 import styles from './style.module.scss'
 import './images.scss'
 
 import frontmatterType from '../../prop-types/frontmatter'
+import siteType from '../../prop-types/site'
 
 class SitePost extends React.Component {
   render() {
-    const { data } = this.props
+    const { data, site } = this.props
     const { frontmatter, html } = data
     const { title, path, date, categories } = frontmatter
 
@@ -34,6 +36,10 @@ class SitePost extends React.Component {
                 __html: html,
               }}
             />
+
+            <section>
+              <Share site={site} path={path} />
+            </section>
           </article>
         </div>
       </Container>
@@ -46,6 +52,7 @@ SitePost.propTypes = {
     frontmatter: frontmatterType,
     html: PropTypes.string.isRequired,
   }).isRequired,
+  site: siteType,
 }
 
 export default SitePost
