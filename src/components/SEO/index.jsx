@@ -141,7 +141,11 @@ const SEO = ({ isBlogPost, post, site }) => {
       {image && <meta name="og:image" content={image} />}
 
       {/* Twitter Card tags */}
-      <meta name="twitter:card" content="summary" />
+      <meta
+        name="twitter:card"
+        content={image ? 'summary_large_image' : 'summary'}
+      />
+      {image && <meta name="twitter:image" content={image} />}
       <meta
         name="twitter:creator"
         content={Rpath(['siteMetadata', 'twitter'])(site)}

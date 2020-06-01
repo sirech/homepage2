@@ -223,8 +223,12 @@ exports[`components SEO includes the image in the metadata 1`] = `
     name="og:image"
   />
   <meta
-    content="summary"
+    content="summary_large_image"
     name="twitter:card"
+  />
+  <meta
+    content="./image/logo.png"
+    name="twitter:image"
   />
   <meta
     content="@handle"
