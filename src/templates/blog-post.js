@@ -64,6 +64,13 @@ export const pageQuery = graphql`
         draft
         description
         canonical
+        image {
+          childImageSharp {
+            fluid(maxWidth: 750) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
