@@ -5,4 +5,5 @@ export default () => ({
   path: '/the-post',
   title: 'My Post',
   draft: false,
+  description: 'this is the description',
 })

@@ -46,7 +46,9 @@ exports[`components SitePostSummary renders correctly 1`] = `
             </span>
           </a>
         </header>
-        <section />
+        <section>
+          this is the description
+        </section>
       </article>
     </a>
   </div>
