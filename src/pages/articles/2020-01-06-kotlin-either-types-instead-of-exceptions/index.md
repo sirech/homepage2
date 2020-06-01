@@ -11,6 +11,8 @@ categories:
   - Either
 draft: false
 description: "Using Either is an alternative to exceptions to make your code more explicit about errors. Easy and convenient with Kotlin and Arrow"
+image: ./images/either.png
+
 ---
 
 Many of the REST APIs I’ve built lately follow the same pattern. A dumb controller calls a service, which in turn calls a 3rd party API. Simple, well tested, and tidy. Everybody is happy. And then, you start dealing with error conditions.

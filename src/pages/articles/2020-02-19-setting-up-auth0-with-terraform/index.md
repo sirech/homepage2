@@ -10,6 +10,8 @@ categories:
   - Terraform
 draft: false
 description: "Setting up Auth0 with Terraform ensures that your setup is repeatable, and that you can authorize your apps easily and conveniently"
+image: ./images/flow.png
+
 ---
 
 Let's imagine you have an application divided into two components, a frontend, and a backend. The frontend is a Single Page Application written in _React_, and the backend is a REST API written in, say, _Kotlin_. You want to implement some functionality that requires authorization. You naturally gravitate toward [OAuth](https://oauth.net/2/). But then you realize that implementing it by yourself implies much effort. And you still need to manage users. Maybe use an [OAuth provider](https://en.wikipedia.org/wiki/List_of_OAuth_providers)? It all seems kind of overkill for protecting your homemade recipes manager.

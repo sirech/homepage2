@@ -9,6 +9,8 @@ categories:
   - Templating
 draft: false
 description: "Templating YAML pipelines using a tool like Jsonnet is a way of managing the complexity of pipelines that increase in size and complexity"
+image: ./images/logo.png
+
 ---
 
 <figure class="figure figure--right">

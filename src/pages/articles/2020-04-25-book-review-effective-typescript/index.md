@@ -8,6 +8,8 @@ categories:
   - TypeScript
 draft: false
 description: "If there is one book to read about TypeScript, it's got to be Effective TypeScript"
+image: "./images/effective-ts.jpg"
+
 ---
 
 <figure class="figure figure--right">

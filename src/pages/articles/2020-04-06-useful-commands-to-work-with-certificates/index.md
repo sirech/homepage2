@@ -9,6 +9,8 @@ categories:
   - openssl
 draft: false
 description: "A collection of commands to work with certificates for common operations"
+image: ./images/https.png
+
 ---
 
 <figure class="figure figure--right">

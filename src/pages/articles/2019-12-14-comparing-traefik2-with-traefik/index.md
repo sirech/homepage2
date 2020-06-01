@@ -12,6 +12,8 @@ categories:
   - Smart Routing
 draft: false
 description: "Traefik2 is a significant change from Traefik. How do the both compare? I have ported an old setup to the new format"
+image: ./images/traefik2.png
+
 ---
 
 <figure class="figure figure--left">

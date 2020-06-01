@@ -12,6 +12,8 @@ categories:
   - axios
 draft: false
 description: "Automatically failing unit tests with Jest in React when network requests are made will make your tests more reliable and easier to maintain"
+image: ./images/jest.png
+
 ---
 
 A [unit test](https://martinfowler.com/bliki/UnitTest.html) should not trigger network requests, such as calls to a REST API. It breaks the isolation and will make the tests flaky and unreliable.

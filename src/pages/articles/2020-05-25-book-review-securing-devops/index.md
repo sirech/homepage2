@@ -9,6 +9,8 @@ categories:
   - Security
 draft: false
 description: "Securing DevOps offers plenty of actionable advice to make your setup, from CI to production, more secure"
+image: ./images/securing-devops.png
+
 ---
 
 <figure class="figure figure--right">

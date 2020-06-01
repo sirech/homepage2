@@ -9,6 +9,8 @@ categories:
   - react-hooks
 draft: false
 description: "Formik is the new cool kid on the block for forms in react. Here is how to build custom input elements on top"
+image: ./images/react.png
+
 ---
 
 <figure class="figure figure--right">

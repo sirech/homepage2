@@ -10,6 +10,8 @@ categories:
   - SpringBoot
 draft: false
 description: "Build authorization into your Kotlin backend by combining Auth0, JWTs and Spring Security to ensure only the right parties can execute operations"
+image: ./images/jwt-concept.png
+
 ---
 
 In my previous article, I wrote about [setting up Auth0 using Terraform](../setting-up-auth0-with-terraform/). In this article, I want to put that setup to work to authorize requests to a backend API written in _Kotlin_, using [SpringBoot](https://spring.io/).
