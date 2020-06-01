@@ -62,5 +62,22 @@ describe('components', () => {
       const component = shallow(<SEO isBlogPost post={draft} site={site} />)
       expect(toJson(component)).toMatchSnapshot()
     })
+
+    it('includes the image in the metadata', () => {
+      const image = {
+        childImageSharp: {
+          fluid: {
+            src: './image/logo.png',
+          },
+        },
+      }
+      const draft = {
+        html: post.html,
+        frontmatter: { ...post.frontmatter, image },
+      }
+
+      const component = shallow(<SEO isBlogPost post={draft} site={site} />)
+      expect(toJson(component)).toMatchSnapshot()
+    })
   })
 })

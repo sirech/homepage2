@@ -179,6 +179,68 @@ exports[`components SEO does not index draft posts 1`] = `
 </HelmetWrapper>
 `;
 
+exports[`components SEO includes the image in the metadata 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+  title="My Post | site title"
+>
+  <meta
+    content="My Post | site title"
+    name="title"
+  />
+  <meta
+    content="this is the content"
+    name="description"
+  />
+  <script
+    type="application/ld+json"
+  >
+    [{"@context":"http://schema.org","@type":"WebSite","url":"http://example.com/the-post","name":"My Post","alternateName":"site title"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/the-post","name":"My Post"}}]},{"@context":"http://schema.org","@type":"BlogPosting","url":"http://example.com/the-post","name":"My Post","alternateName":"site title","headline":"My Post","description":"this is the content","author":{"@type":"Person","name":"me"},"publisher":{"@type":"Organization","url":"http://example.com","name":"me"},"mainEntityOfPage":{"@type":"WebSite","@id":"http://example.com"}}]
+  </script>
+  <meta
+    content="index, follow"
+    name="robots"
+  />
+  <meta
+    content="http://example.com/the-post"
+    property="og:url"
+  />
+  <meta
+    content="article"
+    property="og:type"
+  />
+  <meta
+    content="My Post"
+    property="og:title"
+  />
+  <meta
+    content="this is the content"
+    property="og:description"
+  />
+  <meta
+    content="./image/logo.png"
+    name="og:image"
+  />
+  <meta
+    content="summary"
+    name="twitter:card"
+  />
+  <meta
+    content="@handle"
+    name="twitter:creator"
+  />
+  <meta
+    content="My Post"
+    name="twitter:title"
+  />
+  <meta
+    content="this is the content"
+    name="twitter:description"
+  />
+</HelmetWrapper>
+`;
+
 exports[`components SEO renders correctly for a blogpost 1`] = `
 <HelmetWrapper
   defer={true}

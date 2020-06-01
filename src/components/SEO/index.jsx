@@ -96,6 +96,14 @@ const SEO = ({ isBlogPost, post, site }) => {
   const draft = Rpath(['frontmatter', 'draft'])(post)
   const canonical = Rpath(['frontmatter', 'canonical'])(post)
 
+  const image = Rpath([
+    'frontmatter',
+    'image',
+    'childImageSharp',
+    'fluid',
+    'src',
+  ])(post)
+
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
     isBlogPost,
     url,
@@ -130,6 +138,7 @@ const SEO = ({ isBlogPost, post, site }) => {
       {isBlogPost ? <meta property="og:type" content="article" /> : null}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+      {image && <meta name="og:image" content={image} />}
 
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary" />
@@ -159,6 +168,13 @@ SEO.propTypes = {
       title: PropTypes.string.isRequired,
       draft: PropTypes.bool.isRequired,
       canonical: PropTypes.string,
+      image: PropTypes.shape({
+        childImageSharp: PropTypes.shape({
+          fluid: PropTypes.shape({
+            src: PropTypes.string.isRequired,
+          }),
+        }),
+      }),
     }).isRequired,
     html: PropTypes.string.isRequired,
   }).isRequired,
