@@ -103,6 +103,7 @@ const SEO = ({ isBlogPost, post, site }) => {
     'fluid',
     'src',
   ])(post)
+  const imageUrl = image ? siteUrl + image : null
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
     isBlogPost,
@@ -138,14 +139,14 @@ const SEO = ({ isBlogPost, post, site }) => {
       {isBlogPost ? <meta property="og:type" content="article" /> : null}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      {image && <meta name="og:image" content={image} />}
+      {image && <meta name="og:image" content={imageUrl} />}
 
       {/* Twitter Card tags */}
       <meta
         name="twitter:card"
         content={image ? 'summary_large_image' : 'summary'}
       />
-      {image && <meta name="twitter:image" content={image} />}
+      {image && <meta name="twitter:image" content={imageUrl} />}
       <meta
         name="twitter:creator"
         content={Rpath(['siteMetadata', 'twitter'])(site)}

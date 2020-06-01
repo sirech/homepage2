@@ -67,7 +67,7 @@ describe('components', () => {
       const image = {
         childImageSharp: {
           fluid: {
-            src: './image/logo.png',
+            src: '/static/logo.png',
           },
         },
       }

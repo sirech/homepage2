@@ -219,7 +219,7 @@ exports[`components SEO includes the image in the metadata 1`] = `
     property="og:description"
   />
   <meta
-    content="./image/logo.png"
+    content="http://example.com/static/logo.png"
     name="og:image"
   />
   <meta
@@ -227,7 +227,7 @@ exports[`components SEO includes the image in the metadata 1`] = `
     name="twitter:card"
   />
   <meta
-    content="./image/logo.png"
+    content="http://example.com/static/logo.png"
     name="twitter:image"
   />
   <meta
