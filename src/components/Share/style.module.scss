@@ -1,0 +1,14 @@
+.share {
+  text-align: center;
+}
+
+.cta {
+  font-style: italic;
+  margin-bottom: 0.3rem;
+}
+
+.buttons {
+  button:not(:first-child) {
+    margin-left: 0.3rem;
+  }
+}

@@ -38,7 +38,7 @@ class SitePost extends React.Component {
             />
 
             <section>
-              <Share site={site} path={path} />
+              <Share site={site} frontmatter={frontmatter} />
             </section>
           </article>
         </div>

@@ -1,39 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components Share renders the share buttons 1`] = `
-<div>
-  <button
-    aria-label="facebook"
-    className="react-share__ShareButton"
-    onClick={[Function]}
-    style={
-      Object {
-        "backgroundColor": "transparent",
-        "border": "none",
-        "color": "inherit",
-        "cursor": "pointer",
-        "font": "inherit",
-        "padding": 0,
-      }
-    }
+<div
+  className="share"
+>
+  <div
+    className="cta"
   >
-    <svg
-      height={32}
-      viewBox="0 0 64 64"
-      width={32}
+    Did you like it? Give it a share!
+  </div>
+  <div
+    className="buttons"
+  >
+    <ForwardRef(ShareButton-facebook)
+      quote="this is the description"
+      url="http://example.com/the-post"
     >
-      <circle
-        cx="32"
-        cy="32"
-        fill="#3b5998"
-        r="31"
-        style={Object {}}
+      <Icon
+        bgStyle={Object {}}
+        borderRadius={0}
+        iconFillColor="white"
+        round={true}
+        size={32}
       />
-      <path
-        d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"
-        fill="white"
+    </ForwardRef(ShareButton-facebook)>
+    <ForwardRef(ShareButton-twitter)
+      hashtags={
+        Array [
+          "javascript",
+          "react",
+        ]
+      }
+      title="My Post"
+      url="http://example.com/the-post"
+      via="handle"
+    >
+      <Icon
+        bgStyle={Object {}}
+        borderRadius={0}
+        iconFillColor="white"
+        round={true}
+        size={32}
       />
-    </svg>
-  </button>
+    </ForwardRef(ShareButton-twitter)>
+    <ForwardRef(ShareButton-linkedin)
+      summary="this is the description"
+      title="My Post"
+      url="http://example.com/the-post"
+    >
+      <Icon
+        bgStyle={Object {}}
+        borderRadius={0}
+        iconFillColor="white"
+        round={true}
+        size={32}
+      />
+    </ForwardRef(ShareButton-linkedin)>
+    <ForwardRef(ShareButton-email)
+      body="this is the description http://example.com/the-post"
+      subject="My Post"
+    >
+      <Icon
+        bgStyle={Object {}}
+        borderRadius={0}
+        iconFillColor="white"
+        round={true}
+        size={32}
+      />
+    </ForwardRef(ShareButton-email)>
+  </div>
 </div>
 `;

@@ -1,5 +1,6 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
+import toJson from 'enzyme-to-json'
 import Share from './index'
 
 import frontmatter from '../../fixtures/frontmatter'
@@ -16,10 +17,10 @@ describe('components', () => {
     })
 
     it('renders the share buttons', () => {
-      const component = renderer.create(
-        <Share site={site} path={frontmatter().path} />
+      const component = shallow(
+        <Share site={site} frontmatter={frontmatter()} />
       )
-      expect(component.toJSON()).toMatchSnapshot()
+      expect(toJson(component)).toMatchSnapshot()
     })
   })
 })
