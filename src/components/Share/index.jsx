@@ -37,9 +37,7 @@ const Share = ({ frontmatter, site }) => {
           url={url}
           title={title}
           via={twitter.replace(/@/, '')}
-          hashtags={categories.map((tag) =>
-            tag.toLowerCase().replace(/ /, '-')
-          )}
+          hashtags={categories.map((tag) => tag.toLowerCase().replace(/ /, ''))}
         >
           <TwitterIcon size={32} round />
         </TwitterShareButton>
