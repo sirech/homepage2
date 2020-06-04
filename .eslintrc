@@ -6,6 +6,7 @@
     "prettier/react",
     "prettier/standard",
     "plugin:css-modules/recommended",
+    "plugin:testing-library/recommended",
   ],
   "plugins": [
     "react",
@@ -35,7 +36,15 @@
         "semi": false
       }
     ],
-    "react/jsx-pascal-case": ["error", { "allowAllCaps": true }]
+    "react/jsx-pascal-case": ["error", { "allowAllCaps": true }],
+    "testing-library/no-debug": 2,
+    "testing-library/no-dom-import": 2,
+    "testing-library/no-manual-cleanup": 2,
+    "testing-library/no-wait-for-empty-callback": 2,
+    "testing-library/prefer-explicit-assert": 2,
+    "testing-library/prefer-presence-queries": 2,
+    "testing-library/prefer-screen-queries": 2,
+    "testing-library/prefer-wait-for": 2,
   },
   "globals": {
     "graphql": true,
