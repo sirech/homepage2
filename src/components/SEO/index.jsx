@@ -139,7 +139,7 @@ const SEO = ({ isBlogPost, post, site }) => {
       {isBlogPost ? <meta property="og:type" content="article" /> : null}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      {image && <meta name="og:image" content={imageUrl} />}
+      {image && <meta property="og:image" content={imageUrl} />}
 
       {/* Twitter Card tags */}
       <meta
