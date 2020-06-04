@@ -6,7 +6,10 @@ describe('components', () => {
   describe('Tools', () => {
     it('renders correctly', async () => {
       render(<Tools />)
+
       await screen.findByText('Tools')
+      await screen.findByText('spacemacs')
+      await screen.findByText('git')
     })
   })
 })

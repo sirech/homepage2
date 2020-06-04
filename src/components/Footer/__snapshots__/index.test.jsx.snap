@@ -1,31 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components Footer renders correctly 1`] = `
-<footer
-  className="footer text-center"
->
-  <div>
-    Copyright © 
-    2020
-    ,
-     
+<DocumentFragment>
+  <footer
+    class="footer text-center"
+  >
+    <div>
+      Copyright © 2020, 
+      <a
+        href="http://creativecommons.org/licenses/by/4.0/legalcode"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Licensed under CC-by-4.0
+      </a>
+    </div>
+    Favicon courtesy of 
     <a
-      href="http://creativecommons.org/licenses/by/4.0/legalcode"
+      href="https://icons8.com/"
       rel="noopener noreferrer"
       target="_blank"
     >
-      Licensed under CC-by-4.0
+      Icons8
     </a>
-  </div>
-  Favicon courtesy of
-   
-  <a
-    href="https://icons8.com/"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    Icons8
-  </a>
-   
-</footer>
+     
+  </footer>
+</DocumentFragment>
 `;

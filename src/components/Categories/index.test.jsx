@@ -1,14 +1,14 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
 import Categories from './index'
 
 describe('components', () => {
   describe('Categories', () => {
     it('renders correctly', () => {
-      const component = renderer.create(
+      const { asFragment } = render(
         <Categories categories={['React', 'SpringBoot', 'SSL Certificates']} />
       )
-      expect(component.toJSON()).toMatchSnapshot()
+      expect(asFragment()).toMatchSnapshot()
     })
   })
 })

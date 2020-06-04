@@ -7,6 +7,7 @@ module.exports = {
     '^.+\\.jsx?$': './jest/transformer.js',
   },
   setupFiles: ['<rootDir>/setupTests.js'],
+  setupFilesAfterEnv: ['<rootDir>/setupJest.js'],
   testPathIgnorePatterns: ['/node_modules/', '<rootDir>/.cache/'],
   transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],
   globals: {

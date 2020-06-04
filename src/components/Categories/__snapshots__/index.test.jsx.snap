@@ -1,33 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components Categories renders correctly 1`] = `
-Array [
+<DocumentFragment>
   <a
     href="/blog/tags/react"
   >
     <span
-      className="tag badge mr-1"
+      class="tag badge mr-1"
     >
       React
     </span>
-  </a>,
+  </a>
   <a
     href="/blog/tags/springboot"
   >
     <span
-      className="tag badge mr-1"
+      class="tag badge mr-1"
     >
       SpringBoot
     </span>
-  </a>,
+  </a>
   <a
     href="/blog/tags/ssl-certificates"
   >
     <span
-      className="tag badge mr-1"
+      class="tag badge mr-1"
     >
       SSL Certificates
     </span>
-  </a>,
-]
+  </a>
+</DocumentFragment>
 `;

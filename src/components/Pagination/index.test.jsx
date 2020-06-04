@@ -1,32 +1,41 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { render, screen } from '@testing-library/react'
 import Pagination from './index'
 
 describe('components', () => {
   describe('Pagination', () => {
     it('renders correctly', () => {
-      const component = renderer.create(<Pagination index={3} pageCount={5} />)
-      expect(component.toJSON()).toMatchSnapshot()
+      const { asFragment } = render(<Pagination index={3} pageCount={5} />)
+      expect(asFragment()).toMatchSnapshot()
     })
 
     it('renders correctly if it links to the first page', () => {
-      const component = renderer.create(<Pagination index={2} pageCount={5} />)
-      expect(component.toJSON()).toMatchSnapshot()
+      render(<Pagination index={2} pageCount={5} />)
+
+      const first = screen.getAllByRole('link')[0]
+      expect(first.href).toMatch(/\/blog\/$/)
     })
 
     it('disables back link if we are on the first page', () => {
-      const component = renderer.create(<Pagination index={1} pageCount={5} />)
-      expect(component.toJSON()).toMatchSnapshot()
+      render(<Pagination index={1} pageCount={5} />)
+
+      const first = screen.getAllByRole('listitem')[0]
+      expect(first).toHaveClass('disabled')
     })
 
     it('disables next link if we are on the last page', () => {
-      const component = renderer.create(<Pagination index={5} pageCount={5} />)
-      expect(component.toJSON()).toMatchSnapshot()
+      render(<Pagination index={5} pageCount={5} />)
+
+      const elements = screen.getAllByRole('listitem')
+      const last = elements[elements.length - 1]
+      expect(last).toHaveClass('disabled')
     })
 
     it('only renders if there are multiple pages', () => {
-      const component = renderer.create(<Pagination index={1} pageCount={1} />)
-      expect(component.toJSON()).toMatchSnapshot()
+      render(<Pagination index={1} pageCount={1} />)
+
+      expect(screen.getByRole('navigation')).toBeInTheDocument()
+      expect(screen.queryByRole('list')).not.toBeInTheDocument()
     })
   })
 })
