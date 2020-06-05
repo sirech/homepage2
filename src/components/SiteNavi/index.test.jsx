@@ -1,15 +1,15 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
 import SiteNavi from './index'
 
 describe('components', () => {
   describe('SiteNavi', () => {
     it('renders correctly', () => {
       const location = { pathname: '/' }
-      const component = renderer.create(
+      const { asFragment } = render(
         <SiteNavi title="title" location={location} />
       )
-      expect(component.toJSON()).toMatchSnapshot()
+      expect(asFragment()).toMatchSnapshot()
     })
   })
 })

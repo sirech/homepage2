@@ -1,15 +1,16 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
+import { render, waitFor } from '@testing-library/react'
 import StandardHelmet from './StandardHelmet'
 
 describe('components', () => {
   describe('StandardHelmet', () => {
-    it('renders correctly', () => {
-      const component = shallow(
-        <StandardHelmet title="the title" description="the description" />
+    it('renders correctly for a blogpost', async () => {
+      render(<StandardHelmet title="the title" description="the description" />)
+      await waitFor(() =>
+        expect(document.querySelector('head')).not.toBeEmptyDOMElement()
       )
-      expect(toJson(component)).toMatchSnapshot()
+
+      expect(document.querySelector('head')).toMatchSnapshot()
     })
   })
 })

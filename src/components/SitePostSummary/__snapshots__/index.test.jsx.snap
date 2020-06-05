@@ -1,37 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components SitePostSummary renders correctly 1`] = `
-<div
-  className="container"
->
+<DocumentFragment>
   <div
-    className="articles"
+    class="container"
   >
-    <a
-      href="/the-post"
-      style={
-        Object {
-          "boxShadow": "none",
-        }
-      }
+    <div
+      class="articles"
     >
+      <a
+        href="/the-post"
+        style="box-shadow: none;"
+      />
       <article
-        className="article articleBox"
+        class="article articleBox"
       >
+        <a
+          href="/the-post"
+          style="box-shadow: none;"
+        />
         <header>
-          <h3>
-            My Post
-          </h3>
-          <time
-            dateTime="2018/03/01"
+          <a
+            href="/the-post"
+            style="box-shadow: none;"
           >
-            2018/03/01
-          </time>
+            <h3>
+              My Post
+            </h3>
+            <time
+              datetime="2018/03/01"
+            >
+              2018/03/01
+            </time>
+          </a>
           <a
             href="/blog/tags/javascript"
           >
             <span
-              className="tag badge mr-1"
+              class="tag badge mr-1"
             >
               JavaScript
             </span>
@@ -40,7 +46,7 @@ exports[`components SitePostSummary renders correctly 1`] = `
             href="/blog/tags/react"
           >
             <span
-              className="tag badge mr-1"
+              class="tag badge mr-1"
             >
               React
             </span>
@@ -50,7 +56,7 @@ exports[`components SitePostSummary renders correctly 1`] = `
           this is the description
         </section>
       </article>
-    </a>
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;

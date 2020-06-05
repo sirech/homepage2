@@ -1,37 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components StandardHelmet renders correctly 1`] = `
-<HelmetWrapper
-  defer={true}
-  encodeSpecialCharacters={true}
-  meta={
-    Array [
-      Object {
-        "content": "the title | Mario Fernandez",
-        "name": "title",
-      },
-      Object {
-        "content": "the description",
-        "name": "description",
-      },
-      Object {
-        "content": "summary",
-        "name": "twitter:card",
-      },
-      Object {
-        "content": "the title",
-        "property": "og:title",
-      },
-      Object {
-        "content": "website",
-        "property": "og:type",
-      },
-      Object {
-        "content": "the description",
-        "property": "og:description",
-      },
-    ]
-  }
-  title="the title | Mario Fernandez"
-/>
+exports[`components StandardHelmet renders correctly for a blogpost 1`] = `
+<head>
+  <title>
+    the title | Mario Fernandez
+  </title>
+  <meta
+    content="the title | Mario Fernandez"
+    data-react-helmet="true"
+    name="title"
+  />
+  <meta
+    content="the description"
+    data-react-helmet="true"
+    name="description"
+  />
+  <meta
+    content="summary"
+    data-react-helmet="true"
+    name="twitter:card"
+  />
+  <meta
+    content="the title"
+    data-react-helmet="true"
+    property="og:title"
+  />
+  <meta
+    content="website"
+    data-react-helmet="true"
+    property="og:type"
+  />
+  <meta
+    content="the description"
+    data-react-helmet="true"
+    property="og:description"
+  />
+</head>
 `;

@@ -1,91 +1,206 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components IndexPage renders correctly 1`] = `
-<div>
-  <HelmetWrapper
-    defer={true}
-    encodeSpecialCharacters={true}
-    meta={
-      Array [
-        Object {
-          "content": "summary",
-          "name": "twitter:card",
-        },
-        Object {
-          "content": "site title",
-          "property": "og:title",
-        },
-        Object {
-          "content": "website",
-          "property": "og:type",
-        },
-        Object {
-          "content": "description",
-          "property": "og:description",
-        },
-        Object {
-          "content": "http://example.com",
-          "property": "og:url",
-        },
-      ]
-    }
-    title="site title"
-  />
-  <SitePost
-    data={
-      Object {
-        "frontmatter": Object {
-          "categories": Array [
-            "JavaScript",
-            "React",
-          ],
-          "date": "2018/03/01",
-          "description": "this is the description",
-          "draft": false,
-          "layout": "post",
-          "path": "/the-post",
-          "title": "My Post",
-        },
-        "html": "
-<div>
-  <span>Header</span>
-</div>
-",
-        "id": "id",
-      }
-    }
-    isIndex={true}
-    key="0"
-  />
-  <SitePost
-    data={
-      Object {
-        "frontmatter": Object {
-          "categories": Array [
-            "JavaScript",
-            "React",
-          ],
-          "date": "2018/03/01",
-          "description": "this is the description",
-          "draft": false,
-          "layout": "post",
-          "path": "/the-post",
-          "title": "My Post",
-        },
-        "html": "
-<div>
-  <span>Header</span>
-</div>
-",
-        "id": "id",
-      }
-    }
-    isIndex={true}
-    key="1"
-  />
-  <Pagination
-    index={3}
-    pageCount={5}
-  />
-</div>
+<DocumentFragment>
+  <div>
+    <div
+      class="container"
+    >
+      <div
+        class="articles"
+      >
+        <a
+          href="/the-post"
+          style="box-shadow: none;"
+        />
+        <article
+          class="article articleBox"
+        >
+          <a
+            href="/the-post"
+            style="box-shadow: none;"
+          />
+          <header>
+            <a
+              href="/the-post"
+              style="box-shadow: none;"
+            >
+              <h3>
+                My Post
+              </h3>
+              <time
+                datetime="2018/03/01"
+              >
+                2018/03/01
+              </time>
+            </a>
+            <a
+              href="/blog/tags/javascript"
+            >
+              <span
+                class="tag badge mr-1"
+              >
+                JavaScript
+              </span>
+            </a>
+            <a
+              href="/blog/tags/react"
+            >
+              <span
+                class="tag badge mr-1"
+              >
+                React
+              </span>
+            </a>
+          </header>
+          <section>
+            this is the description
+          </section>
+        </article>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="articles"
+      >
+        <a
+          href="/the-post"
+          style="box-shadow: none;"
+        />
+        <article
+          class="article articleBox"
+        >
+          <a
+            href="/the-post"
+            style="box-shadow: none;"
+          />
+          <header>
+            <a
+              href="/the-post"
+              style="box-shadow: none;"
+            >
+              <h3>
+                My Post
+              </h3>
+              <time
+                datetime="2018/03/01"
+              >
+                2018/03/01
+              </time>
+            </a>
+            <a
+              href="/blog/tags/javascript"
+            >
+              <span
+                class="tag badge mr-1"
+              >
+                JavaScript
+              </span>
+            </a>
+            <a
+              href="/blog/tags/react"
+            >
+              <span
+                class="tag badge mr-1"
+              >
+                React
+              </span>
+            </a>
+          </header>
+          <section>
+            this is the description
+          </section>
+        </article>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <nav
+        class="mt-4"
+      >
+        <ul
+          class="pagination justify-content-center"
+        >
+          <li
+            class="page-item"
+          >
+            <a
+              class="page-link"
+              href="/blog/2"
+            >
+              <i
+                class="fa fa-caret-left"
+              />
+            </a>
+          </li>
+          <li
+            class="page-item"
+          >
+            <a
+              class="page-link"
+              href="/blog/"
+            >
+              1
+            </a>
+          </li>
+          <li
+            class="page-item"
+          >
+            <a
+              class="page-link"
+              href="/blog/2"
+            >
+              2
+            </a>
+          </li>
+          <li
+            class="page-item active"
+          >
+            <a
+              class="page-link"
+              href="/blog/3"
+            >
+              3
+            </a>
+          </li>
+          <li
+            class="page-item"
+          >
+            <a
+              class="page-link"
+              href="/blog/4"
+            >
+              4
+            </a>
+          </li>
+          <li
+            class="page-item"
+          >
+            <a
+              class="page-link"
+              href="/blog/5"
+            >
+              5
+            </a>
+          </li>
+          <li
+            class="page-item"
+          >
+            <a
+              class="page-link"
+              href="/blog/4"
+            >
+              <i
+                class="fa fa-caret-right"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</DocumentFragment>
 `;

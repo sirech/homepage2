@@ -1,6 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
+import { render } from '@testing-library/react'
 
 import BlogPostTemplate from './blog-post'
 
@@ -17,8 +16,8 @@ describe('components', () => {
 
       const post = { id: 'id', frontmatter: frontmatter(), html: html() }
       const data = { site, post }
-      const component = shallow(<BlogPostTemplate data={data} />)
-      expect(toJson(component)).toMatchSnapshot()
+      const { asFragment } = render(<BlogPostTemplate data={data} />)
+      expect(asFragment()).toMatchSnapshot()
     })
   })
 })

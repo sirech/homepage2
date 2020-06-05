@@ -1,6 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
+import { render } from '@testing-library/react'
 
 import IndexPage from './blog-index'
 
@@ -24,8 +23,8 @@ describe('components', () => {
         group: [{ post }, { post }],
       }
 
-      const component = shallow(<IndexPage pageContext={pageContext} />)
-      expect(toJson(component)).toMatchSnapshot()
+      const { asFragment } = render(<IndexPage pageContext={pageContext} />)
+      expect(asFragment()).toMatchSnapshot()
     })
   })
 })

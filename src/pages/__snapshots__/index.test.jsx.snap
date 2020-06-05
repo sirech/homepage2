@@ -1,59 +1,321 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components Profile renders correctly for a blogpost 1`] = `
-<div>
-  <main>
-    <HelmetWrapper
-      defer={true}
-      encodeSpecialCharacters={true}
-      meta={
-        Array [
-          Object {
-            "content": "About me | Mario Fernandez",
-            "name": "title",
-          },
-          Object {
-            "content": "I have been programming for a while already. Counting the time when I was studying, it has been over ten years already. If Peter Norvig is correct I should know by now what I am doing, although I often get the feeling I do not know anything.",
-            "name": "description",
-          },
-          Object {
-            "content": "summary",
-            "name": "twitter:card",
-          },
-          Object {
-            "content": "About me",
-            "property": "og:title",
-          },
-          Object {
-            "content": "website",
-            "property": "og:type",
-          },
-          Object {
-            "content": "I have been programming for a while already. Counting the time when I was studying, it has been over ten years already. If Peter Norvig is correct I should know by now what I am doing, although I often get the feeling I do not know anything.",
-            "property": "og:description",
-          },
-        ]
-      }
-      title="About me | Mario Fernandez"
-    />
-    <section
-      className="horizontal-section"
+exports[`components Profile renders correctly 1`] = `
+<DocumentFragment>
+  <div>
+    <main>
+      <section
+        class="horizontal-section"
+      >
+        <div
+          class="container"
+        >
+          <p>
+            I develop software for a living. Then I go home and continue reading about software because I just can't get enough. At some point, somebody thought it was a good idea to make me the technical lead of an agile team. I quickly discovered that building things myself is not the same as helping somebody else figure it out. I learned, somewhat to my surprise, that I really enjoy sharing ideas. According to their feedback, other developers have managed to learn something from me. At least they don't tend to run away screaming, which is, I think, a good thing.
+          </p>
+          <p>
+            I have been working as a professional developer for more than ten years. If 
+            <a
+              href="http://norvig.com/21-days.html"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Peter Norvig is correct
+            </a>
+             I should know by now what I am doing, although I often get the feeling I don't know anything.
+          </p>
+          <p>
+            I specialize in web programming. I started doing backend work, then I got more and more into frontend topics, and lately I have managed to touch infrastructure as well. I don't know if there is such a thing as a 
+            <b>
+              Full Stack Developer
+            </b>
+            , but I definitely try to involve myself in all areas of software delivery.
+          </p>
+          <p>
+            I have managed to work with plenty of 
+            <a
+              href="/#techs"
+            >
+              technologies
+            </a>
+             and 
+            <a
+              href="/#tools"
+            >
+              tools
+            </a>
+            . It took my a while to realize, though, that while solid tech and good foundations are important, they are not the only thing needed to deliver high quality software.
+          </p>
+        </div>
+      </section>
+      <section
+        class="horizontal-section bg-primary text-white"
+        id="techs"
+      >
+        <div
+          class="technologies"
+        >
+          <div
+            class="container"
+          >
+            <h2
+              class="section-heading text-center"
+            >
+              Technologies
+            </h2>
+            <p>
+              Following the 
+              <a
+                class="text-dark"
+                href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X"
+              >
+                Pragmatic Programmer
+              </a>
+               advice, I try to learn some new technology every year. My github account is full of small projects I have started to teach myself new things, such as this page itself. A list of them, in no particular order
+            </p>
+            <ul
+              class="techList"
+            >
+              <li
+                class="tech"
+                data-placement="top"
+                data-toggle="tooltip"
+                title="Ruby"
+              >
+                <i
+                  class="tech-icon devicon-ruby-plain"
+                  data-emergence="hidden"
+                />
+              </li>
+              <li
+                class="tech"
+                data-placement="top"
+                data-toggle="tooltip"
+                title="Rails"
+              >
+                <i
+                  class="tech-icon devicon-rails-plain"
+                  data-emergence="hidden"
+                />
+              </li>
+              <li
+                class="tech"
+                data-placement="top"
+                data-toggle="tooltip"
+                title="JavaScript"
+              >
+                <i
+                  class="tech-icon devicon-javascript-plain"
+                  data-emergence="hidden"
+                />
+              </li>
+              <li
+                class="tech"
+                data-placement="top"
+                data-toggle="tooltip"
+                title="React"
+              >
+                <i
+                  class="tech-icon devicon-react-plain"
+                  data-emergence="hidden"
+                />
+              </li>
+              <li
+                class="tech"
+                data-placement="top"
+                data-toggle="tooltip"
+                title="SQL"
+              >
+                <i
+                  class="tech-icon devicon-mysql-plain"
+                  data-emergence="hidden"
+                />
+              </li>
+              <li
+                class="tech"
+                data-placement="top"
+                data-toggle="tooltip"
+                title="Docker"
+              >
+                <i
+                  class="tech-icon devicon-docker-plain"
+                  data-emergence="hidden"
+                />
+              </li>
+              <li
+                class="tech"
+                data-placement="top"
+                data-toggle="tooltip"
+                title="HTML"
+              >
+                <i
+                  class="tech-icon devicon-html5-plain"
+                  data-emergence="hidden"
+                />
+              </li>
+              <li
+                class="tech"
+                data-placement="top"
+                data-toggle="tooltip"
+                title="CSS"
+              >
+                <i
+                  class="tech-icon devicon-css3-plain"
+                  data-emergence="hidden"
+                />
+              </li>
+              <li
+                class="tech"
+                data-placement="top"
+                data-toggle="tooltip"
+                title="Python"
+              >
+                <i
+                  class="tech-icon devicon-python-plain"
+                  data-emergence="hidden"
+                />
+              </li>
+              <li
+                class="tech"
+                data-placement="top"
+                data-toggle="tooltip"
+                title="Java"
+              >
+                <i
+                  class="tech-icon devicon-java-plain"
+                  data-emergence="hidden"
+                />
+              </li>
+              <li
+                class="tech"
+                data-placement="top"
+                data-toggle="tooltip"
+                title="AWS"
+              >
+                <i
+                  class="tech-icon devicon-amazonwebservices-plain"
+                  data-emergence="hidden"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section
+        class="horizontal-section"
+        id="tools"
+      >
+        <div
+          class="container"
+        >
+          <h2
+            class="section-heading text-center"
+          >
+            Tools
+          </h2>
+          <hr
+            class="border-white"
+          />
+          <p>
+            I am a bit picky about the tools I use. Actually, I am 
+            <b>
+              very picky
+            </b>
+            . I cannot remember how many times I did rewrite my shell config in the past. It is problematic for pair programming because I usually am the only one that can work at my computer.
+          </p>
+          <p>
+            Nowadays I try to at least outsource my configurations a bit, using some awesome community driven ones like 
+            <a
+              href="http://spacemacs.org"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Spacemacs
+            </a>
+             and 
+            <a
+              href="https://github.com/robbyrussell/oh-my-zsh"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Oh My Zsh
+            </a>
+          </p>
+          <ul
+            class="text-center"
+          >
+            <li
+              class="mr-1 mb-1 badge badge-secondary badge-pill"
+            >
+              spacemacs
+            </li>
+            <li
+              class="mr-1 mb-1 badge badge-secondary badge-pill"
+            >
+              zsh
+            </li>
+            <li
+              class="mr-1 mb-1 badge badge-secondary badge-pill"
+            >
+              git
+            </li>
+            <li
+              class="mr-1 mb-1 badge badge-secondary badge-pill"
+            >
+              tmux
+            </li>
+            <li
+              class="mr-1 mb-1 badge badge-secondary badge-pill"
+            >
+              Google Chrome
+            </li>
+            <li
+              class="mr-1 mb-1 badge badge-secondary badge-pill"
+            >
+              hammerspoon
+            </li>
+            <li
+              class="mr-1 mb-1 badge badge-secondary badge-pill"
+            >
+              Alfred
+            </li>
+            <li
+              class="mr-1 mb-1 badge badge-secondary badge-pill"
+            >
+              Dash
+            </li>
+            <li
+              class="mr-1 mb-1 badge badge-secondary badge-pill"
+            >
+              trello
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="footer text-center"
     >
-      <_default />
-    </section>
-    <section
-      className="horizontal-section bg-primary text-white"
-      id="techs"
-    >
-      <_default />
-    </section>
-    <section
-      className="horizontal-section"
-      id="tools"
-    >
-      <_default />
-    </section>
-  </main>
-  <_default />
-</div>
+      <div>
+        Copyright © 2020, 
+        <a
+          href="http://creativecommons.org/licenses/by/4.0/legalcode"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Licensed under CC-by-4.0
+        </a>
+      </div>
+      Favicon courtesy of 
+      <a
+        href="https://icons8.com/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Icons8
+      </a>
+       
+    </footer>
+  </div>
+</DocumentFragment>
 `;

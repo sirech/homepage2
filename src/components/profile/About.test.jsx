@@ -1,12 +1,11 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
 import About from './About'
 
 describe('components', () => {
   describe('About', () => {
-    it('renders correctly', () => {
-      const component = renderer.create(<About />)
-      expect(component).not.toBeNull()
+    it('renders correctly', async () => {
+      render(<About />)
     })
   })
 })
