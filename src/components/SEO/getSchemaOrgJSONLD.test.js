@@ -26,6 +26,7 @@ describe('getSchemaOrgJSONLD', () => {
         title: post.frontmatter.title,
         siteUrl: site.siteMetadata.url,
         author: site.siteMetadata.author,
+        image: '/static/logo.png',
         siteTitle: site.siteMetadata.title,
         description: post.frontmatter.description,
         datePublished: post.frontmatter.date,

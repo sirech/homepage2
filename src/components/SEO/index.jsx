@@ -49,6 +49,7 @@ const SEO = ({ isBlogPost, post, site }) => {
     siteUrl,
     title,
     author,
+    image: imageUrl,
     siteTitle,
     description,
     datePublished: date,

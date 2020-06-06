@@ -4,6 +4,7 @@ export default ({
   siteUrl,
   title,
   author,
+  image,
   siteTitle,
   description,
   datePublished,
@@ -39,6 +40,10 @@ export default ({
       '@id': siteUrl,
     },
     datePublished,
+  }
+
+  if (image) {
+    post.image = image
   }
 
   return isBlogPost
