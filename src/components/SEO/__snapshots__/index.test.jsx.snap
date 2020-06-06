@@ -64,7 +64,7 @@ exports[`components SEO renders correctly for a blogpost 1`] = `
     data-react-helmet="true"
     type="application/ld+json"
   >
-    [{"@context":"http://schema.org","@type":"WebSite","url":"http://example.com/the-post","name":"My Post","alternateName":"site title"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/the-post","name":"My Post"}}]},{"@context":"http://schema.org","@type":"BlogPosting","url":"http://example.com/the-post","name":"My Post","alternateName":"site title","headline":"My Post","description":"this is the description","author":{"@type":"Person","name":"me"},"publisher":{"@type":"Person","name":"me"},"mainEntityOfPage":{"@type":"WebSite","@id":"http://example.com"},"datePublished":"2018/03/01"}]
+    [{"@context":"http://schema.org","@type":"WebSite","url":"http://example.com/the-post","name":"My Post","alternateName":"site title"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/the-post","name":"My Post"}}]},{"@context":"http://schema.org","@type":"BlogPosting","url":"http://example.com/the-post","name":"My Post","alternateName":"site title","headline":"My Post","description":"this is the description","author":{"@type":"Person","name":"me"},"publisher":{"@type":"Organization","url":"http://example.com","name":"me"},"mainEntityOfPage":{"@type":"WebSite","@id":"http://example.com"},"datePublished":"2018/03/01"}]
   </script>
 </head>
 `;

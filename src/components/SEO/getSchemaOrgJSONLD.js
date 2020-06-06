@@ -32,7 +32,8 @@ export default ({
       name: author,
     },
     publisher: {
-      '@type': 'Person',
+      '@type': 'Organization',
+      url: siteUrl,
       name: author,
     },
     mainEntityOfPage: {

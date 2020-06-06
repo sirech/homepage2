@@ -41,8 +41,9 @@ Array [
     },
     "name": "My Post",
     "publisher": Object {
-      "@type": "Person",
+      "@type": "Organization",
       "name": "me",
+      "url": "http://example.com",
     },
     "url": "/the-post",
   },
