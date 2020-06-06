@@ -6,7 +6,8 @@ import { path as Rpath } from 'ramda'
 
 import siteType from '../../prop-types/site'
 
-const getSchemaOrgJSONLD = ({
+// exported for testing
+export const getSchemaOrgJSONLD = ({
   isBlogPost,
   url,
   siteUrl,
@@ -26,6 +27,29 @@ const getSchemaOrgJSONLD = ({
     },
   ]
 
+  const post = {
+    '@context': 'http://schema.org',
+    '@type': 'BlogPosting',
+    url,
+    name: title,
+    alternateName: siteTitle,
+    headline: title,
+    description,
+    author: {
+      '@type': 'Person',
+      name: author,
+    },
+    publisher: {
+      '@type': 'Person',
+      name: author,
+    },
+    mainEntityOfPage: {
+      '@type': 'WebSite',
+      '@id': siteUrl,
+    },
+    datePublished,
+  }
+
   return isBlogPost
     ? [
         ...schemaOrgJSONLD,
@@ -43,29 +67,7 @@ const getSchemaOrgJSONLD = ({
             },
           ],
         },
-        {
-          '@context': 'http://schema.org',
-          '@type': 'BlogPosting',
-          url,
-          name: title,
-          alternateName: siteTitle,
-          headline: title,
-          description,
-          author: {
-            '@type': 'Person',
-            name: author,
-          },
-          publisher: {
-            '@type': 'Organization',
-            url: siteUrl,
-            name: author,
-          },
-          mainEntityOfPage: {
-            '@type': 'WebSite',
-            '@id': siteUrl,
-          },
-          datePublished,
-        },
+        post,
       ]
     : schemaOrgJSONLD
 }
@@ -113,7 +115,7 @@ const SEO = ({ isBlogPost, post, site }) => {
     author,
     siteTitle,
     description,
-    date,
+    datePublished: date,
   })
 
   return (

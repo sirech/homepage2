@@ -1,26 +1,26 @@
 import React from 'react'
 import { render, waitFor } from '@testing-library/react'
-import SEO from './index'
+import SEO, { getSchemaOrgJSONLD } from './index'
 
 import frontmatter from '../../fixtures/frontmatter'
 import siteMetadata from '../../fixtures/siteMetadata'
 
 describe('components', () => {
+  let post
+  let site
+
+  beforeEach(() => {
+    post = {
+      html: '<p>this is the content</p>',
+      frontmatter: frontmatter(),
+    }
+
+    site = {
+      siteMetadata: siteMetadata(),
+    }
+  })
+
   describe('SEO', () => {
-    let post
-    let site
-
-    beforeEach(() => {
-      post = {
-        html: '<p>this is the content</p>',
-        frontmatter: frontmatter(),
-      }
-
-      site = {
-        siteMetadata: siteMetadata(),
-      }
-    })
-
     it('renders correctly for a blogpost', async () => {
       render(<SEO isBlogPost post={post} site={site} />)
       await waitFor(() =>
@@ -99,6 +99,23 @@ describe('components', () => {
       expect(
         document.querySelector('meta[name="twitter:image"]')
       ).toHaveAttribute('content', `http://example.com${imageUrl}`)
+    })
+  })
+
+  describe('getSchemaOrgJSONLD', () => {
+    it('creates the correct structure', () => {
+      expect(
+        getSchemaOrgJSONLD({
+          isBlogPost: true,
+          url: post.frontmatter.path,
+          title: post.frontmatter.title,
+          siteUrl: site.siteMetadata.url,
+          author: site.siteMetadata.author,
+          siteTitle: site.siteMetadata.title,
+          description: post.frontmatter.description,
+          datePublished: post.frontmatter.date,
+        })
+      ).toMatchSnapshot()
     })
   })
 })
