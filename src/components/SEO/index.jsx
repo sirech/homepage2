@@ -4,73 +4,9 @@ import PropTypes from 'prop-types'
 
 import { path as Rpath } from 'ramda'
 
+import getSchemaOrgJSONLD from './getSchemaOrgJSONLD'
+
 import siteType from '../../prop-types/site'
-
-// exported for testing
-export const getSchemaOrgJSONLD = ({
-  isBlogPost,
-  url,
-  siteUrl,
-  title,
-  author,
-  siteTitle,
-  description,
-  datePublished,
-}) => {
-  const schemaOrgJSONLD = [
-    {
-      '@context': 'http://schema.org',
-      '@type': 'WebSite',
-      url,
-      name: title,
-      alternateName: siteTitle,
-    },
-  ]
-
-  const post = {
-    '@context': 'http://schema.org',
-    '@type': 'BlogPosting',
-    url,
-    name: title,
-    alternateName: siteTitle,
-    headline: title,
-    description,
-    author: {
-      '@type': 'Person',
-      name: author,
-    },
-    publisher: {
-      '@type': 'Person',
-      name: author,
-    },
-    mainEntityOfPage: {
-      '@type': 'WebSite',
-      '@id': siteUrl,
-    },
-    datePublished,
-  }
-
-  return isBlogPost
-    ? [
-        ...schemaOrgJSONLD,
-        {
-          '@context': 'http://schema.org',
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            {
-              '@type': 'ListItem',
-              position: 1,
-              item: {
-                '@id': url,
-                name: title,
-              },
-            },
-          ],
-        },
-        post,
-      ]
-    : schemaOrgJSONLD
-}
 
 const buildDescription = (post) => {
   const description = Rpath(['frontmatter', 'description'])(post)
