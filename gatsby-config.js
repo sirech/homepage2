@@ -142,13 +142,13 @@ module.exports = {
         mergeDefaultDirectives: true,
         directives: {
           'script-src':
-            "'self' https://hceris.ck.page https://f.convertkit.com/ckjs",
+            "'self' https://hceris.ck.page https://f.convertkit.com/ckjs/",
           'style-src': "'self' 'unsafe-inline'",
           'img-src':
             "'self' data: https://github.com https://raw.githubusercontent.com",
           'connect-src': "'self'",
           'frame-src': 'https://codepen.io https://codesandbox.io',
-          'form-action': "'self' https://app.convertkit.com/forms",
+          'form-action': "'self' https://app.convertkit.com/forms/",
         },
       },
     },
