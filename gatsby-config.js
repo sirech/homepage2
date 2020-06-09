@@ -141,8 +141,7 @@ module.exports = {
         mergeStyleHashes: false, // you can disable styles sha256 hashes
         mergeDefaultDirectives: true,
         directives: {
-          'script-src': "'self'",
-          'script-src-elem': 'https://hceris.ck.page',
+          'script-src': "'self' https://hceris.ck.page",
           'style-src': "'self' 'unsafe-inline'",
           'img-src':
             "'self' data: https://github.com https://raw.githubusercontent.com",
