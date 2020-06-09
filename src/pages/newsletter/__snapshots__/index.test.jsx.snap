@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Newsletter renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+    >
+      <div
+        class="horizontal-section newsletter"
+        data-tag="newsletter"
+      >
+        <script
+          data-uid="052ac9b9e2"
+          src="https://hceris.ck.page/052ac9b9e2/index.js"
+        />
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
