@@ -146,7 +146,7 @@ module.exports = {
           'style-src': "'self' 'unsafe-inline'",
           'img-src':
             "'self' data: https://github.com https://raw.githubusercontent.com",
-          'connect-src': "'self'",
+          'connect-src': "'self' https://app.convertkit.com/forms/",
           'frame-src': 'https://codepen.io https://codesandbox.io',
           'form-action': "'self' https://app.convertkit.com/forms/",
         },
