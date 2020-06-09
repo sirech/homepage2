@@ -142,6 +142,7 @@ module.exports = {
         mergeDefaultDirectives: true,
         directives: {
           'script-src': "'self'",
+          'script-src-elem': 'https://hceris.ck.page',
           'style-src': "'self' 'unsafe-inline'",
           'img-src':
             "'self' data: https://github.com https://raw.githubusercontent.com",
