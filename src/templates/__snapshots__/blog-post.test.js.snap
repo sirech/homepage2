@@ -163,6 +163,17 @@ exports[`components BlogPostTemplate renders correctly 1`] = `
                   </svg>
                 </button>
               </div>
+              <div
+                class="cta"
+              >
+                Want to hear about new posts? You can subscribe to this 
+                <a
+                  href="/newsletter/"
+                >
+                  newsletter
+                </a>
+                .
+              </div>
             </div>
           </section>
         </article>

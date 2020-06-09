@@ -9,6 +9,7 @@ import {
   EmailShareButton,
   EmailIcon,
 } from 'react-share'
+import Link from 'gatsby-link'
 
 import { path as Rpath } from 'ramda'
 
@@ -49,6 +50,11 @@ const Share = ({ frontmatter, site }) => {
         <EmailShareButton subject={title} body={description + ' ' + url}>
           <EmailIcon size={32} round />
         </EmailShareButton>
+      </div>
+
+      <div className={styles.cta}>
+        Want to hear about new posts? You can subscribe to this{' '}
+        <Link to="/newsletter/">newsletter</Link>.
       </div>
     </div>
   )
