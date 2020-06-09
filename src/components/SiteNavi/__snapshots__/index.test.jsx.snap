@@ -73,7 +73,7 @@ exports[`components SiteNavi renders correctly 1`] = `
         class="icon nav-item"
       >
         <a
-          aria-label="StackOverflow Profile"
+          aria-label="GitHub Profile"
           class="nav-link"
           href="https://github.com/sirech"
           rel="noopener noreferrer"

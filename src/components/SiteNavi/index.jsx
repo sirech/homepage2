@@ -51,7 +51,7 @@ class SiteNavi extends React.Component {
               className="nav-link"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="StackOverflow Profile"
+              aria-label="GitHub Profile"
             >
               <i className="fa fa-github-square fa-lg" />
             </a>
