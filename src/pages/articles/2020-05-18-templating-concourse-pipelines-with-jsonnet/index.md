@@ -13,6 +13,15 @@ image: ./images/logo.png
 
 ---
 
+<div class="guide clearfix">
+
+### Generating pipelines for Concourse using jsonnet
+
+- [**Part 1 - Introduction**](../templating-concourse-pipelines-with-jsonnet/)
+- [Part 2 - Follow-up](../templating-concourse-pipelines-with-jsonnet-follow-up/)
+
+</div>
+
 <figure class="figure figure--right">
   <img src="./images/logo.png" alt="YAML and Concourse and Jsonnet" />
 </figure>
