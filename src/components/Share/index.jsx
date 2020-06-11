@@ -53,7 +53,7 @@ const Share = ({ frontmatter, site }) => {
       </div>
 
       <div className={styles.cta}>
-        Want to hear about new posts? You can subscribe to this{' '}
+        Want to hear about new posts? You can subscribe to my{' '}
         <Link to="/newsletter/">newsletter</Link>.
       </div>
     </div>

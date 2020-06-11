@@ -165,7 +165,7 @@ exports[`components SitePost renders correctly 1`] = `
             <div
               class="cta"
             >
-              Want to hear about new posts? You can subscribe to this 
+              Want to hear about new posts? You can subscribe to my 
               <a
                 href="/newsletter/"
               >
