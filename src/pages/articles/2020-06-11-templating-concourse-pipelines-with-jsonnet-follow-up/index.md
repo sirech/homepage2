@@ -8,7 +8,7 @@ categories:
   - Jsonnet
   - Templating
 draft: false
-description: "Having built a bunch of big pipelines for Concourse using jsonnet, I've seen a bunch of things that work and others that don't"
+description: "After building a bunch of big infrastructure pipelines for Concourse with jsonnet, I've some patterns to share to handle all that complexity"
 image: ./images/logo.png
 ---
 
