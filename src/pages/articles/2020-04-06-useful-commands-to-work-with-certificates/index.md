@@ -140,10 +140,10 @@ You will probably never run into this, but if you do, this will save you a ton o
 What if you don't have the certificate, but want to get it from a remote server? _openssl_ is up to the task.
 
 ```console
-openssl s_client -connect google.com:443 -servername google.com | openssl x509 -text -noout
+echo -n | openssl s_client -connect google.com:443 -servername google.com | openssl x509 -text -noout
 ```
 
-With the `s_client` command, we are requesting the certificate presented by a host on a specific port (usually 443). In this case, we are checking the certificate from _google.com_. We can pipe the output into the standard command for reading a certificate.
+With the `s_client` command, we are requesting the certificate presented by a host on a specific port (usually 443). In this case, we are checking the certificate from _google.com_. We can pipe the output into the standard command for reading a certificate. We pipe the `echo -n` first so that it doesn't hang.
 
 You might be wondering about the `-servername` option. That is related to [SNI](https://en.wikipedia.org/wiki/Server_Name_Indication). If the target is serving multiple domains under the same IP address, you might want to select the one associated with a domain. I recently needed the option when testing a Kubernetes [nginx ingress](https://github.com/kubernetes/ingress-nginx) that was serving a self-signed certificate unless I specified that option.
 
@@ -152,3 +152,5 @@ You might be wondering about the `-servername` option. That is related to [SNI](
 ## We are only scratching the surface
 
 This post was focused on reading existing certificates, but there are a ton more things that you can do with `openssl`, including writing them, extracting keys and whatnot. Not to mention [Certificate signing requests](https://en.wikipedia.org/wiki/Certificate_signing_request). Reading is a good place to familiarize yourself with certificates, however.
+
+*EDIT 19/06/2020:* Fix `openssl s_client` command
