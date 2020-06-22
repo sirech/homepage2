@@ -74,7 +74,7 @@
     "stylelint": "^13.6.0",
     "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
-    "stylelint-scss": "^3.17.1",
+    "stylelint-scss": "^3.18.0",
     "textlint": "^11.6.3",
     "textlint-rule-preset-ja-spacing": "^2.0.1"
   },
