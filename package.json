@@ -71,7 +71,7 @@
     "prettier": "^2.0.5",
     "react-test-renderer": "^16.13.1",
     "regenerator-runtime": "^0.13.5",
-    "stylelint": "^13.6.0",
+    "stylelint": "^13.6.1",
     "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-scss": "^3.18.0",
