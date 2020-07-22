@@ -81,6 +81,10 @@ export const talks = [
     'https://github.com/sirech/talks/blob/master/2020-06-xconf-moving_away_from_null_and_exceptions.pdf',
     'Moving away from null and exceptions: An alternative way of error handling',
   ],
+  [
+    'https://github.com/sirech/talks/blob/master/2020-07-parametrized_concourse_pipelines_with_jsonnet.pdf',
+    'Parametrized Concourse pipelines using jsonnet',
+  ],
 ].reverse()
 
 const extractYear = (item) => {
