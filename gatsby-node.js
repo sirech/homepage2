@@ -20,6 +20,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
 
+        singlePosts: allMarkdownRemark {
+          edges {
+            post: node {
+              frontmatter {
+                path
+              }
+            }
+          }
+        }
+
         posts: allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           filter: { frontmatter: { draft: { eq: false } } }
@@ -98,5 +108,5 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: edge.post.frontmatter.path,
       component: path.resolve('./src/templates/blog-post.js'),
     })
-  })(result.data.posts.edges)
+  })(result.data.singlePosts.edges)
 }
