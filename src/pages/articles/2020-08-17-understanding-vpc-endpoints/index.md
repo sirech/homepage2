@@ -175,7 +175,7 @@ And now, the connection between the two is complete. Our Service A can reach Ser
 
 ### A note about availability zones
 
-You need to remember one thing. A VPC endpoint can only can only connect to a VPC endpoint service in the same [Availability Zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-availability-zones). That's more relevant for a zone like `us-east-1`, which has six AZs.
+You need to remember one thing. A VPC endpoint can only connect to a VPC endpoint service in the same [Availability Zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-availability-zones). That's more relevant for a zone like `us-east-1`, which has six AZs.
 
 For the names to be consistent across accounts, you need to identify them with [Availability Zone IDs](https://docs.aws.amazon.com/ram/latest/userguide/working-with-az-ids.html).
 
