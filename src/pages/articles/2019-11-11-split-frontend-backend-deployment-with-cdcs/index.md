@@ -4,6 +4,7 @@ date: "2019-11-12"
 layout: post
 path: "/split-frontend-backend-deployment-with-cdcs/"
 categories:
+  - Testing
   - Contract Testing
   - Pact
   - Continuous Delivery
