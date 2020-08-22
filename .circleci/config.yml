@@ -61,7 +61,7 @@ jobs:
   post-deploy:
 
     docker:
-      - image: cypress/browsers:node13.8.0-chrome81-ff75
+      - image: cypress/browsers:node14.7.0-chrome84
 
     steps:
 
