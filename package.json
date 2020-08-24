@@ -65,7 +65,7 @@
     "font-awesome": "^4.7.0",
     "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^26.4.0",
+    "jest": "^26.4.2",
     "lighthouse": "^6.2.0",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
