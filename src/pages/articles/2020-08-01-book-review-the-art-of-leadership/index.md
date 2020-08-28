@@ -1,13 +1,13 @@
 ---
 title: "Book Review: The art of leadership"
-date: ""
+date: "2020-08-28"
 layout: post
 path: "/book-review-the-art-of-leadership/"
 categories:
   - Book Review
   - Leadership
   - Rands
-draft: true
+draft: false
 description: "In his newest book, Rands talks about leadership using his experience in different management roles in Silicon Valley companies"
 image: ./images/cover.jpg
 
