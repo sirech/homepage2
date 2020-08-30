@@ -104,6 +104,7 @@ module.exports = {
                     frontmatter {
                       title
                       path
+                      description
                       date(formatString: "YYYY/MM/DD")
                       draft
                       categories
