@@ -79,7 +79,7 @@ Running a dev huddle consists of going through the list of topics, discussing th
 
 Not so fast. First of all, there **has** to be a facilitator. Keeping the total time, making sure that no single topic consumes the whole timeslot. Giving everybody a chance to speak. Without this role, you might end up having a pub discussion, without the beer.
 
-I used to run all the huddles in a previous team. I only realized much later what a mistake it was. The meeting becomes yours when it should belong to the whole team. Besides, it's tough to facilitate and be an active participant at the same time. Rotate the facilitation instead. Everybody gets practice moderating, and you get to have some of the fun as well!
+I used to run all the huddles in a previous team. I only realized much later what a mistake it was. The meeting ends up becoming yours when it should belong to the whole team. Besides, it's tough to facilitate and be an active participant at the same time. Rotate the facilitation instead. Everybody gets practice moderating, and you get to have some of the fun as well!
 
 If you have too many topics, you have to pick which ones to tackle. You can take them in order of creation, or [dot vote](https://en.wikipedia.org/wiki/Dot-voting) just before starting. Some people will bring more points than others. Try to keep it balanced. A big architectural change requires more than a few minutes, so maybe a follow-up meeting is in order.
 
