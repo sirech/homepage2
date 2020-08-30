@@ -1,13 +1,13 @@
 ---
 title: Dev huddle as a tool to achieve alignment among developers
-date: ""
+date: "2020-08-30"
 layout: post
 path: "/dev-huddle-as-a-tool-to-achieve-alignment-among-developers/"
 categories:
   - Agile
   - Practices
   - Leadership
-draft: true
+draft: false
 description: "A well-run dev huddle increases the alignment among the developers of a team. I'm going to share my experience preparing for and running it"
 image: ./images/huddle.jpg
 
