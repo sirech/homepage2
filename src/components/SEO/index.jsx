@@ -19,6 +19,22 @@ const buildDescription = (post) => {
   )
 }
 
+const article = (isBlogPost, siteUrl, date) => {
+  if (!isBlogPost) {
+    return null
+  }
+
+  return [
+    <meta key="article" property="og:type" content="article" />,
+    <meta
+      key="published_time"
+      property="article:published_time"
+      content={date.replace(/\//g, '-')}
+    />,
+    <meta key="author" property="article:author" content={siteUrl} />,
+  ]
+}
+
 const SEO = ({ isBlogPost, post, site }) => {
   const title = Rpath(['frontmatter', 'title'])(post)
   const siteTitle = Rpath(['siteMetadata', 'title'])(site)
@@ -60,6 +76,7 @@ const SEO = ({ isBlogPost, post, site }) => {
       {/* General tags */}
       <meta name="title" content={`${title} | ${siteTitle}`} />
       <meta name="description" content={description} />
+      <meta name="author" content={author} />
 
       {/* Schema.org tags */}
       <script type="application/ld+json">
@@ -75,7 +92,8 @@ const SEO = ({ isBlogPost, post, site }) => {
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url} />
-      {isBlogPost ? <meta property="og:type" content="article" /> : null}
+      {article(isBlogPost, siteUrl, date)}
+      <meta property="og:site_name" content={siteTitle} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       {image && <meta property="og:image" content={imageUrl} />}

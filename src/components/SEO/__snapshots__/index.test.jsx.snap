@@ -16,6 +16,11 @@ exports[`components SEO renders correctly for a blogpost 1`] = `
     name="description"
   />
   <meta
+    content="me"
+    data-react-helmet="true"
+    name="author"
+  />
+  <meta
     content="index, follow"
     data-react-helmet="true"
     name="robots"
@@ -29,6 +34,21 @@ exports[`components SEO renders correctly for a blogpost 1`] = `
     content="article"
     data-react-helmet="true"
     property="og:type"
+  />
+  <meta
+    content="2018-03-01"
+    data-react-helmet="true"
+    property="article:published_time"
+  />
+  <meta
+    content="http://example.com"
+    data-react-helmet="true"
+    property="article:author"
+  />
+  <meta
+    content="site title"
+    data-react-helmet="true"
+    property="og:site_name"
   />
   <meta
     content="My Post"
