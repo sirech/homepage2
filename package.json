@@ -68,7 +68,7 @@
     "jest": "^26.4.2",
     "lighthouse": "^6.2.0",
     "lint-staged": "^10.2.13",
-    "prettier": "^2.0.5",
+    "prettier": "^2.1.1",
     "react-test-renderer": "^16.13.1",
     "regenerator-runtime": "^0.13.7",
     "stylelint": "^13.6.1",
