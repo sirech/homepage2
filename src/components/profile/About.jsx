@@ -25,8 +25,8 @@ export default () => (
         rel="noopener noreferrer"
       >
         Peter Norvig is correct
-      </a>{' '}
-      I should know by now what I am doing, although I often get the feeling I
+      </a>
+      , I should know by now what I am doing, although I often get the feeling I
       don't know anything.
     </p>
 
@@ -41,9 +41,9 @@ export default () => (
     <p>
       I have managed to work with plenty of{' '}
       <Link to="/#techs">technologies</Link> and <Link to="/#tools">tools</Link>
-      . It took my a while to realize, though, that while solid tech and good
+      . It took me a while to realize, though, that while reliable tech and good
       foundations are important, they are not the only thing needed to deliver
-      high quality software.
+      high-quality software.
     </p>
   </Container>
 )

@@ -22,7 +22,7 @@ exports[`components Profile renders correctly 1`] = `
             >
               Peter Norvig is correct
             </a>
-             I should know by now what I am doing, although I often get the feeling I don't know anything.
+            , I should know by now what I am doing, although I often get the feeling I don't know anything.
           </p>
           <p>
             I specialize in web programming. I started doing backend work, then I got more and more into frontend topics, and lately I have managed to touch infrastructure as well. I don't know if there is such a thing as a 
@@ -44,7 +44,7 @@ exports[`components Profile renders correctly 1`] = `
             >
               tools
             </a>
-            . It took my a while to realize, though, that while solid tech and good foundations are important, they are not the only thing needed to deliver high quality software.
+            . It took me a while to realize, though, that while reliable tech and good foundations are important, they are not the only thing needed to deliver high-quality software.
           </p>
         </div>
       </section>
