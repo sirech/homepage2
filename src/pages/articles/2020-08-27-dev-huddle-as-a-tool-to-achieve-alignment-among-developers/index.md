@@ -10,7 +10,7 @@ categories:
 draft: false
 description: "A well-run dev huddle increases the alignment among the developers of a team. I'm going to share my experience preparing for and running it"
 image: ./images/huddle.jpg
-
+canonical: https://www.freecodecamp.org/news/how-to-use-the-dev-huddle-to-get-your-developers-on-the-same-page/
 ---
 
 <figure class="figure figure--left">
