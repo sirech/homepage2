@@ -72,7 +72,7 @@
     "react-test-renderer": "^16.13.1",
     "regenerator-runtime": "^0.13.7",
     "stylelint": "^13.7.0",
-    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-config-sass-guidelines": "^7.1.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-scss": "^3.18.0",
     "textlint": "^11.7.6",
