@@ -67,7 +67,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.4.2",
     "lighthouse": "^6.3.0",
-    "lint-staged": "^10.2.13",
+    "lint-staged": "^10.3.0",
     "prettier": "^2.1.1",
     "react-test-renderer": "^16.13.1",
     "regenerator-runtime": "^0.13.7",
