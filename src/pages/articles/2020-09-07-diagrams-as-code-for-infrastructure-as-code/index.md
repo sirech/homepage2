@@ -18,11 +18,11 @@ description: "Diagrams is a neat tool to visualize your infrastructure using cod
   </figcaption>
 </figure>
 
-If you're working with infrastructure, you're surely leveraging [infrastructure as code](https://searchitoperations.techtarget.com/definition/Infrastructure-as-Code-IAC), right? I sure hope so. Otherwise, start now. I'll be waiting.
+If you're working with infrastructure, you're undoubtedly leveraging [infrastructure as code](https://searchitoperations.techtarget.com/definition/Infrastructure-as-Code-IAC), right? I sure hope so. Otherwise, start now. I'll be waiting.
 
 A natural evolution might be creating a graphical representation of your infrastructure. Diagrams as code if you will. It is not a new idea. This technique appeared in the [tech radar](https://www.thoughtworks.com/radar/techniques/generated-infrastructure-diagrams) back in 2015. You can hark back to that period where people thought that generating code [from UML diagrams](https://softwareengineering.stackexchange.com/questions/124996/is-code-commonly-generated-from-uml) was a sensible idea.
 
-Let's forget that ever happened! Instead, let's think about using visualization to understand complex architectures. And maintaining those artifacts up to date, while we're at it. I'm going to talk about a tool that builds on top of [Graphviz](https://www.graphviz.org/) called [Diagrams](https://diagrams.mingrammer.com/).
+Let's forget that ever happened! Instead, let's think about using visualization to understand complex architectures. And maintaining those artifacts up to date while we're at it. I'm going to talk about a tool that builds on top of [Graphviz](https://www.graphviz.org/) called [Diagrams](https://diagrams.mingrammer.com/).
 
 ## What is diagrams?
 
@@ -30,13 +30,13 @@ A tool with a very generic name, that's for sure. If you check its website, it's
 
 > Diagrams lets you draw the cloud system architecture in Python code.
 
-Pretty straight-forward. Installing it is a one liner.
+Pretty straight-forward. Installing it is a one-liner.
 
 ```bash
 pip3 install diagrams
 ```
 
-We're going to create infrastructure diagrams with Python. We'll commit both the image and the code used to generate it, so that everybody in the team can make changes. Let's get coding, I mean drawing. I have two examples for you.
+We're going to create infrastructure diagrams with Python. We'll commit both the image and the code used to generate them so that everybody in the team can make changes. Let's get coding, err drawing. I have two examples for you.
 
 ## Alerting workflow
 
@@ -50,11 +50,11 @@ So much text for such a little thing. I'm surprised you're still paying attentio
 
 If you check the code, you'll notice how simple it is. There are three elements. 
 
-- The **nodes**, which is a single component. It has a recognizable icon and a name.
+- The **nodes**, which are single components. It has a recognizable icon and a name.
 - The **edges**, which are the connections between components. They can be directed or undirected.
 - The **clusters**, which group nodes logically.
 
-And there is not much else, really. The diagram is built with this snippet.
+And there is not much else. The diagram is built with this snippet.
 
 <!-- alerting-workflow -->
 ```python
@@ -91,7 +91,7 @@ Notice how quickly you can get a decent overview of your system with a just bit 
 
 Networking seems to be uniquely suited for this approach. While researching [VPC endpoints](../understanding-vpc-endpoints/), I realized that a clear drawing aids understanding significantly.
 
-Let's say we are connecting to a [Kubernetes](https://kubernetes.io/) cluster, because that's what we all do these days. We're routing a bunch of different domains to a VPC endpoint. The cluster resides in a different account, so we use an endpoint service to make it available. Add a few more routes and the whole thing becomes a tangled mess, much like the pile of cables behind your desk. That is, until you see this diagram.
+Let's say we are connecting to a [Kubernetes](https://kubernetes.io/) cluster because that's what we all do these days. We're routing a bunch of different domains to a VPC endpoint. The cluster resides in a different account, so we use an endpoint service to make it available. Add a few more routes, and the whole thing becomes a tangled mess, much like the pile of cables behind your desk. That is until you see this diagram.
 
 <figure class="figure">
   <img src="./images/connecting_two_accounts.png" alt="connecting accounts" />
@@ -142,10 +142,10 @@ The amount of code used to represent it has grown compared to the previous examp
 
 That's how you use _Diagrams_. Is it really valuable? I certainly like the pretty icons. Apart from that, it shines is enabling visual documentation to evolve.
 
-I've tried to digitalize technical diagrams before. I really tried. [Sketch](https://www.sketch.com/), [sketchboard](https://sketchboard.io/), or even just taking a picture of a hand drawn diagram. It works, until you need to update it and you don't have the original source. Perhaps it was done by somebody else, who preferred a completely different tool. I've seen it many times that the documentation of a project gets more and more out of date because nobody is able to update the damn diagrams. If it's just source code, your chances get a lot better.
+I've tried to digitalize technical diagrams before. I really tried. [Sketch](https://www.sketch.com/), [sketchboard](https://sketchboard.io/), or even just taking a picture of a hand-drawn diagram. It works until you need to update it, and you don't have the source. Perhaps it was done by somebody else, who preferred a completely different tool. I've often seen a project's documentation get more and more out of date because nobody can update the damn diagrams. If it's just source code, your chances get a lot better.
 
 ## Conclusion
 
-_Diagrams_ is a neat, albeit limited, tool. You can't really add much more than what I've shown. While that is constraining, it can protect you from yourself. Overly complex diagrams do more harm than good. If you are representing the system in its entirety, why not check the code directly? The point of abstraction is to make it simpler to understand by omitting some of the details.
+_Diagrams_ is a neat, albeit limited tool. You can't add much more than what I've shown. While that is constraining, it can protect you from yourself. Overly complicated diagrams do more harm than good. If you are representing the system in its entirety, why not check the code directly? The point of abstraction is to make it simpler to understand by omitting some of the details.
 
 In summary, it's a convenient way to bring clarity into your impenetrable READMEs, and you'll be able to update the images as your code evolves.
