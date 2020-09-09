@@ -1,13 +1,13 @@
 ---
 title: Diagrams as code for infrastructure as code
-date: ""
+date: "2020-09-09"
 layout: post
 path: "/diagrams-as-code-for-infrastructure-as-code/"
 categories:
   - Infrastructure as Code
   - Diagrams as Code
   - Documentation
-draft: true
+draft: false
 description: "Diagrams is a neat tool to visualize your infrastructure using code. Using code allows easy modification and is version control friendly"
 ---
 
