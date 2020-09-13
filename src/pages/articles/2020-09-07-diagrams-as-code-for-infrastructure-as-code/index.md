@@ -32,7 +32,8 @@ A tool with a very generic name, that's for sure. If you check its website, it's
 
 Pretty straight-forward. Installing it is a one-liner.
 
-```bash
+<!-- installation -->
+```shell
 pip3 install diagrams
 ```
 
