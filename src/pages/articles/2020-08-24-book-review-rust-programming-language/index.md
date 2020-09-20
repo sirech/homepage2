@@ -1,13 +1,13 @@
 ---
 title: "Book Review: The Rust programming language"
-date: ""
+date: "2020-09-20"
 layout: post
 path: "/book-review-the-rust-programming-language/"
 categories:
   - Book Review
   - Rust
   - Systems Programming
-draft: true
+draft: false
 description: "Rust is a trendy pick for a programming language these days. There is no better book to get started than this one"
 image: ./images/cover.jpg
 
