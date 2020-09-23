@@ -16,19 +16,19 @@ image: ./images/tech-story.jpg
   <img src="./images/tech-story.jpg" alt="Technical Story" />
 </figure>
 
-_Technical stories_ are a controversial topic in the agile world. If you google [technical stories antipattern](https://www.google.com/search?q=technical+stories+antipattern), you'll get plenty of people advocating to never do them. On the other hand, some teams religiously outsource any refactoring onto technical stories.
+_Technical stories_ are a controversial topic in the agile world. If you google [technical stories antipattern](https://www.google.com/search?q=technical+stories+antipattern), you'll get plenty of people advocating never to do them. On the other hand, some teams religiously outsource any refactoring onto technical stories.
 
-Should we eschew technical stories altogether? Or should we embrace them and put all of our (technical) dreams and hopes in them?
+Should we eschew technical stories altogether? Or should we embrace them and put all of our (technological) dreams and hopes into them?
 
 I believe this kind of story belongs in a healthy backlog, as long as we don't use it to hide our corpses under the rug. That's a terrible idea. I'll explain what I mean in this article.
 
 ### What is a technical story, anyways?
 
-I'm not sure there is an agreement on this. I couldn't find a definition on the internet, so I'll just use my own.
+I'm not sure there is an agreement on this. I couldn't find a definition on the internet, so I'll use my own.
 
-> A technical story is one where the main stakeholders are the developers in the team
+> A technical story is one where the main stakeholders are the developers in the team.
 
-The end user benefits only indirectly from such a story. As our system becomes better, the theory goes, we'll have an easier time delivering actual user stories. I've seen attempts at putting a monetary value on technical stories, but it felt nothing more than a charade.
+The end-user benefits only indirectly from such a story. As our system becomes better, the theory goes, we'll have an easier time delivering actual user stories. I've seen attempts at putting a monetary value on technical stories, but it felt nothing more than a charade.
 
 ## Are technical stories an antipattern?
 
@@ -49,7 +49,7 @@ The problem with technical stories is that they are used to draw an artificial l
   <img src="./images/iceberg-reality.png" alt="The reality of the iceberg" />
 </figure>
 
-Except, this is a **crucial mistake**. We're avoiding essential technical work in a misguided effort to be faster. Striping a _user story_ of this bottom part **is** the antipattern. It leads to an endless list of stories in the backlog that will never happen. It encourages cutting corners and short-term thinking. If the story is too big, let's find one smaller in scope that still delivers meaningful value. But we have to resist by all means the temptation of crippling our stories to meet an arbitrary story point cut off.
+Except, this is a **crucial mistake**. We're avoiding essential technical work in a misguided effort to be faster. Striping a _user story_ of this bottom part **is** the antipattern. It leads to an endless list of tickes in the backlog that will never happen. It encourages cutting corners and short-term thinking. If the story is too big, let's find one with a smaller scope that still delivers meaningful value. But we have to resist by all means the temptation of crippling our stories to meet an arbitrary story point cut off.
 
 <figure class="figure figure--left">
   <img src="./images/conflict.jpg" alt="Conflict" />
@@ -58,7 +58,7 @@ Except, this is a **crucial mistake**. We're avoiding essential technical work i
   </figcaption>
 </figure>
     
-Besides, it creates unnecessary tension between the business side and the technology side. Developers often feel like they have to fight for long overdue improvements. The product owner can't understand why stories take twice as long as before.
+Besides, it creates unnecessary tension between the business side and the technology side. Developers often feel like they have to fight for long-overdue improvements. The product owner can't understand why stories take twice as long as before.
 
 Sure, taking on some [tech debt](https://martinfowler.com/bliki/TechnicalDebt.html) can be a valid tactical decision. But let's be honest, we're just normalizing the practice of writing substandard software if we keep doing this.
 
@@ -70,11 +70,11 @@ I thought you'd never ask. In my opinion, the most natural place to create techn
 - Refactor our API calls to use [React hooks](https://reactjs.org/docs/hooks-intro.html)
 - Missing documentation for our newest microservice
 
-Once there is agreement in the team, reflecting these points in stories helps building the technical vision of the team. These stories will (hopefully) happen soon, and increase the quality of the system. That in turn means that the visible part of the iceberg will have an easier time floating, which will lead to more fancy features for our happy stakeholders.
+Once there is an agreement in the team, reflecting these points in stories helps build the team's technical vision. These stories will (hopefully) happen soon, and increase the quality of the system. That, in turn, means that the iceberg's visible part will have an easier time floating, which will lead to more fancy features for our happy stakeholders.
 
 ### Monitor the amount of technical stories in your backlog!
 
-The number of technical stories is a good [fitness function](https://www.thoughtworks.com/radar/techniques/architectural-fitness-function). If that number only grows and grows, this whole process is not working well. If anything, it can even discourage further attempts to improve the situation.
+The number of technical stories is a useful [fitness function](https://www.thoughtworks.com/radar/techniques/architectural-fitness-function). If that number only grows and grows, this whole process is not working well. If anything, it can even discourage further attempts to improve the situation.
 
 ## The tenets of a good technical story
 
@@ -87,11 +87,11 @@ Let's say you grudgingly agree to start writing technical stories (only when it 
   </figcaption>
 </figure>
 
-Poorly written technical stories are sadly all-too-common. They are dense. They don't get to the point. They are vague on the provided value. Because of this, they langish in the backlog. That leads to important topics not being addressed. This cycle is hard to escape from.
+Poorly written technical stories are sadly all-too-common. They are dense. They don't get to the point. They are vague on the provided value. Because of this, they languish in the backlog. That leads to important topics not being addressed. This cycle is hard to escape from.
 
-**A technical story has to be held to the same standards as a user story**. A story with a one-line description like _Upgrade Rails to a new version_ doesn't cut it. It's unfair to demand that user stories are descriptive, complete, and clear, if that won't apply to the technical ones.
+**A technical story has to be held to the same standards as a user story**. A story with a one-line description like _Upgrade Rails to a new version_ doesn't cut it. It's unfair to demand that user stories are descriptive, complete, and clear if that won't apply to the technical ones.
 
-There are many resources on [how to write user stories in general](https://www.mountaingoatsoftware.com/books/user-stories-applied). There is even an acronym, [INVEST](https://www.agilealliance.org/glossary/invest). Follow these practices while using your best judgement. Here is a suggested structure based on my last five years of story poetry.
+There are many resources on [how to write user stories in general](https://www.mountaingoatsoftware.com/books/user-stories-applied). There is even an acronym, [INVEST](https://www.agilealliance.org/glossary/invest). Follow these practices while using your best judgment. Here is a suggested structure based on my last five years of story poetry.
 
     - Context
     - What's the value
@@ -104,7 +104,7 @@ Where does this story come from? Understanding the background prevents misunders
 
 ### What's the value
 
-Technical stories are in a perpetual fight for survival. Stories without clear value get ignored in favor of user stories that bring a clearer benefit. That's why it's important to consider it. Getting hard numbers is ideal, although not always possible. A qualitative judgement of what we want to improve can be helpful enough.
+Technical stories are in a perpetual fight for survival. Stories without clear value get ignored in favor of user stories that bring a tangible benefit. That's why it's important to consider it. Getting hard numbers is ideal, although not always possible. A qualitative judgment of what we want to improve can be helpful enough.
 
 ### What to do (Acceptance Criteria)
 
@@ -119,7 +119,7 @@ Be mindful, however, of writing an instruction list. Nobody wants to be ordered 
 <figure class="figure">
   <img src="./images/blueprint.jpg" alt="Blueprint" />
   <figcaption class="figure__caption">
-  A clear blueprint will prevent so many needless discussions
+  An exact blueprint will prevent so many needless discussions
   </figcaption>
 </figure>
 
@@ -127,9 +127,9 @@ Be mindful, however, of writing an instruction list. Nobody wants to be ordered 
 
 Technical stories have helped the teams I've been on managing evolution and improving. The two fundamental points that I want to highlight again are:
 
-- _Don't_ strip the underlying complexity of a story and put it in technical stories that you "will just do later"
-- _Do_ yourself a favor and treat technical stories with the same respect and care than you do for user stories
+- _Don't_ strip the underlying complexity of a story and put it in technical stories that you "will just do later."
+- _Do_ yourself a favor and treat technical stories with the same respect and care as you do for user stories.
 
-Notice that I haven't talked at all about the tension between including user stories and technical stories in an iteration. That relates to building a technical backlog, and assessing the health of a system. I plan to dig into that on its own post.
+Notice that I haven't talked about the tension between including user stories and technical stories in an iteration. That relates to building a technical backlog and assessing the health of a system. I plan to dig into that on its own post.
 
 
