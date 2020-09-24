@@ -1,13 +1,13 @@
 ---
 title: Technical stories, a miscast artifact of agile development
-date: ""
+date: "2020-09-24"
 layout: post
 path: "/technical-stories-a-miscast-artifact-of-agile-development/"
 categories:
   - Agile
   - Practices
   - Leadership
-draft: true
+draft: false
 description: "Technical stories are misused. If used correctly, they help shape the technical vision. If not, they just enable skipping essential work"
 image: ./images/tech-story.jpg
 ---
