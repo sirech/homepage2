@@ -53,7 +53,7 @@ Except, this is a **crucial mistake**. We're avoiding essential technical work i
 
 If the story is too big, let's agree on a smaller scope that still delivers meaningful value.
 
-### Why do we end up crippling stories?
+### Why do we extract this work when we know it's so important?
 
 Does this happen in your team? You're not alone. Many teams struggle with this. There are many reasons, among them:
 
@@ -66,19 +66,19 @@ Does this happen in your team? You're not alone. Many teams struggle with this. 
 
 _Avoidance of conflict_. If the product owner and the developers push in opposite directions, there's tension that needs to be solved. Avoiding the conflict solves nothing, but it's the path of least resistance.
 
-_Delivery pressure_. Yes, features almost always take priority. However, keeping the platform healthy is in everyone's best interest. There might be real urgency, in which case it's worth talking about managing the created [tech debt](https://martinfowler.com/bliki/TechnicalDebt.html).
+_Delivery pressure_. Yes, features almost always take priority. Technical work is a catalyst for features. There might be real urgency, in which case it's worth talking about managing the created [tech debt](https://martinfowler.com/bliki/TechnicalDebt.html).
 
 _Lack of empowerment_. Developers sometimes feel that they can't stand for what they believe is necessary, or that their voice won't be heard. Maybe they're genuinely not being listened to, or perhaps their voice is too quiet.
 
-Let's be honest; this suggests deeper problems than writing some stories (or not). However, normalizing the practice of writing substandard software isn't going to help anybody.
+Let's be honest; these are symptoms of deeper problems than writing some stories (or not). However, keeping the platform healthy is in everyone's best interest.
 
 ## Then when **do you** create technical stories?
 
 I thought you'd never ask. The most natural place to create technical stories is the [dev huddle](../dev-huddle-as-a-tool-to-achieve-alignment-among-developers/). As a result of a successful dev huddle, the development team will agree on certain experiments, refactorings, or changes to be made. Any action big enough is a prime candidate for a technical story. To name some examples:
 
-- Let's try out [strikt](https://strikt.io/), a new assertions library
-- Refactor our API calls to use [React hooks](https://reactjs.org/docs/hooks-intro.html)
-- Enhance documentation for our newest microservice
+- Refactor the layout of our product cards to use [flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+- Let's try out [strikt](https://strikt.io/), a new assertions library.
+- Refactor our API calls to use [React hooks](https://reactjs.org/docs/hooks-intro.html).
 
 Once there is an agreement in the team, reflecting these points in stories helps build the team's technical vision. These stories will (hopefully) happen soon, and increase the quality of the system. That, in turn, means that the iceberg's visible part will have an easier time floating, which will lead to more fancy features for our happy stakeholders.
 
@@ -101,11 +101,12 @@ Poorly written technical stories are sadly all-too-common. They are dense. They 
 
 **A technical story has to be held to the same standards as a user story**. A story with a one-line description like _Upgrade Rails to a new version_ doesn't cut it. It's unfair to demand that user stories are descriptive, complete, and clear if that won't apply to the technical ones.
 
-There are many resources on [how to write user stories in general](https://www.mountaingoatsoftware.com/books/user-stories-applied). There is even an acronym, [INVEST](https://www.agilealliance.org/glossary/invest). Follow these practices while using your best judgment. Here are four suggested sections based on my last five years of story poetry.
+There are many resources on [how to write user stories in general](https://www.mountaingoatsoftware.com/books/user-stories-applied). There is even an acronym, [INVEST](https://www.agilealliance.org/glossary/invest). Follow these practices while using your best judgment. Here are five suggested sections based on my last five years of story poetry.
 
     - Context
     - What's the value
     - What to do (Acceptance Criteria)
+    - Out of scope
     - Tech hint
     
 I'll explain what I think should be part of each, plus some bad and good examples.
@@ -114,25 +115,31 @@ I'll explain what I think should be part of each, plus some bad and good example
 
 Where does this story come from? Understanding the background prevents misunderstandings. It allows us to understand if some parts are more critical than others.
 
- ❌ _Please change the testing framework to `jest`._
+ ❌ _We want to use `flexbox` now._
 
- ✅ _When we started this application, we had to support older versions of Internet Explorer, which meant that we couldn't use `display: grid`._
+ ✅ _When we started this application, we had to support older versions of Internet Explorer. Support for `flexbox` is limited for them, so we decided to build our product cards using a more traditional inline-block layout to avoid incompatibilities. This requirement has been dropped, so we're free to switch to a more modern technique._
 
 ### What's the value
 
 Technical stories are in a perpetual fight for survival. At the end of the day, it's the product owner who controls the backlog. Stories without clear value get ignored in favor of user stories that bring a tangible benefit. Getting hard numbers is ideal, although not always possible. A qualitative judgment of what we want to improve can be helpful enough.
 
- ❌ _I like React more than Angular, so we're doing React._
+ ❌ _I like `flexbox` a lot._
 
- ✅ _Updating our version of React will allow us to use code splitting. The smaller bundle will make the site load faster for our users._
+ ✅ _Using `flexbox` will lead to a simpler CSS structure, resulting in less maintenance effort. We expect less visual bugs and less difficulty with typical tasks like centering elements._
 
 ### What to do (Acceptance Criteria)
 
 Yes, this seems pretty self-evident. Still, you'll find stories that are neither actionable nor verifiable. Is it clear what we want to do? How will we know when we're finished? Can somebody in the team that didn't write the story pick it up?
 
- ❌ _Fix the performance of the checkout form._
+ ❌ _Fix the product cards._
 
  ✅ _Replace layout based on inline display with flexbox for product cards._
+ 
+### Out of scope
+
+Technical stories can be very broad. It's useful to be explicit if we won't touch some parts that folks would expect to be part of this story. In the end, you want small, incremental improvements. Not a complete rewrite.
+
+ ✅ _The customer preview uses a similar layout, but we won't touch that one until we've finished changing the product cards._
 
 ### Tech hint
 
@@ -156,5 +163,5 @@ Technical stories have helped the teams I've been on managing evolution and impr
 
 Notice that I haven't talked about the tension between including user stories and technical stories in an iteration. That relates to building a technical backlog and assessing the health of a system. I plan to dig into that on its own post.
 
-*Thanks to Anna and Rachael for the feedback.*
+*Thanks to Anna, Rachael and Felix for the feedback.*
 
