@@ -141,7 +141,7 @@ The amount of code used to represent it has grown compared to the previous examp
 
 ## The curious case of the diagram that could not be updated
 
-That's how you use _Diagrams_. Is it really valuable? I certainly like the pretty icons. Apart from that, it shines is enabling visual documentation to evolve.
+That's how you use _Diagrams_. Is it really valuable? I certainly like the pretty icons. Apart from that, it shines in enabling visual documentation to evolve.
 
 I've tried to digitalize technical diagrams before. I really tried. [Sketch](https://www.sketch.com/), [sketchboard](https://sketchboard.io/), or even just taking a picture of a hand-drawn diagram. It works until you need to update it, and you don't have the source. Perhaps it was done by somebody else, who preferred a completely different tool. I've often seen a project's documentation get more and more out of date because nobody can update the damn diagrams. If it's just source code, your chances get a lot better.
 
