@@ -21,7 +21,7 @@ I've written extensively about the [Either datatype](https://www.thoughtworks.co
 
 _Kotlin_ has been thus far my go-to language to show this concept. However, I've been playing a lot with _Rust_ lately. My first instinct was to explore its functional programming capabilities. Rust really delivers there.
 
-There are plenty of interesting ideas in Rust. The borrow checker, lifecycles and plenty others. I'm going to focus on _Either_ on this post, although you might be more familiar with its actual name in the language, _Result_.
+There are plenty of exciting ideas in Rust. The borrow checker, lifecycles, and plenty of others. I'm going to focus on _Either_ in this post, although you might be more familiar with its actual name in the language, _Result_.
 
 ## A reason to use Rust
 
@@ -36,15 +36,15 @@ Rust is an increasingly [popular language](https://stackoverflow.blog/2020/01/20
   </figcaption>
 </figure>
 
-Is Rust a replacement for, say, _Kotlin_ or _Ruby_? I don't think so! A systems programming language like Rust might not be the tool that you want to use to write applications, specially if there is no need to have tight memory management. 
+Is Rust a replacement for, say, _Kotlin_ or _Ruby_? I don't think so! A systems programming language like Rust might not be the tool you want to use to write applications, especially if there is no need to have tight memory management.
 
-However, I've found a use case where Rust fits very well: CLI Tools. That is, tools like `cat` that are used from the command line. Typically, they start as shell scripts that inevitably get too hard to read and maintain. With Rust you can use a pretty high level language, and package it as a binary that's extremely easy to distribute, be it in a Docker container, or anywhere else.
+However, I've found a use case where Rust fits very well: CLI Tools. By that, I mean tools like `cat` that are used from the command line. Typically, they start as shell scripts that inevitably get too hard to read and maintain. With Rust, you can use a pretty high-level language, and package it as a binary that's extremely easy to distribute, be it in a Docker container or anywhere else.
 
-_Go_ has seen success in this space ([envconsul](https://github.com/hashicorp/envconsul) comes to mind). After coming in contact with both, I find Rust much more pleasant to use.
+_Go_ has seen success in this space ([envconsul](https://github.com/hashicorp/envconsul) comes to mind). After having been involved with both, I find Rust much more pleasant to use.
 
 ## Either is actually called Result in Rust
 
-Just in case you missed previous posts, let's quickly present Either. Either is an entity whose value can be of two different types, called left and right. It can be used to represent computation that can fail. So the `Right` part is the result in case of success, and the `Left` part is the error if something goes wrong.
+Just in case you missed previous posts, let's quickly present Either. Either is an entity whose value can be of two different types, called left and right. It represents a computation that can fail. So the `Right` side is the result in case of success, and the `Left` one is the error if something goes wrong.
 
 <figure class="figure">
   <img src="./images/either.png" alt="Either" />
@@ -54,7 +54,7 @@ It turns out that Rust has a built-in Either datatype, called [Result](https://d
 
 ## Using Result
 
-Result is very well integrated into the language. It's implemented as an enumeration with two possible types.
+Result integrates well into the language. It's implemented as an enumeration with two possible types.
 
 ```rust
 enum Result<T, E> {
@@ -63,7 +63,7 @@ enum Result<T, E> {
 }
 ```
 
-Being an enumeration comes handy when we try to unwrap the value, as we'll see in a second.
+Being an enumeration comes in handy when we try to unwrap the value, as we'll see in a second.
 
 ### Returning a Result
 
@@ -76,7 +76,7 @@ let failure: Result<i32, &str> = Err("failed :(");
 
 ### Unwrapping a value
 
-Many operations in Rust return a Result. How do you get the value that's inside, and how do you decide what to do based on whether the operation worked? The answer to both questions lays in pattern matching.
+Many operations in Rust return a Result. How do you get the value inside? How do you decide what to do based on the outcome of the operation? The answer to both questions lies in pattern matching.
 
 ```rust
 fn read_state(file: Result<i32,&str>) {
@@ -87,7 +87,7 @@ fn read_state(file: Result<i32,&str>) {
 }
 ```
 
-Note how we can decide what to do based on the type of the Result, and extract our data in one operation. That's really convenient. Moreover, pattern matching is exhaustive, so we're sure we've handled every possibility. I love pattern matching.
+Note how we can decide what to do based on the Result type and extract our data in one operation. That's convenient. Moreover, pattern matching is exhaustive, so we're sure we've handled every possibility. I love pattern matching.
 
 ### Chaining
 
@@ -102,9 +102,9 @@ pub fn from_file(file_name: &str) -> anyhow::Result<Self> {
 
 ### Flat syntax
 
-One disadvantage of modelling errors with Result/Either is that your code can become quite nested as you operate on the data contained within it. The [do notation](https://en.wikibooks.org/wiki/Haskell/do_notation), coming from Haskell, is an attempt to address this, though it's not without [detractors](https://wiki.haskell.org/Do_notation_considered_harmful).
+One disadvantage of modeling errors with Result/Either is that your code can become quite nested as you operate on the data contained within it. The [do notation](https://en.wikibooks.org/wiki/Haskell/do_notation), coming from Haskell, attempts to address this, though it's not without [detractors](https://wiki.haskell.org/Do_notation_considered_harmful).
 
-Luckily, Rust has a solution for that as well! The [question mark operator](https://doc.rust-lang.org/edition-guide/rust-2018/error-handling-and-panics/the-question-mark-operator-for-easier-error-handling.html). By using it, you can extract the data from an `Ok` result, or return directly the `Err` in case it didn't work. It looks like this:
+Luckily, Rust has a solution for that as well! The [question mark operator](https://doc.rust-lang.org/edition-guide/rust-2018/error-handling-and-panics/the-question-mark-operator-for-easier-error-handling.html). Using it, you can extract the data from an Ok result or return directly the Err if it didn't work. It looks like this:
 
 ```rust
 pub fn from_file(file_name: &str) -> anyhow::Result<Self> {
@@ -114,9 +114,9 @@ pub fn from_file(file_name: &str) -> anyhow::Result<Self> {
 }
 ```
 
-Both `read_to_string` and `from_str` can fail, thus returning a `Result`. If that happens, computations stop and the method will return an error. The code remains readable without compromising on its security.
+Both `read_to_string` and `from_str` can fail, thus returning a `Result`. If that happens, computations stop, and the method will return an error. The code remains readable without compromising its security.
 
-It combines really well with the [anyhow](https://docs.rs/anyhow/1.0.33/anyhow/) crate. If you have different kind of errors in your method _anyhow_ helps with the propagation. If they implement `std::error::Error`, that is.
+It combines well with the [anyhow](https://docs.rs/anyhow/1.0.33/anyhow/) crate. If you have multiple kinds of errors in your method, _anyhow_ helps with the propagation. If they implement `std::error::Error`, that is.
 
 ## Conclusion
 
