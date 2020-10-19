@@ -1,6 +1,6 @@
 ---
 title: Either Types for Rust
-date: ""
+date: "2020-10-19"
 layout: post
 path: "/either-types-for-rust/"
 categories:
@@ -8,8 +8,8 @@ categories:
   - Functional Programming
   - Exceptions
   - Either
-draft: true
-description: ""
+draft: false
+description: "Either types are great for error handling. Rust has the Result type. It's tightly integrated into the language, and simplifies robust code"
 image: ./images/rust.jpg
 ---
 
