@@ -56,6 +56,7 @@ It turns out that Rust has a built-in Either datatype, called [Result](https://d
 
 Result integrates well into the language. It's implemented as an enumeration with two possible types.
 
+<!-- result-base -->
 ```rust
 enum Result<T, E> {
    Ok(T),
@@ -69,6 +70,7 @@ Being an enumeration comes in handy when we try to unwrap the value, as we'll se
 
 Any value can be wrapped using `Ok` and `Err` as constructors.
 
+<!-- result-create -->
 ```rust
 let success: Result<i32, &str> = Ok(42);
 let failure: Result<i32, &str> = Err("failed :(");
@@ -78,6 +80,7 @@ let failure: Result<i32, &str> = Err("failed :(");
 
 Many operations in Rust return a Result. How do you get the value inside? How do you decide what to do based on the outcome of the operation? The answer to both questions lies in pattern matching.
 
+<!-- result-unwrap -->
 ```rust
 fn read_state(file: Result<i32,&str>) {
     match file {
@@ -93,6 +96,7 @@ Note how we can decide what to do based on the Result type and extract our data 
 
 You rarely do just one computation. So, are you expected to unwrap the value, transform it, and rewrap it every time? That'd be very annoying. Instead, let's use `map` and `flatMap` (called `and_then` in Rust) to apply a function and get a new Result. If you remember, these methods are biased, so they'll never be applied to an error case.
 
+<!-- result-chaining -->
 ```rust
 pub fn from_file(file_name: &str) -> anyhow::Result<Self> {
     fs::read_to_string(file_name)
@@ -106,6 +110,7 @@ One disadvantage of modeling errors with Result/Either is that your code can bec
 
 Luckily, Rust has a solution for that as well! The [question mark operator](https://doc.rust-lang.org/edition-guide/rust-2018/error-handling-and-panics/the-question-mark-operator-for-easier-error-handling.html). Using it, you can extract the data from an Ok result or return directly the Err if it didn't work. It looks like this:
 
+<!-- result-flat-syntax -->
 ```rust
 pub fn from_file(file_name: &str) -> anyhow::Result<Self> {
     let content = fs::read_to_string(file_name)?;
