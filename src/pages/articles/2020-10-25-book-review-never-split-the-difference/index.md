@@ -22,7 +22,7 @@ If you're _constantly_ negotiating, so you might as well pretend to know what yo
 
 ## The magic recipe
 
-There is no magic recipe that will instantly transform every situation in your favor, as you might expect. There are, however, things that you need to do in every negotiation to tilt the odds in your favor.
+There is no magic recipe that will instantly transform every situation, as you might expect. There are, however, things that you need to do in every negotiation to tilt the odds in your favor.
 
 It starts with _listening_. Who knew? But really, listening is vital. Not just paying attention to the words coming out of your counterparty. Being empathetic towards them. Empathy is **hard**. Understanding their concerns. It sounds so easy, yet you often feel that people don't truly listen in meetings or listen having already decided what they're going to hear in advance.
 
