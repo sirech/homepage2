@@ -7,7 +7,7 @@ categories:
   - Book Review
   - Negotiation
 draft: false
-description: "Being properly prepared for a negotation is a skill that is useful in many situations. Software development is about humans, after all"
+description: "Being properly prepared for a negotiation is a skill that is useful in many situations. Software development is about humans, after all"
 image: ./images/cover.jpg
 
 ---
