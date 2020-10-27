@@ -220,7 +220,7 @@ class SecurityConfiguration : WebSecurityConfigurerAdapter() {
 }
 ```
 
-So now all three parts are finally connected. We defined which requests we want to authorize. The filter parses and verifies the token. If that token fulfills all our requirements, the request goes through. Otherwise, it fails with an unauthorized response.
+So now all three parts are finally connected. We defined which requests we want to authorize. The filter parses and verifies the token. If that token fulfills all our requirements, the request goes through. Otherwise, it fails with an unauthorized response. If you want deeper into _Spring Security_, you can check [this tutorial](https://www.toptal.com/spring/spring-security-tutorial).
 
 ## Summary
 
