@@ -12,6 +12,15 @@ description: "Technical stories are misused. If used correctly, they help shape 
 image: ./images/tech-story.jpg
 ---
 
+<div class="guide">
+
+### Technical Stories
+
+- [**Part 1 - Writing technical stories**](../technical-stories-a-miscast-artifact-of-agile-development/)
+- [Part 2 - Getting technical stories into an iteration](../getting-technical-stories-into-an-iteration/)
+
+</div>
+
 <figure class="figure figure--left">
   <img src="./images/tech-story.jpg" alt="Technical Story" />
 </figure>
