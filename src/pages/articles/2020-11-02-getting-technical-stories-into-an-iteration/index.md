@@ -9,7 +9,7 @@ categories:
   - Leadership
 draft: true
 description: "Writing technical stories is only the first step. Integrating them in an iteration is where progress happens. Don't avoid this discussion"
-image: ./images/tech-story.jpg
+image: ./images/iteration.jpg
 ---
 
 <div class="guide">
@@ -21,7 +21,9 @@ image: ./images/tech-story.jpg
 
 </div>
 
-TODO: main picture
+<figure class="figure figure--left">
+  <img src="./images/iteration.jpg" alt="Iteration" />
+</figure>
 
 As I recently wrote, I believe [technical stories](../technical-stories-a-miscast-artifact-of-agile-development/) **have** a place in a healthy agile workflow, as long as we use them judiciously.
 
@@ -31,7 +33,12 @@ Trying to get important stories in play to see them deprioritized is very demoti
 
 ## The bottomless pit of despair
 
-TODO: despair picture
+<figure class="figure figure--right">
+  <img src="./images/bottom.jpg" alt="Bottom" />
+  <figcaption class="figure__caption">
+  I'm sure the ticket to fix that old bug is somewhere here
+  </figcaption>
+</figure>
 
 Much like rocks, technical stories are dense and tend to sink to the bottom of the backlog. They will remain there, forever, unless you fish them up like a treasure hunter. Many backlogs are living museums of ideas that are long obsolete.
 
@@ -39,7 +46,12 @@ Writing a story is the beginning of the journey. Don't think your work is done a
 
 ## No process will survive the lack of trust
 
-TODO: trust picture
+<figure class="figure figure--left">
+  <img src="./images/trust.jpg" alt="trust" />
+  <figcaption class="figure__caption">
+  Emerging trusty relationship
+  </figcaption>
+</figure>
 
 I've been in many teams and worked with many different Product Owners. For some reason, negotiating the amount of bandwidth for technical work (or [technical debt](https://martinfowler.com/bliki/TechnicalDebt.html)) is a classical friction source. There is something about wanting to upgrade to [Rails's](https://rubyonrails.org/) latest version that brings out an otherwise functional team's darkest resentments. 
 
@@ -57,7 +69,9 @@ Conversely, negotiation doesn't mean capitulation. Some teams opt to avoid the c
 
 Trust issues, conflicting priorities. It looks like an uphill battle! How do we know that we're going in the right direction?
 
-TODO: chart with 0 to 100% investment in tech work (100% screwed, 0% screwed)
+<figure class="figure">
+  <img src="./images/balance.png" alt="balance" />
+</figure>
 
 The most sustainable process is to invest a regular amount of work into technical concerns, every sprint. As my totally non-scientific chart shows, it should be a meaningful amount but not become the dominant theme. From experience, 10% to 25% is a reasonable number, although that changes depending on the context.
 
