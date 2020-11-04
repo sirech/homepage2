@@ -49,21 +49,27 @@ Writing a story is the beginning of the journey. Don't think your work is done a
 <figure class="figure figure--left">
   <img src="./images/trust.jpg" alt="trust" />
   <figcaption class="figure__caption">
-  Emerging trusty relationship
+  Emerging trust-based relationship
   </figcaption>
 </figure>
 
-I've been in many teams and worked with many different Product Owners. For some reason, negotiating the amount of bandwidth for technical work (or [technical debt](https://martinfowler.com/bliki/TechnicalDebt.html)) is a classical friction source. There is something about wanting to upgrade to [Rails's](https://rubyonrails.org/) latest version that brings out an otherwise functional team's darkest resentments. 
+I've been in many teams and worked with many different Product Owners. For some reason, negotiating the amount of bandwidth for technical work (or [technical debt](https://martinfowler.com/bliki/TechnicalDebt.html)) is a classical friction source. There is something about wanting to upgrade to [Rails's](https://rubyonrails.org/) latest version that brings out the darkest resentments of an otherwise functional team. 
 
 All those fruitless confrontations throughout the years have taught me that _trust_ is an indispensable ingredient in this negotiation. I mean, trust is crucial in general. But in this case, you have some deeply technical topics that need to be merged into a very business-y roadmap (the backlog). If both sides mistrust each other, it's bound to go poorly. No process will survive this. 
 
-As a Tech Lead, I often engage in these discussions. I have to admit that I've failed to build this bridge more than once. What to do, then? I could recommend something standard, like having *empathy* or being *transparent*. But I want to advocate for something a bit different:
+As a Tech Lead, I often engage in these discussions. I have to admit that I've failed to build this bridge more than once. What to do, then? I could recommend something standard, like having *empathy* or being *transparent*. But you know that already.
 
-> Negotiate in good faith
+### A conversation starter
 
-The capacity of a team is a precious resource. It's tempting to exaggerate the severity of a problem so that we get a bit more time to work on it. Hiding behind impenetrable tech jargon to prevent questions that we don't have answers for might work once, but it's not a long term strategy. We want to present stories that are clear on its purpose and give a picture of the value that we want to create. We want to have an honest conversation. That includes skipping work that we believe is important, if there is no space for it at this moment. Only then we'll gain the credibility to do so repeatedly over time.
+Finally, having invested all that time in creating sound stories starts to pay off. A story that provides clear context, has tangible value, and is clear about scope is **much** easier to sell than a poorly written one-liner.
 
-Conversely, negotiation doesn't mean capitulation. Some teams opt to avoid the confrontation, not pushing for any technical story unless the Product Owner brings it up herself. That will create bitterness among the developers, who'll think that they are not being heard. However, to be heard, you need to use your voice in the first place.
+### Negotiate in good faith
+
+The capacity of a team is a precious resource. It's tempting to exaggerate the severity of a problem so that we get a bit more time to work on it. Hiding behind impenetrable tech jargon to prevent questions that we don't have answers for might work once, but it's not a long term strategy. We want to present stories that are clear on its purpose and give a picture of the value that we want to achieve. We want to have an honest conversation. That includes skipping work that we believe is important if there is no space for it at this moment. Only then we'll gain the credibility to do so repeatedly over time.
+
+### Don't be a pushover
+
+Conversely, negotiation doesn't mean capitulation. Some teams opt to avoid the confrontation, not pushing for any technical story unless the Product Owner brings it up herself. That will produce bitterness among the developers, who'll think that they are not being heard. However, to be heard, you need to use your voice in the first place.
 
 ## A healthy dose of continuous progress
 
@@ -75,7 +81,7 @@ Trust issues, conflicting priorities. It looks like an uphill battle! How do we 
 
 The most sustainable process is to invest a regular amount of work into technical concerns, every sprint. As my totally non-scientific chart shows, it should be a meaningful amount but not become the dominant theme. From experience, 10% to 25% is a reasonable number, although that changes depending on the context.
 
-_Why?_ Because small continuous improvements **compound** over time. It might not look like much, but it **will** make an impact over time. It doesn't require extraordinary efforts. Keep the stories small. If you can prove that you can deliver small increments, it will create a positive cycle.
+_Why?_ Because small [continuous improvements](https://www.leanproduction.com/kaizen.html) **compound** over time. It might not look like much, but it **will** make an impact. It doesn't require extraordinary efforts. Keep the stories small. If you can prove that you can deliver small increments, it will create a positive cycle.
 
 Also, be **persistent**. If there is one message to take from this post, it's don't give up. Every team I've ever been part of has had this discussion at some point. Without patience and perseverance, it always ends up in frustration. Angry people won't do great work. Eventually, tech stagnation leads to user stories not being delivered, either.
 
