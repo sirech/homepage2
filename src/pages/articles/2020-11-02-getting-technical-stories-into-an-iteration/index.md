@@ -1,6 +1,6 @@
 ---
 title: Getting technical stories into an iteration
-date: "2020-04-11"
+date: "2020-11-05"
 layout: post
 path: "/getting-technical-stories-into-an-iteration/"
 categories:
