@@ -7,7 +7,7 @@ categories:
   - Agile
   - Practices
   - Leadership
-draft: true
+draft: false
 description: "Writing technical stories is only the first step. Integrating them in an iteration is where progress happens. Don't avoid this discussion"
 image: ./images/iteration.jpg
 ---
@@ -98,4 +98,6 @@ In summary, once you have your lovingly crafted tickets, you want to, you know, 
 ## Next Step: A technical backlog
 
 After talking about writing technical stories, it's the turn of getting them into an iteration. One thing remains: Which stories to pick? In other words, how do we maintain a technical backlog? That'll be its own post.
+
+*Thanks to Anna for the feedback.*
 
