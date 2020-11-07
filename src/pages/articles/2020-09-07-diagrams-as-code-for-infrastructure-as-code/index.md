@@ -61,6 +61,7 @@ And there is not much else. The diagram is built with this snippet.
 ```python
 from diagrams import Diagram, Cluster
 
+from diagrams.aws.storage import S3
 from diagrams.aws.compute import Lambda
 from diagrams.aws.integration import SNS, Eventbridge
 from diagrams.aws.management import Cloudwatch
