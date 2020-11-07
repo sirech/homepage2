@@ -6,6 +6,9 @@ jobs:
 
     docker:
       - image: cimg/node:14.4.0
+        auth:
+          username: $DOCKER_USER
+          password: $DOCKER_PASSWORD
 
     steps:
 
@@ -31,7 +34,6 @@ jobs:
           command: |
             SITE_URL=$SITE_URL yarn run build
             find public -regextype posix-basic -regex '.*\.\(js\|css\)\(.map\)\?$' -print0 | xargs --null -I@ sh -c "gzip -c @ > @.gz"
-
       - persist_to_workspace:
           root: public
           paths:
@@ -41,6 +43,9 @@ jobs:
 
     docker:
       - image: cimg/node:14.4.0
+        auth:
+          username: $DOCKER_USER
+          password: $DOCKER_PASSWORD
 
     steps:
 
@@ -54,6 +59,9 @@ jobs:
 
     docker:
       - image: owasp/zap2docker-weekly
+        auth:
+          username: $DOCKER_USER
+          password: $DOCKER_PASSWORD
 
     steps:
       - run: zap-baseline.py -t $SITE_URL -u $ZAP_CONF_URL
@@ -62,6 +70,9 @@ jobs:
 
     docker:
       - image: cypress/browsers:node14.7.0-chrome84
+        auth:
+          username: $DOCKER_USER
+          password: $DOCKER_PASSWORD
 
     steps:
 
@@ -83,16 +94,24 @@ workflows:
   version: 2
   pipeline:
     jobs:
-      - build
+      - build:
+          context:
+            - docker-context
       - deploy:
+          context:
+            - docker-context
           filters:
             branches:
               only: master
           requires:
             - build
       - security:
+          context:
+            - docker-context
           requires:
             - deploy
       - post-deploy:
+          context:
+            - docker-context
           requires:
             - deploy
