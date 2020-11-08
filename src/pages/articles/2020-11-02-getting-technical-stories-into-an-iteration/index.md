@@ -29,7 +29,7 @@ As I recently wrote, I believe [technical stories](../technical-stories-a-miscas
 
 I left a question in that article unanswered: How do you get such stories into an iteration? An iteration can be fixed, like a two-week sprint or something more free-flowing like Kanban. In any case, the _Product Owner_ is typically the backlog's gatekeeper, which naturally leads to user stories having priority over technical ones. We have to live with that.
 
-Trying to get important stories in play to see them deprioritized is very demotivating. Even more so if that happens again and again. The sarcasm level might increase. Dilbert comics might appear on the walls. Let's see what we can do about it.
+Trying to get important stories in play to see them deprioritized is very demotivating. Even more so if that happens again and again. The sarcasm level might increase. [Dilbert](https://dilbert.com/) comics might appear on the walls. Let's see what we can do about it.
 
 ## The bottomless pit of despair
 
@@ -57,11 +57,13 @@ I've been in many teams and worked with many different Product Owners. For some 
 
 All those fruitless confrontations throughout the years have taught me that _trust_ is an indispensable ingredient in this negotiation. I mean, trust is crucial in general. But in this case, you have some deeply technical topics that need to be merged into a very business-y roadmap (the backlog). If both sides mistrust each other, it's bound to go poorly. No process will survive this. 
 
-As a Tech Lead, I often engage in these discussions. I have to admit that I've failed to build this bridge more than once. What to do, then? I could recommend something standard, like having *empathy* or being *transparent*. But you know that already.
+As a Tech Lead, I often engage in these discussions. I have to admit that I've failed to build this bridge more than once. In one team I was part of, the Product Owner didn't believe in technical work, to begin with, but the lack of trust between him and me made it worse. It created a very adversarial relationship. I learned that focusing on *winning* a discussion can be damaging. 
+
+What to do, then? Hard to say! I could recommend something standard, like having *empathy* or being *transparent*. But you know that already.
 
 ### A conversation starter
 
-Finally, having invested all that time in creating sound stories starts to pay off. A story that provides clear context, has tangible value, and is clear about scope is **much** easier to sell than a poorly written one-liner.
+Finally, having invested all that time in creating [sound stories](../technical-stories-a-miscast-artifact-of-agile-development/) starts to pay off. A story that provides clear context, has tangible value, and is clear about scope is **much** easier to sell than a poorly written one-liner. If your organization doesn't value this type of work at all, this conversation might not get started at all. I'd recommend spending extra time surfacing the value that a particular story creates, seeking to collect clear data where possible.
 
 ### Negotiate in good faith
 
@@ -99,5 +101,7 @@ In summary, once you have your lovingly crafted tickets, you want to, you know, 
 
 After talking about writing technical stories, it's the turn of getting them into an iteration. One thing remains: Which stories to pick? In other words, how do we maintain a technical backlog? That'll be its own post.
 
-*Thanks to Anna for the feedback.*
+*EDIT 08/11/2020:* Added more context.
+
+*Thanks to Anna and David for the feedback.*
 
