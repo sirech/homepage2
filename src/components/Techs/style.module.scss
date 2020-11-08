@@ -8,11 +8,11 @@
   padding: 0;
   place-items: center;
 
-  @media (min-width: 700px) {
+  @media only screen and (min-width: 700px) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (min-width: 900px) {
+  @media only screen and (min-width: 900px) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
