@@ -17,7 +17,7 @@
     "gatsby-plugin-react-helmet": "^3.3.14",
     "gatsby-plugin-react-helmet-canonical-urls": "^1.4.0",
     "gatsby-plugin-sass": "^2.3.19",
-    "gatsby-plugin-sharp": "^2.6.43",
+    "gatsby-plugin-sharp": "^2.7.1",
     "gatsby-plugin-sitemap": "^2.4.17",
     "gatsby-plugin-twitter": "^2.3.12",
     "gatsby-plugin-webpack-bundle-analyzer": "^1.0.3",
