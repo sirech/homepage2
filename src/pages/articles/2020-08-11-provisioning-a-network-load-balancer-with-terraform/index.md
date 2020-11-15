@@ -8,67 +8,73 @@ categories:
   - Terraform
   - Load Balancing
   - Networking
+  - Infrastructure as Code
 draft: true
 description: ""
+image: ./images/lb.jpg
 ---
 
-## Why do we use LBs
+<figure class="figure figure--left">
+  <img src="./images/lb.jpg" alt="lb" />
+</figure>
 
-Putting a load balancer in front of your application is a standard pattern for high availability, automated scaling and security. Luckily, AWS makes it [easy](https://aws.amazon.com/elasticloadbalancing/) for us to provision such resources.
+Are you using some form of load balancing in your application? Don't answer, it's a rhetorical question. Of course I am, you scream defiantly. How else am I going to ensure that traffic is evenly distributed?
 
-This article is focused on setting up a load balancer using [Terraform](https://www.terraform.io/).
+Load Balancers come in all shapes and sizes. In the past, it used to be a concern for the operations folks. As an application developer, you could spend years without having to think about them. In the cloud that's not always the case. Luckily, AWS makes it [easy](https://aws.amazon.com/elasticloadbalancing/) for us to provision such resources. More so if you use [Infrastructure as Code](https://www.hashicorp.com/resources/what-is-infrastructure-as-code) (which I'm sure you are). I'm going to use [Terraform](https://www.terraform.io/) in this article to provision _Network Load Balancer_ instances.
 
-## Different types of load balancers in AWS
+## It's AWS, of course there are multiple competing options
 
-There are three different type of load balancers in AWS:
+There are three different types of load balancers in AWS.
 
 - [Classic](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/introduction.html)
 - [Network Load Balancer (NLB)](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html)
 - [Application Load Balancer (ALB)](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html)
 
-Classic load balancers are becoming a relic of the past, so usually your choice is between an _NLB_ and an _ALB_. They are Layer 4 and Layer 7 load balancers, respectively. They both have a ton of [features](https://aws.amazon.com/elasticloadbalancing/features/). All three are managed infrastructure. Once you create it, AWS will make sure that it's available, and that it's scaled on your behalf.
+Classic load balancers are becoming a relic of the past. Usually your choice is between an _NLB_ (Layer 4) and an _ALB_ (Layer 7). If you are worried about [the amount of features](https://aws.amazon.com/elasticloadbalancing/features/), they got you covered. All three are managed infrastructure. AWS handles the availability and scaling transparently for you.
 
-In this article I'm focusing on the NLB. TODO: As a Layer 4 load balancer, we are handling traffic without considering 
+Let's talk about NLBs. Being a Layer 4 means that you don't know about the application protocol used. Even so, most of your load balancing needs in life can be covered with an NLB. Unless you want routing based on an HTTP path, for instance. In that case you need an ALB, which I'll cover in a future post.
 
 ## Setting up a basic load balancer
 
-Setting up a load balancer requires three steps:
+Setting up a load balancer requires provisioning three types of resources.
 
-- The load balancer itself
-- The listeners that will forward the traffic
-- The target groups that ensure that the traffic reaches its destination
+- The **load balancer** itself
+- The **listeners** that will forward the traffic
+- The **target groups** that ensure that the traffic reaches its destination
 
-The most typical setup is to have the load balancer inside a Virtual Private Cloud (VPC), in a public subnet. The instances that we want live in a private subnet inside the same VPC. To protect ourselves against outages, we want to deploy to multiple Availability Zones (AZ).
+The most typical setup is a Virtual Private Cloud (VPC) with a public and a private subnet. The load balancer goes in the public subnet. The instances live in the private subnet. To protect ourselves against outages, everything is deployed to multiple Availability Zones (AZ).
 
-TODO: diagram public private subnet
+<figure class="figure">
+  <img src="./images/diagram.png" alt="diagram" />
+</figure>
 
-Assuming that we have an existing vpc (with the id `vpc_id`), this is the snippet that creates the load balancer.
+Assuming that we have an existing vpc (identified by `vpc_id`), this is the snippet that creates the load balancer.
 
 ```hcl
-data "aws_subnet_ids" "private" {
+data "aws_subnet_ids" "this" {
   vpc_id = var.vpc_id
 
   tags = {
-    Tier = "Private"
+    Tier = "Public"
   }
 }
 
 resource "aws_lb" "this" {
   name               = "basic-load-balancer"
   load_balancer_type = "network"
-  subnets            = data.aws_subnet_ids.private.ids
+  subnets            = data.aws_subnet_ids.this.ids
 
   enable_cross_zone_load_balancing = true
 }
 ```
 
-The most confusing aspect of the `aws_lb` resource is that it represents both NLBs and ALBs, as specified in the `load_balancer_type`. Some arguments only apply to one type, which means that you've got to read the documentation carefully.
+The `aws_lb` resource is a bit confusing, because it represents both NLBs and ALBs, depending on the `load_balancer_type` argument. Some arguments only apply to one type, so you've got to read the documentation carefully.
 
-`enable_cross_zone_load_balancing` is an [interesting parameter](https://aws.amazon.com/about-aws/whats-new/2018/02/network-load-balancer-now-supports-cross-zone-load-balancing/). It will help prevent downtimes by sending traffic to other AZs in case of problems. Cross-AZ traffic ain't free, so make that an exception!
+`enable_cross_zone_load_balancing` is an [interesting parameter](https://aws.amazon.com/about-aws/whats-new/2018/02/network-load-balancer-now-supports-cross-zone-load-balancing/). It'll help prevent downtimes by sending traffic to other AZs in case of problems. Cross-AZ traffic ain't free, so make that an exception!
 
 ### Listeners
 
-Our LB is not being a _good listener_ right now. We've got to fix that. Through the `aws_lb_listener` resource, we tell it which ports it should be checking for connection requests, and what to do with them. We want to listen to both port 80 and 443, so we'll setup two different resources using `for_each`. Let's have a look at the code.
+Our load balancer is not being a _good listener_ right now. We've got to fix that. Through the `aws_lb_listener` resource, we specify the ports that we want to handle, and what to do with them. We want to listen to both port 80 and 443, so we'll setup two different resources using `for_each`. Let's have a look at the code.
 
 ```hcl
 variable "ports" {
@@ -94,17 +100,17 @@ resource "aws_lb_listener" "this" {
 }
 ```
 
-You see the port coming from our `ports` hash. Next is the `protocol`. If we just want to forward the request, we use TCP or UDP. We can also choose to [terminate the TLS connection](https://aws.amazon.com/about-aws/whats-new/2019/01/network-load-balancer-now-supports-tls-termination/) by using TLS as a protocol. For that we need to set up a certificate, though. TODO: termination as an item?
+You see the ports defined in the `ports` variable. Next is the `protocol`. If we just want to forward the request, we use TCP or UDP. We can also choose to [terminate the TLS connection](https://aws.amazon.com/about-aws/whats-new/2019/01/network-load-balancer-now-supports-tls-termination/) by using TLS as a protocol. For that we'd need to set up a certificate, though.
 
-After port and protocol are set up, we need the action to perform. The most common is to forward it to our receiver target group, although we can do redirects, fixed results, or authentication. I showed how to do that in [this article](../concourse-fly-behind-alb-oidc/).
+After port and protocol are set up, we need the action to perform. The most common action is to forward it to our receiver target group. Additionally, we can do redirects, fixed results, or even authentication. By the way, I showed how to do authentication in [this article](../concourse-fly-behind-alb-oidc/).
 
 ### Target Groups
 
-The last step is to define the target group(s), so that the load balancer knows how is going to receive the requests. We do that with the `aws_lb_target_group` resource.
+The last step is to define the target group(s), so that the load balancer knows who is going to receive the requests. We do that with the `aws_lb_target_group` resource. Here we branch again, as there are different possibilities.
 
 #### Instance based
 
-The target group can point to specific instances. That's the default `target_type`. You don't want to specify instances explicitly though (What if they go down?), but rather point to an [autoscaling group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html).
+The target group can point to specific instances. That's the default `target_type`. You don't want to specify instances explicitly though (What if they go down?), but rather create an [Autoscaling Group (ASG)](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html). We assume an existing ASG in the code.
 
 ```hcl
 resource "aws_lb_target_group" "this" {
@@ -133,9 +139,11 @@ resource "aws_autoscaling_attachment" "target" {
 }
 ```
 
+We add a `depends_on` block containing the lb resource so that the dependencies are properly modelled. Otherwise destroying the resource might not work properly.
+
 #### IP Based
 
-The other `target_type` is for when you want to specify IPs instead of instance ids.
+We use the `target_type` `ip` when using IPs instead of instance ids. We assume that these IPs are available, and can be read through a `data` resource. They are connected to the target group through a `aws_lb_target_group_attachment`.
 
 ```hcl
 resource "aws_lb_target_group" "this" {
@@ -190,24 +198,41 @@ data "aws_network_interface" "this" {
 }
 ```
 
-In this case we have a list of [ENIs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html) that we want to connect to, and we want every a target group for every combination of [port, ip]. That's why we need some loops.
+The connections to the [ENIs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html) are expressed as a list of [port, ip] pairs. That requires some ungainly terraform loops to define everything properly.
 
-You can connect to [ECS](https://aws.amazon.com/ecs/) for instance with this.
+These are two typical examples, but it's not the only way of doing it. [ECS](https://aws.amazon.com/ecs/) supports adding target groups to reach its services directly. If you are working with [Lambda](https://aws.amazon.com/lambda/), that needs an ALB, in fact.
 
-We add a `depends_on` block containing the lb resource so that the dependencies are properly modelled. Otherwise destroying the resource might not work properly
+I've left a bunch of details out to avoid writing a 10k words article. You can customize the health check (`health_check`) associated to each target group, the algorithm used (`load_balancing_algorithm_type`), and a host of other things. The flexibility can be overwhelming. I recommend starting small.
 
-### Healthcheck
+### Security Groups
 
-Every target group has an associated healthcheck. It comes with some default settings, but you can configure it as well through a `health_check` block.
+Oh yes, security groups. Every so often, running `curl` against your shiny, new infrastructure results in timeouts. Inevitably, you forgot the [security groups](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html).
 
-TODO: security groups
+Network load balancers don't have associated security groups per se. For both instance and IP based target groups, you add a rule that allows traffic from the load balancer to the target IP.
 
-- health check
+```hcl
+resource "aws_security_group" "this" {
+  description = "Allow connection between NLB and target"
+  vpc_id      = var.vpc_id
+}
 
+resource "aws_security_group_rule" "ingress" {
+  for_each = var.ports
 
-## Querying a load balancer
+  security_group_id = aws_security_group.this.id
+  from_port         = each.value
+  to_port           = each.value
+  protocol          = "tcp"
+  type              = "ingress"
+  cidr_blocks       = ["0.0.0.0/0"]
+}
+```
 
-We can programmatically find the DNS entry for our newly created LB and query it, thanks to the [aws cli](https://aws.amazon.com/cli/).
+## Getting to our load balancer
+
+That's about it. With all these resources, we've got ourselves a working load balancer!
+
+All load balancers can be reached through their automatically assigned DNS entry. We can programmatically find it thanks to the [aws cli](https://aws.amazon.com/cli/).
 
 ```shell
 export LB_NAME="basic-load-balancer"
@@ -215,15 +240,17 @@ dns=$(aws elb describe-load-balancers --load-balancer-name $LB_NAME | jq -r '.Lo
 nslookup $dns
 ```
 
-If there is a registered target, we can query it using the content of `dns` and see that our setup, in fact, works.
+Provided there is a registered target, we can query it using the content of `dns` and see that our setup, in fact, works.
 
-## Internal Load Balancers
+### Internal Load Balancers
 
-A load balancer doesn't always have to be publicly available. If you use [VPC endpoints](../understanding-vpc-endpoints/) to keep your traffic inside AWS's network, you'll want to use an internal LB for any VPC endpoint service. In that case you have to set the `internal` parameter to `true`. Moreover, the LB can live in a private subnet.
+A load balancer doesn't always have to be publicly available. Let's say you use [VPC endpoints](../understanding-vpc-endpoints/) to keep your traffic inside AWS's network. We don't want to expose our load balancer to the public if it's going to sit behind a VPC endpoint service. In that case you set the `internal` parameter to `true`. The LB can live in a private subnet.
 
 ## Operations
 
-### Monitoring
+_Operations_ is a bit of a strong word in this case. There is not really _a lot_ to operate here. Not for us, at least. Still, let's finish with some thoughts about that.
+
+Out of the box, a lot of [CloudWatch](https://aws.amazon.com/cloudwatch/) metrics are exported for your convenience. The AWS Console has some nice charts to look at, but these metrics can be exported to another monitoring tool as well.
 
 <figure class="figure">
   <img src="./images/monitoring.png" alt="monitoring" />
@@ -232,13 +259,11 @@ A load balancer doesn't always have to be publicly available. If you use [VPC en
   </figcaption>
 </figure>
 
-### A word on pricing
+What about costs? As you can see in the [pricing page](https://aws.amazon.com/elasticloadbalancing/pricing/), an NLB has a fixed price, plus a fairly arcane operating cost based on _Load Balancer Capacity Units (LCU)_. Honestly, the easiest way to monitor expenditures is by looking at previous months in the Cost Explorer.
 
-As you can see in the [pricing page](https://aws.amazon.com/elasticloadbalancing/pricing/), an NLB has a fixed price, plus a fairly arcane operating cost based on _Load Balancer Capacity Units (LCU)_. Honestly, the easiest way to monitor expenditures is by looking at previous months in the Cost Explorer.
-
-### The performance of an NLB
-
-An NLB _scales_ like there is no tomorrow. Each unique target ip can support 55000 simultaneous connections, and the whole thing should be merrily passing along requests long after your applications have collapsed in a smoking pile of ashes.
+Lastly, performance. An NLB _scales_ like there is no tomorrow. Each unique target ip can support 55000 simultaneous connections, and the whole thing should be merrily passing along requests long after your applications have collapsed into a smoking pile of ashes. The word _managed_ is truly earned here, because you'll rarely have to do anything past the provisiniong.
 
 ## Conclusion
+
+Load balancers are an integral part of every cloud setup. It's a very broad topic as well, and thus I could only scratch the surface. However this is enough to get started with a very solid foundation.
 
