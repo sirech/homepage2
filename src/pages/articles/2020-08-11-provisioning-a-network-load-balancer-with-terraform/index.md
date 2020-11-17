@@ -1,6 +1,6 @@
 ---
 title: Provisioning a Network Load Balancer with Terraform
-date: ""
+date: "2020-11-17"
 layout: post
 path: "/provisioning-a-network-load-balancer-with-terraform/"
 categories:
@@ -9,7 +9,7 @@ categories:
   - Load Balancing
   - Networking
   - Infrastructure as Code
-draft: true
+draft: false
 description: "Learn how to provision Network Load Balancers in AWS using Terraform to ensure high availability for your applications"
 image: ./images/lb.jpg
 ---
