@@ -18,6 +18,7 @@ image: ./images/iteration.jpg
 
 - [Part 1 - Writing technical stories](../technical-stories-a-miscast-artifact-of-agile-development/)
 - [**Part 2 - Getting technical stories into an iteration**](../getting-technical-stories-into-an-iteration/)
+- [Part 3 - Keeping a technical backlog](../keeping-a-technical-backlog/)
 
 </div>
 
