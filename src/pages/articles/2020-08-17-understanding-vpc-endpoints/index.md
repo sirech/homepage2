@@ -92,7 +92,7 @@ resource "aws_vpc_endpoint" "log" {
 Both `vpc_id` and `service_name` work as before. `type` is `Interface` this time. Some new arguments are coming  to the party:
 
 - `subnet_ids`: Instead of a route table, we need the subnets accessing the endpoint. These are the private subnets where we put our instances.
-- `security_group_ids`: We need an existing security group as well.
+- `security_group_ids`: We need an existing security group as well. This security group must allow inbound traffic on port 443, as well as outbound traffic (in case you want to touch the defaults).
 
 By default, we can reach the AWS service that we're connecting through its DNS hostname. It can be disabled with `private_dns_enabled`.
 
