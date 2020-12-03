@@ -1,13 +1,13 @@
 ---
 title: Keeping a technical backlog
-date: ""
+date: "2020-12-04"
 layout: post
 path: "/keeping-a-technical-backlog/"
 categories:
   - Agile
   - Practices
   - Leadership
-draft: true
+draft: false
 description: "You are writing high-quality technical stories and including them in every iteration. Find a home for them in your technical backlog"
 image: ./images/backlog.jpg
 ---
