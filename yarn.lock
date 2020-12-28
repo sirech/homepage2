@@ -4854,37 +4854,7 @@ chokidar@^2.0.4, chokidar@^2.1.8:
   optionalDependencies:
     fsevents "^1.2.7"
 
-chokidar@^3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.1.tgz#e905bdecf10eaa0a0b1db0c664481cc4cbc22ba1"
-  integrity sha512-TQTJyr2stihpC4Sya9hs2Xh+O2wf+igjL36Y75xx2WdHuiICcn/XJza46Jwt0eT5hVpQOzo3FpY3cj3RVYLX0g==
-  dependencies:
-    anymatch "~3.1.1"
-    braces "~3.0.2"
-    glob-parent "~5.1.0"
-    is-binary-path "~2.1.0"
-    is-glob "~4.0.1"
-    normalize-path "~3.0.0"
-    readdirp "~3.4.0"
-  optionalDependencies:
-    fsevents "~2.1.2"
-
-chokidar@^3.4.2:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.2.tgz#38dc8e658dec3809741eb3ef7bb0a47fe424232d"
-  integrity sha512-IZHaDeBeI+sZJRX7lGcXsdzgvZqKv6sECqsbErJA4mHWfpRrD8B97kSFN4cQz6nGBGiuFia1MKR4d6c1o8Cv7A==
-  dependencies:
-    anymatch "~3.1.1"
-    braces "~3.0.2"
-    glob-parent "~5.1.0"
-    is-binary-path "~2.1.0"
-    is-glob "~4.0.1"
-    normalize-path "~3.0.0"
-    readdirp "~3.4.0"
-  optionalDependencies:
-    fsevents "~2.1.2"
-
-chokidar@^3.4.3:
+chokidar@^3.4.1, chokidar@^3.4.2, chokidar@^3.4.3:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.3.tgz#c1df38231448e45ca4ac588e6c79573ba6a57d5b"
   integrity sha512-DtM3g7juCXQxFVSNPNByEC2+NImtBuxQQvWlHunpJIS5Ocr0lG306cC7FCi7cEA0fzmybPUIl4txBIobk1gGOQ==
@@ -8230,10 +8200,10 @@ gatsby-cli@^2.15.0:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^1.1.2"
 
-gatsby-core-utils@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.6.0.tgz#ec719e1a1d409ce69f89883e4334922f3b5c720e"
-  integrity sha512-jGaXDPbXOkP5Ct7pcOTsx0C0WTvIjSBVlHp0oBIv6rTw7DP498G9RAytqOT8z3uAf1PzWjAcUEMGNdicVucrxg==
+gatsby-core-utils@^1.6.0, gatsby-core-utils@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.7.1.tgz#7e7e6596c228d580ed8ce4a3fc04c56f103cae3f"
+  integrity sha512-hnzQCixp2C4opmSgjido/CQwSt4FL3CcmGwq6fK3PVPTT3hLPz7rvuTMQIUlR8BJjGYai6i5f6V3wfkCJ3VTgQ==
   dependencies:
     ci-info "2.0.0"
     configstore "^5.0.1"
@@ -8594,17 +8564,17 @@ gatsby-remark-smartypants@^2.6.0:
     retext-smartypants "^3.0.3"
     unist-util-visit "^1.4.1"
 
-gatsby-source-filesystem@^2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.7.0.tgz#09da0ecfb85a6527858029d38b7bc2c68c9a91a3"
-  integrity sha512-SpIwHe89LLwgwNUEcHaRCe3J5+7ODgdJLh/PhJdSpmEzeHQRtLAfInNuoTMs8pJ53W+1HI/ph3/HXSAPddi/VA==
+gatsby-source-filesystem@^2.8.1:
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.8.1.tgz#85b5dce6ed7a1df5d43a54e91f8682d2b219a656"
+  integrity sha512-awvrQ63dayVFsbTnPS8dIpFCsDnvwj5RKUCtwn5wL+DKerOFgcCfyXHsSx4rrnIlnvs30yzR7qNgN5tHSx2++Q==
   dependencies:
     "@babel/runtime" "^7.12.5"
     better-queue "^3.8.10"
     chokidar "^3.4.3"
     file-type "^16.0.0"
     fs-extra "^8.1.0"
-    gatsby-core-utils "^1.6.0"
+    gatsby-core-utils "^1.7.1"
     got "^9.6.0"
     md5-file "^5.0.0"
     mime "^2.4.6"
@@ -14685,12 +14655,7 @@ prettier@^2.0.5, prettier@^2.2.1:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
   integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
 
-pretty-bytes@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-5.3.0.tgz#f2849e27db79fb4d6cfe24764fc4134f165989f2"
-  integrity sha512-hjGrh+P926p4R4WbaB6OckyRtO0F0/lQBiT+0gnxjV+5kjPBrfVBFCsCLbMqVQeydvIoouYTCmmEURiH3R1Bdg==
-
-pretty-bytes@^5.4.1:
+pretty-bytes@^5.3.0, pretty-bytes@^5.4.1:
   version "5.4.1"
   resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-5.4.1.tgz#cd89f79bbcef21e3d21eb0da68ffe93f803e884b"
   integrity sha512-s1Iam6Gwz3JI5Hweaz4GoCD1WUNUIyzePFy5+Js2hjwGVt2Z79wNN+ZKOZ2vB6C+Xs6njyB84Z1IthQg8d9LxA==
@@ -15354,13 +15319,6 @@ readdirp@^2.2.1:
     graceful-fs "^4.1.11"
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
-
-readdirp@~3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/readdirp/-/readdirp-3.4.0.tgz#9fdccdf9e9155805449221ac645e8303ab5b9ada"
-  integrity sha512-0xe001vZBnJEK+uKcj8qOhyAKPzIT+gStxWr3LCB0DwcXR5NZJ3IaC+yGnHCYzB/S7ov3m3EEbZI2zeNvX+hGQ==
-  dependencies:
-    picomatch "^2.2.1"
 
 readdirp@~3.5.0:
   version "3.5.0"
@@ -19389,12 +19347,7 @@ xss@^1.0.6:
     commander "^2.20.3"
     cssfilter "0.0.10"
 
-xstate@^4.11.0, xstate@^4.9.1:
-  version "4.11.0"
-  resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.11.0.tgz#dc0bd31079fe22918c2c27c118d6310bef3dcd9e"
-  integrity sha512-v+S3jF2YrM2tFOit8o7+4N3FuFd9IIGcIKHyfHeeNjMlmNmwuiv/IbY9uw7ECifx7H/A9aGLcxPSr0jdjTGDww==
-
-xstate@^4.14.0:
+xstate@^4.11.0, xstate@^4.14.0, xstate@^4.9.1:
   version "4.15.0"
   resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.15.0.tgz#4a27173666f7c8f0574a64b849f2da26f9641e7b"
   integrity sha512-VXmJgkh1u2ejpNBSqdQLTU9V0YIn7clJ+4a3P/G/AJGyXwpyf8Ykf+k7I7UptccpmQktcPHPzLTtLctp+8qURA==
