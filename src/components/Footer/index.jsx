@@ -8,11 +8,12 @@ export default () => (
     <div>
       Copyright © {new Date().getFullYear()},{' '}
       <a
-        href="http://creativecommons.org/licenses/by/4.0/legalcode"
+        href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Licensed under CC-by-4.0
+        Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+        International License.
       </a>
     </div>
     Favicon courtesy of{' '}
