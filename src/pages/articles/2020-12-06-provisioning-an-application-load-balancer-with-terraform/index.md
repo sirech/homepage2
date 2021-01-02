@@ -152,6 +152,7 @@ resource "aws_security_group_rule" "ingress" {
 
 Our load balancer is aware of the path and headers that we're requesting, and thus we can make routing decisions based on that. We use extra `aws_lb_listener_rule` resources to enrich the regular listener.
 
+<!-- listener-rule -->
 ```hcl
 resource "aws_lb_listener_rule" "redirect_based_on_path" {
   listener_arn = aws_lb_listener.this.arn
