@@ -11,6 +11,6 @@ describe('Homepage', () => {
   })
 
   it('has a license', () => {
-    cy.get('footer').contains('CC-by-4.0')
+    cy.get('footer').contains('Creative Commons')
   })
 })
