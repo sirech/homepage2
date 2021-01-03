@@ -10,14 +10,14 @@
     "selector-max-compound-selectors": 4,
     "selector-class-pattern": "^[a-z][a-zA-Z-]*$",
 
-    "declaration-property-unit-whitelist": {
+    "declaration-property-unit-allowed-list": {
       "font-size": ["rem"],
       "width": ["rem", "%"],
       "height": ["rem", "%", "px"],
       "/^margin": ["rem"],
       "/^padding": ["rem"]
     },
-    "unit-blacklist": ["em"],
+    "unit-disallowed-list": ["em"],
 
     "plugin/declaration-block-no-ignored-properties": true
   }
