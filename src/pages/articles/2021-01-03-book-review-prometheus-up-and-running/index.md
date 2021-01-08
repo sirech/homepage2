@@ -1,6 +1,6 @@
 ---
 title: "Book Review: Prometheus up and running"
-date: ""
+date: "2021-01-08"
 layout: post
 path: "/book-review-prometheus-up-and-running/"
 categories:
