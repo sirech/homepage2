@@ -8,7 +8,7 @@ categories:
   - Monitoring
   - DevOps
   - Prometheus
-draft: true
+draft: false
 description: "Get started with Prometheus thanks to this book, which is both practical and comprehensive"
 image: ./images/cover.jpeg
 
