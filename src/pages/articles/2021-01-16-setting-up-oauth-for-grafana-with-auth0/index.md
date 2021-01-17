@@ -1,6 +1,6 @@
 ---
 title: Setting up OAuth for Grafana with Auth0
-date: ""
+date: "2021-01-17"
 layout: post
 path: "/setting-up-oauth-for-grafana-with-auth0/"
 categories:
@@ -9,7 +9,7 @@ categories:
   - Infrastructure as Code
   - Terraform
   - Grafana
-draft: true
+draft: false
 description: "Set up secure access for Grafana based on OAuth thanks to Auth0, nicely provisioned with Terraform using Infrastructure as Code"
 image: ./images/dashboard.png
 
