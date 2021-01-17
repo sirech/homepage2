@@ -51,6 +51,8 @@ resource "aws_lb" "this" {
 }
 ```
 
+Unlike NLBs, you can't set static IPs for an ALB.
+
 ### Listeners
 
 For an ALB, our listeners have to be either `HTTPS` or `HTTP`. We can choose to do SSL termination at this stage. Let's see an example.
