@@ -164,7 +164,7 @@ resource "auth0_rule" "grafana-drop-unauthorized" {
 }
 ```
 
-The rule is implemented in JavaScript.
+The rule is implemented in JavaScript. The file is templated, so the values for `application` and `role` are interpolated and won't be present in the final file that is uploaded to Auth0.
 
 <!-- rule-definition -->
 ```javascript
