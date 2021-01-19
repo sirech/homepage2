@@ -89,6 +89,16 @@ gopass setup --remote ssh://git@bitbucket.internal.instance.org/your-team/passwo
 gopass sync
 ```
 
+### Addind a new sub-store
+
+It's a good idea to create multiple sub-stores, so that you can separate secrets and put them in different repositories. In that case, you need to initialize and set up a remote for the new store. Assuming there is an existing remote repository, you'll do this:
+
+```bash
+gopass init --path $PATH --store $STORE
+gopass git remote add --store $STORE origin $REPO_URL
+gopass sync
+```
+
 ## Adding/Removing people
 
 Once you have the whole thing set up, you can add your fellow developers to the repository. For every developer, you need to import her _GPG_ key and trust it, otherwise will fail when trying to add new recipients
@@ -158,5 +168,6 @@ In summary, there is no reason to have these passwords laying around when they c
 ### Revisions
 
 - 08/2019: Added *Troubleshooting* section.
+- 01/2021: Added *Addind a new sub-store* section.
 
 
