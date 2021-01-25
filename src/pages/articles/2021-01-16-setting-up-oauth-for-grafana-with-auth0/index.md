@@ -63,7 +63,7 @@ output "grafana-client-secret" {
 }
 ```
 
-Provisioning this client generates a `client_id` and `client_secret` that I'll pass to Grafana. We don't have a custom backend, so there is no need to set up an [application](https://auth0.com/docs/dashboard/reference/settings-application) on Auth0's side.
+Provisioning this client generates a `client_id` and `client_secret` that I'll pass to Grafana. We don't have a custom backend, so there is no need to set up an [API](https://auth0.com/docs/authorization/apis) on Auth0's side.
 
 <figure class="figure">
   <img src="./images/client-output.png" alt="Client Settings" />
@@ -189,3 +189,5 @@ Rules run for _every_ application, so make sure you only process the correct app
 ## Summary
 
 The temptation to do some half-assed measure to protect internal tools like Grafana is always there. Many of these tools end up behind a VPN or (God forbid) using something like Basic Auth. Thanks to providers like Auth0, the right thing is easier than ever. With infrastructure as code, you can ensure that the installation is repeatable. Moreover, you'll be able to come back and still understand it.
+
+*EDIT 25/01/2021:* Corrected mixed usage of API and Application for Auth0
