@@ -1,13 +1,13 @@
 ---
 title: So, what does the NGINX ingress controller actually do?
-date: ""
+date: "2021-01-30"
 layout: post
 path: "/what-does-the-nginx-ingress-controller-actually-do/"
 categories:
   - Kubernetes
   - Ingress
   - NGINX
-draft: true
+draft: false
 description: "If you run a lot of applications in a Kubernetes cluster, you probably use an Ingress controller. Let's dive into how it actually works"
 image: ./images/traffic-control.jpg 
 
@@ -53,12 +53,7 @@ There is a [krew](https://github.com/kubernetes-sigs/krew) plugin for `kubectl`,
 
 NGINX is the Swiss Army Knife of delivering content. It serves static assets. It works as a reverse proxy. It can be modded with [Lua](https://blog.cloudflare.com/pushing-nginx-to-its-limit-with-lua/). It can probably run on toasters.
 
-Naturally, there are a million different configuration options. Let's focus on what we need. We're using NGINX as a reverse proxy. It gets an HTTP request, and it sends it to the right application based on that. We need an entrypoint that can specify URLs, a way of defining downstream applications, and a connection between the two of them. Two directives will suffice:
-
-- **server**
-- **upstream** 
-
-A simplified example looks like this:
+Naturally, there are a million different configuration options. Let's focus on what we need. We're using NGINX as a reverse proxy. This means we want to route an HTTP request to an application, based on the domain and the path. We need an entrypoint (a `server`) that can specify URLs, a way of defining downstream applications (an `upstream`), and a connection between the two of them (the `proxy_pass`). A simplified configuration looks like this:
 
 <!-- nginx-config -->
 ```nginx
@@ -109,7 +104,7 @@ kubectl ingress-nginx backends --namespace $NAMESPACE --pod $POD
 
 ## Ingress
 
-The [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) resource is a way of declaratively defining how to reach an application. On its own, it does nothing. The controller ensures it's reachable by creating an appropriate NGINX configuration. That configuration points to the [Service](https://kubernetes.io/docs/concepts/services-networking/service/) associated with the ingress.
+The [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) resource is a way of declaratively defining how to reach an application. On its own, it does nothing. The controller ensures it's reachable by creating an appropriate NGINX configuration. That configuration points to the [Service](https://kubernetes.io/docs/concepts/services-networking/service/) associated with the ingress. I prefer using [Terraform](https://www.terraform.io/) for that, though it's not a requirement.
 
 ```hcl
 variable "host" {
