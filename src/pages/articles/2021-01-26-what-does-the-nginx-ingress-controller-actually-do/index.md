@@ -191,3 +191,5 @@ As mentioned, the output is a gigantic config file. The controller gets notified
 ## What did we learn?
 
 The NGINX Ingress Controller is a surprisingly complicated piece of software. [Look](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-helm/#configuration) at all the configuration parameters of the helm chart. And it's no surprise. It's a complex NGINX proxy, a control loop written in golang, and a connector of all these different networking pieces. I've used it for a while without really understanding what it does. It's definitely worth spending some time on the details.
+
+*Thanks to Donald for the feedback.*
