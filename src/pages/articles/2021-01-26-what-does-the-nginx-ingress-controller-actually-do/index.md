@@ -158,7 +158,7 @@ An Ingress is a nice abstraction, but it looks a bit like magic, doesn't it? Wha
 
 This is the setup: We have a cluster with a bunch of nodes, with a _Load Balancer_ in front. The NGINX Controller runs as a _DaemonSet_ in every node. Our application is configured as a _Deployment_. To reach it, there is a _Service_ and an _Ingress_.
 
-Let's assume we start our request from a [VPC Endpoint](https://hceris.com/understanding-vpc-endpoints/). What happens next?
+Let's assume we start our request from a [VPC Endpoint](../understanding-vpc-endpoints/). What happens next?
 
 - We reach the Load Balancer. As I explained in my article about [NLBs](../provisioning-a-network-load-balancer-with-terraform/), a target group points to individual instances. In this case, the worker nodes of the cluster.
 - _(1st Load Balancing)_ The Load Balancer picks one of the nodes.
