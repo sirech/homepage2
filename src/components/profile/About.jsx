@@ -3,7 +3,8 @@ import Link from 'gatsby-link'
 
 import Container from '../Container'
 
-export default () => (
+/* eslint-disable react/no-unescaped-entities */
+const About = () => (
   <Container>
     <p>
       I develop software for a living. Then I go home and continue reading about
@@ -47,3 +48,5 @@ export default () => (
     </p>
   </Container>
 )
+
+export default About

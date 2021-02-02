@@ -17,7 +17,7 @@ const techItem = ([title, name]) => (
   </li>
 )
 
-export default () => (
+const Techs = () => (
   <div className="technologies">
     <Container>
       <h2 className="section-heading text-center">Technologies</h2>
@@ -38,3 +38,5 @@ export default () => (
     </Container>
   </div>
 )
+
+export default Techs

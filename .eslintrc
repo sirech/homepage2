@@ -1,53 +1,23 @@
 {
-  "extends": [
-    "standard",
-    "standard-react",
-    "prettier",
-    "prettier/react",
-    "prettier/standard",
-    "plugin:css-modules/recommended",
-    "plugin:testing-library/recommended",
-  ],
-  "plugins": [
-    "react",
-    "css-modules",
-    "prettier",
-    "jest"
-  ],
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true,
-      "experimentalObjectRestSpread": true
+  "parser": "babel-eslint",
+  "settings": {
+    "react": {
+      "version": "detect"
     }
   },
   "env": {
-    "es6": true,
+    "browser": true,
     "node": true,
     "jest/globals": true
   },
-  "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "trailingComma": "es5",
-        "singleQuote": true,
-        "semi": false
-      }
-    ],
-    "react/jsx-pascal-case": ["error", { "allowAllCaps": true }],
-    "testing-library/no-debug": 2,
-    "testing-library/no-dom-import": 2,
-    "testing-library/no-manual-cleanup": 2,
-    "testing-library/no-wait-for-empty-callback": 2,
-    "testing-library/prefer-explicit-assert": 2,
-    "testing-library/prefer-presence-queries": 2,
-    "testing-library/prefer-screen-queries": 2,
-    "testing-library/prefer-wait-for": 2,
-  },
+  "plugins": [
+    "jest"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "globals": {
-    "graphql": true,
-    "cy": true
+    "graphql": true
   }
 }

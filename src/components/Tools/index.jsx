@@ -9,7 +9,7 @@ const toolItem = (name) => (
   </li>
 )
 
-export default () => (
+const Tools = () => (
   <Container>
     <h2 className="section-heading text-center">Tools</h2>
     <hr className="border-white" />
@@ -39,3 +39,5 @@ export default () => (
     <ul className="text-center">{tools.map((tool) => toolItem(tool))}</ul>
   </Container>
 )
+
+export default Tools

@@ -3,7 +3,7 @@ import cx from 'classnames'
 
 import styles from './style.module.scss'
 
-export default () => (
+const Footer = () => (
   <footer className={cx(styles.footer, 'text-center')}>
     <div>
       Copyright © {new Date().getFullYear()},{' '}
@@ -22,3 +22,5 @@ export default () => (
     </a>{' '}
   </footer>
 )
+
+export default Footer
