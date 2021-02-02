@@ -11,11 +11,14 @@
     "jest/globals": true
   },
   "plugins": [
+    "css-modules",
     "jest"
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:css-modules/recommended",
+    "plugin:react/recommended",
+    "plugin:testing-library/recommended"
   ],
   "globals": {
     "graphql": true
