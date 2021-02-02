@@ -57,6 +57,10 @@ goal_build() {
   npm run build
 }
 
+goal_clean-build() {
+  rm -Rf public .cache
+}
+
 goal_all() {
   goal_linter-js
   goal_linter-css
