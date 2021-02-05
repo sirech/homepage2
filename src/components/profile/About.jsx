@@ -3,48 +3,35 @@ import Link from 'gatsby-link'
 
 import Container from '../Container'
 
-/* eslint-disable react/no-unescaped-entities */
 const About = () => (
   <Container>
     <p>
-      I develop software for a living. Then I go home and continue reading about
-      software because I just can't get enough. At some point, somebody thought
-      it was a good idea to make me the technical lead of an agile team. I
-      quickly discovered that building things myself is not the same as helping
-      somebody else figure it out. I learned, somewhat to my surprise, that I
-      really enjoy sharing ideas. According to their feedback, other developers
-      have managed to learn something from me. At least they don't tend to run
-      away screaming, which is, I think, a good thing.
+      I develop software for a living. Then I go home and continue thinking
+      about software because I just can&apos;t get enough. I started my career
+      as a backend engineer. Later on I learned enough about frontend
+      development to consider myself a fullstack developer. Lastly I became
+      interested in infrastructure, and nowadays I feel confident in all three
+      areas.
     </p>
 
     <p>
-      I have been working as a professional developer for more than ten years.
-      If{' '}
-      <a
-        href="http://norvig.com/21-days.html"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Peter Norvig is correct
-      </a>
-      , I should know by now what I am doing, although I often get the feeling I
-      don't know anything.
+      I&apos;ve worked as a technical lead for the past few years. It took me a
+      while to figure it out, but I really enjoy working on making a team more
+      effective. I like helping others along their journey and establishing good
+      practices within a team. I&apos;m a big advocate of Continuous Delivery
+      and Test Driven Development, among others.
     </p>
 
     <p>
-      I specialize in web programming. I started doing backend work, then I got
-      more and more into frontend topics, and lately I have managed to touch
-      infrastructure as well. I don't know if there is such a thing as a{' '}
-      <b>Full Stack Developer</b>, but I definitely try to involve myself in all
-      areas of software delivery.
+      I love sharing my knowledge. I write a lot about different technologies
+      and practices. I&apos;ve done a whole bunch of talks in many different
+      meetups and conferences.
     </p>
 
     <p>
-      I have managed to work with plenty of{' '}
-      <Link to="/#techs">technologies</Link> and <Link to="/#tools">tools</Link>
-      . It took me a while to realize, though, that while reliable tech and good
-      foundations are important, they are not the only thing needed to deliver
-      high-quality software.
+      I avoid calling myself a <i>Technology X</i> developer. Nevertheless
+      I&apos;ve worked with plenty of <Link to="/#techs">technologies</Link> and{' '}
+      <Link to="/#tools">tools</Link>.
     </p>
   </Container>
 )
