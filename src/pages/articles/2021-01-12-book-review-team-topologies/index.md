@@ -1,13 +1,13 @@
 ---
 title: "Book Review: Team topologies"
-date: ""
+date: "2021-02-08"
 layout: post
 path: "/book-review-team-topologies/"
 categories:
   - Book Review
   - Practices 
   - Team Organization
-draft: true
+draft: false
 description: "Team topologies is a book that proposes four ways of organizing teams that aim to empower them to build better software"
 image: ./images/cover.jpeg
 
