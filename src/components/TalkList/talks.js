@@ -89,6 +89,10 @@ export const talks = [
     'https://github.com/sirech/talks/blob/master/2020-09-hackerkiste-moving_away_from_null_and_exceptions.pdf',
     'Hackerkiste - Moving away from null and exceptions: An alternative way of error handling',
   ],
+  [
+    'https://github.com/sirech/talks/blob/master/2021-02-codedays-pipelines_as_code_for_infrastructure_at_scale.pdf',
+    'Code Days 2021 - Pipelines as code for infrastructure at scale',
+  ],
 ].reverse()
 
 const extractYear = (item) => {
