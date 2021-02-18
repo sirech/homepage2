@@ -1,6 +1,6 @@
 ---
 title: Be a good Kubernetes citizen and use Pod Disruption Budgets
-date: ""
+date: "2021-02-18"
 layout: post
 path: "/be-a-good-k8s-citizen-with-pod-disruption-budgets/"
 categories:
@@ -8,7 +8,7 @@ categories:
   - Operations
   - DevOps
   - Terraform
-draft: true
+draft: false
 description: "Pod Disruption Budgets offer a way to protect the uptime of an application in Kubernetes during node maintenance, in a decoupled fashion"
 image: ./images/disruption.jpg 
 
