@@ -62,6 +62,7 @@ Alright, so let's get down to basics and create one such PDB. Usually, you'll ha
 
 Let's show some [Terraform](https://www.terraform.io/) code.
 
+<!-- deployment --> 
 ```hcl
 locals {
   app   = "hello-world"
@@ -125,6 +126,7 @@ You need a target. It uses the same `selector` as the deployment, which we reuse
 
 The crucial part of this resource is specifying how many Pods you want to keep up at all times. You have to provide one of `maxUnavailable` or `minAvailable`, but not both. They do what you'd expect. In my example, I want to ensure that there is always at least one instance running.
 
+<!-- pdb -->
 ```hcl
 resource "kubernetes_pod_disruption_budget" "this" {
   metadata {
