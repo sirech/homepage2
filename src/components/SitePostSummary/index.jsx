@@ -10,7 +10,7 @@ import styles from './style.module.scss'
 
 import frontmatterType from '../../prop-types/frontmatter'
 
-class SitePost extends React.Component {
+class SitePostSummary extends React.Component {
   render() {
     const { data } = this.props
     const { frontmatter } = data
@@ -38,11 +38,10 @@ class SitePost extends React.Component {
   }
 }
 
-SitePost.propTypes = {
+SitePostSummary.propTypes = {
   data: PropTypes.shape({
     frontmatter: frontmatterType,
-    html: PropTypes.string.isRequired,
   }).isRequired,
 }
 
-export default SitePost
+export default SitePostSummary

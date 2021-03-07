@@ -8,7 +8,7 @@ import SitePostSummary from '../components/SitePostSummary'
 import Pagination from '../components/Pagination'
 
 import siteType from '../prop-types/site'
-import postType from '../prop-types/post'
+import postType from '../prop-types/summary'
 
 const helmet = (site) => {
   const { title, description, url } = site

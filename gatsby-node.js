@@ -36,7 +36,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         ) {
           edges {
             post: node {
-              html
               frontmatter {
                 layout
                 title
@@ -58,7 +57,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             fieldValue
             edges {
               post: node {
-                html
                 frontmatter {
                   layout
                   title
