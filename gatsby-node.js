@@ -94,7 +94,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       edges: edges,
       createPage: createPage,
       pageTemplate: 'src/templates/blog-index.js',
-      pageLength: 10,
+      pageLength: 50,
       pathPrefix: `blog/tags/${tag}`,
       context: result.data.site,
     })
