@@ -5,7 +5,6 @@ import IndexPage from './blog-index'
 
 import frontmatter from '../fixtures/frontmatter'
 import siteMetadata from '../fixtures/siteMetadata'
-import html from '../fixtures/html'
 
 describe('components', () => {
   describe('IndexPage', () => {
@@ -14,13 +13,14 @@ describe('components', () => {
         siteMetadata: siteMetadata(),
       }
 
-      const post = { id: 'id', frontmatter: frontmatter(), html: html() }
+      const post = { id: 'id', frontmatter: frontmatter() }
 
       const pageContext = {
         index: 3,
         pageCount: 5,
         additionalContext: site,
         group: [{ post }, { post }],
+        pathPrefix: 'blog',
       }
 
       const { asFragment } = render(<IndexPage pageContext={pageContext} />)

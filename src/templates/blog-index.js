@@ -40,13 +40,13 @@ const posts = (group) => {
 }
 
 const IndexPage = ({ pageContext }) => {
-  const { group, additionalContext, index, pageCount } = pageContext
+  const { group, additionalContext, index, pageCount, pathPrefix } = pageContext
 
   return (
     <div>
       {helmet(additionalContext.siteMetadata)}
       {posts(group)}
-      <Pagination index={index} pageCount={pageCount} />
+      <Pagination index={index} pageCount={pageCount} pathPrefix={pathPrefix} />
     </div>
   )
 }
@@ -61,6 +61,7 @@ IndexPage.propTypes = {
       })
     ),
     additionalContext: siteType,
+    pathPrefix: PropTypes.string,
   }),
 }
 
