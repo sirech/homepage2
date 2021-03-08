@@ -3629,15 +3629,10 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
   integrity sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==
 
-axe-core@4.1.2:
+axe-core@4.1.2, axe-core@^4.0.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.1.2.tgz#7cf783331320098bfbef620df3b3c770147bc224"
   integrity sha512-V+Nq70NxKhYt89ArVcaNL9FDryB3vQOd+BFXZIfO3RP6rwtj+2yqqqdHEkacutglPaZLkJeuXKCjCJDMGPtPqg==
-
-axe-core@^4.0.2:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.1.1.tgz#70a7855888e287f7add66002211a423937063eaf"
-  integrity sha512-5Kgy8Cz6LPC9DJcNb3yjAXTu3XihQgEdnIg50c//zOC/MyLP0Clg+Y8Sh9ZjjnvBrDZU4DgXS9C3T9r4/scGZQ==
 
 axios@^0.21.0, axios@^0.21.1:
   version "0.21.1"
@@ -11436,10 +11431,10 @@ lighthouse-stack-packs@^1.4.0:
   resolved "https://registry.yarnpkg.com/lighthouse-stack-packs/-/lighthouse-stack-packs-1.4.0.tgz#bf98e0fb04a091ec2d73648842698b41070968ef"
   integrity sha512-wdv94WUjaqUwtW8DOapng45Yah62c5O5geNVeoSQlnoagfbTO/YbiwNlfzDIF1xNKRkPlsfr/oWHhXsaHXDivg==
 
-lighthouse@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-7.1.0.tgz#bd9c4f98f0747a27ed3b1ab41056ead3d6fac139"
-  integrity sha512-2fYQWQZIfg5Tg1B+sZn3aaVNNb63HLdizxN4IO9CQnV8FvE/3VG/7V04zHuksrXKkRmH9XbVLww/yM76FuH52Q==
+lighthouse@^7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-7.2.0.tgz#3368e94804b751586a48e95f39a71c68bee9c4d9"
+  integrity sha512-f2FLaJIHVACPUHK13Wl0EAvc+8vjSNf3+zjHM9h/WM+qZKpP2FkPOVpWnWs+TjAfsUG3C1alYtG2bzdD6qGmxA==
   dependencies:
     axe-core "4.1.2"
     chrome-launcher "^0.13.4"
@@ -18829,7 +18824,7 @@ ws@3.3.2:
     safe-buffer "~5.1.0"
     ultron "~1.1.0"
 
-ws@7.4.2, ws@^7.2.3, ws@^7.3.0:
+ws@7.4.2:
   version "7.4.2"
   resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.2.tgz#782100048e54eb36fe9843363ab1c68672b261dd"
   integrity sha512-T4tewALS3+qsrpGI/8dqNMLIVdq/g/85U98HPMa6F0m6xTbvhXU6RCQLqPH3+SlomNV/LdY6RXEbBpMH6EOJnA==
@@ -18841,7 +18836,7 @@ ws@^6.0.0, ws@^6.2.1:
   dependencies:
     async-limiter "~1.0.0"
 
-ws@~7.4.2:
+ws@^7.2.3, ws@^7.3.0, ws@~7.4.2:
   version "7.4.3"
   resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.3.tgz#1f9643de34a543b8edb124bdcbc457ae55a6e5cd"
   integrity sha512-hr6vCR76GsossIRsr8OLR9acVVm1jyfEWvhbNjtgPOrfvAlKzvyeg/P6r8RuDjRyrcQoPQT7K0DGEPc7Ae6jzA==
@@ -18986,12 +18981,7 @@ yargs-parser@^18.1.2:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
 
-yargs-parser@^20.2.2, yargs-parser@^20.2.3:
-  version "20.2.4"
-  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-20.2.4.tgz#b42890f14566796f85ae8e3a25290d205f154a54"
-  integrity sha512-WOkpgNhPTlE73h4VFAFsOnomJVaovO8VqLDzy5saChRBFQFBoMYirowyW+Q9HB4HFF4Z7VZTiG3iSzJJA29yRA==
-
-yargs-parser@^20.2.4:
+yargs-parser@^20.2.2, yargs-parser@^20.2.3, yargs-parser@^20.2.4:
   version "20.2.5"
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-20.2.5.tgz#5d37729146d3f894f39fc94b6796f5b239513186"
   integrity sha512-jYRGS3zWy20NtDtK2kBgo/TlAoy5YUuhD9/LZ7z7W4j1Fdw2cqD0xEEclf8fxc8xjD6X5Qr+qQQwCEsP8iRiYg==
