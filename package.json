@@ -50,7 +50,7 @@
     "cypress": "^6.6.0",
     "devicon-2.2": "^2.2.0",
     "emergence.js": "^1.1.2",
-    "eslint": "^7.21.0",
+    "eslint": "^7.22.0",
     "eslint-plugin-css-modules": "^2.11.0",
     "eslint-plugin-jest": "^24.1.8",
     "eslint-plugin-react": "^7.22.0",
