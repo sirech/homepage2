@@ -93,6 +93,10 @@ export const talks = [
     'https://github.com/sirech/talks/blob/master/2021-02-codedays-pipelines_as_code_for_infrastructure_at_scale.pdf',
     'Code Days 2021 - Pipelines as code for infrastructure at scale',
   ],
+  [
+    'https://github.com/sirech/talks/blob/master/2021-03-tw-human_on_call.pdf',
+    'Humane on Call',
+  ],
 ].reverse()
 
 const extractYear = (item) => {
