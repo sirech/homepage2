@@ -89,7 +89,7 @@ gopass setup --remote ssh://git@bitbucket.internal.instance.org/your-team/passwo
 gopass sync
 ```
 
-### Addind a new sub-store
+### Adding a new sub-store
 
 It's a good idea to create multiple sub-stores, so that you can separate secrets and put them in different repositories. In that case, you need to initialize and set up a remote for the new store. Assuming there is an existing remote repository, you'll do this:
 
