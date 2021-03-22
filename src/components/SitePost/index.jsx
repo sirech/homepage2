@@ -13,38 +13,33 @@ import './images.scss'
 import frontmatterType from '../../prop-types/frontmatter'
 import siteType from '../../prop-types/site'
 
-class SitePost extends React.Component {
-  render() {
-    const { data, site } = this.props
-    const { frontmatter, html } = data
-    const { title, path, date, categories } = frontmatter
+const SitePost = ({ data: { frontmatter, html }, site }) => {
+  const { title, path, date, categories } = frontmatter
+  return (
+    <Container>
+      <div className={styles.articles}>
+        <article key={path} className={cx(`${styles.article}`)}>
+          <header>
+            <Link style={{ boxShadow: 'none' }} to={path}>
+              <h1>{title}</h1>
+              <time dateTime={date}>{date}</time>
+            </Link>
+            <Categories categories={categories} />
+          </header>
+          <section
+            className={cx(`${styles.pageContent}`, 'clearfix')}
+            dangerouslySetInnerHTML={{
+              __html: html,
+            }}
+          />
 
-    return (
-      <Container>
-        <div className={styles.articles}>
-          <article key={path} className={cx(`${styles.article}`)}>
-            <header>
-              <Link style={{ boxShadow: 'none' }} to={path}>
-                <h1>{title}</h1>
-                <time dateTime={date}>{date}</time>
-              </Link>
-              <Categories categories={categories} />
-            </header>
-            <section
-              className={cx(`${styles.pageContent}`, 'clearfix')}
-              dangerouslySetInnerHTML={{
-                __html: html,
-              }}
-            />
-
-            <section>
-              <Share site={site} frontmatter={frontmatter} />
-            </section>
-          </article>
-        </div>
-      </Container>
-    )
-  }
+          <section>
+            <Share site={site} frontmatter={frontmatter} />
+          </section>
+        </article>
+      </div>
+    </Container>
+  )
 }
 
 SitePost.propTypes = {
