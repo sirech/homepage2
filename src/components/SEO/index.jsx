@@ -19,11 +19,7 @@ const buildDescription = (post) => {
   )
 }
 
-const article = (isBlogPost, siteUrl, date) => {
-  if (!isBlogPost) {
-    return null
-  }
-
+const article = (siteUrl, date) => {
   return [
     <meta key="article" property="og:type" content="article" />,
     <meta
@@ -35,12 +31,12 @@ const article = (isBlogPost, siteUrl, date) => {
   ]
 }
 
-const SEO = ({ isBlogPost, post, site }) => {
+const SEO = ({ post, site }) => {
   const title = Rpath(['frontmatter', 'title'])(post)
   const siteTitle = Rpath(['siteMetadata', 'title'])(site)
   const author = Rpath(['siteMetadata', 'author'])(site)
 
-  const date = isBlogPost ? Rpath(['frontmatter', 'date'])(post) : false
+  const date = Rpath(['frontmatter', 'date'])(post)
 
   const description = buildDescription(post)
 
@@ -60,7 +56,6 @@ const SEO = ({ isBlogPost, post, site }) => {
   const imageUrl = image ? siteUrl + image : null
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
-    isBlogPost,
     url,
     siteUrl,
     title,
@@ -92,7 +87,7 @@ const SEO = ({ isBlogPost, post, site }) => {
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url} />
-      {article(isBlogPost, siteUrl, date)}
+      {article(siteUrl, date)}
       <meta property="og:site_name" content={siteTitle} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -120,7 +115,6 @@ const SEO = ({ isBlogPost, post, site }) => {
 }
 
 SEO.propTypes = {
-  isBlogPost: PropTypes.bool,
   post: PropTypes.shape({
     frontmatter: PropTypes.shape({
       categories: PropTypes.arrayOf(PropTypes.string),
@@ -141,10 +135,6 @@ SEO.propTypes = {
     html: PropTypes.string.isRequired,
   }).isRequired,
   site: siteType,
-}
-
-SEO.defaultProps = {
-  isBlogPost: false,
 }
 
 export default SEO

@@ -21,7 +21,6 @@ describe('getSchemaOrgJSONLD', () => {
   it('creates the correct structure', () => {
     expect(
       getSchemaOrgJSONLD({
-        isBlogPost: true,
         url: post.frontmatter.path,
         title: post.frontmatter.title,
         siteUrl: site.siteMetadata.url,

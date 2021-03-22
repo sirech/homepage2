@@ -1,10 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { path as Rpath } from 'ramda'
-
 import SitePost from '../components/SitePost'
-import SitePage from '../components/SitePage'
 import SEO from '../components/SEO'
 
 import siteType from '../prop-types/site'
@@ -14,19 +11,11 @@ class BlogPostTemplate extends React.Component {
   render() {
     const { data } = this.props
     const { post, site } = data
-    const layout = Rpath(['frontmatter', 'layout'])(post)
-    const isBlogPost = layout !== 'page'
 
-    let template = ''
-    if (isBlogPost) {
-      template = <SitePost data={post} site={site} isIndex={false} />
-    } else {
-      template = <SitePage {...this.props} />
-    }
     return (
       <main>
-        <SEO isBlogPost={isBlogPost} post={post} site={site} />
-        {template}
+        <SEO post={post} site={site} />
+        <SitePost data={post} site={site} isIndex={false} />
       </main>
     )
   }

@@ -1,5 +1,4 @@
 export default ({
-  isBlogPost,
   url,
   siteUrl,
   title,
@@ -47,24 +46,22 @@ export default ({
     post.image = image
   }
 
-  return isBlogPost
-    ? [
-        ...schemaOrgJSONLD,
+  return [
+    ...schemaOrgJSONLD,
+    {
+      '@context': 'http://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
         {
-          '@context': 'http://schema.org',
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            {
-              '@type': 'ListItem',
-              position: 1,
-              item: {
-                '@id': url,
-                name: title,
-              },
-            },
-          ],
+          '@type': 'ListItem',
+          position: 1,
+          item: {
+            '@id': url,
+            name: title,
+          },
         },
-        post,
-      ]
-    : schemaOrgJSONLD
+      ],
+    },
+    post,
+  ]
 }

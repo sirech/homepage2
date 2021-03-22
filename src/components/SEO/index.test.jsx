@@ -22,7 +22,7 @@ describe('components', () => {
 
   describe('SEO', () => {
     it('renders correctly for a blogpost', async () => {
-      render(<SEO isBlogPost post={post} site={site} />)
+      render(<SEO post={post} site={site} />)
       await waitFor(() =>
         expect(document.querySelector('head')).not.toBeEmptyDOMElement()
       )
@@ -36,7 +36,7 @@ describe('components', () => {
         frontmatter: { ...post.frontmatter, draft: true },
       }
 
-      render(<SEO isBlogPost post={draft} site={site} />)
+      render(<SEO post={draft} site={site} />)
       await waitFor(() =>
         expect(document.querySelector('meta[name="robots"]')).toHaveAttribute(
           'content',
@@ -49,7 +49,7 @@ describe('components', () => {
       const description = 'This is another description'
       post.frontmatter.description = description
 
-      render(<SEO isBlogPost post={post} site={site} />)
+      render(<SEO post={post} site={site} />)
       await waitFor(() =>
         expect(
           document.querySelector('meta[name="description"]')
@@ -63,7 +63,7 @@ describe('components', () => {
         frontmatter: { ...post.frontmatter, canonical: 'http:dude.com' },
       }
 
-      render(<SEO isBlogPost post={draft} site={site} />)
+      render(<SEO post={draft} site={site} />)
       await waitFor(() =>
         expect(document.querySelector('link[rel="canonical"]')).toHaveAttribute(
           'href',
@@ -86,7 +86,7 @@ describe('components', () => {
         frontmatter: { ...post.frontmatter, image },
       }
 
-      render(<SEO isBlogPost post={draft} site={site} />)
+      render(<SEO post={draft} site={site} />)
       await waitFor(() =>
         expect(
           document.querySelector('meta[property="og:image"]')
