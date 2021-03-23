@@ -105,6 +105,17 @@ exports[`components Profile renders correctly 1`] = `
                 class="tech"
                 data-placement="top"
                 data-toggle="tooltip"
+                title="TypeScript"
+              >
+                <i
+                  class="tech-icon devicon-typescript-plain"
+                  data-emergence="hidden"
+                />
+              </li>
+              <li
+                class="tech"
+                data-placement="top"
+                data-toggle="tooltip"
                 title="React"
               >
                 <i
@@ -186,6 +197,17 @@ exports[`components Profile renders correctly 1`] = `
               >
                 <i
                   class="tech-icon devicon-amazonwebservices-plain"
+                  data-emergence="hidden"
+                />
+              </li>
+              <li
+                class="tech"
+                data-placement="top"
+                data-toggle="tooltip"
+                title="Kubernetes"
+              >
+                <i
+                  class="tech-icon devicon-kubernetes-plain"
                   data-emergence="hidden"
                 />
               </li>

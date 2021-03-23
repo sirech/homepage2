@@ -2,6 +2,7 @@ export default [
   ['Ruby', 'ruby'],
   ['Rails', 'rails'],
   ['JavaScript', 'javascript'],
+  ['TypeScript', 'typescript'],
   ['React', 'react'],
   ['SQL', 'mysql'],
   ['Docker', 'docker'],
@@ -10,4 +11,5 @@ export default [
   ['Python', 'python'],
   ['Java', 'java'],
   ['AWS', 'amazonwebservices'],
+  ['Kubernetes', 'kubernetes'],
 ]

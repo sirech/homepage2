@@ -6,7 +6,7 @@ import emergence from 'emergence.js'
 
 import './gatstrap.scss'
 import 'prismjs/themes/prism-coy.css'
-import 'devicon-2.2/devicon.min.css'
+import 'devicon/devicon.min.css'
 import 'font-awesome/css/font-awesome.css'
 
 class Template extends React.Component {
