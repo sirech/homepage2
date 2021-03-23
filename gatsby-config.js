@@ -1,4 +1,4 @@
-const siteUrl = process.env.SITE_URL || 'example.com'
+const siteUrl = process.env.SITE_URL || 'https://example.com'
 
 module.exports = {
   siteMetadata: {
@@ -143,7 +143,7 @@ module.exports = {
         mergeDefaultDirectives: true,
         directives: {
           'script-src':
-            "'self' https://hceris.ck.page https://f.convertkit.com/ckjs/",
+            "'self' https://hceris.ck.page https://f.convertkit.com/ckjs/ https://plausible.io",
           'style-src': "'self' 'unsafe-inline'",
           'img-src':
             "'self' data: https://github.com https://raw.githubusercontent.com",
@@ -151,6 +151,12 @@ module.exports = {
           'frame-src': 'https://codepen.io https://codesandbox.io',
           'form-action': "'self' https://app.convertkit.com/forms/",
         },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-plausible',
+      options: {
+        domain: siteUrl.replace(/https?:\/\//, ''),
       },
     },
     'gatsby-plugin-catch-links',
