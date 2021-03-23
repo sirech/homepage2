@@ -67,6 +67,17 @@ class SiteNavi extends React.Component {
               <i className="fa fa-stack-overflow fa-lg" />
             </a>
           </li>
+          <li className={cx(`${styles.icon}`, 'nav-item')}>
+            <a
+              href="https://www.linkedin.com/in/mario-fernandez-9b9195a/"
+              className="nav-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
+            >
+              <i className="fa fa-linkedin fa-lg" />
+            </a>
+          </li>
         </ul>
       </nav>
     )

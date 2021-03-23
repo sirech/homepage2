@@ -99,6 +99,21 @@ exports[`components SiteNavi renders correctly 1`] = `
           />
         </a>
       </li>
+      <li
+        class="icon nav-item"
+      >
+        <a
+          aria-label="LinkedIn Profile"
+          class="nav-link"
+          href="https://www.linkedin.com/in/mario-fernandez-9b9195a/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <i
+            class="fa fa-linkedin fa-lg"
+          />
+        </a>
+      </li>
     </ul>
   </nav>
 </DocumentFragment>
