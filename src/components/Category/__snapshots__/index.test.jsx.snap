@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Category renders correctly 1`] = `
+<DocumentFragment>
+  <a
+    href="/blog/tags/react"
+  >
+    <span
+      class="tag badge mr-1"
+    >
+      React - 3
+    </span>
+  </a>
+</DocumentFragment>
+`;
