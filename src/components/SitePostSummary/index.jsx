@@ -10,29 +10,25 @@ import styles from './style.module.scss'
 
 import frontmatterType from '../../prop-types/frontmatter'
 
-class SitePostSummary extends React.Component {
-  render() {
-    const { data } = this.props
-    const { frontmatter } = data
-    const { title, path, date, categories, description } = frontmatter
+const SitePostSummary = ({ data: { frontmatter } }) => {
+  const { title, path, date, categories, description } = frontmatter
 
-    return (
-      <Container>
-        <div className={cx(styles.articles)}>
-          <article key={path} className={cx(styles.article, styles.articleBox)}>
-            <header>
-              <Link to={path}>
-                <h3>{title}</h3>
-              </Link>
-              <time dateTime={date}>{date}</time>
-              <Categories categories={categories} />
-            </header>
-            <section>{description}</section>
-          </article>
-        </div>
-      </Container>
-    )
-  }
+  return (
+    <Container>
+      <div className={cx(styles.articles)}>
+        <article key={path} className={cx(styles.article, styles.articleBox)}>
+          <header>
+            <Link to={path}>
+              <h3>{title}</h3>
+            </Link>
+            <time dateTime={date}>{date}</time>
+            <Categories categories={categories} />
+          </header>
+          <section>{description}</section>
+        </article>
+      </div>
+    </Container>
+  )
 }
 
 SitePostSummary.propTypes = {
