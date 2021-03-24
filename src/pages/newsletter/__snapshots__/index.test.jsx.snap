@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components Newsletter renders correctly 1`] = `
+exports[`pages Newsletter renders correctly 1`] = `
 <DocumentFragment>
   <main>
     <div

@@ -9,6 +9,7 @@ const links = [
   ['/', 'About'],
   ['/talks/', 'Talks'],
   ['/blog/', 'Blog'],
+  ['/tags', 'Tags'],
 ]
 
 class SiteNavi extends React.Component {

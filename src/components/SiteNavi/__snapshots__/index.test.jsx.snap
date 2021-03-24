@@ -51,6 +51,16 @@ exports[`components SiteNavi renders correctly 1`] = `
             Blog
           </a>
         </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="underline nav-link"
+            href="/tags"
+          >
+            Tags
+          </a>
+        </li>
       </ul>
     </div>
     <ul
