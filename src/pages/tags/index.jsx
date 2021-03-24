@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 import { graphql } from 'gatsby'
 
+import groupTags from './group-tag'
+
 import Container from '../../components/Container'
 import Category from '../../components/Category'
 
@@ -27,12 +29,23 @@ const Tags = ({
     tags: { group },
   },
 }) => {
+  const { top, other } = groupTags(group, 10)
   return (
     <main>
       <Container>
-        {group.map(({ tag, count }) => (
-          <Tag key={tag} tag={tag} count={count} />
-        ))}
+        <section className="mt-4">
+          <h2>Top Tags</h2>
+          {top.map(({ tag, count }) => (
+            <Tag key={tag} tag={tag} count={count} />
+          ))}
+        </section>
+
+        <section className="mt-4">
+          <h2>Other Tags</h2>
+          {other.map(({ tag, count }) => (
+            <Tag key={tag} tag={tag} count={count} />
+          ))}
+        </section>
       </Container>
     </main>
   )

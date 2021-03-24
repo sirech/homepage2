@@ -13,7 +13,9 @@ describe('pages', () => {
       const data = { tags }
       render(<Tags data={data} />)
 
+      await screen.findByText('Top Tags')
       await screen.findByText('AWS', { exact: false })
+      await screen.findByText('Other Tags')
     })
   })
 })
