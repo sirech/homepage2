@@ -9,18 +9,13 @@ import SEO from '../components/SEO'
 import siteType from '../prop-types/site'
 import postType from '../prop-types/post'
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const { data } = this.props
-    const { post, site } = data
-
-    return (
-      <main>
-        <SEO post={post} site={site} />
-        <SitePost data={post} site={site} isIndex={false} />
-      </main>
-    )
-  }
+const BlogPostTemplate = ({ data: { post, site } }) => {
+  return (
+    <main>
+      <SEO post={post} site={site} />
+      <SitePost data={post} site={site} isIndex={false} />
+    </main>
+  )
 }
 
 BlogPostTemplate.propTypes = {
@@ -43,6 +38,7 @@ export const pageQuery = graphql`
         twitter
       }
     }
+
     post: markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
       html
