@@ -9,11 +9,20 @@ import styles from './style.module.scss'
 
 import formatTag from './format-tag'
 
+const Category = ({ item, text }) => (
+  <Link to={`/blog/tags/${formatTag(item)}`}>
+    <span className={cx(styles.tag, 'badge', 'mr-1')}>{text}</span>
+  </Link>
+)
+
+Category.propTypes = {
+  item: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+}
+
 const renderCategories = (data) => {
   return addIndex(map)((item, i) => (
-    <Link to={`/blog/tags/${formatTag(item)}`} key={i}>
-      <span className={cx(styles.tag, 'badge', 'mr-1')}>{item}</span>
-    </Link>
+    <Category key={i} item={item} text={item} />
   ))(data)
 }
 
