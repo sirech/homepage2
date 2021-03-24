@@ -21,11 +21,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
 
         singlePosts: allMarkdownRemark {
-          edges {
-            post: node {
-              frontmatter {
-                path
-              }
+          nodes {
+            frontmatter {
+              path
             }
           }
         }
@@ -34,17 +32,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           sort: { fields: [frontmatter___date], order: DESC }
           filter: { frontmatter: { draft: { eq: false } } }
         ) {
-          edges {
-            post: node {
-              frontmatter {
-                layout
-                title
-                path
-                categories
-                date(formatString: "YYYY/MM/DD")
-                draft
-                description
-              }
+          nodes {
+            frontmatter {
+              layout
+              title
+              path
+              categories
+              date(formatString: "YYYY/MM/DD")
+              draft
+              description
             }
           }
         }
@@ -55,17 +51,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         ) {
           group(field: frontmatter___categories) {
             fieldValue
-            edges {
-              post: node {
-                frontmatter {
-                  layout
-                  title
-                  path
-                  categories
-                  date(formatString: "YYYY/MM/DD")
-                  draft
-                  description
-                }
+            nodes {
+              frontmatter {
+                layout
+                title
+                path
+                categories
+                date(formatString: "YYYY/MM/DD")
+                draft
+                description
               }
             }
           }
@@ -80,7 +74,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   createPaginatedPages({
-    edges: result.data.posts.edges,
+    edges: result.data.posts.nodes,
     createPage: createPage,
     pageTemplate: 'src/templates/blog-index.js',
     pageLength: 50,
@@ -88,10 +82,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     context: result.data.site,
   })
 
-  R.forEach(({ fieldValue, edges }) => {
+  R.forEach(({ fieldValue, nodes }) => {
     const tag = _.kebabCase(fieldValue.toLowerCase())
     createPaginatedPages({
-      edges: edges,
+      edges: nodes,
       createPage: createPage,
       pageTemplate: 'src/templates/blog-index.js',
       pageLength: 50,
@@ -101,10 +95,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })(result.data.tags.group)
 
   // Create blog posts pages.
-  R.forEach((edge) => {
+  R.forEach((post) => {
     createPage({
-      path: edge.post.frontmatter.path,
+      path: post.frontmatter.path,
       component: path.resolve('./src/templates/blog-post.js'),
     })
-  })(result.data.singlePosts.edges)
+  })(result.data.singlePosts.nodes)
 }

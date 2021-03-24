@@ -13,13 +13,13 @@ describe('components', () => {
         siteMetadata: siteMetadata(),
       }
 
-      const post = { id: 'id', frontmatter: frontmatter() }
+      const post = { frontmatter: frontmatter() }
 
       const pageContext = {
         index: 3,
         pageCount: 5,
         additionalContext: site,
-        group: [{ post }, { post }],
+        group: [post, post],
         pathPrefix: 'blog',
       }
 

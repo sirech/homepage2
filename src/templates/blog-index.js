@@ -8,7 +8,7 @@ import SitePostSummary from '../components/SitePostSummary'
 import Pagination from '../components/Pagination'
 
 import siteType from '../prop-types/site'
-import postType from '../prop-types/summary'
+import frontmatterType from '../prop-types/frontmatter'
 
 const helmet = (site) => {
   const { title, description, url } = site
@@ -29,13 +29,11 @@ const helmet = (site) => {
 const posts = (group) => {
   return pipe(
     filter((data) => {
-      const layout = Rpath(['post', 'frontmatter', 'layout'])(data)
-      const path = Rpath(['post', 'path'])(data)
+      const layout = Rpath(['frontmatter', 'layout'])(data)
+      const path = Rpath(['frontmatter', 'path'])(data)
       return layout === 'post' && path !== '/404/'
     }),
-    addIndex(map)((data, i) => (
-      <SitePostSummary data={data.post} isIndex key={i} />
-    ))
+    addIndex(map)((data, i) => <SitePostSummary data={data} isIndex key={i} />)
   )(group)
 }
 
@@ -57,7 +55,7 @@ IndexPage.propTypes = {
     pageCount: PropTypes.number,
     group: PropTypes.arrayOf(
       PropTypes.shape({
-        post: postType,
+        frontmatter: frontmatterType,
       })
     ),
     additionalContext: siteType,
