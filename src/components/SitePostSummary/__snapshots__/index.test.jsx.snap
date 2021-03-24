@@ -8,31 +8,22 @@ exports[`components SitePostSummary renders correctly 1`] = `
     <div
       class="articles"
     >
-      <a
-        href="/the-post"
-        style="box-shadow: none;"
-      />
       <article
         class="article articleBox"
       >
-        <a
-          href="/the-post"
-          style="box-shadow: none;"
-        />
         <header>
           <a
             href="/the-post"
-            style="box-shadow: none;"
           >
             <h3>
               My Post
             </h3>
-            <time
-              datetime="2018/03/01"
-            >
-              2018/03/01
-            </time>
           </a>
+          <time
+            datetime="2018/03/01"
+          >
+            2018/03/01
+          </time>
           <a
             href="/blog/tags/javascript"
           >

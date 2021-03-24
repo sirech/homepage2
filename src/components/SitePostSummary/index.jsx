@@ -19,19 +19,16 @@ class SitePostSummary extends React.Component {
     return (
       <Container>
         <div className={cx(styles.articles)}>
-          <Link style={{ boxShadow: 'none' }} to={path}>
-            <article
-              key={path}
-              className={cx(styles.article, styles.articleBox)}
-            >
-              <header>
+          <article key={path} className={cx(styles.article, styles.articleBox)}>
+            <header>
+              <Link to={path}>
                 <h3>{title}</h3>
-                <time dateTime={date}>{date}</time>
-                <Categories categories={categories} />
-              </header>
-              <section>{description}</section>
-            </article>
-          </Link>
+              </Link>
+              <time dateTime={date}>{date}</time>
+              <Categories categories={categories} />
+            </header>
+            <section>{description}</section>
+          </article>
         </div>
       </Container>
     )
