@@ -9,6 +9,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const result = await graphql(
     `
+      fragment Frontmatter on MarkdownRemark {
+        frontmatter {
+          layout
+          title
+          path
+          categories
+          date(formatString: "YYYY/MM/DD")
+          draft
+          description
+        }
+      }
+
       {
         site {
           siteMetadata {
@@ -33,15 +45,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           filter: { frontmatter: { draft: { eq: false } } }
         ) {
           nodes {
-            frontmatter {
-              layout
-              title
-              path
-              categories
-              date(formatString: "YYYY/MM/DD")
-              draft
-              description
-            }
+            ...Frontmatter
           }
         }
 
@@ -52,15 +56,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           group(field: frontmatter___categories) {
             fieldValue
             nodes {
-              frontmatter {
-                layout
-                title
-                path
-                categories
-                date(formatString: "YYYY/MM/DD")
-                draft
-                description
-              }
+              ...Frontmatter
             }
           }
         }
