@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { graphql } from 'gatsby'
 
-import groupTags from './group-tag'
+import groupTags from '../../helpers/group-tag'
 
 import Container from '../../components/Container'
 import Category from '../../components/Category'
