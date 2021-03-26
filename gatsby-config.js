@@ -1,4 +1,5 @@
 const siteUrl = process.env.SITE_URL || 'https://example.com'
+const path = require('path')
 
 module.exports = {
   siteMetadata: {
@@ -158,6 +159,14 @@ module.exports = {
       resolve: 'gatsby-plugin-plausible',
       options: {
         domain: siteUrl.replace(/https?:\/\//, ''),
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        fixtures: path.join(__dirname, 'src/fixtures'),
+        pages: path.join(__dirname, 'src/pages'),
+        components: path.join(__dirname, 'src/components'),
       },
     },
     'gatsby-plugin-catch-links',
