@@ -21,6 +21,7 @@ exports[`components IndexPage renders correctly 1`] = `
               </h3>
             </a>
             <time
+              class="time"
               datetime="2018/03/01"
             >
               2018/03/01
@@ -68,6 +69,7 @@ exports[`components IndexPage renders correctly 1`] = `
               </h3>
             </a>
             <time
+              class="time"
               datetime="2018/03/01"
             >
               2018/03/01

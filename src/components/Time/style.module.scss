@@ -1,0 +1,9 @@
+@import '../../layouts/colors';
+@import '../../layouts/fonts';
+
+.time {
+  color: $gray-500;
+  display: inline;
+  font-size: $font-size-xs;
+  margin-right: 0.5rem;
+}

@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components Container renders correctly 1`] = `
+exports[`components Card renders correctly 1`] = `
 <DocumentFragment>
   <div
-    class="container"
+    class="card"
   >
     <p>
       Text
@@ -12,14 +12,14 @@ exports[`components Container renders correctly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`components Container supports extra arguments 1`] = `
+exports[`components Card supports extra arguments 1`] = `
 <DocumentFragment>
-  <div
-    class="container extra"
+  <li
+    class="card extra"
   >
     <p>
       Text
     </p>
-  </div>
+  </li>
 </DocumentFragment>
 `;

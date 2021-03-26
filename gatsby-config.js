@@ -167,6 +167,7 @@ module.exports = {
         fixtures: path.join(__dirname, 'src/fixtures'),
         pages: path.join(__dirname, 'src/pages'),
         components: path.join(__dirname, 'src/components'),
+        types: path.join(__dirname, 'src/prop-types'),
       },
     },
     'gatsby-plugin-catch-links',

@@ -3,12 +3,14 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Link from 'gatsby-link'
-import Container from '../Container'
-import Categories from '../Categories'
+
+import Container from 'components/Container'
+import Categories from 'components/Categories'
+import Time from 'components/Time'
 
 import styles from './style.module.scss'
 
-import frontmatterType from '../../prop-types/frontmatter'
+import frontmatterType from 'types/frontmatter'
 
 const SitePostSummary = ({ data: { frontmatter } }) => {
   const { title, path, date, categories, description } = frontmatter
@@ -21,7 +23,7 @@ const SitePostSummary = ({ data: { frontmatter } }) => {
             <Link to={path}>
               <h3>{title}</h3>
             </Link>
-            <time dateTime={date}>{date}</time>
+            <Time date={date} />
             <Categories categories={categories} />
           </header>
           <section>{description}</section>

@@ -20,7 +20,11 @@ describe('components', () => {
       }
       render(<RelatedPosts related={related} />)
       await screen.findByText('Related Posts')
+
       await screen.findByText(frontmatter.title)
+      expect(screen.getByText(frontmatter.title).closest('a').href).toContain(
+        frontmatter.path
+      )
     })
 
     it('is empty if there are no posts', async () => {

@@ -30,7 +30,6 @@ describe('components', () => {
       render(<BlogPostTemplate data={data} />)
 
       await screen.findByText(frontmatter.title)
-      await screen.findByText(frontmatter.date)
       await screen.findByText('Related Posts')
     })
   })

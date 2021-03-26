@@ -1,8 +1,27 @@
 import React from 'react'
 
-import Container from '../Container'
+import Link from 'gatsby-link'
 
-import relatedType from '../../prop-types/related'
+import Container from 'components/Container'
+import Card from 'components/Card'
+import Time from 'components/Time'
+
+import relatedType, { Item as ItemType } from 'types/related'
+
+import styles from './style.module.scss'
+
+const Item = ({ frontmatter: { title, path, date } }) => (
+  <Card tag="li" className={styles.item}>
+    <Link to={path}>
+      <h4>{title}</h4>
+    </Link>
+    <Time date={date} />
+  </Card>
+)
+
+Item.propTypes = {
+  frontmatter: ItemType.isRequired,
+}
 
 const RelatedPosts = ({ related: { nodes } }) => {
   if (nodes.length === 0) {
@@ -10,11 +29,13 @@ const RelatedPosts = ({ related: { nodes } }) => {
   }
 
   return (
-    <Container>
+    <Container className={styles.related}>
       <h2>Related Posts</h2>
-      {nodes.map(({ frontmatter: { title, path } }) => (
-        <span key={path}>{title}</span>
-      ))}
+      <ul className={styles.list}>
+        {nodes.map(({ frontmatter }) => (
+          <Item key={frontmatter.path} frontmatter={frontmatter} />
+        ))}
+      </ul>
     </Container>
   )
 }

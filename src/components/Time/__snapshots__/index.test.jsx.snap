@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Time renders correctly 1`] = `
+<DocumentFragment>
+  <time
+    class="time"
+    datetime="2020/01/01"
+  >
+    2020/01/01
+  </time>
+</DocumentFragment>
+`;

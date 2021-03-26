@@ -1,23 +1,23 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import Container from './index'
+import Card from './index'
 
 describe('components', () => {
-  describe('Container', () => {
+  describe('Card', () => {
     it('renders correctly', () => {
       const { asFragment } = render(
-        <Container>
+        <Card>
           <p>Text</p>
-        </Container>
+        </Card>
       )
       expect(asFragment()).toMatchSnapshot()
     })
 
     it('supports extra arguments', () => {
       const { asFragment } = render(
-        <Container className="extra">
+        <Card tag="li" className="extra">
           <p>Text</p>
-        </Container>
+        </Card>
       )
       expect(asFragment()).toMatchSnapshot()
     })
