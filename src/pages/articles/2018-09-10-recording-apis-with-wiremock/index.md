@@ -8,6 +8,9 @@ categories:
   - WireMock
   - SpringBoot
   - Testing
+related:
+  - /split-frontend-backend-deployment-with-cdcs/
+  - /mock-verification-in-kotlin/
 draft: false
 description: "Using WireMock to record third party API calls you can get high quality mocks that reflect reality and are much easier to maintain"
 ---

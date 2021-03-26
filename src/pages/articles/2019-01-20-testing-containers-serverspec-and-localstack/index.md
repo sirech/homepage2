@@ -8,6 +8,10 @@ categories:
   - ServerSpec
   - AWS
   - localstack
+related:
+  - /dockerizing-a-jvm-app-with-circleci/
+  - /how-to-automate-rest-api-end-to-end-tests/
+  - /modernizing-your-build-pipelines/
 draft: false
 description: "Testing containers with ServerSpec can be augmented through localstack to test more complex setups with dependencies"
 ---

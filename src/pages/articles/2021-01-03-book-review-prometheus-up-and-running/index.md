@@ -8,6 +8,9 @@ categories:
   - Monitoring
   - DevOps
   - Prometheus
+related:
+  - /book-review-securing-devops/
+  - /setting-up-oauth-for-grafana-with-auth0/
 draft: false
 description: "Get started with Prometheus thanks to this book, which is both practical and comprehensive"
 image: ./images/cover.jpeg

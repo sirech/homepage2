@@ -9,6 +9,10 @@ categories:
   - Infrastructure as Code
   - Terraform
   - Grafana
+related:
+  - /setting-up-auth0-with-terraform/
+  - /authorize-spring-backend-with-jwt-in-kotlin/
+  - /book-review-prometheus-up-and-running/
 draft: false
 description: "Set up secure access for Grafana based on OAuth thanks to Auth0, nicely provisioned with Terraform using Infrastructure as Code"
 image: ./images/dashboard.png

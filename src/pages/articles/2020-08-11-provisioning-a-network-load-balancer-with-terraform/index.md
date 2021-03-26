@@ -9,6 +9,10 @@ categories:
   - Load Balancing
   - Networking
   - Infrastructure as Code
+related:
+  - /provisioning-an-application-load-balancer-with-terraform/
+  - /understanding-vpc-endpoints/
+  - /testing-containers-serverspec-and-localstack/
 draft: false
 description: "Learn how to provision Network Load Balancers in AWS using Terraform to ensure high availability for your applications"
 image: ./images/lb.jpg

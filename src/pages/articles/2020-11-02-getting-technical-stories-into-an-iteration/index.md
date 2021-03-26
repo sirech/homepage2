@@ -7,6 +7,10 @@ categories:
   - Agile
   - Practices
   - Leadership
+related:
+  - /dev-huddle-as-a-tool-to-achieve-alignment-among-developers/
+  - /technical-stories-a-miscast-artifact-of-agile-development/
+  - /keeping-a-technical-backlog/
 draft: false
 description: "Writing technical stories is only the first step. Integrating them in an iteration is where progress happens. Don't avoid this discussion"
 image: ./images/iteration.jpg

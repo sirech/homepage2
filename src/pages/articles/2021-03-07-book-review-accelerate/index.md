@@ -8,6 +8,10 @@ categories:
   - Practices 
   - Team Organization
   - Continuous Delivery
+related:
+  - /split-frontend-backend-deployment-with-cdcs/
+  - /book-review-securing-devops/
+  - /book-review-team-topologies/
 draft: false
 description: "Accelerate is the book you need to read if you want to understand why continuous delivery is a tool for companies to deliver better results"
 image: ./images/cover.jpg

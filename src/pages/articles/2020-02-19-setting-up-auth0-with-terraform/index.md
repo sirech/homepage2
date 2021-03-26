@@ -8,6 +8,9 @@ categories:
   - OAuth
   - Infrastructure as Code
   - Terraform
+related:
+  - "/authorize-spring-backend-with-jwt-in-kotlin/"
+  - "/setting-up-oauth-for-grafana-with-auth0/"
 draft: false
 description: "Setting up Auth0 with Terraform ensures that your setup is repeatable, and that you can authorize your apps easily and conveniently"
 image: ./images/flow.png

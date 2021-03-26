@@ -7,6 +7,10 @@ categories:
   - React
   - Formik
   - react-hooks
+related:
+  - /a-directory-structure-for-react-projects/
+  - /jest-fail-test-if-unexpected-network-request-happens/
+  - /book-review-effective-typescript/
 draft: false
 description: "Formik is the new cool kid on the block for forms in react. Here is how to build custom input elements on top"
 image: ./images/react.png

@@ -9,6 +9,10 @@ categories:
   - Arrow
   - Exceptions
   - Either
+related:
+  - /painless-json-with-kotlin-and-jackson/
+  - /descriptive-assertions-in-kotlin/
+  - /book-review-kotlin-in-action/
 draft: false
 description: "Using Either is an alternative to exceptions to make your code more explicit about errors. Easy and convenient with Kotlin and Arrow"
 image: ./images/either.png

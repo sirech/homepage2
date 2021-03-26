@@ -6,6 +6,10 @@ path: "/concourse-fly-behind-alb-oidc/"
 categories:
   - Concourse CI
   - AWS
+related:
+  - /templating-concourse-pipelines-with-jsonnet/
+  - /provisioning-an-application-load-balancer-with-terraform/
+  - /understanding-vpc-endpoints/
 draft: false
 description: "Setting Concourse CI with an authenticated ALB in AWS is an easy way to increase the security of your CI setup, but if you want to still use fly you need to do some adaptations"
 ---

@@ -7,6 +7,10 @@ categories:
   - JavaScript
   - prettier
   - eslint
+related:
+  - /migrating-to-gatsby2/
+  - /angular-from-react-part1/
+  - /playing-with-css-grid/
 draft: false
 description: "I've started using Prettier for formatting my code. ESLint is now purely a linter. Both of them work together beautifully"
 ---

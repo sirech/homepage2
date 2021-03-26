@@ -7,6 +7,9 @@ categories:
   - Agile
   - Practices
   - Leadership
+related:
+  - /technical-stories-a-miscast-artifact-of-agile-development/
+  - /book-review-team-topologies/
 draft: false
 description: "A well-run dev huddle increases the alignment among the developers of a team. I'm going to share my experience preparing for and running it"
 image: ./images/huddle.jpg

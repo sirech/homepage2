@@ -7,6 +7,10 @@ categories:
   - Kotlin
   - Testing
   - Strikt
+related:
+  - /kotlin-either-types-instead-of-exceptions/
+  - /painless-json-with-kotlin-and-jackson/
+  - /book-review-kotlin-in-action/
 draft: false
 description: "Readable assertions will make your Kotlin code a lot more self describing and your tests more maintainable"
 ---

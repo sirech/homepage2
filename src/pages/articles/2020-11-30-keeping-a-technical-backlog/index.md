@@ -7,6 +7,10 @@ categories:
   - Agile
   - Practices
   - Leadership
+related:
+  - /dev-huddle-as-a-tool-to-achieve-alignment-among-developers/
+  - /technical-stories-a-miscast-artifact-of-agile-development/
+  - /getting-technical-stories-into-an-iteration/
 draft: false
 description: "You are writing high-quality technical stories and including them in every iteration. Find a home for them in your technical backlog"
 image: ./images/backlog.jpg

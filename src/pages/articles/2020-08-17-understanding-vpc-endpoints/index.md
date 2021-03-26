@@ -8,6 +8,10 @@ categories:
   - Terraform
   - VPC
   - Networking
+related:
+  - "/provisioning-an-application-load-balancer-with-terraform/"
+  - "/provisioning-a-network-load-balancer-with-terraform/"
+  - "/aws-iam-an-overview/"
 draft: false
 description: "Using VPC endpoints helps keeping your network traffic away from prying eyes. I'm showing you how to provision them using Terraform"
 image: ./images/private_communication.png

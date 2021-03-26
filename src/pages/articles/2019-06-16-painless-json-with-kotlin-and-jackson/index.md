@@ -9,6 +9,10 @@ categories:
   - Jackson
   - REST
   - SpringBoot
+related:
+  - /kotlin-either-types-instead-of-exceptions/
+  - /descriptive-assertions-in-kotlin/
+  - /book-review-kotlin-in-action/
 draft: false
 description: "Backends that provide a REST API or consume other APIs have to deal with JSON quite a lot. Luckily combining Kotlin and Jackson makes it a breeze"
 ---

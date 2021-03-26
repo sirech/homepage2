@@ -7,6 +7,10 @@ categories:
   - Agile
   - Practices
   - Leadership
+related:
+  - /dev-huddle-as-a-tool-to-achieve-alignment-among-developers/
+  - /getting-technical-stories-into-an-iteration/
+  - /keeping-a-technical-backlog/
 draft: false
 description: "Technical stories are misused. If used correctly, they help shape the technical vision. If not, they just enable skipping essential work"
 image: ./images/tech-story.jpg

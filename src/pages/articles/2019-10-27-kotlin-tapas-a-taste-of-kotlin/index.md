@@ -7,6 +7,10 @@ categories:
   - Kotlin
   - Tapas
   - Testing
+related:
+  - /kotlin-either-types-instead-of-exceptions/
+  - /painless-json-with-kotlin-and-jackson/
+  - /book-review-kotlin-in-action/
 draft: false
 description: "A bunch of bite sized tapas to get a first taste of Kotlin"
 ---

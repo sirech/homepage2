@@ -8,6 +8,10 @@ categories:
   - OAuth
   - Kotlin
   - SpringBoot
+related:
+  - /kotlin-either-types-instead-of-exceptions/
+  - /setting-up-auth0-with-terraform/
+  - /book-review-kotlin-in-action/
 draft: false
 description: "Build authorization into your Kotlin backend by combining Auth0, JWTs and Spring Security to ensure only the right parties can execute operations"
 image: ./images/jwt-concept.png

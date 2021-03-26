@@ -10,6 +10,10 @@ categories:
   - SSL Termination
   - mTLS
   - Smart Routing
+related:
+  - /provisioning-an-application-load-balancer-with-terraform/
+  - /understanding-vpc-endpoints/
+  - /testing-containers-serverspec-and-localstack/
 draft: false
 description: "Traefik2 is a significant change from Traefik. How do the both compare? I have ported an old setup to the new format"
 image: ./images/traefik2.png

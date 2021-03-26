@@ -7,6 +7,10 @@ categories:
   - Concourse
   - Jsonnet
   - Templating
+related:
+  - /diagrams-as-code-for-infrastructure-as-code/
+  - /templating-concourse-pipelines-with-jsonnet-follow-up/
+  - /check-certificate-validity-concourse/
 draft: false
 description: "Templating YAML pipelines using a tool like Jsonnet is a way of managing the complexity of pipelines that increase in size and complexity"
 image: ./images/logo.png

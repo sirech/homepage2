@@ -6,6 +6,10 @@ path: "/storing-passwords-with-gopass/"
 categories:
   - Security
   - gopass
+related:
+  - /signing-your-commits-in-git/
+  - /book-review-securing-devops/
+  - /aws-iam-an-overview/
 draft: false
 ---
 

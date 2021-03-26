@@ -6,6 +6,10 @@ path: "/book-review-no-rules-rules-netflix/"
 categories:
   - Book Review
   - Netflix
+related:
+  - /book-review-accelerate/
+  - /dev-huddle-as-a-tool-to-achieve-alignment-among-developers/
+  - /book-review-team-topologies/
 draft: false
 description: "A book about Netflix's culture is out. Talent density, candor, leading with context are some of the principles they follow"
 image: ./images/cover.jpg

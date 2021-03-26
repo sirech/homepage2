@@ -9,6 +9,10 @@ categories:
   - MockK
   - SpringBoot
   - Atrium
+related:
+  - /kotlin-either-types-instead-of-exceptions/
+  - /painless-json-with-kotlin-and-jackson/
+  - /descriptive-assertions-in-kotlin/
 draft: false
 description: "When working with Kotlin you might need to build some non trivial mocks that need to be verified. Here is how to do it by combining MockK and Atrium"
 ---

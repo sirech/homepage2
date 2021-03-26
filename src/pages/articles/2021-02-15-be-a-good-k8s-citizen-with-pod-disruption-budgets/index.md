@@ -8,6 +8,10 @@ categories:
   - Operations
   - DevOps
   - Terraform
+related:
+  - /what-does-the-nginx-ingress-controller-actually-do/
+  - /understanding-vpc-endpoints/
+  - /book-review-securing-devops/
 draft: false
 description: "Pod Disruption Budgets offer a way to protect the uptime of an application in Kubernetes during node maintenance, in a decoupled fashion"
 image: ./images/disruption.jpg 

@@ -10,6 +10,10 @@ categories:
   - react-testing-library
   - create-react-app
   - axios
+related:
+  - /a-directory-structure-for-react-projects/
+  - /custom-components-in-formik/
+  - /split-frontend-backend-deployment-with-cdcs/
 draft: false
 description: "Automatically failing unit tests with Jest in React when network requests are made will make your tests more reliable and easier to maintain"
 image: ./images/jest.png

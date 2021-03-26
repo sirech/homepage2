@@ -7,6 +7,10 @@ categories:
   - Book Review
   - Practices 
   - Team Organization
+related:
+  - /book-review-accelerate/
+  - /book-review-no-rules-rules-netflix/
+  - /dev-huddle-as-a-tool-to-achieve-alignment-among-developers/
 draft: false
 description: "Team topologies is a book that proposes four ways of organizing teams that aim to empower them to build better software"
 image: ./images/cover.jpeg

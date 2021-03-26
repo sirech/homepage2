@@ -7,6 +7,10 @@ categories:
   - React
   - TypeScript
   - Code Organization
+related:
+  - /jest-fail-test-if-unexpected-network-request-happens/
+  - /custom-components-in-formik/
+  - /playing-with-css-grid/
 draft: false
 description: "How do you structure your components in a React application? I like to group mine around features close to the domain enforced by convention"
 image: ./images/react-folders.png

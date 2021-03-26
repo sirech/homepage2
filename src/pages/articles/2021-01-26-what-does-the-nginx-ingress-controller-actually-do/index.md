@@ -7,6 +7,10 @@ categories:
   - Kubernetes
   - Ingress
   - NGINX
+related:
+  - /provisioning-a-network-load-balancer-with-terraform/
+  - /setting-up-traefik/
+  - /provisioning-an-application-load-balancer-with-terraform/
 draft: false
 description: "If you run a lot of applications in a Kubernetes cluster, you probably use an Ingress controller. Let's dive into how it actually works"
 image: ./images/traffic-control.jpg 

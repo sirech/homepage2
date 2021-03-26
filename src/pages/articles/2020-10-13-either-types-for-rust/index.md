@@ -8,6 +8,9 @@ categories:
   - Functional Programming
   - Exceptions
   - Either
+related:
+  - /kotlin-either-types-instead-of-exceptions/
+  - /book-review-the-rust-programming-language/
 draft: false
 description: "Either types are great for error handling. Rust has the Result type. It's tightly integrated into the language, and simplifies robust code"
 image: ./images/rust.jpg

@@ -7,6 +7,9 @@ categories:
   - Security
   - git
   - gpg
+related:
+  - /storing-passwords-with-gopass/
+  - /book-review-securing-devops/
 draft: false
 description: "Signing your commits with a gpg key adds a layer of integrity to your code contributions. Not only that, but it's quite easy to set up"
 image: ./images/signature.jpeg 

@@ -10,6 +10,9 @@ categories:
   - Continuous Delivery
   - Jest
   - CircleCI
+related:
+  - /book-review-software-architect-elevator/
+  - /authorize-spring-backend-with-jwt-in-kotlin/
 draft: false
 description: "By using contract tests, you can build more independent frontend and backends that can be deployed separately. That way, you can get faster feedback"
 canonical: https://www.freecodecamp.org/news/split-frontend-backend-deployment-with-cdcs/

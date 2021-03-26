@@ -7,6 +7,9 @@ categories:
   - Infrastructure as Code
   - Diagrams as Code
   - Documentation
+related:
+  - /aws-iam-an-overview/
+  - /book-review-accelerate/
 draft: false
 description: "Diagrams is a neat tool to visualize your infrastructure using code. Using code allows easy modification and is version control friendly"
 ---
