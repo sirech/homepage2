@@ -36,6 +36,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           nodes {
             frontmatter {
               path
+              related
             }
           }
         }
@@ -95,6 +96,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       path: post.frontmatter.path,
       component: path.resolve('./src/templates/blog-post.js'),
+      context: {
+        related: post.frontmatter.related || [],
+      },
     })
   })(result.data.singlePosts.nodes)
 }
