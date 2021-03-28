@@ -1,13 +1,13 @@
 ---
 title: Authorization Code Flow with PKCE (OAuth) in a React application
-date: ""
+date: "2021-03-29"
 layout: post
 path: "/oauth-authorization-code-flow-pkce-for-react/"
 categories:
   - Auth0
   - OAuth
   - React
-draft: true
+draft: false
 description: "SPAs implementing OAuth should pick Authorization Code Flow with PKCE for maximum security. Let's implement it in React with help of Auth0"
 image: ./images/lock.jpeg
 
