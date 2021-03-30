@@ -7,6 +7,10 @@ categories:
   - Auth0
   - OAuth
   - React
+related:
+  - /a-directory-structure-for-react-projects/
+  - /setting-up-oauth-for-grafana-with-auth0/
+  - /jest-fail-test-if-unexpected-network-request-happens/
 draft: false
 description: "SPAs implementing OAuth should pick Authorization Code Flow with PKCE for maximum security. Let's implement it in React with help of Auth0"
 image: ./images/lock.jpeg
