@@ -8,7 +8,15 @@ categories:
   - Coding Challenge
 draft: true
 description: "A bad experience in a take-home coding assignment can ruin how a candidate perceives your company. Let's talk about some anti-patterns"
+image: ./images/interview.jpg 
 ---
+
+<figure class="figure figure--left">
+  <img src="./images/interview.jpg" alt="Interview" />
+  <figcaption class="figure__caption">
+  Tell me about your biggest flaw
+  </figcaption>
+</figure>
 
 Technical interviews are a [contentious](https://www.google.com/search?q=tech+interviews+suck) topic, to say the least. It applies both as a candidate and as an interviewer. It feels that you end up sinking a lot of time into it, often with little to show for it.
 
