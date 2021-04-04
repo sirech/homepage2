@@ -30,9 +30,9 @@ Building a small application from scratch.
 Fixing a provided application, or extending it with new functionality.
 Sketching the architecture for a system.
 
-The main justification behind giving homework is that it allows the candidate to work at her own pace, without the pressure of an interview setting. Many candidates struggle to code live, and they sometimes get rejected because they couldn’t showcase their knowledge.
+The main justification behind giving homework is that it allows the candidate to work at her own pace, without the pressure of an interview setting. Many candidates struggle to code live, and they sometimes get rejected because they couldn’t showcase their knowledge within the strict boundaries of an interview. Fair enough.
 
-There is another benefit for the companies that they like to downplay: You’re making the candidate work for free, for you, without investing much time yourself. Let’s call it like it is. Being forthcoming and honest about this is crucial to design an exercise that gives the company the information they need without putting undue pressure on a candidate. Let’s go over some antipatterns that are sadly all-too-common. 
+There is another benefit for the companies that they like to downplay: The candidate has to invest time, and the company doesn't. Even if you discard the submitted code, it still counts as labor in my book. I've never heard of any organization that pays for that time, by the way. Let’s call it like it is, this is working for free. Being forthcoming and honest about this is crucial to design an exercise that gives the company the information they need without putting undue pressure on a candidate. Let’s go over some antipatterns that are sadly all-too-common. 
 
 ## Taking the Candidate’s Time for granted
 
@@ -48,7 +48,7 @@ How much time should you invest in it? Set clear boundaries. Is it two hours max
 
 A related point is _reciprocity_. How long are your engineers going to spend going over the code? I know for a fact certain organizations send out exercises that take multiple hours to complete. Then, an engineer might spend five minutes at best going over the code before rejecting it. That’s just demeaning. I mean, come on.
 
-## Putting this step way too early in the process
+## Putting this Step Way too Early in the Process
 
 There is a balance here. As a company, you might have multiple steps in the recruitment process. You don’t want to set up a panel for somebody who can’t show any technical proficiency whatsoever. That’s understandable.
 
