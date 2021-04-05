@@ -1,12 +1,12 @@
 ---
 title: How not to do a take-home coding assignmentt
-date: ""
+date: "2021-04-05"
 layout: post
 path: "/how-not-to-do-a-take-home-coding-assignment/"
 categories:
   - Interviews
   - Coding Challenge
-draft: true
+draft: false
 description: "A bad experience in a take-home coding assignment can ruin how a candidate perceives your company. Let's talk about some anti-patterns"
 image: ./images/interview.jpg 
 ---
@@ -76,6 +76,8 @@ I get that rejection is never easy, and it might expose a company to some liabil
 
 ## In Summary, Empathy!
 
-This post’s summary is just one word: **Empathy**. Show a bit of empathy toward the people that are considering your organization as a possible destination. It really grinds my gears when somebody treats my time as if it’s worthless.
+Are take-home coding assignments here to stay? I'd guess so. They bring some benefits, after all. When you're setting one up for a position, keep one word in mind: **Empathy**. Show a bit of empathy toward the people that are considering your organization as a possible destination. Don't assume infinite time, instant availability, or people reading your mind to understand exactly what you want. It really grinds my gears when somebody treats my time as if it’s worthless.
 
 If not for general decency, do it for branding reasons. Good candidates have options. A thoughtful recruitment process is a signal that you’re better than other organizations out there that only want fresh meat in. I’m personally willing to listen a lot more when I feel that a company respects my time.
+
+*Thanks to Anna and Vicky for the feedback.*
