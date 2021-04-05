@@ -1,5 +1,5 @@
 ---
-title: How not to do a take-home coding assignmentt
+title: How not to do a take-home coding assignment
 date: "2021-04-05"
 layout: post
 path: "/how-not-to-do-a-take-home-coding-assignment/"
