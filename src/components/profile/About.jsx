@@ -18,7 +18,7 @@ const About = () => (
       I believe in high-quality software and advocate for Continuous Delivery,
       Test Driven Development, and quick iteration. I{' '}
       <Link to="/blog">write</Link> and <Link to="/talks">speak</Link> about my
-      experience regularly.
+      experience regularly. Needless to say, all the opinions expressed in this blog are mine and only mine.
     </p>
   </Container>
 )

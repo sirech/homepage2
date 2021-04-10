@@ -29,7 +29,7 @@ exports[`components Profile renders correctly 1`] = `
             >
               speak
             </a>
-             about my experience regularly.
+             about my experience regularly. Needless to say, all the opinions expressed in this blog are mine and only mine.
           </p>
         </div>
       </section>
