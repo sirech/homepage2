@@ -178,7 +178,6 @@ module.exports = {
     'gatsby-plugin-favicon',
     'gatsby-plugin-layout',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-webpack-bundle-analyzer',
     'gatsby-plugin-eslint',
   ],
 }
