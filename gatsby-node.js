@@ -4,6 +4,25 @@ const R = require('ramda')
 
 const createPaginatedPages = require('gatsby-paginate')
 
+// Custom webpack configuration
+exports.onCreateWebpackConfig = ({ stage, actions, plugins }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+      alias: {
+        types: path.resolve(__dirname, 'src/prop-types'),
+      },
+    },
+  })
+
+  // develop target is throwing an error that process is not defined
+  if (stage === 'build-javascript' || stage === 'develop') {
+    actions.setWebpackConfig({
+      plugins: [plugins.provide({ process: 'process/browser' })],
+    })
+  }
+}
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
