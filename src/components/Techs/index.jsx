@@ -2,12 +2,12 @@ import React from 'react'
 
 import Container from '../Container'
 
-import styles from './style.module.scss'
+import { tech, techList } from './style.module.scss'
 import techs from './techList'
 
 const techItem = ([title, name]) => (
   <li
-    className={styles.tech}
+    className={tech}
     data-toggle="tooltip"
     data-placement="top"
     title={title}
@@ -34,7 +34,7 @@ const Techs = () => (
         such as this page itself. A list of them, in no particular order
       </p>
 
-      <ul className={styles.techList}>{techs.map((tech) => techItem(tech))}</ul>
+      <ul className={techList}>{techs.map((tech) => techItem(tech))}</ul>
     </Container>
   </div>
 )

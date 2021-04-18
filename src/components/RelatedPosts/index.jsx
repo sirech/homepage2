@@ -8,10 +8,10 @@ import Time from 'components/Time'
 
 import relatedType, { Item as ItemType } from 'types/related'
 
-import styles from './style.module.scss'
+import { item, related, list } from './style.module.scss'
 
 const Item = ({ frontmatter: { title, path, date } }) => (
-  <Card tag="li" className={styles.item}>
+  <Card tag="li" className={item}>
     <Link to={path}>
       <h4>{title}</h4>
     </Link>
@@ -29,9 +29,9 @@ const RelatedPosts = ({ related: { nodes } }) => {
   }
 
   return (
-    <Container className={styles.related}>
+    <Container className={related}>
       <h2>Related Posts</h2>
-      <ul className={styles.list}>
+      <ul className={list}>
         {nodes.map(({ frontmatter }) => (
           <Item key={frontmatter.path} frontmatter={frontmatter} />
         ))}

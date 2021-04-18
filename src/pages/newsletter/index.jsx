@@ -3,7 +3,7 @@ import cx from 'classnames'
 
 import Container from '../../components/Container'
 
-import styles from './style.module.scss'
+import { newsletter } from './style.module.scss'
 
 const Newsletter = () => {
   useEffect(() => {
@@ -22,7 +22,7 @@ const Newsletter = () => {
       <Container>
         <div
           data-tag="newsletter"
-          className={cx('horizontal-section', styles.newsletter)}
+          className={cx('horizontal-section', newsletter)}
         />
       </Container>
     </main>

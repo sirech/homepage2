@@ -15,7 +15,7 @@ import { path as Rpath } from 'ramda'
 import frontmatterType from '../../prop-types/frontmatter'
 import siteType from '../../prop-types/site'
 
-import styles from './style.module.scss'
+import { share, cta, buttons } from './style.module.scss'
 
 const Share = ({ frontmatter, site }) => {
   const { path, title, categories, description } = frontmatter
@@ -26,9 +26,9 @@ const Share = ({ frontmatter, site }) => {
   const url = siteUrl + path
 
   return (
-    <div className={styles.share}>
-      <div className={styles.cta}>Did you like it? Give it a share!</div>
-      <div className={styles.buttons}>
+    <div className={share}>
+      <div className={cta}>Did you like it? Give it a share!</div>
+      <div className={buttons}>
         <FacebookShareButton url={url} quote={description}>
           <FacebookIcon size={32} round />
         </FacebookShareButton>

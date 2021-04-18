@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './style.module.scss'
+import { time } from './style.module.scss'
 
 const Time = ({ date }) => (
-  <time className={styles.time} dateTime={date}>
+  <time className={time} dateTime={date}>
     {date}
   </time>
 )

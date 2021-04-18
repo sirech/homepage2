@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import cx from 'classnames'
 
-import styles from './style.module.scss'
+import { underline, icon } from './style.module.scss'
 
 const links = [
   ['/', 'About'],
@@ -21,7 +21,7 @@ class SiteNavi extends React.Component {
           this.props.location.pathname === url ? 'nav-item active' : 'nav-item'
         }
       >
-        <Link to={url} className={cx(styles.underline, 'nav-link')}>
+        <Link to={url} className={cx(underline, 'nav-link')}>
           {name}
         </Link>
       </li>
@@ -41,12 +41,12 @@ class SiteNavi extends React.Component {
           </ul>
         </div>
         <ul className="navbar-icons navbar-nav flex-row ml-md-auto d-md-flex">
-          <li className={cx(`${styles.icon}`, 'nav-item')}>
+          <li className={cx(`${icon}`, 'nav-item')}>
             <a href="/rss.xml" className="nav-link" aria-label="RSS Feed">
               <i className="fa fa-rss fa-lg" />
             </a>
           </li>
-          <li className={cx(`${styles.icon}`, 'nav-item')}>
+          <li className={cx(`${icon}`, 'nav-item')}>
             <a
               href="https://github.com/sirech"
               className="nav-link"
@@ -57,7 +57,7 @@ class SiteNavi extends React.Component {
               <i className="fa fa-github-square fa-lg" />
             </a>
           </li>
-          <li className={cx(`${styles.icon}`, 'nav-item')}>
+          <li className={cx(`${icon}`, 'nav-item')}>
             <a
               href="https://stackoverflow.com/users/3785/mario-f"
               className="nav-link"
@@ -68,7 +68,7 @@ class SiteNavi extends React.Component {
               <i className="fa fa-stack-overflow fa-lg" />
             </a>
           </li>
-          <li className={cx(`${styles.icon}`, 'nav-item')}>
+          <li className={cx(`${icon}`, 'nav-item')}>
             <a
               href="https://www.linkedin.com/in/mario-fernandez-9b9195a/"
               className="nav-link"

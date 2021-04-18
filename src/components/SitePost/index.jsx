@@ -7,7 +7,7 @@ import Container from '../Container'
 import Categories from '../Categories'
 import Share from '../Share'
 
-import styles from './style.module.scss'
+import { articles, article, pageContent } from './style.module.scss'
 import './images.scss'
 
 import frontmatterType from '../../prop-types/frontmatter'
@@ -17,8 +17,8 @@ const SitePost = ({ data: { frontmatter, html }, site }) => {
   const { title, path, date, categories } = frontmatter
   return (
     <Container>
-      <div className={styles.articles}>
-        <article key={path} className={cx(`${styles.article}`)}>
+      <div className={articles}>
+        <article key={path} className={cx(`${article}`)}>
           <header>
             <Link style={{ boxShadow: 'none' }} to={path}>
               <h1>{title}</h1>
@@ -27,7 +27,7 @@ const SitePost = ({ data: { frontmatter, html }, site }) => {
             <Categories categories={categories} />
           </header>
           <section
-            className={cx(`${styles.pageContent}`, 'clearfix')}
+            className={cx(`${pageContent}`, 'clearfix')}
             dangerouslySetInnerHTML={{
               __html: html,
             }}

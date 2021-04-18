@@ -1,10 +1,10 @@
 import React from 'react'
 import cx from 'classnames'
 
-import styles from './style.module.scss'
+import { footer } from './style.module.scss'
 
 const Footer = () => (
-  <footer className={cx(styles.footer, 'text-center')}>
+  <footer className={cx(footer, 'text-center')}>
     <div>
       Copyright © {new Date().getFullYear()},{' '}
       <a

@@ -8,7 +8,7 @@ import Container from 'components/Container'
 import Categories from 'components/Categories'
 import Time from 'components/Time'
 
-import styles from './style.module.scss'
+import { articles, article, articleBox } from './style.module.scss'
 
 import frontmatterType from 'types/frontmatter'
 
@@ -17,8 +17,8 @@ const SitePostSummary = ({ data: { frontmatter } }) => {
 
   return (
     <Container>
-      <div className={cx(styles.articles)}>
-        <article key={path} className={cx(styles.article, styles.articleBox)}>
+      <div className={cx(articles)}>
+        <article key={path} className={cx(article, articleBox)}>
           <header>
             <Link to={path}>
               <h3>{title}</h3>
