@@ -175,7 +175,6 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-plugin-twitter',
-    'gatsby-plugin-favicon',
     'gatsby-plugin-layout',
     'gatsby-transformer-sharp',
     'gatsby-plugin-eslint',
