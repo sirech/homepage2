@@ -55,7 +55,7 @@
     "eslint-plugin-jest": "^24.3.5",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-testing-library": "^4.0.2",
-    "eslint-webpack-plugin": "^2.5.3",
+    "eslint-webpack-plugin": "^2.5.4",
     "font-awesome": "^4.7.0",
     "gatsby-plugin-eslint": "^3.0.0",
     "husky": "^6.0.0",
