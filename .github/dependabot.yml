@@ -1,0 +1,101 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: gatsby-plugin-sharp
+    versions:
+    - 2.14.1
+    - 2.14.3
+  - dependency-name: cypress
+    versions:
+    - 6.3.0
+    - 6.4.0
+  - dependency-name: bl
+    versions:
+    - 1.2.3
+  - dependency-name: node-sass
+    versions:
+    - 5.0.0
+  - dependency-name: react-test-renderer
+    versions:
+    - 17.0.2
+  - dependency-name: react-dom
+    versions:
+    - 17.0.2
+  - dependency-name: react
+    versions:
+    - 17.0.2
+  - dependency-name: ssri
+    versions:
+    - 6.0.2
+  - dependency-name: gatsby
+    versions:
+    - 2.32.11
+    - 2.32.12
+    - 2.32.3
+    - 2.32.4
+    - 2.32.8
+    - 2.32.9
+  - dependency-name: "@testing-library/user-event"
+    versions:
+    - 13.0.16
+    - 13.0.6
+    - 13.1.1
+    - 13.1.2
+  - dependency-name: babel-preset-gatsby
+    versions:
+    - 0.10.0
+    - 0.11.0
+    - 1.0.0
+    - 1.1.0
+    - 1.2.0
+  - dependency-name: gatsby-transformer-sharp
+    versions:
+    - 2.12.1
+  - dependency-name: elliptic
+    versions:
+    - 6.5.4
+  - dependency-name: husky
+    versions:
+    - 5.1.0
+    - 5.1.2
+  - dependency-name: react-share
+    versions:
+    - 4.4.0
+  - dependency-name: gatsby-source-filesystem
+    versions:
+    - 2.11.1
+  - dependency-name: gatsby-remark-images
+    versions:
+    - 3.11.1
+  - dependency-name: gatsby-plugin-feed
+    versions:
+    - 2.13.1
+  - dependency-name: stylelint
+    versions:
+    - 13.10.0
+  - dependency-name: lighthouse
+    versions:
+    - 7.0.0
+    - 7.0.1
+    - 7.1.0
+  - dependency-name: eslint-webpack-plugin
+    versions:
+    - 2.5.0
+  - dependency-name: eslint-plugin-standard
+    versions:
+    - 5.0.0
+  - dependency-name: eslint-config-prettier
+    versions:
+    - 7.2.0
+  - dependency-name: eslint-config-standard
+    versions:
+    - 16.0.2
+  - dependency-name: eslint-config-standard-react
+    versions:
+    - 11.0.1
