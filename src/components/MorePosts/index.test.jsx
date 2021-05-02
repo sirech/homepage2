@@ -28,5 +28,16 @@ describe('components', () => {
         frontmatter2.path
       )
     })
+
+    it('works for empty posts', async () => {
+      const frontmatter = frontmatterGenerator({ title: 'Previous' })
+      render(<MorePosts previous={{ frontmatter }} />)
+      await screen.findByText('Keep Reading')
+
+      await screen.findByText(frontmatter.title)
+      expect(screen.getByText(frontmatter.title).closest('a').href).toContain(
+        frontmatter.path
+      )
+    })
   })
 })

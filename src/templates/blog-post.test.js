@@ -26,11 +26,16 @@ describe('components', () => {
           },
         ],
       }
-      const data = { site, post, related }
+
+      const frontmatter3 = frontmatterGenerator({ title: 'Next' })
+      const data = { site, post, related, next: { frontmatter: frontmatter3 } }
       render(<BlogPostTemplate data={data} />)
 
       await screen.findByText(frontmatter.title)
       await screen.findByText('Related Posts')
+
+      await screen.findByText('Keep Reading')
+      await screen.findByText(frontmatter3.title)
     })
   })
 })

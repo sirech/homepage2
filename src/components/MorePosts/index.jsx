@@ -15,17 +15,21 @@ import {
   position as positionStyle,
 } from './style.module.scss'
 
-const Item = ({ frontmatter: { title, path }, position }) => (
+const Item = ({ frontmatter, position }) => (
   <Card tag="li" className={item}>
     <h5 className={positionStyle}>{position}</h5>
-    <Link to={path}>
-      <h4>{title}</h4>
-    </Link>
+    {frontmatter && (
+      <>
+        <Link to={frontmatter.path}>
+          <h4>{frontmatter.title}</h4>
+        </Link>
+      </>
+    )}
   </Card>
 )
 
 Item.propTypes = {
-  frontmatter: ItemType.isRequired,
+  frontmatter: ItemType,
   position: PropType.string,
 }
 
@@ -34,8 +38,8 @@ const MorePosts = ({ previous, next }) => {
     <Container className={more}>
       <h2>Keep Reading</h2>
       <ul className={list}>
-        <Item frontmatter={previous.frontmatter} position="previous" />
-        <Item frontmatter={next.frontmatter} position="next" />
+        <Item frontmatter={previous?.frontmatter} position="previous" />
+        <Item frontmatter={next?.frontmatter} position="next" />
       </ul>
     </Container>
   )
