@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 
 import { graphql } from 'gatsby'
 
-import SitePost from '../components/SitePost'
-import SEO from '../components/SEO'
-import RelatedPosts from '../components/RelatedPosts'
+import SitePost from 'components/SitePost'
+import SEO from 'components/SEO'
+import RelatedPosts from 'components/RelatedPosts'
 
-import siteType from '../prop-types/site'
-import postType from '../prop-types/post'
-import relatedType from '../prop-types/related'
+import siteType from 'types/site'
+import postType from 'types/post'
+import relatedType, { Item as ItemType } from 'types/related'
 
 const BlogPostTemplate = ({ data: { post, site, related } }) => {
   return (
