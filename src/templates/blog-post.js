@@ -38,6 +38,14 @@ BlogPostTemplate.propTypes = {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
+  fragment PostHeadline on MarkdownRemark {
+    frontmatter {
+      title
+      path
+      date(formatString: "YYYY/MM/DD")
+    }
+  }
+
   query BlogPostByPath(
     $path: String!
     $related: [String]!
@@ -80,28 +88,16 @@ export const pageQuery = graphql`
       filter: { frontmatter: { path: { in: $related } } }
     ) {
       nodes {
-        frontmatter {
-          title
-          path
-          date(formatString: "YYYY/MM/DD")
-        }
+        ...PostHeadline
       }
     }
 
     previous: markdownRemark(frontmatter: { path: { eq: $previous } }) {
-      frontmatter {
-        title
-        path
-        date(formatString: "YYYY/MM/DD")
-      }
+      ...PostHeadline
     }
 
     next: markdownRemark(frontmatter: { path: { eq: $next } }) {
-      frontmatter {
-        title
-        path
-        date(formatString: "YYYY/MM/DD")
-      }
+      ...PostHeadline
     }
   }
 `
