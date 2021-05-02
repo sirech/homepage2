@@ -111,12 +111,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })(result.data.tags.group)
 
   // Create blog posts pages.
-  R.forEach((post) => {
+  R.addIndex(R.forEach)((post, index, list) => {
     createPage({
       path: post.frontmatter.path,
       component: path.resolve('./src/templates/blog-post.js'),
       context: {
         related: post.frontmatter.related || [],
+        previous: index == 0 ? null : list[index - 1].frontmatter.path,
+        next:
+          index == list.length - 1 ? null : list[index + 1].frontmatter.path,
       },
     })
   })(result.data.singlePosts.nodes)
