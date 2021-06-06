@@ -1,17 +1,15 @@
 version: 2
 jobs:
   build:
-
     working_directory: ~/app
 
     docker:
-      - image: cimg/node:14.4.0
+      - image: cimg/node:14.16.0
         auth:
           username: $DOCKER_USER
           password: $DOCKER_PASSWORD
 
     steps:
-
       - checkout
       - restore_cache:
           key: npm-{{ checksum "yarn.lock" }}
@@ -37,18 +35,16 @@ jobs:
       - persist_to_workspace:
           root: public
           paths:
-            - "*"
+            - '*'
 
   deploy:
-
     docker:
-      - image: cimg/node:14.4.0
+      - image: cimg/node:14.16.0
         auth:
           username: $DOCKER_USER
           password: $DOCKER_PASSWORD
 
     steps:
-
       - add_ssh_keys:
       - attach_workspace:
           at: public
@@ -56,7 +52,6 @@ jobs:
       - run: ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "${DEPLOY_PATH}/bin/promote /tmp/homepage2-${CIRCLE_BUILD_NUM} /srv/main"
 
   security:
-
     docker:
       - image: owasp/zap2docker-weekly
         auth:
@@ -67,7 +62,6 @@ jobs:
       - run: zap-baseline.py -t $SITE_URL -u $ZAP_CONF_URL
 
   post-deploy:
-
     docker:
       - image: cypress/browsers:node14.7.0-chrome84
         auth:
@@ -75,7 +69,6 @@ jobs:
           password: $DOCKER_PASSWORD
 
     steps:
-
       - checkout
       - restore_cache:
           key: npm-{{ checksum "yarn.lock" }}
