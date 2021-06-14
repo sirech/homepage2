@@ -472,3 +472,5 @@ Secondly, there is a library called [Redux Toolkit](https://redux-toolkit.js.org
 To recap, should you migrate your existing application built with Redux to use the Context API and hooks? Maybe? It depends! Make sure to think it through and evaluate what you expect to get out of it.
 If you decide to move forward, let this [repository](https://github.com/auth0-blog/example-redux-to-context) be a source of inspiration. Remember that you don't need a complete rewrite. Perhaps just using hooks is enough of an improvement for you. Maybe some parts of your application benefit from Redux. These are decisions to make having all the context in mind.
 
+*This post was published initially in [Auth0](https://auth0.com/blog/redux-to-context-practical-migration-guide/).*
+
