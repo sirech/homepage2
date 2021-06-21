@@ -49,6 +49,7 @@ This article is a practical guide with a working example. I've built a small app
 
 The source code is [here](https://github.com/auth0-blog/example-redux-to-context). The state management uses Redux. I've included a new branch ([context-api](https://github.com/auth0-blog/example-redux-to-context/tree/context-api)) to show how I converted the project to leverage the Context API. To run it, do the following and it'll be available under http://localhost:3000:
 
+<!-- context-migration-start -->
 ```
 yarn
 yarn start
@@ -64,6 +65,7 @@ A theme is a classic example of state that influences almost every component thr
 
 I'm theming the [Header](https://github.com/auth0-blog/example-redux-to-context/blob/master/src/header/Header.js) component. This component styles itself based on two properties, `foreground`, and `background`.
 
+<!-- context-migration-header -->
 ```jsx
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -103,6 +105,7 @@ Header.propTypes = {
 
 When using Redux, the theme resides in the state. The `Header` is connected to the store, and there's a [reducer](https://github.com/auth0-blog/example-redux-to-context/blob/master/src/header/reducer.js) that flips `foreground` and `background` when the user clicks the toggle button.
 
+<!-- context-migration-toggle-theme -->
 ```js
 // action
 export const TOGGLE_ACTION = 'theme:toggle';
@@ -141,6 +144,7 @@ export default connect(
 
 Sweet! How does the Context API version look in comparison? In this case, we're building an extra component, [ThemeProvider](https://github.com/auth0-blog/example-redux-to-context/blob/context-api/src/themeProvider/ThemeProvider.js). It holds the state and makes it available for downstream components through a `Context`. Concretely, using a custom hook `useTheme`. This custom hook is a wrapper around the handy [useContext](https://reactjs.org/docs/hooks-reference.html#usecontext) hook provided by React. It's an elegant way for the consumers to get access to the data.
 
+<!-- context-migration-theme-provider -->
 ```js
 import React, { useContext, useState } from 'react';
 
@@ -165,6 +169,7 @@ export default ThemeProvider;
 
 What about the `Header` component? It doesn't change much, except it's not connected anymore. Instead, we use the `useTheme` hook that we've created:
 
+<!-- context-migration-simple-header -->
 ```js
 const Header = () => {
     const { theme, toggle } = useTheme()
@@ -189,6 +194,7 @@ Fetching data from a downstream service is an asynchronous operation. Once compl
 
 The [Products](https://github.com/auth0-blog/example-redux-to-context/blob/master/src/products/Products.js) component is both the start and the end of this flow.
 
+<!-- context-migration-products -->
 ```js
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -222,6 +228,7 @@ If you think about it, there is a bit too much indirection for what is a fairly 
 
 I like to use [react-use](https://github.com/streamich/react-use) for this use case. It's a collection of [hooks](https://reactjs.org/docs/hooks-intro.html) that provide a thin layer of abstraction on top of the standard `useState` and `useEffect`. Let's see how to fetch the data with the help of [useAsync](https://github.com/streamich/react-use/blob/master/docs/useAsync.md). Again, we're extracting the data fetching to a provider. Planning ahead, other components are going to be interested in the list of products as well. You can find it [here](https://github.com/auth0-blog/example-redux-to-context/blob/context-api/src/productsProvider/ProductsProvider.js).
 
+<!-- context-migration-products-provider -->
 ```js
 import React, { useContext } from 'react';
 import { useAsync } from 'react-use';
@@ -253,6 +260,7 @@ As a bonus, I get two extra variables in my local state, `loading` and `error`. 
 
 The last part is the shopping cart. The `Cart` itself receives the list of items and the total price. There's no logic here. This [component](https://github.com/auth0-blog/example-redux-to-context/blob/master/src/cart/Cart.js) is purely representational.
 
+<!-- context-migration-cart -->
 ```js
 import PropTypes from 'prop-types';
 import Heading from './Heading';
@@ -288,6 +296,7 @@ Cart.propTypes = {
 
 There are two actions, adding a product to a cart and removing it. The trigger is in the product list, so they're attached to the individual products.
 
+<!-- context-migration-simple-product -->
 ```js
 <Product
   key={product.name}
@@ -299,6 +308,7 @@ There are two actions, adding a product to a cart and removing it. The trigger i
 
 The [reducer](https://github.com/auth0-blog/example-redux-to-context/blob/master/src/cart/reducer.js) is trickier. Adding an element to the cart means looking for it in the list or adding a new element if it didn't exist. Then we increase the quantity. You want to avoid duplicating state, so you don't add any details that we store in the list of products, such as the price.
 
+<!-- context-migration-cart-reducer -->
 ```js
 import produce from 'immer';
 import { ADD_TO_CART, REMOVE_FROM_CART } from './actions';
@@ -348,6 +358,7 @@ There're two interesting details here to mention:
 - All the code handling the list part is awkward. An alternative is using [normalizr](https://github.com/paularmstrong/normalizr) and storing our data in the state in a way that's easier to manipulate.
   The last part is the [selector](https://medium.com/@matthew.holman/what-is-a-redux-selector-a517acee1fe8). The state contains all the information that we need to represent the cart. But it can't be used directly by the component. We need to combine the `products` and the `cart` to get the prices. The selector is [here](https://github.com/auth0-blog/example-redux-to-context/blob/master/src/cart/selectors.js).
 
+<!-- context-migration-selector -->
 ```js
 import { createSelector } from 'reselect';
 
@@ -382,6 +393,7 @@ The selectors contain some logic that we don't want to run more often than neces
 
 And now, let's see how the cart looks using the Context API. Instead of a reducer, we have a [CartProvider](https://github.com/auth0-blog/example-redux-to-context/blob/context-api/src/cartProvider/CartProvider.js):
 
+<!-- context-migration-cart-provider -->
 ```js
 import React, { useContext } from 'react';
 import { useImmer } from 'use-immer';
@@ -426,6 +438,7 @@ export default CartProvider;
 The logic is similar to the reducer from before. I'm even using [use-immer](https://github.com/immerjs/use-immer), a hook that integrates _immer_.
 The `Cart` combines the information from two providers, `ProductsProvider` and `CartProvider`. As there's no store, these aren't exactly selectors. The [concept](https://github.com/auth0-blog/example-redux-to-context/blob/context-api/src/cart/Cart.js) is close enough, though:
 
+<!-- context-migration-cart-memo -->
 ```js
 const Cart = () => {
   const products = useProducts();
