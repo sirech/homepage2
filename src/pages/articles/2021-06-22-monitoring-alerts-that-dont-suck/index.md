@@ -14,10 +14,19 @@ related:
   - /book-review-prometheus-up-and-running/
   - /setting-up-oauth-for-grafana-with-auth0/
   - /keeping-a-technical-backlog/
-image: ./images/cover.png
+image: ./images/cover.jpeg
 ---
 
-Have you ever been part of an [On-Call](https://www.pagerduty.com/resources/learn/call-rotations-schedules/) rotation? If so, you know how annoying it is to have monitoring alerts that you can't trust. If they don't trigger, you'll live in fear of missing an incident. If they trigger too much, they won't let you sleep. Neither case sounds great.
+<figure class="figure figure--right">
+  <img src="./images/cover.jpeg" alt="Alert" />
+  <figcaption class="figure__caption">
+  On-Call me maybe
+  </figcaption>
+</figure>
+
+Have you ever been part of an [On-Call](https://www.pagerduty.com/resources/learn/call-rotations-schedules/) rotation?
+
+If so, you know how annoying it is to have monitoring alerts that you can't trust. If they don't trigger, you'll live in fear of missing an incident. If they trigger too much, they won't let you sleep. Neither case sounds great.
 
 Over the past year and a half, I've been part of projects that practice On-Call. You'd be surprised how easily people get used to situations that are so clearly dysfunctional. In this post, I want to talk about how I've tried to improve the quality of our alerts.
 
@@ -37,6 +46,13 @@ When you put it like that, it kind of sounds trivial. Well, you wouldn't believe
 ## The Slow Descent Into Unreliability
 
 As Tolstoy [said](https://en.wikipedia.org/wiki/Anna_Karenina_principle), each unhappy alerting setup is unreliable in its own way. I bet every developer has a story about an error that _just_ wouldn't go away.
+
+<figure class="figure figure--left">
+  <img src="./images/ruins.jpeg" alt="Ruins" />
+  <figcaption class="figure__caption">
+  A bit of tech debt
+  </figcaption>
+</figure>
 
 There are many causes of untrustworthy alerts: Unstable infrastructure, spikes in traffic, legacy applications that time out randomly. Every failure has an origin buried deeply somewhere.
 
@@ -61,6 +77,10 @@ I won't claim that this works in every situation. Still, I've had success lately
 - _Flatline Alert_: Catch extreme conditions through an absolute threshold, like a service receiving no traffic.
 - _Change% Alert_: Catch rapid changes in a metric, like the error rate spiking.
 
+<figure class="figure">
+  <img src="./images/alert.png" alt="Alert" />
+</figure>
+
 For each of the RED metrics, you deploy a pair of alerts. For instance, to cover the rate, you have a flatline for zero or close-to-zero requests and a change alert if traffic drops something like 50% within 15 minutes (tune numbers based on situation).
 
 There's quite a bit of overlap between all these alerts, but at the same time, they provide [defense in depth](https://en.wikipedia.org/wiki/Defense_in_depth_(computing)). Any decent incident management system can handle grouping, anyway. The sum of a threshold and a change percentage means that you don’t have to be too precise in tuning these values.
@@ -73,7 +93,16 @@ There's a lot to say about how to set the alerts and tune them. It's also someth
 
 ### Fight Alert Fatigue
 
-Alerts should trigger for conditions that require immediate attention and for that only. I can't stress this enough. [Alarm fatigue](https://en.wikipedia.org/wiki/Alarm_fatigue) slowly creeps in, and before you know it, you've internalized that people get paged twenty times a day, and it was never any different. Be decisive. If an alert is noisy, change it or delete it. Don't get used to the situation.
+<figure class="figure figure--right">
+  <img src="./images/fatigue.jpeg" alt="Fatigue" />
+  <figcaption class="figure__caption">
+  Too many alarms in one night
+  </figcaption>
+</figure>
+
+Alerts should trigger for conditions that require immediate attention and for that only. I can't stress this enough. [Alarm fatigue](https://en.wikipedia.org/wiki/Alarm_fatigue) slowly creeps in, and before you know it, you've internalized that people get paged twenty times a day, and it was never any different.
+
+Be decisive. If an alert is noisy, change it or delete it. Don't get used to the situation.
 
 ### Start Simple
 
@@ -117,4 +146,13 @@ My recommendation is to stick to flatline alerts for these types of services. Al
 
 ## Keep Your Sanity
 
-I firmly believe that it's better to have a more modest setup that your engineers fully trust than a complex one that drives them nuts. Alerts **aren't** stationary but rather evolve constantly. If you have a solid foundation you can refine triggers quickly. If you have a dumpster fire it's hard enough for the whole thing not to collapse.
+<figure class="figure figure--left">
+  <img src="./images/thisisfine.jpeg" alt="This is fine" />
+  <figcaption class="figure__caption">
+  Alerts are music to my ears
+  </figcaption>
+</figure>
+
+I firmly believe that it's better to have a more modest setup that your engineers fully trust than a complex one that drives them nuts. 
+
+Alerts **aren't** stationary but rather evolve constantly. If you have a solid foundation you can refine triggers quickly. If you have a dumpster fire it's hard enough for the whole thing not to collapse.
