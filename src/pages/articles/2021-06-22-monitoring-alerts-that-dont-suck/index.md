@@ -1,6 +1,6 @@
 ---
 title: "Monitoring Alerts That Don't Suck"
-date: ""
+date: "2021-07-02"
 layout: post
 path: "/monitoring-alerts-that-dont-suck/"
 description: "If you've been part of an On-Call rotation, you know how a bad setup will leave you (literally) sleepless. Let's work on fixing that"
@@ -9,7 +9,7 @@ categories:
   - Practices
   - Alerts
   - On-Call
-draft: true
+draft: false
 related:
   - /book-review-prometheus-up-and-running/
   - /setting-up-oauth-for-grafana-with-auth0/
