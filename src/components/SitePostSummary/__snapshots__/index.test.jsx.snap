@@ -29,7 +29,7 @@ exports[`components SitePostSummary renders correctly 1`] = `
             href="/blog/tags/javascript"
           >
             <span
-              class="tag badge mr-1"
+              class="tag badge mr-2"
             >
               JavaScript
             </span>
@@ -38,7 +38,7 @@ exports[`components SitePostSummary renders correctly 1`] = `
             href="/blog/tags/react"
           >
             <span
-              class="tag badge mr-1"
+              class="tag badge mr-2"
             >
               React
             </span>

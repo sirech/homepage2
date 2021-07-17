@@ -10,7 +10,7 @@ import formatTag from './format-tag'
 
 const Category = ({ item, text }) => (
   <Link to={`/blog/tags/${formatTag(item)}`}>
-    <span className={cx(tag, 'badge', 'mr-1')}>{text}</span>
+    <span className={cx(tag, 'badge', 'mr-2')}>{text}</span>
   </Link>
 )
 
