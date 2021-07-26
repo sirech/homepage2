@@ -70,7 +70,7 @@
     "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-scss": "^3.20.1",
-    "textlint": "^11.9.1",
+    "textlint": "^12.0.2",
     "textlint-rule-preset-ja-spacing": "^2.1.3"
   },
   "keywords": [
