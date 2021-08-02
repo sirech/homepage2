@@ -20,7 +20,6 @@ jobs:
             - node_modules
       - run: ./go linter-js
       - run: ./go linter-css
-      - run: ./go linter-text
       - run: yarn test --coverage --runInBand
       - run:
           name: Upload coverage results
