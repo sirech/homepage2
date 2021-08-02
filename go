@@ -14,10 +14,6 @@ goal_linter-css() {
   npm run linter:css
 }
 
-goal_linter-text() {
-  npm run linter:text
-}
-
 goal_test-js() {
   npm test
 }
@@ -64,7 +60,6 @@ goal_clean-build() {
 goal_all() {
   goal_linter-js
   goal_linter-css
-  goal_linter-text
   CI=t goal_test-js
   SITE_URL=http://test.com goal_build
 }
