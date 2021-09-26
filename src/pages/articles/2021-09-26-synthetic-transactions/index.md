@@ -4,7 +4,6 @@ date: "2021-09-26"
 layout: post
 path: "/synthetic-transactions/"
 categories:
-  - Practices
   - Monitoring
   - Alerts
 related:
