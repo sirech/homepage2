@@ -14,7 +14,7 @@ related:
   - /choosing-an-engineering-organizational-structure/
 draft: false
 description: "What are the software team lead responsibilities? In this blog, let's define them from the perspective of servant leadership."
-image: ./images/cover.jpeg 
+image: ./images/cover.jpg.webp
 canonical: https://linearb.io/blog/software-team-lead-responsibilities/
 ---
 
