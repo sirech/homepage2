@@ -8,6 +8,7 @@ categories:
   - OAuth
   - Infrastructure as Code
   - Terraform
+  - Security
 related:
   - "/authorize-spring-backend-with-jwt-in-kotlin/"
   - "/setting-up-oauth-for-grafana-with-auth0/"

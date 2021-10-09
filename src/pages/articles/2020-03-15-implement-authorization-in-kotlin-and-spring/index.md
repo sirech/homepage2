@@ -8,6 +8,7 @@ categories:
   - OAuth
   - Kotlin
   - SpringBoot
+  - Security
 related:
   - /kotlin-either-types-instead-of-exceptions/
   - /setting-up-auth0-with-terraform/
