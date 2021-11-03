@@ -97,6 +97,10 @@ export const talks = [
     'https://github.com/sirech/talks/blob/master/2021-03-tw-human_on_call.pdf',
     'Humane on Call',
   ],
+  [
+    'https://github.com/sirech/talks/blob/master/2021-11-devoxx-humane_on_call_alerting_doesnt_have_to_be_painful.pdf',
+    "DevoxxUK 2021 - Humane On-Call: Alerting doesn't have to be painful",
+  ],
 ].reverse()
 
 const extractYear = (item) => {
