@@ -8,6 +8,9 @@ import groupTags from '../../helpers/group-tag'
 import Container from '../../components/Container'
 import Category from '../../components/Category'
 
+import cx from 'classnames'
+import { section } from './style.module.scss'
+
 const Tag = ({ tag, count }) => (
   <Category
     item={tag}
@@ -33,14 +36,14 @@ const Tags = ({
   return (
     <main>
       <Container>
-        <section className="mt-4">
+        <section className={cx('mt-4', section)}>
           <h2>Top Tags</h2>
           {top.map(({ tag, count }) => (
             <Tag key={tag} tag={tag} count={count} />
           ))}
         </section>
 
-        <section className="mt-4">
+        <section className={cx('mt-4', section)}>
           <h2>Other Tags</h2>
           {other.map(({ tag, count }) => (
             <Tag key={tag} tag={tag} count={count} />
