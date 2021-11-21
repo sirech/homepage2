@@ -8,7 +8,6 @@ categories:
   - React
   - Micro frontends
   - JavaScript
-  - TypeScript
 related:
   - /starting-a-new-app-with-redux-consider-context-api-first/
   - /scalable-architecture-a-definition-and-how-to-guide/
