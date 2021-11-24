@@ -47,7 +47,9 @@ jobs:
       - add_ssh_keys:
       - attach_workspace:
           at: public
-      - run: scp -o StrictHostKeyChecking=no -r public $DEPLOY_USER@$DEPLOY_HOST:/tmp/homepage2-${CIRCLE_BUILD_NUM}
+      - run: tar -czf homepage2.tgz public
+      - run: scp -o StrictHostKeyChecking=no homepage2.tgz $DEPLOY_USER@$DEPLOY_HOST:/tmp
+      - run: ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "cd /tmp && tar -xf homepage2.tgz && chown -R $DEPLOY_USER:$DEPLOY_USER public && mv public homepage2-${CIRCLE_BUILD_NUM} && rm homepage2.tgz"
       - run: ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "${DEPLOY_PATH}/bin/promote /tmp/homepage2-${CIRCLE_BUILD_NUM} /srv/main"
 
   security:
