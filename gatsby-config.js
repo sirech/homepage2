@@ -56,7 +56,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-        excludes: [`/dev-404-page`],
+        exclude: [`/dev-404-page`],
       },
     },
     {
