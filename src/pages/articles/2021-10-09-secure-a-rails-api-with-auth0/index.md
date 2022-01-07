@@ -386,3 +386,5 @@ The request works now!
 ## Conclusion
 
 In this guide, we've added authorization to a Rails API by using Auth0 as an authorization server. Thanks to the `jwt` gem, we don't have to invest much effort. We use the library to decode the bearer token that the API receives. After that, it's a matter of checking the relevant routes before each request.
+
+*This post was published initially in [Auth0](https://auth0.com/blog/secure-rails-api/).*
