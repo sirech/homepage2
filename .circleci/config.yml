@@ -4,7 +4,7 @@ jobs:
     working_directory: ~/app
 
     docker:
-      - image: cimg/node:16.5.0
+      - image: cimg/node:16.13.2
         auth:
           username: $DOCKER_USER
           password: $DOCKER_PASSWORD
@@ -38,7 +38,7 @@ jobs:
 
   deploy:
     docker:
-      - image: cimg/node:16.5.0
+      - image: cimg/node:16.13.2
         auth:
           username: $DOCKER_USER
           password: $DOCKER_PASSWORD
