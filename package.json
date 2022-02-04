@@ -101,10 +101,5 @@
     "test": "jest",
     "e2e": "cypress run",
     "prepare": "husky install"
-  },
-  "peerDependencies": {
-    "prismjs": "^1.13.0",
-    "react": "^15.6.2",
-    "react-dom": "15.6.2"
   }
 }
