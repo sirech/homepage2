@@ -5,6 +5,7 @@
     ":rebaseStalePrs",
     ":automergePatch",
     ":automergeLinters",
-    ":automergeTesters"
+    ":automergeTesters",
+    ":label(dependencies)"
   ]
 }
