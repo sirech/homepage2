@@ -163,6 +163,7 @@ module.exports = {
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-plugin-twitter',
     'gatsby-plugin-layout',

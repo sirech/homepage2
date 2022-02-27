@@ -73,11 +73,24 @@ describe('components', () => {
     })
 
     it('includes the image in the metadata', async () => {
-      const imageUrl = '/static/logo.png'
+      const imageUrl =
+        '/static/ba4de542f3c100c4bbb8ab30e7b392cf/15f20/cover.webp'
       const image = {
         childImageSharp: {
-          fluid: {
-            src: imageUrl,
+          gatsbyImageData: {
+            height: 502,
+            width: 750,
+            layout: 'constrained',
+            images: {
+              sources: [
+                {
+                  sizes: '(min-width: 750px) 750px, 100vw',
+                  srcSet:
+                    '/static/ba4de542f3c100c4bbb8ab30e7b392cf/31395/cover.webp 188w,\n/static/ba4de542f3c100c4bbb8ab30e7b392cf/9bc7c/cover.webp 375w,\n/static/ba4de542f3c100c4bbb8ab30e7b392cf/15f20/cover.webp 750w,\n/static/ba4de542f3c100c4bbb8ab30e7b392cf/7662c/cover.webp 1500w',
+                  type: 'image/webp',
+                },
+              ],
+            },
           },
         },
       }

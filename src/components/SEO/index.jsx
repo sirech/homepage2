@@ -31,6 +31,33 @@ const article = (siteUrl, date) => {
   ]
 }
 
+const buildImage = (post) => {
+  const image = Rpath([
+    'frontmatter',
+    'image',
+    'childImageSharp',
+    'gatsbyImageData',
+    'images',
+    'sources',
+  ])(post)
+
+  if (image && image.length >= 1) {
+    const rawImages = image[0].srcSet.split(',\n')
+    const images = {}
+
+    for (const line of rawImages) {
+      const split = line.split(' ')
+      images[split[1]] = split[0]
+    }
+
+    if (images['750w']) {
+      return images['750w']
+    }
+  }
+
+  return null
+}
+
 const SEO = ({ post, site }) => {
   const title = Rpath(['frontmatter', 'title'])(post)
   const siteTitle = Rpath(['siteMetadata', 'title'])(site)
@@ -46,13 +73,7 @@ const SEO = ({ post, site }) => {
   const draft = Rpath(['frontmatter', 'draft'])(post)
   const canonical = Rpath(['frontmatter', 'canonical'])(post)
 
-  const image = Rpath([
-    'frontmatter',
-    'image',
-    'childImageSharp',
-    'fluid',
-    'src',
-  ])(post)
+  const image = buildImage(post)
   const imageUrl = image ? siteUrl + image : null
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
@@ -126,8 +147,14 @@ SEO.propTypes = {
       canonical: PropTypes.string,
       image: PropTypes.shape({
         childImageSharp: PropTypes.shape({
-          fluid: PropTypes.shape({
-            src: PropTypes.string.isRequired,
+          gatsbyImageData: PropTypes.shape({
+            images: PropTypes.shape({
+              sources: PropTypes.arrayOf(
+                PropTypes.shape({
+                  srcSet: PropTypes.string.isRequired,
+                })
+              ),
+            }),
           }),
         }),
       }),

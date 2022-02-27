@@ -61,7 +61,6 @@ export const pageQuery = graphql`
         twitter
       }
     }
-
     post: markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
       html
@@ -76,14 +75,11 @@ export const pageQuery = graphql`
         canonical
         image {
           childImageSharp {
-            fluid(maxWidth: 750) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 750, layout: CONSTRAINED)
           }
         }
       }
     }
-
     related: allMarkdownRemark(
       filter: { frontmatter: { path: { in: $related } } }
     ) {
@@ -91,11 +87,9 @@ export const pageQuery = graphql`
         ...PostHeadline
       }
     }
-
     previous: markdownRemark(frontmatter: { path: { eq: $previous } }) {
       ...PostHeadline
     }
-
     next: markdownRemark(frontmatter: { path: { eq: $next } }) {
       ...PostHeadline
     }
