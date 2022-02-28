@@ -15,13 +15,13 @@ const links = [
 class SiteNavi extends React.Component {
   link(url, name) {
     return (
-      <li
-        key={name}
-        className={
-          this.props.location.pathname === url ? 'nav-item active' : 'nav-item'
-        }
-      >
-        <Link to={url} className={cx(underline, 'nav-link')}>
+      <li key={name} className="nav-item">
+        <Link
+          to={url}
+          className={cx(underline, 'nav-link', {
+            active: this.props.location.pathname === url,
+          })}
+        >
           {name}
         </Link>
       </li>
@@ -31,16 +31,14 @@ class SiteNavi extends React.Component {
   render() {
     const { title } = this.props
     return (
-      <nav className="navbar navbar-expand navbar-dark flex-column flex-md-row bg-dark">
+      <nav className="navbar navbar-expand navbar-dark flex-column flex-md-row bg-dark px-3">
         <Link className="text-center" to="/">
-          <h1 className="navbar-brand mb-0 mr-sm-0 mr-md-2">{title}</h1>
+          <h1 className="navbar-brand mb-0 me-sm-0 me-md-2">{title}</h1>
         </Link>
-        <div className="navbar-nav-scroll">
-          <ul className="navbar-nav bd-navbar-nav flex-row">
-            {links.map(([url, name]) => this.link(url, name))}
-          </ul>
-        </div>
-        <ul className="navbar-icons navbar-nav flex-row ml-md-auto d-md-flex">
+        <ul className="navbar-nav bd-navbar-nav flex-row">
+          {links.map(([url, name]) => this.link(url, name))}
+        </ul>
+        <ul className="navbar-icons navbar-nav flex-row ms-md-auto d-md-flex">
           <li className={cx(`${icon}`, 'nav-item')}>
             <a href="/rss.xml" className="nav-link" aria-label="RSS Feed">
               <i className="fa fa-rss fa-lg" />

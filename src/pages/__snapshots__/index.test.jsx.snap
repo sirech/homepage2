@@ -247,52 +247,53 @@ exports[`components Profile renders correctly 1`] = `
             >
               Oh My Zsh
             </a>
+            .
           </p>
           <ul
             class="text-center"
           >
             <li
-              class="mr-1 mb-1 badge badge-secondary badge-pill"
+              class="me-1 mb-1 badge bg-secondary rounded-pill"
             >
               spacemacs
             </li>
             <li
-              class="mr-1 mb-1 badge badge-secondary badge-pill"
+              class="me-1 mb-1 badge bg-secondary rounded-pill"
             >
               zsh
             </li>
             <li
-              class="mr-1 mb-1 badge badge-secondary badge-pill"
+              class="me-1 mb-1 badge bg-secondary rounded-pill"
             >
               git
             </li>
             <li
-              class="mr-1 mb-1 badge badge-secondary badge-pill"
+              class="me-1 mb-1 badge bg-secondary rounded-pill"
             >
               tmux
             </li>
             <li
-              class="mr-1 mb-1 badge badge-secondary badge-pill"
+              class="me-1 mb-1 badge bg-secondary rounded-pill"
             >
               Google Chrome
             </li>
             <li
-              class="mr-1 mb-1 badge badge-secondary badge-pill"
+              class="me-1 mb-1 badge bg-secondary rounded-pill"
             >
               hammerspoon
             </li>
             <li
-              class="mr-1 mb-1 badge badge-secondary badge-pill"
+              class="me-1 mb-1 badge bg-secondary rounded-pill"
             >
               Alfred
             </li>
             <li
-              class="mr-1 mb-1 badge badge-secondary badge-pill"
+              class="me-1 mb-1 badge bg-secondary rounded-pill"
             >
               Dash
             </li>
             <li
-              class="mr-1 mb-1 badge badge-secondary badge-pill"
+              class="me-1 mb-1 badge bg-secondary rounded-pill"
             >
               trello
             </li>

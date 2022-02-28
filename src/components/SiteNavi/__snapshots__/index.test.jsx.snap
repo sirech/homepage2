@@ -3,68 +3,64 @@
 exports[`components SiteNavi renders correctly 1`] = `
 <DocumentFragment>
   <nav
-    class="navbar navbar-expand navbar-dark flex-column flex-md-row bg-dark"
+    class="navbar navbar-expand navbar-dark flex-column flex-md-row bg-dark px-3"
   >
     <a
       class="text-center"
       href="/"
     >
       <h1
-        class="navbar-brand mb-0 mr-sm-0 mr-md-2"
+        class="navbar-brand mb-0 me-sm-0 me-md-2"
       >
         title
       </h1>
     </a>
-    <div
-      class="navbar-nav-scroll"
-    >
-      <ul
-        class="navbar-nav bd-navbar-nav flex-row"
-      >
-        <li
-          class="nav-item active"
-        >
-          <a
-            class="underline nav-link"
-            href="/"
-          >
-            About
-          </a>
-        </li>
-        <li
-          class="nav-item"
-        >
-          <a
-            class="underline nav-link"
-            href="/talks/"
-          >
-            Talks
-          </a>
-        </li>
-        <li
-          class="nav-item"
-        >
-          <a
-            class="underline nav-link"
-            href="/blog/"
-          >
-            Blog
-          </a>
-        </li>
-        <li
-          class="nav-item"
-        >
-          <a
-            class="underline nav-link"
-            href="/tags"
-          >
-            Tags
-          </a>
-        </li>
-      </ul>
-    </div>
     <ul
-      class="navbar-icons navbar-nav flex-row ml-md-auto d-md-flex"
+      class="navbar-nav bd-navbar-nav flex-row"
+    >
+      <li
+        class="nav-item"
+      >
+        <a
+          class="underline nav-link active"
+          href="/"
+        >
+          About
+        </a>
+      </li>
+      <li
+        class="nav-item"
+      >
+        <a
+          class="underline nav-link"
+          href="/talks/"
+        >
+          Talks
+        </a>
+      </li>
+      <li
+        class="nav-item"
+      >
+        <a
+          class="underline nav-link"
+          href="/blog/"
+        >
+          Blog
+        </a>
+      </li>
+      <li
+        class="nav-item"
+      >
+        <a
+          class="underline nav-link"
+          href="/tags"
+        >
+          Tags
+        </a>
+      </li>
+    </ul>
+    <ul
+      class="navbar-icons navbar-nav flex-row ms-md-auto d-md-flex"
     >
       <li
         class="icon nav-item"

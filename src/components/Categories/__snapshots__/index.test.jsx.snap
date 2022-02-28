@@ -6,7 +6,7 @@ exports[`components Categories renders correctly 1`] = `
     href="/blog/tags/react"
   >
     <span
-      class="tag badge mr-2"
+      class="tag badge me-2"
     >
       React
     </span>
@@ -15,7 +15,7 @@ exports[`components Categories renders correctly 1`] = `
     href="/blog/tags/springboot"
   >
     <span
-      class="tag badge mr-2"
+      class="tag badge me-2"
     >
       SpringBoot
     </span>
@@ -24,7 +24,7 @@ exports[`components Categories renders correctly 1`] = `
     href="/blog/tags/ssl-certificates"
   >
     <span
-      class="tag badge mr-2"
+      class="tag badge me-2"
     >
       SSL Certificates
     </span>

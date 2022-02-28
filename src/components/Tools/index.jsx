@@ -4,7 +4,7 @@ import Container from '../Container'
 import tools from './toolList'
 
 const toolItem = (name) => (
-  <li key={name} className="mr-1 mb-1 badge badge-secondary badge-pill">
+  <li key={name} className="me-1 mb-1 badge bg-secondary rounded-pill">
     {name}
   </li>
 )
@@ -34,6 +34,7 @@ const Tools = () => (
       >
         Oh My Zsh
       </a>
+      .
     </p>
 
     <ul className="text-center">{tools.map((tool) => toolItem(tool))}</ul>

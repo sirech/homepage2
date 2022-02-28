@@ -6,7 +6,7 @@ exports[`components Category renders correctly 1`] = `
     href="/blog/tags/react"
   >
     <span
-      class="tag badge mr-2"
+      class="tag badge me-2"
     >
       React - 3
     </span>
