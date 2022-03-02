@@ -1,9 +1,13 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "settings": {
     "react": {
       "version": "detect"
     }
+  },
+  "parserOptions": {
+    "requireConfigFile": false,
+    "sourceType": "module"
   },
   "env": {
     "browser": true,
