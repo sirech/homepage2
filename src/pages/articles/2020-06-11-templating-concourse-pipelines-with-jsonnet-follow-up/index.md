@@ -4,7 +4,7 @@ date: "2020-06-12"
 layout: post
 path: "/templating-concourse-pipelines-with-jsonnet-follow-up/"
 categories:
-  - Concourse
+  - Concourse CI
   - Jsonnet
   - Templating
 draft: false
