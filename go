@@ -64,11 +64,6 @@ goal_all() {
   SITE_URL=http://test.com goal_build
 }
 
-goal_publish() {
-  : "$REPOSITORY"
-  node_modules/.bin/gh-pages -d public -b main --repo $REPOSITORY
-}
-
 validate-args() {
   acceptable_args="$(declare -F | sed -n "s/declare -f goal_//p" | tr '\n' ' ')"
 
