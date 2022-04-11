@@ -26,8 +26,7 @@ jobs:
           SITE_URL: ${{ secrets.SITE_URL }}
       - name: Deploy to Github Pages
         run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY_OWNER}/${REPOSITORY}.git
-          npx gh-pages -d public -b main -u "github-actions-bot <support+actions@github.com>"
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npx gh-pages -d public -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPOSITORY: ${{ secrets.REPOSITORY }}
