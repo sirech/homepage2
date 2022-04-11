@@ -17,10 +17,10 @@ jobs:
       - run: ./go linter-js
       - run: ./go linter-css
       - run: yarn test --coverage --runInBand
-      - name: Upload coverage results
-        run: |
-          cat coverage/lcov.info | node_modules/.bin/coveralls
-        if: always()
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - run: ./go build
         env:
           site_url: ${{ secrets.SITE_URL }}
