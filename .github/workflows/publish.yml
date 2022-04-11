@@ -1,0 +1,29 @@
+name: Publish
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'yarn'
+      - run: yarn
+      - run: ./go linter-js
+      - run: ./go linter-css
+      - run: yarn test --coverage --runInBand
+      - name: Upload coverage results
+        run: |
+          cat coverage/lcov.info | node_modules/.bin/coveralls
+        if: always()
+      - run: ./go build
+        env:
+          site_url: ${{ secrets.SITE_URL }}
+      - run: ./go publish
+        env:
+          repository: ${{ secrets.REPOSITORY }}
