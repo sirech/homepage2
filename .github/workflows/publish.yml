@@ -23,7 +23,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - run: ./go build
         env:
-          site_url: ${{ secrets.SITE_URL }}
+          SITE_URL: ${{ secrets.SITE_URL }}
       - run: ./go publish
         env:
-          repository: ${{ secrets.REPOSITORY }}
+          REPOSITORY: ${{ secrets.REPOSITORY }}
