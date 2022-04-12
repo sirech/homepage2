@@ -36,11 +36,12 @@ jobs:
 
   security:
     needs: publish
-
     runs-on: ubuntu-latest
-    container: owasp/zap2docker-weekly
-
     steps:
-      - run: zap-baseline.py -t $SITE_URL -u https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/master/zap.conf
-        env:
-          SITE_URL: https://${{ secrets.DOMAIN }}
+      - uses: actions/checkout@v3
+      - name: ZAP Scan
+        uses: zaproxy/action-baseline@v0.6.1
+        with:
+          docker_name: 'owasp/zap2docker-stable'
+          target: https://${{ secrets.DOMAIN }}
+          rules_file_name: zap.conf
