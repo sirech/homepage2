@@ -41,6 +41,7 @@ jobs:
     container: owasp/zap2docker-weekly
 
     steps:
-      - run: zap-baseline.py -t $SITE_URL -u zap.conf
+      - run: zap-baseline.py -t $SITE_URL -u $ZAP_CONF
         env:
           SITE_URL: https://${{ secrets.DOMAIN }}
+          ZAP_CONF: https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/master/zap.conf
