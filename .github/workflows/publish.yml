@@ -33,3 +33,12 @@ jobs:
           BUILD_FOLDER: public
           DOMAIN: ${{ secrets.DOMAIN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  security:
+    runs-on: ubuntu-latest
+    container: owasp/zap2docker-weekly
+
+    steps:
+      - run: zap-baseline.py -t $SITE_URL -u zap.conf
+        env:
+          SITE_URL: https://${{ secrets.DOMAIN }}
