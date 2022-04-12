@@ -1,0 +1,29 @@
+name: Test
+on:
+  push:
+    branches-ignore:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'yarn'
+      - run: yarn
+      - run: ./go linter-js
+      - run: ./go linter-css
+      - run: yarn test --coverage --runInBand
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - run: ./go build
+        env:
+          SITE_URL: https://${{ secrets.DOMAIN }}
