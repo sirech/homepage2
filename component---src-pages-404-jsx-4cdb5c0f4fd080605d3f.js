@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkhomepage=self.webpackChunkhomepage||[]).push([[256],{7291:function(e,t,a){a.r(t);var n=a(7294);t.default=()=>n.createElement("section",{className:"mt-5 text-center"},n.createElement("h1",null,"404 - Not Found"))}}]);
+//# sourceMappingURL=component---src-pages-404-jsx-4cdb5c0f4fd080605d3f.js.map

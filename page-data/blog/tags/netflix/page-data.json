@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-index-js",
+    "path": "/blog/tags/netflix",
+    "result": {"pageContext":{"siteMetadata":{"title":"Mario Fernandez","description":"This is the blog from Mario Fernandez, a Software Developer working for ThoughtWorks","author":"Mario Fernandez","url":"https://hceris.com","twitter":"@sirech"},"group":[{"frontmatter":{"layout":"post","title":"Book Review: No rules rules, Netflix and the culture of reinvention","path":"/book-review-no-rules-rules-netflix/","categories":["Book Review","Netflix"],"date":"2020/12/13","draft":false,"description":"A book about Netflix's culture is out. Talent density, candor, leading with context are some of the principles they follow"}}],"pathPrefix":"blog/tags/netflix","first":true,"last":true,"index":1,"pageCount":1,"additionalContext":{"siteMetadata":{"title":"Mario Fernandez","description":"This is the blog from Mario Fernandez, a Software Developer working for ThoughtWorks","author":"Mario Fernandez","url":"https://hceris.com","twitter":"@sirech"}}}},
+    "staticQueryHashes": []}

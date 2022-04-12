@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-index-js",
+    "path": "/blog/tags/react-hooks",
+    "result": {"pageContext":{"siteMetadata":{"title":"Mario Fernandez","description":"This is the blog from Mario Fernandez, a Software Developer working for ThoughtWorks","author":"Mario Fernandez","url":"https://hceris.com","twitter":"@sirech"},"group":[{"frontmatter":{"layout":"post","title":"Custom Components in Formik","path":"/custom-components-in-formik/","categories":["React","Formik","react-hooks"],"date":"2019/08/15","draft":false,"description":"Formik is the new cool kid on the block for forms in react. Here is how to build custom input elements on top"}}],"pathPrefix":"blog/tags/react-hooks","first":true,"last":true,"index":1,"pageCount":1,"additionalContext":{"siteMetadata":{"title":"Mario Fernandez","description":"This is the blog from Mario Fernandez, a Software Developer working for ThoughtWorks","author":"Mario Fernandez","url":"https://hceris.com","twitter":"@sirech"}}}},
+    "staticQueryHashes": []}

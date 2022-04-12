@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-index-js",
+    "path": "/blog/tags/redux",
+    "result": {"pageContext":{"siteMetadata":{"title":"Mario Fernandez","description":"This is the blog from Mario Fernandez, a Software Developer working for ThoughtWorks","author":"Mario Fernandez","url":"https://hceris.com","twitter":"@sirech"},"group":[{"frontmatter":{"layout":"post","title":"Angular from the perspective of a React fan - Part 3","path":"/angular-from-react-part3/","categories":["JavaScript","React","Angular","TypeScript","angular-cli","redux"],"date":"2018/07/07","draft":false,"description":"Third part of my series on Angular, coming from a React background. This article focus on state management"}}],"pathPrefix":"blog/tags/redux","first":true,"last":true,"index":1,"pageCount":1,"additionalContext":{"siteMetadata":{"title":"Mario Fernandez","description":"This is the blog from Mario Fernandez, a Software Developer working for ThoughtWorks","author":"Mario Fernandez","url":"https://hceris.com","twitter":"@sirech"}}}},
+    "staticQueryHashes": []}

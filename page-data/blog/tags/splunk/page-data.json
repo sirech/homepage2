@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-index-js",
+    "path": "/blog/tags/splunk",
+    "result": {"pageContext":{"siteMetadata":{"title":"Mario Fernandez","description":"This is the blog from Mario Fernandez, a Software Developer working for ThoughtWorks","author":"Mario Fernandez","url":"https://hceris.com","twitter":"@sirech"},"group":[{"frontmatter":{"layout":"post","title":"Monitoring Tools: 6 to Cover All Your Needs","path":"/monitoring-tools-to-cover-all-your-needs/","categories":["Monitoring","Alerts","Splunk","DevOps"],"date":"2022/01/06","draft":false,"description":"Here are the six different types of monitoring tools that will give you and your team everything you need to feel confident about your applications' health."}}],"pathPrefix":"blog/tags/splunk","first":true,"last":true,"index":1,"pageCount":1,"additionalContext":{"siteMetadata":{"title":"Mario Fernandez","description":"This is the blog from Mario Fernandez, a Software Developer working for ThoughtWorks","author":"Mario Fernandez","url":"https://hceris.com","twitter":"@sirech"}}}},
+    "staticQueryHashes": []}

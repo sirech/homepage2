@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-index-js",
+    "path": "/blog/tags/distributed-systems",
+    "result": {"pageContext":{"siteMetadata":{"title":"Mario Fernandez","description":"This is the blog from Mario Fernandez, a Software Developer working for ThoughtWorks","author":"Mario Fernandez","url":"https://hceris.com","twitter":"@sirech"},"group":[{"frontmatter":{"layout":"post","title":"Book Review: Designing Data-Intensive Applications","path":"/book-review-designing-data-intensive-applications/","categories":["Book Review","Architecture","Distributed Systems"],"date":"2022/03/07","draft":false,"description":"If you want to dive into distributed systems, there's no better choice right now than Designing Data-Intensive Applications"}}],"pathPrefix":"blog/tags/distributed-systems","first":true,"last":true,"index":1,"pageCount":1,"additionalContext":{"siteMetadata":{"title":"Mario Fernandez","description":"This is the blog from Mario Fernandez, a Software Developer working for ThoughtWorks","author":"Mario Fernandez","url":"https://hceris.com","twitter":"@sirech"}}}},
+    "staticQueryHashes": []}
