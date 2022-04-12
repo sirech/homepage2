@@ -35,6 +35,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   security:
+    needs: publish
+
     runs-on: ubuntu-latest
     container: owasp/zap2docker-weekly
 
