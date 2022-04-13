@@ -55,10 +55,6 @@ jobs:
           node-version: '16'
           cache: 'yarn'
       - run: yarn
-      - name: e2e
-        uses: cypress-io/github-action@v2
-        with:
-          install: false
-          command: ./go test-e2e --record
+      - run: ./go test-e2e --record
         env:
           SITE_URL: https://${{ secrets.DOMAIN }}
