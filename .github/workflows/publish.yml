@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
+          node-version-file: '.nvmrc'
           cache: 'yarn'
       - run: yarn
       - run: ./go linter-js
@@ -54,6 +55,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
+          node-version-file: '.nvmrc'
           cache: 'yarn'
       - run: yarn
       - name: e2e
