@@ -45,3 +45,20 @@ jobs:
           docker_name: 'owasp/zap2docker-stable'
           target: https://${{ secrets.DOMAIN }}
           rules_file_name: zap.conf
+
+  post-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'yarn'
+      - run: yarn
+      - name: e2e
+        uses: cypress-io/github-action@v2
+        with:
+          install: false
+          command: ./go test-e2e --record
+        env:
+          SITE_URL: https://${{ secrets.DOMAIN }}
