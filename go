@@ -7,19 +7,19 @@ set -o pipefail
 SCRIPT_DIR=$(cd "$(dirname "$0")" ; pwd -P)
 
 goal_linter-js() {
-  npm run linter:js
+  n exec auto npm run linter:js
 }
 
 goal_linter-css() {
-  npm run linter:css
+  n exec auto npm run linter:css
 }
 
 goal_test-js() {
-  npm test
+  n exec auto npm test
 }
 
 goal_test-e2e() {
-  CYPRESS_baseUrl=${SITE_URL?Site Url is not defined} npm run e2e -- "$@"
+  CYPRESS_baseUrl=${SITE_URL?Site Url is not defined} n exec auto npm run e2e -- "$@"
 }
 
 goal_security-check() {
@@ -44,13 +44,13 @@ goal_lighthouse() {
 }
 
 goal_run() {
-  SITE_URL=http://localhost:8000 npm run develop
+  SITE_URL=http://localhost:8000 n exec auto npm run develop
 }
 
 goal_build() {
   # Fail if site url is not provided
   : "$SITE_URL"
-  npm run build
+  n exec auto npm run build
 }
 
 goal_clean-build() {
