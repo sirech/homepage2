@@ -1,29 +1,36 @@
 ---
 title: "Making a Microservice More Resilient Against Downstream Failure"
-date: "2022-04-28"
+date: "2022-05-08"
 layout: post
 path: "/making-a-microservice-more-resilient-against-downstream-failure/"
-description: ""
+description: "With the help of resilience4j I've built a fallback cache to significantly increase the fault tolerance of a service with multiple downstream dependencies"
 categories:
   - Software Engineering
   - Monitoring
   - DataDog
   - Netflix
   - resilience4j
-draft: true
+draft: false
 related:
   - /monitoring-alerts-that-dont-suck/
   - /synthetic-transactions/
   - /multiwindow-multi-burn-rate-alerts-in-datadog/
+image: ./images/cover.jpeg
 ---
 
-Monitoring and [alerting](../monitoring-alerts-that-dont-suck/) services is something that has taken a lot of my time for the past year. Nowadays, I like using [SLOs](../multiwindow-multi-burn-rate-alerts-in-datadog/) as a shared language to express expectations around the operational stability for any production grade service.
+<figure class="figure figure--right">
+  <img src="./images/cover.jpeg" alt="Resilience" />
+</figure>
 
-All these metrics are worthless if you don't do anything about them! That's exactly what I want to talk about. Concretely, I'm going to talk about making services more tolerant against downstream failures, using the wonderful [resilience4j](https://resilience4j.readme.io/).
+I like thinking about monitoring and [alerting](../monitoring-alerts-that-dont-suck/) a lot. [SLOs](../multiwindow-multi-burn-rate-alerts-in-datadog/) have been one of my latest obsessions over the past few months.
+
+However, all these metrics are worthless if you don't do act based on them! Worse than worthless. If you have comprehensive alerts that don't get fixed, you'll get swamped by a barrage of alerts.
+
+That's exactly what I want to talk about. Concretely, I'm going to talk about making services more tolerant against downstream failures, using the wonderful [resilience4j](https://resilience4j.readme.io/).
 
 ## Instability Can Ruin Your Day
 
-I was part of a team maintaining a service. That service was very visible for users, but didn't own any data. It relied on plenty of downstream dependencies. Sadly, those were very unstable and experienced frequent downtime. Those propagated to our service, which made us look bad. Check these error spikes:
+In my last project I maintained a service with high visibility. The service didn't own any data, relying instead on several downstream dependencies. Sadly, these dependencies were very unstable and experienced frequent downtime. The issues propagated to our service, causing errors. It made us look bad. Check these error spikes:
 
 <figure class="figure">
   <img src="./images/errors.png" alt="Error Rate" />
@@ -32,208 +39,218 @@ I was part of a team maintaining a service. That service was very visible for us
   </figcaption>
 </figure>
 
-Given that this was weighting on our [On-Call](https://github.com/sirech/talks/blob/master/2021-11-devoxx-humane_on_call_alerting_doesnt_have_to_be_painful.pdf) experience, we _had_ to do something about it. It was leading to a dangerous spiral that could only end in burn-out.
+Not only were our users getting a mediocre experience, but our [On-Call](https://github.com/sirech/talks/blob/master/2021-11-devoxx-humane_on_call_alerting_doesnt_have_to_be_painful.pdf) rotations were becoming a shitshow. We _had_ to do something about it. It was leading to a dangerous spiral that could only end in burn-out.
 
 ## Enter Resilience4j
 
-Our service is written on Java. That makes `resilience4j` a perfect fit. It's a library that provides a whole bunch of operators to increase fault tolerance. As a bonus, it's based on [vavr](https://www.vavr.io/) and thus it benefits from things like [Either types](../kotlin-either-types-instead-of-exceptions/) and all that good stuff.
+Our service is written in Java. That makes `resilience4j` a natural fit. In case you don't know, it's a library written by Netflix that provides a whole bunch of operators to increase fault tolerance. As a bonus, it's based on [vavr](https://www.vavr.io/) and thus it benefits from things like [Either types](../kotlin-either-types-instead-of-exceptions/) and all that good stuff. It's right up my alley.
 
-Now, there are two aspects I want to talk about:
+To prevent the nasty error spikes I showed before we're focusing on two things:
 
-- Using resilience operators to make our micro service a better citizen in the ecosystem
-- Building a Fallback Cache to prevent downstream errors from reaching our users
-
-Let's get some code to show how this looks like.
+- Using resilience operators to make our micro service a better behaved citizen
+- Building a fallback cache to prevent downstream errors from affecting our users
 
 ## Using Resilience Operators
 
-`resilience4j` provides a bunch of [operators](https://resilience4j.readme.io/docs) out of the box. One big plus of the library is its composability. There's little difference between only using a [Retry](https://resilience4j.readme.io/docs/retry) alone, or piping other operators, like a [CircuitBreaker](https://resilience4j.readme.io/docs/circuitbreaker). I'm not getting into the details of how they work, head over the documentation to get more details.
+`resilience4j` provides a bunch of [operators](https://resilience4j.readme.io/docs) out of the box that increase the fault tolerance of your remote calls. One big plus of this library is its composability. There's little difference between using a [Retry](https://resilience4j.readme.io/docs/retry) alone or piping other operators like a [CircuitBreaker](https://resilience4j.readme.io/docs/circuitbreaker). I'm not getting into the details of how they work, head over the documentation to get more details.
 
-If you use [Spring Boot](todo link), there's support for using annotations. There's always support for annotations if SpringBoot is involved, isn't it? In my case, that led to a fair amount of code duplication, so I ended building a small abstraction called a _FallbackCache_. Before we get to the caching part, let's focus on instantiating these operators. The code is quite declarative:
+If you use [Spring Boot](https://spring.io/projects/spring-boot), there's support for using annotations. There's always support for annotations if SpringBoot is involved. Interestingly enough, I feel the annotations create a bit too much duplication. See, I wanted to apply a common set of operators to six or seven remote calls. Annotating the methods and adding the fallbacks led to a messy solution.
 
-snippet declaring operators
+Instead, I built a small abstraction, a _FallbackCache_. Before we consider the caching part, let's focus on instantiating these operators. The code is quite declarative:
+
+```java
+Retry getRetry(String name, MeterRegistry meterRegistry) {
+  RetryRegistry retryRegistry = RetryRegistry.ofDefaults();
+  TaggedRetryMetrics.ofRetryRegistry(retryRegistry).bindTo(meterRegistry);
+  return retryRegistry.retry(name);
+}
+
+CircuitBreaker getCircuitBreaker(String name, MeterRegistry meterRegistry) {
+  CircuitBreakerRegistry circuitBreakerRegistry = CircuitBreakerRegistry
+      .ofDefaults();
+  TaggedCircuitBreakerMetrics
+      .ofCircuitBreakerRegistry(circuitBreakerRegistry).bindTo(meterRegistry);
+  return circuitBreakerRegistry.circuitBreaker(name);
+}
+```
+
+There's a vast amount of settings that you can configure. The default settings work well to get started. On top of that, I'm adding metrics for [micrometer](https://micrometer.io/).
 
 ## Building a Fallback Cache
 
-Building resilience operators is only one part of the equation. If you do a number of retries without success, or the circuit breaker is open, then what?
+Building resilience operators is only one part of the equation. Yes, we're retrying failed requests automatically. Thanks to the circuit breaker we won't [DDOS](https://en.wikipedia.org/wiki/Denial-of-service_attack) downstream services. But the user won't care. As it is, the errors propagate back to them.
 
-Our answer is a fallback cache. The flow is as follows:
+My answer is a fallback cache. The flow is as follows:
 
-![fallback calls]
+<figure class="figure">
+  <img src="./images/degradation.png" alt="Fallback flow" />
+  <figcaption class="figure__caption">
+  That's a happy user
+  </figcaption>
+</figure>
+
+This boils down to three steps:
+
+- Make a call to the downstream service with retries and a circuit breaker
+- If the call works, store the result in a cache and return it
+- If the call fails, use the cache to serve a fallback so that the user experience isn't compromised
+
+Before you ask, caching proactively wasn't an option as we didn't have a way to invalidate the cache when the underlying data changed. Anyhow, these three steps map nicely to a class with the following methods:
 
 ```java
 public class SyncFallbackCache<T, R extends Cacheable<T>> extends AbstractFallbackCache<T, R> {
-  public SyncFallbackCache(
-      String name,
-      CrudRepository<R, String> cache,
-      CircuitBreaker cb,
-      Retry retry,
-      MeterRegistry meterRegistry
-  ) {
-    super(name, cache, cb, retry, meterRegistry);
-  }
+  public T get(Supplier<String> keySupplier, Supplier<R> valueSupplier);
+  private T getAndCache(String key, Supplier<R> valueSupplier);
+  private T getFromCacheOrThrow(String key, RuntimeException exception);
+}
+```
 
-  /**
-   * Fetches data synchronously using the semantics described in {@link AbstractFallbackCache}.
-   *
-   * @param key           the key that identifies the object
-   * @param valueSupplier a supplier to perform the call
-   * @return the data returned from the service, or from the cache
-   * @throws io.github.resilience4j.circuitbreaker.CallNotPermittedException if the service is unhealthy and the
-   *                                                                         circuit breaker is open
-   * @throws RuntimeException                                                if the service throws an exception and
-   *                                                                         there's no cached value to serve
+Let's go one by one.
+
+### Making the Call
+
+The fallback cache doesn't do anything on its own, as it's rather a wrapper. We use a [Supplier](https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html) to pass the operation to perform. We need a key to identify the element in the cache, which uses another supplier for extra flexibility.
+
+```java
+public T get(Supplier<String> keySupplier, Supplier<R> valueSupplier) {
+  Supplier<T> decoratedSupplier = Decorators.ofSupplier(() -> getAndCache(key, valueSupplier))
+      .withRetry(retry)
+      .withCircuitBreaker(cb).decorate();
+
+  var key = keySupplier.get();
+
+  return Try.ofSupplier(decoratedSupplier)
+      .recover(RuntimeException.class, (exception) -> getFromCacheOrThrow(key, exception))
+      .get();
+}
+```
+
+We decorate the supplier with our operators. If the call works, we return the result. If not, there's a [Try](https://www.javadoc.io/doc/io.vavr/vavr/0.9.2/io/vavr/control/Try.html) wrapping it that looks for something to serve from the cache. If that fails as well we're out of options, and we can only propagate the error upstream.
+
+### Store the Result
+
+Whenever we get a valid result, we store it in the cache. Let's assume that `valueSupplier.get()` returns without any errors:
+
+```java
+private T getAndCache(String key, Supplier<R> valueSupplier) {
+  /*
+    This has the disadvantage that the [get result, cache it] is not atomic. So if two requests try to update the same key at the same time, it might create an undetermined result.
+
+    However, two calls to the same service should return the same value, so we should be able to live with that.
+
+    This is not happening inside the compute method anymore due to problems acquiring the lock that led to significant timeouts.
    */
-  public T get(String key, Supplier<R> valueSupplier) {
-    Supplier<T> decoratedSupplier = Decorators.ofSupplier(() -> getAndCache(key, valueSupplier))
-        .withRetry(retry)
-        .withCircuitBreaker(cb).decorate();
-
-    return Try.ofSupplier(decoratedSupplier)
-        .recover(RuntimeException.class, (exception) -> getFromCacheOrThrow(key, exception))
-        .get();
+  var result = valueSupplier.get();
+  if (result == null) {
+    return null;
   }
 
-  public static <X, Y extends Cacheable<X>> SyncFallbackCache<X, Y> of(
-      String name,
-      CrudRepository<Y, String> cache,
-      MeterRegistry meterRegistry
-  ) {
-    return of(name, cache, getCircuitBreaker(name, meterRegistry), getRetry(name, meterRegistry), meterRegistry);
-  }
+  return Try.of(() -> {
+    cache.save(result);
+    return result;
+  })
+      .recover(Exception.class, e -> {
+        log.error("Could not save result to cache", e);
+        return result;
+      })
+      .map(Cacheable::data)
+      .get();
+}
+```
 
-  static <X, Y extends Cacheable<X>> SyncFallbackCache<X, Y> of(
-      String name,
-      CrudRepository<Y, String> cache,
-      CircuitBreaker circuitBreaker,
-      Retry retry,
-      MeterRegistry meterRegistry
-  ) {
-    return new SyncFallbackCache<>(name, cache, circuitBreaker, retry, meterRegistry);
-  }
+This action should be as seamless as possible. We want to avoid blocking anything while we save the data. Moreover, we swallow any error that happens while saving. Failing to save to the cache shouldn't result in a failed request.
+
+### Use the Fallback
+
+If the supplier didn't work, our last hope is finding some content in the cache for the associated key. A value means that we can show valid, albeit possibly outdated, information to the user. A cache miss ends up with the original exception.
+
+```java
+private T getFromCacheOrThrow(String key, RuntimeException exception) {
+  var value = cache.findById(key);
+
+  value.ifPresent((v) -> {
+    log.info(String.format("FallbackCache[%s] got cached value", cb.getName()), v);
+  });
+
+  return value
+      .map(Cacheable::data)
+      .orElseThrow(() -> {
+            log.error(
+                String.format("FallbackCache[%s] got an error without a cached value", cb.getName()),
+                exception
+            );
+            throw exception;
+          }
+      );
+}
+```
+
+### The Caller's Perspective
+
+As a user, I need to instantiate a `SyncFallbackCache` and call the public method with the operation that I want to safeguard.
+
+```java
+private SyncFallbackCache<Collection<SupplierUserPermission>> permissions;
+
+private Collection<SupplierUserPermission> getPermissions(
+    int userId, 
+    int supplierId) {
+  return permissions.get(
+      () -> String.format("id:%s;suId:%s", userId, supplierId),
+      () -> client.getUserPermissions(userId, supplierId)
+          .getData()
+          .getSupplierUserMyInformation()
+          .getPermissions()
+  );
+}
+```
+
+As you can see, we don't need to know about what's happening underneath. It's pretty nifty. You could argue that the return type isn't explicit enough, as the method may throw an exception that's not part of the signature. An alternative is to model it with an [Either](https://www.javadoc.io/doc/io.vavr/vavr/0.10.0/io/vavr/control/Either.html).
+
+## Where's the Cache?
+
+I haven't spoken about the cache. The easiest alternative is using an in-memory cache like [Caffeine](https://github.com/ben-manes/caffeine). Something like this:
+
+```java
+static <R> Cache<String, R> cache(String name, MeterRegistry meterRegistry) {
+  Cache<String, R> cache = Caffeine.newBuilder()
+      .recordStats()
+      .expireAfterWrite(Duration.ofHours(24))
+      .maximumSize(6000)
+      .build();
+
+  CaffeineCacheMetrics.monitor(meterRegistry, cache, name);
+  return cache;
+}
+```
+
+This approach is convenient, yet flawed. Our application runs as a container. Every time it's restarted, the cache is wiped out. That's bad for our hit rate percentage, which hovered around 65-70%. That's not great for a cache, and still propagates way too many failures to the end user.
+
+To mitigate the problem, we switched to a persistent cache based on [Aerospike](https://aerospike.com/). _SpringBoot_ has some integrations to make this easier:
+
+```java
+public interface NavigationRepository extends
+    AerospikeRepository<CachedNavigation, String> {
 }
 ```
 
 ```java
-public abstract class AbstractFallbackCache<T, R extends Cacheable<T>> {
-  protected final CrudRepository<R, String> cache;
-  protected final CircuitBreaker cb;
-  protected final Retry retry;
+@Value
+@Document(collection = "navigation_CachedNavigationMenu")
+public class CachedNavigation implements Cacheable<List<LegacyNavMenuItem>> {
+  @Id
+  String id;
+  List<LegacyNavMenuItem> navigation;
 
-  private final Counter hitCounter;
-  private final Counter missCounter;
-  private final Counter putsCounter;
-
-  public AbstractFallbackCache(
-      String name,
-      CrudRepository<R, String> cache,
-      CircuitBreaker cb,
-      Retry retry,
-      MeterRegistry registry
-  ) {
-    this.cache = cache;
-    this.cb = cb;
-    this.retry = retry;
-
-    hitCounter = registry.counter("cache.gets", Arrays.asList(Tag.of("cache", name), Tag.of("result", "hit")));
-    missCounter = registry.counter("cache.gets", Arrays.asList(Tag.of("cache", name), Tag.of("result", "miss")));
-    putsCounter = registry.counter("cache.puts", Collections.singletonList(Tag.of("cache", name)));
-  }
-
-  protected static Retry getRetry(String name, MeterRegistry meterRegistry) {
-    RetryRegistry retryRegistry = RetryRegistry.ofDefaults();
-    TaggedRetryMetrics.ofRetryRegistry(retryRegistry).bindTo(meterRegistry);
-    return retryRegistry.retry(name);
-  }
-
-  protected static CircuitBreaker getCircuitBreaker(String name, MeterRegistry meterRegistry) {
-    CircuitBreakerRegistry circuitBreakerRegistry = CircuitBreakerRegistry.ofDefaults();
-    TaggedCircuitBreakerMetrics.ofCircuitBreakerRegistry(circuitBreakerRegistry).bindTo(meterRegistry);
-    return circuitBreakerRegistry.circuitBreaker(name);
-  }
-
-  protected T getAndCache(String key, Supplier<R> valueSupplier) {
-    /*
-      This has the disadvantage that the [get result, cache it] is not atomic. So if two requests try to update the
-      same key at the same time, it might create an undetermined result.
-
-      However, two calls to the same service should return the same value, so we should be able to live with that.
-
-      This is not happening inside the compute method anymore due to problems acquiring the lock that led to
-      significant timeouts.
-     */
-    var result = valueSupplier.get();
-    if (result == null) {
-      return null;
-    }
-
-    return Try.of(() -> {
-      cache.save(result);
-      putsCounter.increment();
-      return result;
-    })
-        .recover(DataAccessException.class, e -> {
-          log.error("Could not save result to cache", e);
-          return result;
-        })
-        .map(Cacheable::data)
-        .get();
-  }
-
-  protected T getFromCacheOrThrow(String key, RuntimeException exception) {
-    var value = cache.findById(key);
-
-    value.ifPresent((v) -> {
-      log.info(String.format("FallbackCache[%s] got cached value", cb.getName()), v);
-      hitCounter.increment();
-    });
-
-    return value
-        .map(Cacheable::data)
-        .orElseThrow(() -> {
-              log.error(
-                  String.format("FallbackCache[%s] got an error without a cached value", cb.getName()),
-                  exception
-              );
-              missCounter.increment();
-              throw exception;
-            }
-        );
-  }
-
-  public void clearCache() {
-    cache.deleteAll();
+  @Override
+  public List<LegacyNavMenuItem> data() {
+    return navigation;
   }
 }
 ```
 
-### Using the Abstraction
+Using the cache for failure scenarios means invalidation isn't that relevant. The persistent cache made a tangible difference that brought our hit rate percentage up to the high 90s. That's a lot better, isn't it?
 
-snippet usage
+## A Journey With a Happy Ending
 
-### Measuring Success
-
-![hit rate]
-
-## Persistent Caching
-
-doing ephemereal caching with containers is limited by design to the lifecycle of these containers. Our hit rates weren't good enough, to be frank.
-
-We switched from in-memory caches to persistent ones. We used [Aerospike](todo link) for that. Our case is serializing data classes from and to JSON, so any highly-available datastore works in this scenario. Again, _SpringBoot_ has some integrations to make this easier:
-
-snippet serializable model
-
-Using the cache for failure scenarios means that invalidation isn't that relevant, which is good, because we don't get notified when the data becomes stale.
-
-### Measuring Success (Part 2)
-
-![hit rate]
-
-That's a lot better, isn't it?
-
-
-## Did It Work?
-
-That's a fair question to ask. Did all this _actually_ work? Luckily, yes. Our error rate went from X to Y. A significant improvement that made a world of difference in our rotations.
-
-  
+Was all this effort _worth it_? Hell, yes. Our error rate went from 2% to 0.03%. We've set an SLO for service's availability of 99,95%. Our rotations became significantly smoother. I had so much time available that I could write blog posts about it!
