@@ -18,4 +18,5 @@ module.exports = {
     __PATH_PREFIX__: '',
   },
   testEnvironment: 'jsdom',
+  reporters: ['default', 'github-actions'],
 }
