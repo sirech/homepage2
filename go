@@ -7,7 +7,7 @@ set -o pipefail
 SCRIPT_DIR=$(cd "$(dirname "$0")" ; pwd -P)
 
 _npm() {
-  if test $(which nna); then
+  if test $(which n); then
     n exec auto npm "$@"
   else
     npm "$@"
