@@ -109,6 +109,10 @@ export const talks = [
     'https://github.com/sirech/talks/blob/master/2022-03-burda_iaas-resilience-against-downstream-failures.pdf',
     'Burda IaaS - Resilience against downstream failures',
   ],
+  [
+    'https://github.com/sirech/talks/blob/master/2022-05-voxxed-applications_instead_of_libraries.pdf',
+    'Voxxed Days Zurich - Applications instead of libraries',
+  ],
 ].reverse()
 
 const extractYear = (item) => {
