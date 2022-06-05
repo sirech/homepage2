@@ -58,7 +58,7 @@ jobs:
           cache: 'yarn'
       - run: yarn
       - name: e2e
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4
         env:
           CYPRESS_baseUrl: https://${{ secrets.DOMAIN }}
       - run: ./go lighthouse
