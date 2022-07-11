@@ -1,4 +1,148 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mario Fernandez]]></title><description><![CDATA[This is the blog from Mario Fernandez, a Software Developer working for ThoughtWorks]]></description><link>https://hceris.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 05 Jun 2022 14:11:23 GMT</lastBuildDate><atom:link href="https://hceris.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Book Review: Site Reliability Workbook]]></title><description><![CDATA[Everybody's favorite saga about Site Reliability Engineering is back. This time it comes with plenty of actionable advice.]]></description><link>https://hceris.com/book-review-site-reliability-workbook/</link><guid isPermaLink="false">https://hceris.com/book-review-site-reliability-workbook/</guid><category><![CDATA[Book Review]]></category><category><![CDATA[DevOps]]></category><category><![CDATA[Monitoring]]></category><category><![CDATA[Alerts]]></category><category><![CDATA[On-Call]]></category><pubDate>Mon, 23 May 2022 00:00:00 GMT</pubDate><content:encoded>&lt;figure class=&quot;figure&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mario Fernandez]]></title><description><![CDATA[This is the blog from Mario Fernandez, a Software Developer working for ThoughtWorks]]></description><link>https://hceris.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 11 Jul 2022 20:23:51 GMT</lastBuildDate><atom:link href="https://hceris.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Tips for Coding Interviews at FAANG]]></title><description><![CDATA[Coding interviews at FAANG are difficult. Let me share some tips that helped me go through these interviews successfully]]></description><link>https://hceris.com/tips-for-coding-interviews-at-faang/</link><guid isPermaLink="false">https://hceris.com/tips-for-coding-interviews-at-faang/</guid><category><![CDATA[Interviews]]></category><category><![CDATA[Coding Challenge]]></category><category><![CDATA[FAANG]]></category><category><![CDATA[Career]]></category><pubDate>Mon, 11 Jul 2022 00:00:00 GMT</pubDate><content:encoded>&lt;figure class=&quot;figure figure--right&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 750px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/9dff55309a2652e21cb2509173830c07/0f98f/cover.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEEBf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHQlcIslKn/xAAZEAADAQEBAAAAAAAAAAAAAAAAAgMSEyH/2gAIAQEAAQUCKWydnKqzl1yen//EABURAQEAAAAAAAAAAAAAAAAAABBB/9oACAEDAQE/AYf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAADAAMAAAAAAAAAAAAAAAAAAREQITH/2gAIAQEABj8CNHBRwStx/8QAHBABAAICAwEAAAAAAAAAAAAAAQARMUEhcYGh/9oACAEBAAE/IQoWFxF3uKYT5KQY2M24zc7fZ//aAAwDAQACAAMAAAAQF9//xAAVEQEBAAAAAAAAAAAAAAAAAAAQIf/aAAgBAwEBPxCD/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAh/9oACAECAQE/EB2f/8QAHBABAAIDAAMAAAAAAAAAAAAAAQARITFBUYGR/9oACAEBAAE/EBddHYuXI5E9RoSa3QifkjPuJXRKuCsYKhbqP//Z&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;Whiteboard interview&quot; title=&quot;Whiteboard interview&quot; src=&quot;/static/9dff55309a2652e21cb2509173830c07/acb04/cover.jpg&quot; srcset=&quot;/static/9dff55309a2652e21cb2509173830c07/bc01b/cover.jpg 188w,
+/static/9dff55309a2652e21cb2509173830c07/bf173/cover.jpg 375w,
+/static/9dff55309a2652e21cb2509173830c07/acb04/cover.jpg 750w,
+/static/9dff55309a2652e21cb2509173830c07/ec605/cover.jpg 1125w,
+/static/9dff55309a2652e21cb2509173830c07/c58a3/cover.jpg 1500w,
+/static/9dff55309a2652e21cb2509173830c07/0f98f/cover.jpg 1920w&quot; sizes=&quot;(max-width: 750px) 100vw, 750px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/figure&gt;
+&lt;p&gt;Have you ever considered a position in &lt;a href=&quot;https://en.wikipedia.org/wiki/Big_Tech&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;BigTech&lt;/a&gt; as an engineer? Lots of people do. There’s no shortage of articles where people talk about their experiences.&lt;/p&gt;
+&lt;p&gt;If you’ve looked into it, you know that you’ll have to pass a coding interview as part of the process. Possibly multiple rounds, depending on the company. You’re unlikely to get an offer without a decent performance. Better be prepared for them.&lt;/p&gt;
+&lt;p&gt;Let’s talk about coding interviews. There are way too many articles about this topic already. I’m assuming you’re familiar with the format already. I’m going to focus on a bunch of things that helped me during the interview process at FAANG.&lt;/p&gt;
+&lt;p&gt;If you’re not up to speed, check out &lt;a href=&quot;https://blog.pragmaticengineer.com/preparing-for-the-systems-design-and-coding-interviews/#coding-interviews&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;this article&lt;/a&gt; from the pragmatic engineer. He’s an invaluable source on all things related to tech.&lt;/p&gt;
+&lt;h2&gt;Coding Interviews Have Moved Online&lt;/h2&gt;
+&lt;p&gt;Coding interviews are about writing a small program. Typically it’s an algorithmic challenge. Traditionally, you’d do that in person, writing your code on a whiteboard.&lt;/p&gt;
+&lt;p&gt;Nowadays, most interviews happen remotely using some online editor. It’s a pretty significant improvement, as coding on a whiteboard is quite uncomfortable. Still, don’t expect much more than simple code highlighting. You don’t get to compile or run your code.&lt;/p&gt;
+&lt;p&gt;Thus, the very first thing to do is to get familiar with the environment you’ll be using in the real interview.&lt;/p&gt;
+&lt;h2&gt;Preparing for a Coding Interview&lt;/h2&gt;
+&lt;p&gt;It goes without saying, but if you’re going through the process, you’ll have to spend time preparing. If you can’t commit to that, or you fundamentally oppose the idea, then you should skip the whole thing. I don’t think you can realistically pass a FAANG interview loop without any preparation.&lt;/p&gt;
+&lt;p&gt;With that in mind, here are six tips for a more successful coding interview:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The Right Amount of Grinding&lt;/li&gt;
+&lt;li&gt;Speed is Key&lt;/li&gt;
+&lt;li&gt;Share your Thoughts&lt;/li&gt;
+&lt;li&gt;Get Used to Write Readable Code&lt;/li&gt;
+&lt;li&gt;A Clear Structure&lt;/li&gt;
+&lt;li&gt;Don’t Give Up&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;The Right Amount of Grinding&lt;/h3&gt;
+&lt;figure class=&quot;figure figure--left&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 750px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/2505631315ee2ca9932729f3065bc97a/78bce/grinding.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 64.8936170212766%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAQP/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABT1WqE45hX//EABoQAAIDAQEAAAAAAAAAAAAAAAABAgMSETH/2gAIAQEAAQUCqkiyowkRfJuOT0//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAbEAACAwADAAAAAAAAAAAAAAAAAREhIhIxQf/aAAgBAQAGPwLi+mZs07EyZdeEn//EABwQAAICAgMAAAAAAAAAAAAAAAABETEhQVFxgf/aAAgBAQABPyFD3xqejvJRg4G+oZvZBN1s/9oADAMBAAIAAwAAABAM7//EABgRAAIDAAAAAAAAAAAAAAAAAAABESGB/9oACAEDAQE/EG5VmH//xAAXEQADAQAAAAAAAAAAAAAAAAABECEx/9oACAECAQE/EBMX/8QAGxABAQADAQEBAAAAAAAAAAAAAREAIUFxYdH/2gAIAQEAAT8QKjVgefTBSdOhFPncZNAqNzEikbHu8kDAInvv5ikqqKtz/9k=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;Grinding&quot; title=&quot;Grinding&quot; src=&quot;/static/2505631315ee2ca9932729f3065bc97a/acb04/grinding.jpg&quot; srcset=&quot;/static/2505631315ee2ca9932729f3065bc97a/bc01b/grinding.jpg 188w,
+/static/2505631315ee2ca9932729f3065bc97a/bf173/grinding.jpg 375w,
+/static/2505631315ee2ca9932729f3065bc97a/acb04/grinding.jpg 750w,
+/static/2505631315ee2ca9932729f3065bc97a/ec605/grinding.jpg 1125w,
+/static/2505631315ee2ca9932729f3065bc97a/c58a3/grinding.jpg 1500w,
+/static/2505631315ee2ca9932729f3065bc97a/78bce/grinding.jpg 5100w&quot; sizes=&quot;(max-width: 750px) 100vw, 750px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+  &lt;figcaption class=&quot;figure__caption&quot;&gt;
+  Putting that subscription to use
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;There’s a whole industry built around preparing for technical interviews. Books, videos, courses, websites, you name it. I would stick to &lt;a href=&quot;https://leetcode.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;LeetCode&lt;/a&gt;. LeetCode is a highly convenient place to practice exercises similar to the ones you’ll encounter.&lt;/p&gt;
+&lt;p&gt;LeetCode has a ton of exercises, though. It’s easy to get lost. You read horror stories of people that spent months doing it full time. I don’t think you need to get to those extremes to have success.&lt;/p&gt;
+&lt;p&gt;Aim for breadth. I used LeetCode to develop a broad portfolio of techniques you can apply to any problem. Some concrete recommendations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cover a variety of structures, like Arrays, Hashes, Linked Lists, Heaps, Trees, or Graphs&lt;/li&gt;
+&lt;li&gt;Cover a variety of techniques, like Binary Search, BFS/DFS, Sort, Backtracking, or Sliding Windows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other structures like Tries or &lt;a href=&quot;https://en.wikipedia.org/wiki/Disjoint_sets&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Disjoint Sets&lt;/a&gt; make some difficult problems super easy. It’s never a bad idea to expand your toolkit.&lt;/p&gt;
+&lt;p&gt;Certain algorithms are just too hard to implement in the context of an interview. Nobody other than a sadist will ask you to write a Red-Black Tree in an interview. Then you have some edge cases, like Dynamic Programming. Google is supposed to like them a lot. Get familiar with some of them, but remember that plenty of people struggle mightily solving them.&lt;/p&gt;
+&lt;p&gt;LeetCode categorizes problems as &lt;em&gt;easy/medium/hard&lt;/em&gt;. I doubt you will pass an interview for BigTech if you can only handle easy problems. If you are good at finishing medium problems, you’re probably good to go. If you can reliably solve hard problems under the constraints of an interview you probably don’t need my advice.&lt;/p&gt;
+&lt;h3&gt;Speed is Key&lt;/h3&gt;
+&lt;figure class=&quot;figure figure--right&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 750px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/0db5e10bee26e511d7e5ac70c44fd24a/d2602/kotlin.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAABAv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAR6boTGj/8QAGhAAAQUBAAAAAAAAAAAAAAAAAgABAwQREP/aAAgBAQABBQIijc9rraybv//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EAB4QAAAEBwAAAAAAAAAAAAAAAAABAjMREiAhUZGS/9oACAEBAAY/AlTIjfIZPoNK3R//xAAaEAACAgMAAAAAAAAAAAAAAAAAAREhEEGR/9oACAEBAAE/IWyzW61nTWcHCD//2gAMAwEAAgADAAAAEPwf/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQMBAT8Qp//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAECAQE/EIf/xAAeEAEAAgICAwEAAAAAAAAAAAABACERMUFxgaHB8P/aAAgBAQABPxBGqpysqFHhgux6T9hyfl3K7O7cnMt36Rj/2Q==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;Kotlin&quot; title=&quot;Kotlin&quot; src=&quot;/static/0db5e10bee26e511d7e5ac70c44fd24a/acb04/kotlin.jpg&quot; srcset=&quot;/static/0db5e10bee26e511d7e5ac70c44fd24a/bc01b/kotlin.jpg 188w,
+/static/0db5e10bee26e511d7e5ac70c44fd24a/bf173/kotlin.jpg 375w,
+/static/0db5e10bee26e511d7e5ac70c44fd24a/acb04/kotlin.jpg 750w,
+/static/0db5e10bee26e511d7e5ac70c44fd24a/ec605/kotlin.jpg 1125w,
+/static/0db5e10bee26e511d7e5ac70c44fd24a/c58a3/kotlin.jpg 1500w,
+/static/0db5e10bee26e511d7e5ac70c44fd24a/d2602/kotlin.jpg 4032w&quot; sizes=&quot;(max-width: 750px) 100vw, 750px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+  &lt;figcaption class=&quot;figure__caption&quot;&gt;
+  The king of terse code
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Interviews are short. You have about 15-20 minutes per problem to solve two problems, at best. Minimizing the amount of typing gives you back some valuable time.&lt;/p&gt;
+&lt;p&gt;For that reason, I recommend using the highest-level language you’re comfortable with. I don’t know if esoteric languages are a good bet, though.&lt;/p&gt;
+&lt;p&gt;Python is a common choice because it’s both popular and high-level. I’m not a C++ person, but it feels a bit too low level. I find Java too verbose (consider using a newer version if you pick it). I don’t like JavaScript as it doesn’t have a very comprehensive standard library.&lt;/p&gt;
+&lt;p&gt;I ended up using Kotlin. Similar to Java, but much more succinct. You can use all the standard libraries. I like the language a lot, so it made my preparation easier. I think you should stick to one language, though. Most companies are fairly accommodating in that respect.&lt;/p&gt;
+&lt;h3&gt;Share your Thoughts&lt;/h3&gt;
+&lt;p&gt;You can’t solve problems silently. Even if you’re correct, you might lose your interviewer. However, don’t mistake this ubiquitous advice for constant talking. Just avoiding silence isn’t good enough.&lt;/p&gt;
+&lt;p&gt;You should talk about the options that you’re considering. What are the tradeoffs? Maybe you have a great idea that won’t fit within the interview. Share your thoughts and let the interviewer participate. Many are happy to support you and offer valuable tips and input.&lt;/p&gt;
+&lt;p&gt;Once you start coding, shift to discuss why you are doing things. Explain the choices you make in data structures. Walk the interviewer through the structure of the code. Show her a coherent path.&lt;/p&gt;
+&lt;p&gt;Talking while coding isn’t easy to practice just by doing LeetCode. Consider walking a friend through a problem, or doing a mock interview.&lt;/p&gt;
+&lt;h3&gt;Get Used to Writing Readable Code&lt;/h3&gt;
+&lt;figure class=&quot;figure figure--left&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 750px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/cfc3eed1f7a6842ba3bae3045f3c5cda/fc9e0/readable.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 66.48936170212765%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEC/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAP/2gAMAwEAAhADEAAAAbbmFcg//8QAFhABAQEAAAAAAAAAAAAAAAAAEAFB/9oACAEBAAEFAo4f/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEQITFx/9oACAEBAAE/IcRQsdGo/9oADAMBAAIAAwAAABC0/wD/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPxAn/8QAGhABAAMBAQEAAAAAAAAAAAAAAQARMSFxsf/aAAgBAQABPxAtCwqPN+xFSpDaeJh2GZP/2Q==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;Readable&quot; title=&quot;Readable&quot; src=&quot;/static/cfc3eed1f7a6842ba3bae3045f3c5cda/acb04/readable.jpg&quot; srcset=&quot;/static/cfc3eed1f7a6842ba3bae3045f3c5cda/bc01b/readable.jpg 188w,
+/static/cfc3eed1f7a6842ba3bae3045f3c5cda/bf173/readable.jpg 375w,
+/static/cfc3eed1f7a6842ba3bae3045f3c5cda/acb04/readable.jpg 750w,
+/static/cfc3eed1f7a6842ba3bae3045f3c5cda/ec605/readable.jpg 1125w,
+/static/cfc3eed1f7a6842ba3bae3045f3c5cda/c58a3/readable.jpg 1500w,
+/static/cfc3eed1f7a6842ba3bae3045f3c5cda/fc9e0/readable.jpg 5817w&quot; sizes=&quot;(max-width: 750px) 100vw, 750px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+  &lt;figcaption class=&quot;figure__caption&quot;&gt;
+  Good variable naming
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The pressure of getting something done quickly will tempt you to take shortcuts. Don’t do that.&lt;/p&gt;
+&lt;p&gt;Use good variable names and split chunks into functions. Write idiomatic code. If needed, add a comment or two. It will help you, and it will help the interviewer evaluate you.&lt;/p&gt;
+&lt;p&gt;Splitting the code has another benefit; you can tackle things in order of importance. Most interviewers won’t care if you leave boilerplate functions unimplemented. I’ve had interviewers that completed some of my methods while I was writing the core part.&lt;/p&gt;
+&lt;p&gt;You won’t have linters or formatters to help produce readable output. It’s on you to get this ingrained as a habit. Doing it naturally means you won’t have to focus on it, which leaves space to focus on other meatier parts of the interview.&lt;/p&gt;
+&lt;h3&gt;A Clear Structure&lt;/h3&gt;
+&lt;p&gt;Following a clear structure helped me a lot. If you get nervous you might forget important steps. Take this as an example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Understand the problem. State it in your own words.&lt;/li&gt;
+&lt;li&gt;Input/Output. Write down some inputs and the outputs. Think of edge cases.&lt;/li&gt;
+&lt;li&gt;Approach. Think of an approach, and explain the tradeoffs.&lt;/li&gt;
+&lt;li&gt;Code the solution&lt;/li&gt;
+&lt;li&gt;Read through your solution carefully. Spot errors&lt;/li&gt;
+&lt;li&gt;Test the code. Run a sample input manually&lt;/li&gt;
+&lt;li&gt;How does the solution perform? Use the O-notation, for time and space&lt;/li&gt;
+&lt;li&gt;Can you improve it?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Notice how coding is just one among many steps. That’s comparable to how you’d approach a problem in real life.&lt;/p&gt;
+&lt;figure class=&quot;figure figure--right&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 750px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/f92eeacb10aa1ba2e28e87a8cd4ee17d/fd63d/discipline.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 64.36170212765958%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMBBf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABtHLOeeG//8QAGRAAAwEBAQAAAAAAAAAAAAAAAAECAxEh/9oACAEBAAEFAnPl5Ux52idWPai7ff/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/AYj/xAAcEAACAAcAAAAAAAAAAAAAAAAAAQIRICExMkH/2gAIAQEABj8C16OULyXVH//EABkQAQADAQEAAAAAAAAAAAAAAAEAESFBkf/aAAgBAQABPyFAU7zVQYdCUFopekyrEGZF7X2f/9oADAMBAAIAAwAAABAvP//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxAbW//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QD//EABoQAQEBAQEBAQAAAAAAAAAAAAERIQAxgUH/2gAIAQEAAT8QE8kpaIny5wlYiJcTpOoGDvNBDhSuzzmavG7V+8pUM/ef/9k=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;Discipline&quot; title=&quot;Discipline&quot; src=&quot;/static/f92eeacb10aa1ba2e28e87a8cd4ee17d/acb04/discipline.jpg&quot; srcset=&quot;/static/f92eeacb10aa1ba2e28e87a8cd4ee17d/bc01b/discipline.jpg 188w,
+/static/f92eeacb10aa1ba2e28e87a8cd4ee17d/bf173/discipline.jpg 375w,
+/static/f92eeacb10aa1ba2e28e87a8cd4ee17d/acb04/discipline.jpg 750w,
+/static/f92eeacb10aa1ba2e28e87a8cd4ee17d/ec605/discipline.jpg 1125w,
+/static/f92eeacb10aa1ba2e28e87a8cd4ee17d/c58a3/discipline.jpg 1500w,
+/static/f92eeacb10aa1ba2e28e87a8cd4ee17d/fd63d/discipline.jpg 4100w&quot; sizes=&quot;(max-width: 750px) 100vw, 750px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+  &lt;figcaption class=&quot;figure__caption&quot;&gt;
+  Programmers estimating the time complexity of a double loop
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Being disciplined is key. It gives you time to explore the boundaries of the problem. Maybe you misunderstood the problem. Establishing a conversation helps you work on what the interviewer wants, not what you have in mind. Depending on seniority, you won’t pass the interview if you only code a solution without thinking about edge cases and testing the solution by yourself.&lt;/p&gt;
+&lt;p&gt;If you don’t find the optimal approach, take any solution that you can think of and iterate. Iterate continuously until you get to a good place. Clear code and discipline help tremendously here.&lt;/p&gt;
+&lt;p&gt;Given that you’re diligently preparing, there’s a chance that you get a problem that you’ve seen before. Don’t pretend to struggle and “magically” find the optimal solution. You’ll make an ass of yourself and fail in the process. Be honest in what you know. Let the interviewer change the problem if they need to, but don’t force the issue yourself.&lt;/p&gt;
+&lt;p&gt;Learn to do reasonable O-notation estimations on the fly. Nobody is going to expect hard proof in the middle of the interview. A few heuristics go a long way.&lt;/p&gt;
+&lt;h3&gt;Don’t Give Up!&lt;/h3&gt;
+&lt;p&gt;If you get stuck, don’t panic. Keep trying things, and keep voicing your thoughts. A naive solution is better than no solution. You might think that you’re bombing the interview, but some problems are too big by design.&lt;/p&gt;
+&lt;p&gt;If you’re running out of time, explain how you would continue with the parts that are missing. Whatever you do, don’t give up. Even if your performance isn’t great, show as much as possible.&lt;/p&gt;
+&lt;h2&gt;What if I Always Get Nervous During Coding Interviews?&lt;/h2&gt;
+&lt;p&gt;Welcome to the club! Very few people are naturally good at this. An interview is a stressful situation, no matter what. Preparing well gives you the backbone to rely on when things get rough. Interviewers want you to succeed, for the most part.&lt;/p&gt;
+&lt;p&gt;Even if you are well prepared, you’ll fail some interviews miserably. Shit happens. Don’t take it as a personal failure. Everybody has gone through that.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Book Review: Site Reliability Workbook]]></title><description><![CDATA[Everybody's favorite saga about Site Reliability Engineering is back. This time it comes with plenty of actionable advice.]]></description><link>https://hceris.com/book-review-site-reliability-workbook/</link><guid isPermaLink="false">https://hceris.com/book-review-site-reliability-workbook/</guid><category><![CDATA[Book Review]]></category><category><![CDATA[DevOps]]></category><category><![CDATA[Monitoring]]></category><category><![CDATA[Alerts]]></category><category><![CDATA[On-Call]]></category><pubDate>Mon, 23 May 2022 00:00:00 GMT</pubDate><content:encoded>&lt;figure class=&quot;figure&quot;&gt;
   &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 540px; &quot;&gt;
       &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/877fe33b02bca4b4f35c2832599d2ea3/09d21/cover.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
     &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 131.38297872340425%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAaABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//aAAwDAQACEAMQAAABrLmprKiNJ0WmzlFB0gX/xAAeEAABBAIDAQAAAAAAAAAAAAACAAEDBBESEBQjM//aAAgBAQABBQI2jzrAvWNS/VVW2iOubn1zVcNAWG4//8QAFxEAAwEAAAAAAAAAAAAAAAAAAAESEP/aAAgBAwEBPwGkIlZ//8QAGBEAAwEBAAAAAAAAAAAAAAAAAAESEFH/2gAIAQIBAT8Bh9GW8//EACQQAAIBAgMJAAAAAAAAAAAAAAABAhESAyIyICExQVFhcZGh/9oACAEBAAY/As0PhoXopg2uPcn5OKqZuo3dGjNUCjae/lsf/8QAHBABAAMBAAMBAAAAAAAAAAAAAQARITFBUWHB/9oACAEBAAE/IRYG9WLMSkLdvZakiTY66y2uHtcBkC2IawS9jd+TEdApjxPgQyf/2gAMAwEAAgADAAAAECcRQ//EABcRAQEBAQAAAAAAAAAAAAAAAAERADH/2gAIAQMBAT8QbcypctghDf/EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxAQgRxgZVdb/8QAHhABAQEAAQUBAQAAAAAAAAAAAREAITFBUXHRwfH/2gAIAQEAAT8QY99EJfeaBzxX409JTEh7P3TLx0JmaAdA7giOz1NJ+EF4xuVuvU/NXoFCHM85BhKb+VgCAHrf/9k=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
