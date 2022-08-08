@@ -132,7 +132,7 @@ With that being said, this is a sample agenda I've used before:
    2. Go as deep as you can
    3. Trade-offs!
 7. Operational concerns
-   1. Points of failure (error handling**
+   1. Points of failure (error handling)
    2. Monitoring
    3. Analytics -> Business metrics
 8. Scaling Up
