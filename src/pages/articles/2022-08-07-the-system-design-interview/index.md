@@ -18,6 +18,15 @@ related:
 image: ./images/cover.jpeg
 ---
 
+<div class="guide">
+
+### Interviewing at BigTech
+
+- [Part 1 - Coding Interview](../tips-for-coding-interviews-at-faang/)
+- [**Part 2 - System Design**](../the-system-design-interview/)
+
+</div>
+
 <figure class="figure figure--right">
   <img src="./images/cover.jpg" alt="System design interview" />
 </figure>
