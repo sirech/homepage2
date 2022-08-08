@@ -44,6 +44,13 @@ If your company doesn't provide any opportunity to engage in these activities, y
 
 ## Preparation Materials
 
+<figure class="figure figure--left">
+  <img src="./images/ddia.png" alt="DDIA" />
+  <figcaption class="figure__caption">
+  The bible of System Design
+  </figcaption>
+</figure>
+
 Designing data-intensive applications ([DDIA](https://hceris.com/book-review-designing-data-intensive-applications/)) is the canonical book for system design. It's almost a mandatory read as it covers such a vast amount of topics that are relevant to system design. Additionally, it helps polish your vocabulary to communicate more efficiently with the interviewer.
 
 Specialized courses are popping up that cover the topic. Alex Wu's [course](https://courses.systeminterview.com/) is probably the best and completely worth your money.
@@ -79,6 +86,13 @@ There's a vast amount of materials out there. I won't cover the basics, or tell 
 A lot of these suggestions are very fuzzy. How much scope is too much? How do you know how much time you can spend in an area? That's why you practice. You need to get a feeling of that, and that's only happening if you practice in advance. 
 
 ## Present a Clear Structure
+
+<figure class="figure figure--right">
+  <img src="./images/plan.jpg" alt="Plan" />
+  <figcaption class="figure__caption">
+  We're getting somewhere here
+  </figcaption>
+</figure>
 
 There's so much you can talk about in a system design interview. It's easy to get lost or start aimlessly rambling. That's why it's useful to create a rough outline of the topics you're going to cover. It has two crucial benefits:
 
