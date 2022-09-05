@@ -24,6 +24,7 @@ image: ./images/cover.jpeg
 
 - [Part 1 - Coding Interview](../tips-for-coding-interviews-at-faang/)
 - [**Part 2 - System Design**](../the-system-design-interview/)
+- [Part 3 - Behavioral](../the-behavioral-interview/)
 
 </div>
 
