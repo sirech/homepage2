@@ -1,8 +1,110 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mario Fernandez]]></title><description><![CDATA[This is the blog from Mario Fernandez, a Software Developer working for ThoughtWorks]]></description><link>https://hceris.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 28 Aug 2022 19:21:28 GMT</lastBuildDate><atom:link href="https://hceris.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[The System Design Interview]]></title><description><![CDATA[The system design interview is an unavoidable part of interviewing at FAANG. Let's see how to prepare for them successfully]]></description><link>https://hceris.com/the-system-design-interview/</link><guid isPermaLink="false">https://hceris.com/the-system-design-interview/</guid><category><![CDATA[Interviews]]></category><category><![CDATA[Coding Challenge]]></category><category><![CDATA[FAANG]]></category><category><![CDATA[Career]]></category><category><![CDATA[System Design]]></category><pubDate>Mon, 08 Aug 2022 00:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;guide&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mario Fernandez]]></title><description><![CDATA[This is the blog from Mario Fernandez, a Software Developer working for ThoughtWorks]]></description><link>https://hceris.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 07 Sep 2022 19:09:08 GMT</lastBuildDate><atom:link href="https://hceris.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[The Behavioral Interview]]></title><description><![CDATA[The behavioral interview is the last component of the FAANG interview. Less technical yet challenging, as you need to talk about your experience effectively]]></description><link>https://hceris.com/the-behavioral-interview/</link><guid isPermaLink="false">https://hceris.com/the-behavioral-interview/</guid><category><![CDATA[Interviews]]></category><category><![CDATA[Coding Challenge]]></category><category><![CDATA[FAANG]]></category><category><![CDATA[Career]]></category><pubDate>Wed, 07 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;guide&quot;&gt;
+&lt;h3&gt;Interviewing at BigTech&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;../tips-for-coding-interviews-at-faang/&quot;&gt;Part 1 - Coding Interview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;../the-system-design-interview/&quot;&gt;Part 2 - System Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;../the-behavioral-interview/&quot;&gt;&lt;strong&gt;Part 3 - Behavioral&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;figure class=&quot;figure figure--right&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 750px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/bfdf323d5cce7a31aa0970b520168a61/93719/cover.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 66.48936170212765%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAWAQEBAQAAAAAAAAAAAAAAAAACAAH/2gAMAwEAAhADEAAAAaOHyiuAaWf/xAAaEAADAQADAAAAAAAAAAAAAAABAgMRAAQS/9oACAEBAAEFAmgCVivOwMsp9BmyrDT/AP/EABYRAQEBAAAAAAAAAAAAAAAAAAAREv/aAAgBAwEBPwHSv//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/AYj/xAAaEAACAgMAAAAAAAAAAAAAAAAAEQEhAhCB/9oACAEBAAY/AmWuElmS1//EABwQAQABBAMAAAAAAAAAAAAAAAEAESFRcTFBgf/aAAgBAQABPyFlb7LgDMWRiqZNTRIzknXMKuz/2gAMAwEAAgADAAAAEDP/AP/EABYRAQEBAAAAAAAAAAAAAAAAAAEQEf/aAAgBAwEBPxDQR//EABURAQEAAAAAAAAAAAAAAAAAABAx/9oACAECAQE/ELH/xAAbEAEAAwADAQAAAAAAAAAAAAABABEhMUGRUf/aAAgBAQABPxDEhW0Al1WfIwLOIPqI5C2h24iIW7YxoRa6WnG+R6Ws/9k=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;Behavioral interview&quot; title=&quot;Behavioral interview&quot; src=&quot;/static/bfdf323d5cce7a31aa0970b520168a61/acb04/cover.jpg&quot; srcset=&quot;/static/bfdf323d5cce7a31aa0970b520168a61/bc01b/cover.jpg 188w,
+/static/bfdf323d5cce7a31aa0970b520168a61/bf173/cover.jpg 375w,
+/static/bfdf323d5cce7a31aa0970b520168a61/acb04/cover.jpg 750w,
+/static/bfdf323d5cce7a31aa0970b520168a61/ec605/cover.jpg 1125w,
+/static/bfdf323d5cce7a31aa0970b520168a61/c58a3/cover.jpg 1500w,
+/static/bfdf323d5cce7a31aa0970b520168a61/93719/cover.jpg 4000w&quot; sizes=&quot;(max-width: 750px) 100vw, 750px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/figure&gt;
+&lt;p&gt;The behavioral interview is the last component of the interview loop at &lt;a href=&quot;https://en.wikipedia.org/wiki/Big_Tech&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;BigTech&lt;/a&gt;. It’s not, as its name implies, a technical interview. Instead, it focuses on your previous experience. You’re there to show that you understand how to act and communicate. It’s similar to the System Design round in that it weighs more heavily for senior candidates.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Well, I don’t need preparation to talk about my experience&lt;/em&gt;, you might think. And you’d be wrong. Don’t underestimate this interview or you will fail it miserably. A behavioral interview isn’t an informal chat where you reminisce about your previous experience and have a good laugh in the end. There are clear expectations.&lt;/p&gt;
+&lt;p&gt;I’m ending my series about interviewing talking about this interview format.&lt;/p&gt;
+&lt;h2&gt;Structure of a Behavioral Interview&lt;/h2&gt;
+&lt;p&gt;A behavioral interview centers around open-ended questions. There are many, many &lt;a href=&quot;https://igotanoffer.com/blogs/tech/amazon-behavioral-interview&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;sample questions&lt;/a&gt; on the internet. They tend to sound similar, though:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tell me about a project where you had a big impact&lt;/li&gt;
+&lt;li&gt;Tell me how you solved a conflict between multiple teams&lt;/li&gt;
+&lt;li&gt;Tell me about a time when you had to make a quick decision&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that these questions focus on your &lt;em&gt;previous&lt;/em&gt; experience, not hypothetical scenarios. The reasoning is that it’s easier to understand how you think by hearing about what you did already.&lt;/p&gt;
+&lt;p&gt;These questions are vague and undefined. However, that doesn’t mean you should answer with the first thing that comes to mind. Doing so is a recipe for rejection. Instead, the canonical advice is to use the &lt;a href=&quot;https://interviewsteps.com/blogs/news/amazon-star-method&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;STAR&lt;/a&gt; method. While that’s the right starting point, we can build on top and do better. Allow me to explain.&lt;/p&gt;
+&lt;h2&gt;STAR is Flawed&lt;/h2&gt;
+&lt;figure class=&quot;figure figure--left&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 750px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/75312e3aa45b27bcfecdb798c293491b/c42e5/book.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 66.48936170212765%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAwACBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHjZU4GaP/EABkQAQADAQEAAAAAAAAAAAAAAAIAAREDEP/aAAgBAQABBQIckzZ8Sl3syf/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABkQAQADAQEAAAAAAAAAAAAAAAEAEBESIf/aAAgBAQAGPwLojWHgTWv/xAAbEAEAAgIDAAAAAAAAAAAAAAABABEhYRBBUf/aAAgBAQABPyFTRo9gXS9cKOXAC5Z7Ilyz/9oADAMBAAIAAwAAABCnL//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/EIf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAIAQIBAT8Quq//xAAcEAEAAgIDAQAAAAAAAAAAAAABABEhQTFRcWH/2gAIAQEAAT8QGWg0jl7qFuAKA9/fCJSjqHkxI41uK4WnNPL3E8l+z//Z&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;Book&quot; title=&quot;Book&quot; src=&quot;/static/75312e3aa45b27bcfecdb798c293491b/acb04/book.jpg&quot; srcset=&quot;/static/75312e3aa45b27bcfecdb798c293491b/bc01b/book.jpg 188w,
+/static/75312e3aa45b27bcfecdb798c293491b/bf173/book.jpg 375w,
+/static/75312e3aa45b27bcfecdb798c293491b/acb04/book.jpg 750w,
+/static/75312e3aa45b27bcfecdb798c293491b/ec605/book.jpg 1125w,
+/static/75312e3aa45b27bcfecdb798c293491b/c58a3/book.jpg 1500w,
+/static/75312e3aa45b27bcfecdb798c293491b/c42e5/book.jpg 4928w&quot; sizes=&quot;(max-width: 750px) 100vw, 750px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+  &lt;figcaption class=&quot;figure__caption&quot;&gt;
+  This response could be shorter
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;STAR (&lt;em&gt;Situation&lt;/em&gt;, &lt;em&gt;Task&lt;/em&gt;, &lt;em&gt;Action&lt;/em&gt;, &lt;em&gt;Result&lt;/em&gt;) is a way of structuring your answers to any behavioral question. You start explaining the context. Then, you talk about your task. You follow with your actions, and in the end, you round it up with the results of those actions. Using this structure ensures that you tell a coherent story.&lt;/p&gt;
+&lt;p&gt;There’s a problem, and it has to do with repetition. In practice, &lt;em&gt;Situation&lt;/em&gt; and &lt;em&gt;Task&lt;/em&gt; often overlap significantly. If you follow the method rigidly you’ll end up mostly saying the same thing twice. It might sound innocuous, but you can’t afford to use your limited time inefficiently.&lt;/p&gt;
+&lt;p&gt;In these interviews, time is your enemy. At Meta, for instance, they last 45 minutes. That includes the introduction and &lt;em&gt;your&lt;/em&gt; questions, mind you. You won’t have enough time to talk about all the wonderful things you have done. Repeating yourself leaves you less time to provide useful signal. It makes the interviewer’s evaluation harder, which reduces your chances.&lt;/p&gt;
+&lt;p&gt;I prefer using a streamlined version of STAR. Let’s call it PAR: &lt;em&gt;Problem&lt;/em&gt;, &lt;em&gt;Action&lt;/em&gt;, &lt;em&gt;Result&lt;/em&gt;.&lt;/p&gt;
+&lt;h2&gt;Using PAR&lt;/h2&gt;
+&lt;p&gt;Let’s say you get one of the aforementioned questions. You come prepared and want to answer it following this method. What are the relevant bits to include for each section?&lt;/p&gt;
+&lt;h3&gt;Problem&lt;/h3&gt;
+&lt;p&gt;This part is about giving context. Where were you, when was that, and what was your role. Make it short and crisp. Skip any detail about your position that’s not fundamental for understanding the situation.&lt;/p&gt;
+&lt;p&gt;After that, it’s time to describe the problem. Remember that you have to make it understandable for people who weren’t there. Talk about the timelines. If you were measuring the problem with some KPI, that’s worth mentioning.&lt;/p&gt;
+&lt;p&gt;Be succinct! An interviewer will get frustrated if you bore them with irrelevant details. Practice saying the least possible that is still enough to understand what’s going on.&lt;/p&gt;
+&lt;h3&gt;Action&lt;/h3&gt;
+&lt;p&gt;You set up the stages, now it’s time for the important bit. What did &lt;em&gt;you&lt;/em&gt; do? Explain that without domain-specific context or internal terminology. Focus on what &lt;em&gt;you&lt;/em&gt; did. A behavioral question isn’t the time to talk about the team. They are looking to hire &lt;strong&gt;you&lt;/strong&gt;, not your team. Ensure that there’s no ambiguity about that.&lt;/p&gt;
+&lt;p&gt;Don’t go too broad with your answer. For a complex project, you did a lot of things. You don’t have time for all of them. Pick the top three that are the most relevant for the question and had the most impact. Again, you’re looking for the right amount of detail.&lt;/p&gt;
+&lt;h3&gt;Result&lt;/h3&gt;
+&lt;p&gt;The result is where you round up your answer and come to a satisfying conclusion. You did a whole bunch of things. Talk about the outcome. There &lt;strong&gt;has&lt;/strong&gt; to be some outcome. If all your actions changed nothing, find another example.&lt;/p&gt;
+&lt;p&gt;Ideally, you’ll have numbers that you can mention. You don’t always have solid, well-measured numbers, but you can make reasoned estimations. Don’t make outlandish claims unless you’re ready to justify them.&lt;/p&gt;
+&lt;p&gt;Depending on time, consider including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Next Steps: What would come next?&lt;/li&gt;
+&lt;li&gt;Scaling: How can you use what you did to scale it to a bigger audience?&lt;/li&gt;
+&lt;li&gt;Learnings: What would you do differently next time?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You put all three together, and that’s your answer. See &lt;a href=&quot;https://lethain.com/star-method/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;this post&lt;/a&gt; from Will Larson to see an example.&lt;/p&gt;
+&lt;h2&gt;Building a Portfolio of Experiences&lt;/h2&gt;
+&lt;p&gt;In my experience, the best way to prepare for the behavioral interview is to build and curate a portfolio of examples based on your experience. There are way too many questions out there. You can’t prepare specific answers for all of them. Instead, I focused on having strong examples that cover multiple behaviors. That way, you can adjust them to the situation instead of scrambling to think of something unique on the spot.&lt;/p&gt;
+&lt;figure class=&quot;figure figure--right&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 750px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/93a1093d00d8b17b0c168740d51ff694/12609/portfolio.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 66.48936170212765%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDBAX/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAdlIrl5wg3//xAAaEAACAwEBAAAAAAAAAAAAAAAAAgERIQMS/9oACAEBAAEFAlKgfHWaOj+UfZ//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAWEQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8BNX//xAAYEAADAQEAAAAAAAAAAAAAAAAAEBECUf/aAAgBAQAGPwJaVhen/8QAGRABAAMBAQAAAAAAAAAAAAAAAQARIWEQ/9oACAEBAAE/ITbpOUyu+B0oaIUE6Ln/2gAMAwEAAgADAAAAELvP/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8QqP/EABcRAAMBAAAAAAAAAAAAAAAAAAEQESH/2gAIAQIBAT8QCsX/xAAaEAEBAAMBAQAAAAAAAAAAAAABEQAhMWHB/9oACAEBAAE/ECcpC9xQBul7iOJu4u0Gk3hvQkudCoa9T5n/2Q==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;Portfolio&quot; title=&quot;Portfolio&quot; src=&quot;/static/93a1093d00d8b17b0c168740d51ff694/acb04/portfolio.jpg&quot; srcset=&quot;/static/93a1093d00d8b17b0c168740d51ff694/bc01b/portfolio.jpg 188w,
+/static/93a1093d00d8b17b0c168740d51ff694/bf173/portfolio.jpg 375w,
+/static/93a1093d00d8b17b0c168740d51ff694/acb04/portfolio.jpg 750w,
+/static/93a1093d00d8b17b0c168740d51ff694/ec605/portfolio.jpg 1125w,
+/static/93a1093d00d8b17b0c168740d51ff694/c58a3/portfolio.jpg 1500w,
+/static/93a1093d00d8b17b0c168740d51ff694/12609/portfolio.jpg 3000w&quot; sizes=&quot;(max-width: 750px) 100vw, 750px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+  &lt;figcaption class=&quot;figure__caption&quot;&gt;
+  A future portfolio of success
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The &lt;a href=&quot;https://www.amazon.jobs/en/principles&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Amazon Leadership Principles&lt;/a&gt; are a good base. They cover plenty of ground, so you get to think about many different aspects of your previous jobs. I have a table with examples spanning my career that I’ve refined carefully. I usually follow the same approach to extend this table.&lt;/p&gt;
+&lt;p&gt;First, I write down a sketch of my answer. Just enough that I know all the points I want to cover. It’s fine to bring your notes to an interview, but don’t read a whole answer straight out of them. Once the case is ready it’s time to polish it! Your first version will inevitably suck. You probably made it too long. Or didn’t make the results clear enough. In any case, you need to iterate relentlessly. Get feedback from somebody you trust for extra perspective.&lt;/p&gt;
+&lt;p&gt;Lastly, test it out. Read the scenario aloud to yourself or somebody else. Do a mock interview, or use it in a real interview. While your experience remains the same, your ability to present it will improve massively.&lt;/p&gt;
+&lt;h3&gt;Some Extra Thoughts&lt;/h3&gt;
+&lt;p&gt;Don’t make stuff up. Honestly, you’ll probably get caught and fail the interview. Even if you somehow put it past your interviewer, you’re setting yourself up for failure.&lt;/p&gt;
+&lt;p&gt;Try to cover a decent span of your career. People want to see that you have acquired a broad array of experiences. At the same time, your most recent work is the most valuable. It’s easier to remember, and it’s a closer representation of who you are today. Your strongest examples should come from the last few years.&lt;/p&gt;
+&lt;p&gt;You should prepare enough examples. You might get behavioral questions in every interview you do. Expect a couple of them. Talking about the same scenario over and over won’t be beneficial.&lt;/p&gt;
+&lt;p&gt;Lastly, don’t limit yourself to positive experiences exclusively. We all have failed at some point. Talking about your failures openly is a great way to show self-reflection and growth. What did you learn, and what would you do differently? Needless to say, don’t confront failure by blaming others. Even if it happens to be true you’re showing a very concerning side to somebody who’s trying to gauge your contributions.&lt;/p&gt;
+&lt;h2&gt;Measure your Outcomes&lt;/h2&gt;
+&lt;p&gt;Let’s be clear: You can’t change your experience. You can make present it better. You can show your ability to reflect and learn. Don’t get discouraged if you think that your examples are too modest.&lt;/p&gt;
+&lt;p&gt;If you don’t have impactful examples, think about how to get there over time. Use this to guide your work. If you’re working on a problem at work, go deep and understand its true impact. Seek metrics that will reflect changes. If you’re doing good work, you’ll be able to show it sooner or later. If you somehow didn’t burn all your motivation yet, &lt;a href=&quot;https://www.youtube.com/watch?v=PJKYqLP6MRE&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;this video&lt;/a&gt; from Jackson Gabbard.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[The System Design Interview]]></title><description><![CDATA[The system design interview is an unavoidable part of interviewing at FAANG. Let's see how to prepare for them successfully]]></description><link>https://hceris.com/the-system-design-interview/</link><guid isPermaLink="false">https://hceris.com/the-system-design-interview/</guid><category><![CDATA[Interviews]]></category><category><![CDATA[Coding Challenge]]></category><category><![CDATA[FAANG]]></category><category><![CDATA[Career]]></category><category><![CDATA[System Design]]></category><pubDate>Mon, 08 Aug 2022 00:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;guide&quot;&gt;
 &lt;h3&gt;Interviewing at BigTech&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;../tips-for-coding-interviews-at-faang/&quot;&gt;Part 1 - Coding Interview&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;../the-system-design-interview/&quot;&gt;&lt;strong&gt;Part 2 - System Design&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;../the-behavioral-interview/&quot;&gt;Part 3 - Behavioral&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;figure class=&quot;figure figure--right&quot;&gt;
@@ -152,6 +254,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;../tips-for-coding-interviews-at-faang/&quot;&gt;&lt;strong&gt;Part 1 - Coding Interview&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;../the-system-design-interview/&quot;&gt;Part 2 - System Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;../the-behavioral-interview/&quot;&gt;Part 3 - Behavioral&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;figure class=&quot;figure figure--right&quot;&gt;
