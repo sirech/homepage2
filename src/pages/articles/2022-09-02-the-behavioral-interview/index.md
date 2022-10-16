@@ -14,7 +14,7 @@ related:
   - /tips-for-coding-interviews-at-faang/
   - /the-system-design-interview/
   - /book-review-the-art-of-leadership/
-image: ./images/cover.jpeg
+image: ./images/cover.jpg
 ---
 
 <div class="guide">
