@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`getSchemaOrgJSONLD creates the correct structure 1`] = `
-Array [
-  Object {
+[
+  {
     "@context": "http://schema.org",
     "@type": "WebSite",
     "alternateName": "site title",
     "name": "My Post",
     "url": "/the-post",
   },
-  Object {
+  {
     "@context": "http://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": Array [
-      Object {
+    "itemListElement": [
+      {
         "@type": "ListItem",
-        "item": Object {
+        "item": {
           "@id": "/the-post",
           "name": "My Post",
         },
@@ -23,11 +23,11 @@ Array [
       },
     ],
   },
-  Object {
+  {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "alternateName": "site title",
-    "author": Object {
+    "author": {
       "@type": "Person",
       "name": "me",
     },
@@ -35,12 +35,12 @@ Array [
     "description": "this is the description",
     "headline": "My Post",
     "image": "/static/logo.png",
-    "mainEntityOfPage": Object {
+    "mainEntityOfPage": {
       "@id": "http://example.com",
       "@type": "WebSite",
     },
     "name": "My Post",
-    "publisher": Object {
+    "publisher": {
       "@type": "Organization",
       "name": "me",
       "url": "http://example.com",
