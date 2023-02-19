@@ -47,6 +47,8 @@ What is a role? Quoting the official documentation:
 
 > An IAM role is an IAM identity that you can create in your account that has specific permissions.
 
+Check out [this article](https://spacelift.io/blog/aws-iam-roles) for a more detailed introduction to roles in AWS.
+
 <figure class="figure">
   <img src="./images/iam-role.jpg" alt="IAM Role" />
 </figure>
@@ -128,6 +130,8 @@ There are more things you can do, such as using `principals` or `conditions`, wh
 This is it, you don't really need anything else to build a solid and secure foundation in which to run your applications. Using different roles and giving them the access they need through policies step by step is all there is to it, really.
 
 Testing this still remains a challenge, as _IAM_ failures tend to manifest only when you actually try to run the whole thing in your environment. Don't succumb to the temptation to take the easy route, though. Fixing a bad permission setup is hard, and you will regret it.
+
+*EDIT 19/02/2023:* Added link to AWS role guide
 
 
 
