@@ -1,6 +1,6 @@
 ---
 title: "The Humble Extract Method"
-date: "2023-02-19"
+date: "2023-02-27"
 layout: post
 path: "/the-humble-extract-method/"
 description: "The extract method refactoring is a low-cost, high-impact tool to increase maintainability in your code. Let's talk about its benefits"
@@ -13,15 +13,22 @@ related:
   - /book-review-working-effectively-with-legacy-code/
   - /what-is-code-duplication-definition-and-overview/
   - /why-is-refactoring-your-code-important-in-agile/
+image: ./images/cover.jpg
 ---
 
 After reviewing a lot of code in the past couple of months, I've realized that I regularly leave comments like this one:
 
 > Can we break this down into smaller pieces?
 
+<figure class="figure figure--right">
+  <img src="./images/cover.jpg" alt="Refactoring" />
+</figure>
+
 Turns out, I like to advocate for shorter methods. Is this the right thing to pay attention to? I think so. I strongly believe that breaking down code is often the most cost-effective way to increase maintainability.
 
-For that, the best alternative is _extracting smaller methods_. It's easy and works consistently. In this article, I'm writing about the simple yet powerful extract method refactoring.
+For that, the best alternative is _extracting smaller methods_. It's easy and works consistently. It should be part of every developer's toolkit.
+
+In this article, I'm writing about the simple yet powerful extract method refactoring.
 
 ## What Is Extract Method, Exactly?
 
@@ -93,23 +100,23 @@ If you're struggling to find a name for an extracted method, it can be a sign of
 The combination of smaller methods and better names reduces cognitive load. Each method serves as a small reusable abstraction. For instance, something as typical as iterating over a list to apply a function to every element:
 
 ```kotlin
-    val input = listOf(1..10)
-    
-    val result = mutableListOf<String>()
-    for(item in input) {
-        result.add(item.toString())
-    }
-    
-    return result
+val input = listOf(1..10)
+
+val result = mutableListOf<String>()
+for(item in input) {
+    result.add(item.toString())
+}
+
+return result
 ```
 
 A better alternative is to use a higher-level abstraction, in this case, `map`:
 
 ```kotlin
-    val input = listOf(1..10)
-    
-    val result = input.map { it.toString() }
-    return result
+val input = listOf(1..10)
+
+val result = input.map { it.toString() }
+return result
 ```
 
 Using `map` encapsulates the implementation and lets you focus on what you want to express.
@@ -132,11 +139,17 @@ Not only that, you start getting worried about unexpected changes. You can't be 
 
 ### What About Testability?
 
+<figure class="figure figure--left">
+  <img src="./images/working-effectively.jpg" alt="Working Effectively with Legacy Code" />
+</figure>
+
 And lastly, we come to testability. Does extracting methods improve testability? You could argue it doesn't, as you should have your tests ready _before_ you perform the refactoring.
 
 However! Reality isn't always so kind. You might face a huge, gnarly class that lacks tests. Writing tests might prove impossible unless you make the problem more manageable.
 
-As described in the book [Working Effectively with Legacy Code](../book-review-working-effectively-with-legacy-code/), extracting methods allows you to break down smaller pieces. At some point, they become small enough that you can write some tests for them. It's not pretty, but it gets the job done. Much better than the alternative of not really knowing if your changes will screw something.
+As described in the book [Working Effectively with Legacy Code](../book-review-working-effectively-with-legacy-code/), extracting methods allows you to break down smaller pieces. At some point, they become small enough that you can write some tests for them. 
+
+It's not pretty, but it gets the job done. Much better than the alternative of not really knowing if your changes will screw something.
 
 ## Notice I Didn't Talk about Reuse
 
