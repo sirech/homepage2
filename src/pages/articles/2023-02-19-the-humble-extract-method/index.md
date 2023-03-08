@@ -47,7 +47,7 @@ fun splitNumbers(source: String): List<Int> {
 }
 ```
 
-This example is too small to truly benefit from breaking it down, so bear with me for the sake of the example. Anyway, there's a section that converts a string to a number. It's a prime candidate for extraction:
+This is too small to truly benefit from breaking it down, so bear with me for the sake of the example. Anyway, there's a section that converts a string to a number. It's a prime candidate for extraction:
 
 ```kotlin
 fun splitNumbers(source: String): List<Int> {
@@ -121,7 +121,7 @@ return result
 
 Using `map` encapsulates the implementation and lets you focus on what you want to express.
 
-Anyhow. While shorter methods and better names are the big two aspects, other considerations that speak for using this refactoring.
+Anyhow. While shorter methods and better names are the big two aspects, other considerations speak for using this refactoring.
 
 ### Nesting Is Another form of Complexity
 
@@ -149,7 +149,7 @@ However! Reality isn't always so kind. You might face a huge, gnarly class that 
 
 As described in the book [Working Effectively with Legacy Code](../book-review-working-effectively-with-legacy-code/), extracting methods allows you to break down smaller pieces. At some point, they become small enough that you can write some tests for them. 
 
-It's not pretty, but it gets the job done. Much better than the alternative of not really knowing if your changes will screw something.
+It's not pretty, but it gets the job done. Much better than the alternative of not really knowing if your changes will break something.
 
 ## Notice I Didn't Talk about Reuse
 
@@ -159,8 +159,8 @@ A smaller auxiliary method is valuable even if we only use it once. Making code 
 
 ## Is Extracting Methods Worth The Effort?
 
-In any big codebase, the code developers write lives for a long time. Often, it's still there while the original developers moved somewhere else. Meanwhile, new developers will read it many times and try to figure out what it does. Capturing the context of why a decision happened is hard, so these poor developers are left without context.
+In any big codebase, the code developers write lives for a long time. Often, it's still there while the original developers moved somewhere else. 
 
-Thus, it will be read many times by multiple developers. Investing some effort in making it more readable pays off more and more over time.
+Meanwhile, new developers will read it many times and try to figure out what it does. Capturing the context of why a decision happened is hard, so these poor developers are left without context. By investing some effort into making it more readable you'll make their life easier.
 
 Not that you should overdo it, though. An endless collection of one-liners isn't an improvement, either. Aim for methods that stand on their own and have one purpose. That's a reasonable guideline to follow.
