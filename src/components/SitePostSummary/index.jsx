@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 import Container from 'components/Container'
 import Categories from 'components/Categories'

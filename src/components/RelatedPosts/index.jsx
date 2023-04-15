@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 import Container from 'components/Container'
 import Card from 'components/Card'
