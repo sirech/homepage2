@@ -134,27 +134,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-csp`,
-      options: {
-        disableOnDev: true,
-        reportOnly: true, // Changes header to Content-Security-Policy-Report-Only for csp testing purposes
-        mergeScriptHashes: true, // you can disable scripts sha256 hashes
-        mergeStyleHashes: false, // you can disable styles sha256 hashes
-        mergeDefaultDirectives: true,
-        directives: {
-          'script-src':
-            "'self' https://hceris.ck.page https://f.convertkit.com/ckjs/ https://plausible.io",
-          'style-src': "'self' 'unsafe-inline'",
-          'img-src':
-            "'self' data: https://github.com https://raw.githubusercontent.com",
-          'connect-src':
-            "'self' https://app.convertkit.com/forms/ https://plausible.io",
-          'frame-src': 'https://codepen.io https://codesandbox.io',
-          'form-action': "'self' https://app.convertkit.com/forms/",
-        },
-      },
-    },
-    {
       resolve: 'gatsby-plugin-plausible',
       options: {
         domain: siteUrl.replace(/https?:\/\//, ''),
