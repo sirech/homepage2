@@ -1,5 +1,6 @@
-@import '../../layouts/colors';
-@import '../../layouts/fonts';
+@use 'sass:map';
+@use '../../layouts/colors';
+@use '../../layouts/fonts';
 
 .articles {
   padding-top: 2rem;
@@ -9,19 +10,19 @@
   padding-bottom: 0.5rem;
 
   header {
-    border-bottom: 1px solid $gray-200;
+    border-bottom: 1px solid colors.$gray-200;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
     word-break: break-word;
 
     h1 {
-      color: $gray-600;
+      color: colors.$gray-600;
     }
 
     time {
-      color: $gray-500;
+      color: colors.$gray-500;
       display: inline;
-      font-size: $font-size-xs;
+      font-size: fonts.$font-size-xs;
       margin-right: 0.5rem;
     }
   }
@@ -31,21 +32,21 @@
   padding-bottom: 0.5rem;
 
   h2 {
-    border-bottom: 3px solid $gray-400;
-    border-top: 3px solid $gray-400;
+    border-bottom: 3px solid colors.$gray-400;
+    border-top: 3px solid colors.$gray-400;
 
     margin-top: 2rem;
     padding: 0.5rem 0;
   }
 
   h3 {
-    border-bottom: 2px solid $gray-400;
+    border-bottom: 2px solid colors.$gray-400;
     margin-top: 1.5rem;
     padding-bottom: 0.5rem;
   }
 
   h4 {
-    border-bottom: 1px solid $gray-400;
+    border-bottom: 1px solid colors.$gray-400;
     padding-bottom: 0.5rem;
   }
 
@@ -54,7 +55,7 @@
   }
 
   blockquote {
-    border-left: 10px solid $gray-800;
+    border-left: 10px solid colors.$gray-800;
     box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px 0;
     font-style: italic;
     padding: 0.25rem 1.5rem;
@@ -69,8 +70,8 @@
 }
 
 :global(.guide) {
-  background-color: $white;
-  border: 1px solid map-get($theme-colors, 'light');
+  background-color: colors.$white;
+  border: 1px solid map.get(colors.$theme-colors, 'light');
   border-radius: 4px;
   box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12);

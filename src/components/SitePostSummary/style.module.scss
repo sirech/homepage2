@@ -1,47 +1,48 @@
-@import '../../layouts/colors';
-@import '../../layouts/fonts';
+@use 'sass:map';
+@use '../../layouts/colors';
+@use '../../layouts/fonts';
 
 .articles {
   margin-top: 1rem;
 }
 
 .articleBox {
-  background-color: $white;
-  border: 1px solid map-get($theme-colors, 'light');
+  background-color: colors.$white;
+  border: 1px solid map.get(colors.$theme-colors, 'light');
   border-radius: 4px;
   box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 
   &:hover {
-    border-color: map-get($theme-colors, 'primary');
+    border-color: map.get(colors.$theme-colors, 'primary');
   }
 }
 
 .article {
-  color: $gray-600;
+  color: colors.$gray-600;
   padding: 0.75rem 1rem;
 
   header {
-    border-bottom: 1px solid $gray-200;
+    border-bottom: 1px solid colors.$gray-200;
     margin-bottom: 0.375rem;
     padding-bottom: 0.375rem;
     word-break: break-word;
 
     time {
-      color: $gray-500;
+      color: colors.$gray-500;
       display: inline;
-      font-size: $font-size-xs;
+      font-size: fonts.$font-size-xs;
       margin-right: 0.5rem;
     }
   }
 
   &:hover {
-    border-color: map-get($theme-colors, 'primary');
+    border-color: map.get(colors.$theme-colors, 'primary');
 
     h1,
     h3 {
-      color: map-get($theme-colors, 'primary');
+      color: map.get(colors.$theme-colors, 'primary');
       transition: all 0.5s ease;
     }
   }

@@ -1,10 +1,11 @@
-@import '../../layouts/colors';
+@use 'sass:map';
+@use '../../layouts/colors';
 
 .tag {
-  background-color: map-get($theme-colors, 'primary');
-  color: $white;
+  background-color: map.get(colors.$theme-colors, 'primary');
+  color: colors.$white;
 
   &:hover {
-    background-color: map-get($theme-colors, 'highlight');
+    background-color: map.get(colors.$theme-colors, 'highlight');
   }
 }
