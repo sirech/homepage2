@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Mario Fernandez',
     description:
-      'This is the blog from Mario Fernandez, a Software Developer working for ThoughtWorks',
+      'This is the blog from Mario Fernandez, a Software Developer working for Meta',
     author: 'Mario Fernandez',
     siteUrl: siteUrl,
     twitter: '@sirech',
