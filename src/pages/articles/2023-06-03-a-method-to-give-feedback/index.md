@@ -22,7 +22,7 @@ image: ./images/cover.jpg
 
 Feedback, when used thoughtfully, is a superpower. It accelerates personal growth faster than anything you can achieve through introspection alone.
 
-Over time, I've witnessed developers hinder their careers, sometimes for years, by repeatedly making the same fundamental mistake. Imagine influencing this trajectory by simply proactively sharing feedback. That screams _Senior Engineer_ to me. Besides, compared to the intricate technical problems you solve daily, it seems comparatively easier, doesn't it?
+Over time, I've witnessed developers hinder their careers by repeatedly making the same fundamental mistake. Imagine influencing somebody's trajectory by simply giving good feedback. That screams _Senior Engineer_ to me.
 
 Why is it, then, that so many people wait until the last day before the performance review submission deadline to finally write down something that's way too superficial to be useful? I don't know, man. Maybe it's for lack of a method? In this article, I'm talking about my approach to delivering feedback.
 
@@ -33,17 +33,15 @@ There are two aspects of giving feedback:
 - *The content:* The observation you're attempting to share
 - *The delivery:* How you share it with the intended recipient
 
-Let's begin with the content. Don't wait for deep, career-changing insights before sharing feedback. Those come around rarely, if ever. Smaller things are better candidates. Here are some situations that are good opportunities:
+Let's begin with the content. You don't need deep, career-changing insights to be helpful. More mundane observations are valuable and easier to come by. For instance, I tend to speak over others in meetings. While it might sound like a small thing to point out, receiving that feedback has helped me become more aware of it.
 
-- How did she facilitate a meeting
-- How did she answer questions or criticisms while presenting an idea
-- How did she structure a document to make a proposal
-
-Make sure to refer to **concrete** events. Be as precise as possible to help the other person understand what you're talking about. For the same reason, talk about **recent** events. Memory gets hazy over time. It's significantly easier to discuss something when it's fresh on your mind. At the same time, it's probably good to avoid giving feedback _immediately_ after the fact. Waiting a bit helps cool down.
+Be sure to refer to **concrete** events. Be as precise as possible to help the other person understand what you're talking about. For the same reason, talk about **recent** events. Memory gets hazy over time. It's significantly easier to discuss something when it's fresh on your mind. At the same time, it's probably good to avoid giving feedback _immediately_ after the fact. Waiting a bit helps cool down.
 
 Next, your input should be **actionable**. What's there to do differently next time? A situation with no realistic alternative is a dead end. Feedback is about finding ways to improve yourself, not grading your performance.
 
 Lastly, it should be **constructive**. _You suck_ isn't feedback, even if you phrase it nicely. If you can't find a way to frame it so that it helps the person grow, it's probably better to let it go.
+
+As an example of what _not_ to do, I remember a manager in a previous company telling me something akin to _Why do you repeat yourself so much?_, in a way that sounded more like an accusation than a question. I actually went and asked a few colleagues if they had observed this, as I was taken aback. That feedback didn't land well at all.
 
 In summary, keep the following in mind when preparing the content:
 
@@ -64,9 +62,11 @@ Instead of reading minds, focus on your observations. Make it clear that this is
 
 *Impact* is the last part of the puzzle. What did the previous behavior _cause_, on you or somebody else? Talking about impact can be uncomfortable, but it's a necessary part of a complete piece of feedback. Based on this impact, the receiver can reflect and decide to do things differently the next time.
 
-Similarly to the behavior part, focus on what you saw.
+Similarly to the behavior part, focus on what you saw. Using a fixed structure can feel forced, but it ensures consistency. When you're raising a thorny issue, this formula helps you concentrate on being as objective as possible. 
 
-Using a fixed structure can feel forced, but it ensures consistency. When you're raising a thorny issue, this formula helps you concentrate on being as objective as possible. It's similar to the [STAR method](../the-behavioral-interview/) that's common in behavioral interviews if you think about it.
+Another example: I used to work in consulting. In my first project, we developed some CI/CD infrastructure for a traditional German company. I was a bit overwhelmed as I wasn't familiar with the tooling. A senior colleague gave me some harsh feedback about me being hesitant to make decisions, which was diminishing my credibility with the client. It wasn't easy to hear, I can tell you that much. 
+
+However, my colleague was disciplined in how he delivered the feedback. He was concrete about the meeting he was referring to. He described the actions he was seeing from me. Lastly, while he was clear about the impact it was having, he wasn't judgemental. On the contrary, he was keen to support me. The structure made this tough message more digestible. Building a plan to address the issues felt a lot easier.
 
 ## Practice!
 
@@ -78,9 +78,9 @@ Another option is to go to the person's manager directly and share the feedback 
 
 ## Beware of Rigid Formulas
 
-Even though a structured method like **SBI** can help, you should be ready to abandon any method and be adaptable instead. Feedback is a very personal thing. People have different preferences regarding format, medium, or anything else, really. Adapting your delivery to accommodate these preferences will improve effectiveness. Especially so for people with whom you collaborate more closely and have more to share.
+Even though a structured method like **SBI** can help, you should be ready to abandon any method and be adaptable instead. Feedback is a very personal thing. People have different preferences regarding format, medium, or anything else. Adapting your delivery to accommodate these preferences will improve effectiveness. Especially so for people with whom you collaborate more closely and have more to share.
 
-For instance, some resources recommend using the _feedback sandwich_, where you wrap a negative piece of feedback in between two good ones. I despise this method and find it fake and artificial. It just doesn't work for me. Everybody has their own anti-patterns, so it's a good idea to figure out those over time.
+For instance, some resources recommend using the _feedback sandwich_, where you wrap a negative piece of feedback in between two good ones. I despise this method and find it fake and artificial. It just doesn't work for me. Everybody has their anti-patterns, so it's a good idea to figure out those over time.
 
 Using a formula allows you to be consistent. However, it's more important to be _genuine_.
 
