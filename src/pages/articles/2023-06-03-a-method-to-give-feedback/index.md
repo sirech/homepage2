@@ -1,14 +1,14 @@
 ---
 title: "A Method to Give Feedback"
-date: "2023-08-03"
+date: "2023-08-07"
 layout: post
 path: "/a-method-to-give-feedback/"
-description: ""
+description: "Feedback, when used thoughtfully, is a superpower. Here's my approach on how to deliver it effectively"
 categories:
   - Practices
   - Career
   - Software Engineering
-draft: true
+draft: false
 related:
   - /dev-huddle-as-a-tool-to-achieve-alignment-among-developers/
   - /technical-stories-a-miscast-artifact-of-agile-development/
@@ -17,7 +17,7 @@ image: ./images/cover.jpg
 ---
 
 <figure class="figure figure--right">
-  <img src="./images/cover.jpg" alt="Retrospective" />
+  <img src="./images/cover.jpg" alt="Feedback" />
 </figure>
 
 Feedback, when used thoughtfully, is a superpower. It accelerates personal growth faster than anything you can achieve through introspection alone.
@@ -36,6 +36,13 @@ There are two aspects of giving feedback:
 Let's begin with the content. You don't need deep, career-changing insights to be helpful. More mundane observations are valuable and easier to come by. For instance, I tend to speak over others in meetings. While it might sound like a small thing to point out, receiving that feedback has helped me become more aware of it.
 
 Be sure to refer to **concrete** events. Be as precise as possible to help the other person understand what you're talking about. For the same reason, talk about **recent** events. Memory gets hazy over time. It's significantly easier to discuss something when it's fresh on your mind. At the same time, it's probably good to avoid giving feedback _immediately_ after the fact. Waiting a bit helps cool down.
+
+<figure class="figure figure--left">
+  <img src="./images/deer.jpg" alt="deer" />
+  <figcaption class="figure__caption">
+  actionable insights
+  </figcaption>
+</figure>
 
 Next, your input should be **actionable**. What's there to do differently next time? A situation with no realistic alternative is a dead end. Feedback is about finding ways to improve yourself, not grading your performance.
 
@@ -64,9 +71,16 @@ Instead of reading minds, focus on your observations. Make it clear that this is
 
 Similarly to the behavior part, focus on what you saw. Using a fixed structure can feel forced, but it ensures consistency. When you're raising a thorny issue, this formula helps you concentrate on being as objective as possible. 
 
+<figure class="figure figure--right">
+  <img src="./images/impact.jpg" alt="impact" />
+  <figcaption class="figure__caption">
+  Landing some impact
+  </figcaption>
+</figure>
+
 Another example: I used to work in consulting. In my first project, we developed some CI/CD infrastructure for a traditional German company. I was a bit overwhelmed as I wasn't familiar with the tooling. A senior colleague gave me some harsh feedback about me being hesitant to make decisions, which was diminishing my credibility with the client. It wasn't easy to hear, I can tell you that much. 
 
-However, my colleague was disciplined in how he delivered the feedback. He was concrete about the meeting he was referring to. He described the actions he was seeing from me. Lastly, while he was clear about the impact it was having, he wasn't judgemental. On the contrary, he was keen to support me. The structure made this tough message more digestible. Building a plan to address the issues felt a lot easier.
+However, my colleague was structured in how he delivered the feedback. He was concrete about the meeting he was referring to. He described the actions he was seeing from me. Lastly, while he was clear about the impact it was having, he wasn't judgemental. On the contrary, he was keen to support me. The structure made this tough message more digestible. Building a plan to address the issues felt a lot easier.
 
 ## Practice!
 
