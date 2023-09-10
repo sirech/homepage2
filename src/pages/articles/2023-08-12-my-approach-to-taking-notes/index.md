@@ -8,7 +8,7 @@ categories:
   - Practices
   - Career
   - Software Engineering
-draft: false
+draft: true
 related:
   - /dev-huddle-as-a-tool-to-achieve-alignment-among-developers/
   - /a-method-to-give-feedback/
@@ -17,12 +17,14 @@ image: ./images/cover.jpg
 ---
 
 <figure class="figure figure--right">
-  <img src="./images/cover.jpg" alt="Feedback" />
+  <img src="./images/cover.png" alt="Taking Notes" />
   </figure>
 
 Taking notes is kind of like flossing but for the corporate world. Essential but often overlooked. We all know we should do it more, but we don't. 
 
-Good notes are helpful in *pretty much* every possible situation. Let's say you want [to give feedback](../a-method-to-give-feedback/). You can wing it and hope you somehow remember what happened months ago. Or you can rely on your carefully collected notes and make your life way easier in the process. I know I prefer the second approach. Let me share how I go about it.
+Good notes are helpful in *pretty much* every possible situation. Let's say you want [to give feedback](../a-method-to-give-feedback/). 
+
+You can wing it and hope you somehow remember what happened months ago. Or you can rely on your carefully collected notes and make your life way easier in the process. I know I prefer the second approach. Let me share how I go about it.
 
 ## When To Take Notes
 
@@ -54,6 +56,13 @@ This moment is the scaled-up version of the previous point. It's also the one th
 
 ## How I Take Notes
 
+<figure class="figure figure--left">
+  <img src="./images/todo.jpg" alt="Todo" />
+  <figcaption class="figure__caption">
+  It never looks so clean in reality
+  </figcaption>
+</figure>
+
 Efficiency is _crucial_ when taking notes between other tasks. I create separate notes for individual topics or people.
 
 I aim to write the shortest thing I can get away with. For future feedback, I keep context minimal. Instead, I limit myself to observed actions or behaviors. I may leave out the impact, as that's something I can add later based on the facts.
@@ -71,6 +80,13 @@ Choosing between digital and handwritten notes is a personal preference. I prefe
 There are other points of view. For instance, this recent article from [Werner Vogels](https://www.allthingsdistributed.com/2023/06/a-few-words-on-taking-notes.html) is full of praise for handwritten notes. If you want to be a CTO someday, maybe it's worth copying that approach instead.
 
 ### Be Mindful of Where You Put Things
+
+<figure class="figure figure--right">
+  <img src="./images/notebooks.jpg" alt="Notebooks" />
+  <figcaption class="figure__caption">
+  Trying every software ever made
+  </figcaption>
+</figure>
 
 It goes without saying, but you should only store notes where it's allowed. I try very hard to avoid proprietary details in my notes. That stuff is better suited for official documents, wikis, or similar. Your notes can contain a reference that links to it. 
 
