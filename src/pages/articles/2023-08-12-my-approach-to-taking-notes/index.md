@@ -20,7 +20,7 @@ image: ./images/cover.jpg
   <img src="./images/cover.png" alt="Taking Notes" />
   </figure>
 
-Taking notes is kind of like flossing but for the corporate world. Essential but often overlooked. We all know we should do it more, but we don't. 
+Taking notes is kind of like flossing but for the corporate world. It's essential yet frequently overlooked. We all know we should do it more, but we let other things get in the way. 
 
 Good notes are helpful in *pretty much* every possible situation. Let's say you want [to give feedback](../a-method-to-give-feedback/). 
 
@@ -30,13 +30,20 @@ You can wing it and hope you somehow remember what happened months ago. Or you c
 
 I'm going to start with _when_ to take notes. I think the _cadence_ is the most important aspect of this whole endeavor. Yes, more important than _what_ you write or _where_ you maintain your notes. Consistency beats any fancy system you can think of.
 
-If it were so easy, though, everybody would be doing it already. The challenge lies in finding moments to take notes amidst a busy day. Over the years, I've figured out specific times that work best for me. I use these to give feedback later on.
+If it were so easy, though, everybody would be doing it already. The challenge lies in finding moments to take notes amidst a busy day. Over the years, I've figured out the specific times that work best for me. By using these opportunities to collect as many notes as possible, I'll have an easier time once I sit down to think about the feedback I want to give.
 
 ### During Meetings
 
-Meetings offer an opportunity to observe how others present their ideas. I'm talking more about the form rather than the content. Small improvements in your communication can make a significant difference, and this is the right place to find suggestions.
+<figure class="figure figure--left">
+  <img src="./images/todo.jpg" alt="Todo" />
+  <figcaption class="figure__caption">
+  It never looks so clean in reality
+  </figcaption>
+</figure>
 
-However, this isn't easy to do! I struggle to take notes during meetings, more so if I'm actively participating. So I limit myself to very short notes. Otherwise, I tend to get lost and miss the actual content of the meeting. That's not what you want.
+Meetings offer an excellent opportunity to observe how others present their ideas. It's not just about the content. You can focus on what they ask, how they contribute, or how they explain their arguments. Small improvements in your communication increase your effectiveness in spreading your ideas. Thus, you can find plenty of suggestions to share with them.
+
+However, this isn't easy to do! I struggle to take notes during meetings, more so if I'm actively participating. So, I limit myself to very short notes. Otherwise, I tend to get lost and miss the actual content of the meeting. That's not what you want.
 
 ### Shortly After the Meeting
 
@@ -56,20 +63,38 @@ This moment is the scaled-up version of the previous point. It's also the one th
 
 ## How I Take Notes
 
-<figure class="figure figure--left">
-  <img src="./images/todo.jpg" alt="Todo" />
-  <figcaption class="figure__caption">
-  It never looks so clean in reality
-  </figcaption>
-</figure>
+Efficiency is _crucial_ when taking notes between other tasks. I optimize for speed and volume.
 
-Efficiency is _crucial_ when taking notes between other tasks. I create separate notes for individual topics or people.
+I create separate notes for individual topics or people. I aim to write the shortest thing I can get away with, in chronological order and with timestamps. For future feedback, I keep context minimal. Instead, I limit myself to observed actions or behaviors. I may leave out the impact, as that's something I can add later based on the facts.
 
-I aim to write the shortest thing I can get away with. For future feedback, I keep context minimal. Instead, I limit myself to observed actions or behaviors. I may leave out the impact, as that's something I can add later based on the facts.
+This note is quite raw and not meant for sharing. I leave enough of a trail to trace it back to the source. This is a lightly edited example from a previous gig:
 
-This note is quite raw and not meant for sharing. My note for one person is a list of things in chronological order. If I don't recall the context anymore, knowing when it happened helps me reverse-engineer it. I leave enough of a trail to trace it back to the source. 
+```
+06.10
 
-Sometimes, I outsmart myself with some garbled notes so cryptic that I can't decipher them afterward. That's not ideal. However, I can't commit to writing tidy notes all the time. The occasional failure is an acceptable trade-off for me.
+- update in the standup: what do you want to convey? what’s the level of details?
+-- think of a structure: what happened, what’s coming up, what blocks
+
+13.01
+
+- lack of sync before the workshop, we had two conflicting messages
+
+27.01
+
+- kudos for fixing the CG dependency
+
+23.02
+
+- didn't leave an update before being off, was a bit confusing
+
+05.04
+
+- seemed like you were jumping straight into fixing the bug, without quantifying it first
+-- could be taken as lack of prioritization
+- what's next
+```
+
+Sometimes, I outsmart myself with some garbled notes so cryptic that I can't decipher them afterward. That's far from ideal. However, I can't commit to writing tidy notes all the time. The occasional failure is an acceptable trade-off for me.
 
 ## The Logistics of Taking Notes
 
@@ -98,9 +123,9 @@ As for concrete software, there are a ton of solutions to choose from. I use App
 
 As a general principle, you should consider making public anything that could help somebody else. This post, for instance, started as a direct response, but I thought it might benefit others 😊.
 
-Feedback isn't the best example, as it's something to share privately. For less personal topics, it's good to ask yourself if somebody else would read it. Defaulting to sharing leverages what you already did and it provides some easy impact. 
+Feedback isn't the best example, as it's something to share privately. For less personal topics, it's good to ask yourself if somebody else would read it. Defaulting to sharing leverages what you already did. You can be more impactful with low extra effort. For instance, while migrating one service to the cloud, I had a lot of notes to understand AWS permissions in more detail. At some point, I realized I could show it to others, so I converted it into a [post about IAM](../aws-iam-an-overview/). I shared it broadly and even reused it on different projects.
 
-Well, not completely for free. To publish it you probably need to edit it more heavily than when you're the only consumer.
+You can see that it's not completely true that making it public is for free. To publish a private note you need to edit it more heavily than when you're the only consumer.
 
 ## Notes for Everything
 
@@ -113,3 +138,5 @@ Every now and then, I write down what I've been doing lately. I put a timestamp 
 ## Start Taking Notes
 
 The TLDR is that taking notes is inexpensive if you organize yourself. Moreover, it's an extremely beneficial investment of your time. If you aren't doing it now, you have to start. If you do, do it more often.
+
+*Thanks to Anna for the feedback.*
