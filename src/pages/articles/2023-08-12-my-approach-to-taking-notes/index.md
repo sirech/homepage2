@@ -1,6 +1,6 @@
 ---
 title: "My Approach to Taking Notes"
-date: "2023-09-10"
+date: "2023-09-11"
 layout: post
 path: "/my-approach-to-taking-notes/"
 description: "Taking notes is an extremely beneficial practice. I use it extensively to be able to give more and better feedback. Let me share my approach"
@@ -8,7 +8,7 @@ categories:
   - Practices
   - Career
   - Software Engineering
-draft: true
+draft: false
 related:
   - /dev-huddle-as-a-tool-to-achieve-alignment-among-developers/
   - /a-method-to-give-feedback/
