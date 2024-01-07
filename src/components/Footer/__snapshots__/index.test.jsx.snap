@@ -6,7 +6,7 @@ exports[`components Footer renders correctly 1`] = `
     class="footer text-center"
   >
     <div>
-      Copyright © 2023, 
+      Copyright © 2024, 
       <a
         href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
         rel="noopener noreferrer"
