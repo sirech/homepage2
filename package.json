@@ -56,7 +56,7 @@
     "eslint-plugin-css-modules": "^2.12.0",
     "eslint-plugin-jest": "^27.6.0",
     "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-testing-library": "^5.11.1",
+    "eslint-plugin-testing-library": "^6.0.0",
     "eslint-webpack-plugin": "^4.0.0",
     "font-awesome": "^4.7.0",
     "gatsby-plugin-eslint": "^4.0.4",
