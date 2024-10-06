@@ -33,7 +33,7 @@ goal_test-e2e() {
 goal_security-check() {
     docker run \
            -v "$(pwd)":/zap/wrk/:rw \
-           -t owasp/zap2docker-weekly zap-baseline.py \
+           -t ghcr.io/zaproxy/zaproxy:stable zap-baseline.py \
            -t "${SITE_URL?Site Url is not defined}" \
            -c zap.conf
 }
