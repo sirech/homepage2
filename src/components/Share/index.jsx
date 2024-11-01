@@ -29,11 +29,12 @@ const Share = ({ frontmatter, site }) => {
     <div className={share}>
       <div className={cta}>Did you like it? Give it a share!</div>
       <div className={buttons}>
-        <FacebookShareButton url={url} quote={description}>
+        <FacebookShareButton url={url} data-testid="facebook">
           <FacebookIcon size={32} round />
         </FacebookShareButton>
 
         <TwitterShareButton
+          data-testid="twitter"
           url={url}
           title={title}
           via={twitter.replace(/@/, '')}
@@ -42,11 +43,20 @@ const Share = ({ frontmatter, site }) => {
           <TwitterIcon size={32} round />
         </TwitterShareButton>
 
-        <LinkedinShareButton url={url} title={title} summary={description}>
+        <LinkedinShareButton
+          data-testid="linkedin"
+          url={url}
+          title={title}
+          summary={description}
+        >
           <LinkedinIcon size={32} round />
         </LinkedinShareButton>
 
-        <EmailShareButton subject={title} body={description + ' ' + url}>
+        <EmailShareButton
+          data-testid="email"
+          subject={title}
+          body={description + ' ' + url}
+        >
           <EmailIcon size={32} round />
         </EmailShareButton>
       </div>

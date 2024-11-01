@@ -22,9 +22,9 @@ describe('components', () => {
     it('renders the facebook share button', async () => {
       render(<Share site={site} frontmatter={frontmatter()} />)
 
-      await user.click(screen.getByLabelText('facebook'))
+      await user.click(screen.getByTestId('facebook'))
       expect(window.open.mock.calls[0][0]).toEqual(
-        'https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fexample.com%2Fthe-post&quote=this%20is%20the%20description'
+        'https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fexample.com%2Fthe-post'
       )
     })
 
@@ -38,16 +38,16 @@ describe('components', () => {
         />
       )
 
-      await user.click(screen.getByLabelText('twitter'))
+      await user.click(screen.getByTestId('twitter'))
       expect(window.open.mock.calls[0][0]).toEqual(
-        'https://twitter.com/share?url=http%3A%2F%2Fexample.com%2Fthe-post&text=My%20Post&via=handle&hashtags=functionalprogramming%2Cdevops'
+        'https://twitter.com/intent/tweet?url=http%3A%2F%2Fexample.com%2Fthe-post&text=My%20Post&via=handle&hashtags=functionalprogramming%2Cdevops'
       )
     })
 
     it('renders the linkedin share button', async () => {
       render(<Share site={site} frontmatter={frontmatter()} />)
 
-      await user.click(screen.getByLabelText('linkedin'))
+      await user.click(screen.getByTestId('linkedin'))
       expect(window.open.mock.calls[0][0]).toEqual(
         'https://linkedin.com/shareArticle?url=http%3A%2F%2Fexample.com%2Fthe-post&mini=true&title=My%20Post&summary=this%20is%20the%20description'
       )
