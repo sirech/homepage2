@@ -305,7 +305,7 @@ exports[`components Profile renders correctly 1`] = `
       class="footer text-center"
     >
       <div>
-        Copyright © 2024, 
+        Copyright © 2025, 
         <a
           href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
           rel="noopener noreferrer"
