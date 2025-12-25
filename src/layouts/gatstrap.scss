@@ -6,7 +6,7 @@
 //
 // Color system
 //
-@import './colors';
+@use './colors' as *;
 
 // Options
 //
@@ -46,11 +46,11 @@ $link-hover-decoration: none !default;
 
 // Fonts
 //
-@import './fonts';
+@use './fonts' as *;
 
 // Globals
 //
-@import './globals';
+@use './globals';
 
 /* @import 'node_modules/bootstrap/scss/bootstrap.scss'; */
 @import 'node_modules/bootstrap/scss/bootstrap-utilities';

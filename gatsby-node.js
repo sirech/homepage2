@@ -16,13 +16,6 @@ exports.onCreateWebpackConfig = ({ stage, actions, plugins, getConfig }) => {
     },
   })
 
-  // develop target is throwing an error that process is not defined
-  if (stage === 'build-javascript' || stage === 'develop') {
-    actions.setWebpackConfig({
-      plugins: [plugins.provide({ process: 'process/browser' })],
-    })
-  }
-
   if (stage === 'build-javascript' || stage === 'develop') {
     const config = getConfig()
     config.plugins = config.plugins.map((plugin) => {
@@ -76,7 +69,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
 
         posts: allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
+          sort: { frontmatter: { date: DESC } }
           filter: { frontmatter: { draft: { eq: false } } }
         ) {
           nodes {
@@ -85,10 +78,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
 
         tags: allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
+          sort: { frontmatter: { date: DESC } }
           filter: { frontmatter: { draft: { eq: false } } }
         ) {
-          group(field: frontmatter___categories) {
+          group(field: { frontmatter: { categories: SELECT } }) {
             fieldValue
             nodes {
               ...Frontmatter

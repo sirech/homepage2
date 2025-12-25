@@ -94,8 +94,8 @@ module.exports = {
             query: `
             {
               allMarkdownRemark(
-                limit: 1000,
-                sort: { order: DESC, fields: [frontmatter___date] },
+                limit: 1000
+                sort: { frontmatter: { date: DESC } }
                 filter: { frontmatter: { draft: { eq: false } } }
               ) {
                 posts: edges {
@@ -141,7 +141,15 @@ module.exports = {
     },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        sassOptions: {
+          quietDeps: true,
+          silenceDeprecations: ['import', 'legacy-js-api'],
+        },
+      },
+    },
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-plugin-twitter',
