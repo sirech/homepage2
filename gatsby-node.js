@@ -1,11 +1,12 @@
 const path = require('path')
 const _ = require('lodash')
 const R = require('ramda')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const createPaginatedPages = require('gatsby-paginate')
 
 // Custom webpack configuration
-exports.onCreateWebpackConfig = ({ stage, actions, plugins }) => {
+exports.onCreateWebpackConfig = ({ stage, actions, plugins, getConfig }) => {
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
@@ -14,6 +15,20 @@ exports.onCreateWebpackConfig = ({ stage, actions, plugins }) => {
       },
     },
   })
+
+  if (stage === 'build-javascript' || stage === 'develop') {
+    const config = getConfig()
+    config.plugins = config.plugins.map((plugin) => {
+      if (plugin.constructor && plugin.constructor.name === 'MiniCssExtractPlugin') {
+        return new MiniCssExtractPlugin({
+          ...plugin.options,
+          ignoreOrder: true,
+        })
+      }
+      return plugin
+    })
+    actions.replaceWebpackConfig(config)
+  }
 }
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
