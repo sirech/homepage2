@@ -14,13 +14,6 @@ exports.onCreateWebpackConfig = ({ stage, actions, plugins }) => {
       },
     },
   })
-
-  // develop target is throwing an error that process is not defined
-  if (stage === 'build-javascript' || stage === 'develop') {
-    actions.setWebpackConfig({
-      plugins: [plugins.provide({ process: 'process/browser' })],
-    })
-  }
 }
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
