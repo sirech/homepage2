@@ -46,6 +46,7 @@ jobs:
           target: https://${{ secrets.DOMAIN }}
           token: ${{ secrets.GITHUB_TOKEN }}
           rules_file_name: zap.conf
+          allow_issue_writing: false
 
   post-deploy:
     needs: publish
