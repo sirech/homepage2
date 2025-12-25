@@ -1,4 +1,4 @@
-@import '../../layouts/fonts';
+@use '../../layouts/fonts' as *;
 
 .techList {
   display: grid;

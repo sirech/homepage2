@@ -72,7 +72,7 @@ export default Tags
 export const pageQuery = graphql`
   query {
     tags: allMarkdownRemark(filter: { frontmatter: { draft: { eq: false } } }) {
-      group(field: frontmatter___categories) {
+      group(field: { frontmatter: { categories: SELECT } }) {
         tag: fieldValue
         count: totalCount
       }

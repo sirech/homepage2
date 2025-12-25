@@ -1,5 +1,5 @@
-@import '../../layouts/colors';
-@import '../../layouts/fonts';
+@use '../../layouts/colors' as *;
+@use '../../layouts/fonts' as *;
 
 .time {
   color: $gray-500;
