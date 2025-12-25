@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`components SitePost renders correctly 1`] = `
 <DocumentFragment>
@@ -76,7 +76,7 @@ exports[`components SitePost renders correctly 1`] = `
               <button
                 class="react-share__ShareButton"
                 data-testid="facebook"
-                style="background-color: transparent; padding: 0px; cursor: pointer;"
+                style="background-color: transparent; padding: 0px; color: inherit; cursor: pointer;"
               >
                 <svg
                   height="32"
@@ -98,7 +98,7 @@ exports[`components SitePost renders correctly 1`] = `
               <button
                 class="react-share__ShareButton"
                 data-testid="twitter"
-                style="background-color: transparent; padding: 0px; cursor: pointer;"
+                style="background-color: transparent; padding: 0px; color: inherit; cursor: pointer;"
               >
                 <svg
                   height="32"
@@ -120,7 +120,7 @@ exports[`components SitePost renders correctly 1`] = `
               <button
                 class="react-share__ShareButton"
                 data-testid="linkedin"
-                style="background-color: transparent; padding: 0px; cursor: pointer;"
+                style="background-color: transparent; padding: 0px; color: inherit; cursor: pointer;"
               >
                 <svg
                   height="32"
@@ -142,7 +142,7 @@ exports[`components SitePost renders correctly 1`] = `
               <button
                 class="react-share__ShareButton"
                 data-testid="email"
-                style="background-color: transparent; padding: 0px; cursor: pointer;"
+                style="background-color: transparent; padding: 0px; color: inherit; cursor: pointer;"
               >
                 <svg
                   height="32"
