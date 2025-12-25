@@ -12,11 +12,11 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version-file: '.nvmrc'
-          cache: 'yarn'
-      - run: yarn
+          cache: 'npm'
+      - run: npm install
       - run: ./go linter-js
       - run: ./go linter-css
-      - run: yarn test --coverage --runInBand
+      - run: npm test -- --coverage --runInBand
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
@@ -54,8 +54,8 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version-file: '.nvmrc'
-          cache: 'yarn'
-      - run: yarn
+          cache: 'npm'
+      - run: npm install
       - name: e2e
         uses: cypress-io/github-action@v4
         env:
