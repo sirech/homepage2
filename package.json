@@ -50,7 +50,7 @@
     "babel-preset-gatsby": "^3.12.1",
     "bootstrap": "^5.3.2",
     "coveralls": "^3.1.1",
-    "cypress": "^12.17.3",
+    "cypress": "^15.0.0",
     "devicon": "^2.15.1",
     "emergence.js": "^1.1.2",
     "eslint": "^8.53.0",
