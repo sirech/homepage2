@@ -46,7 +46,9 @@ goal_lighthouse() {
         --output html \
         --output-path="./reports/homepage" \
         --quiet \
-        --chrome-flags="--headless --no-sandbox"
+        --preset=desktop \
+        --throttling-method=simulate \
+        --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage"
 
     node scripts/evaluateLighthouse.js
 }
