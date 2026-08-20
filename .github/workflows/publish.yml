@@ -59,7 +59,7 @@ jobs:
           cache: 'npm'
       - run: npm install
       - name: e2e
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v7.4.3
         env:
           CYPRESS_baseUrl: https://${{ secrets.DOMAIN }}
       - run: ./go lighthouse
