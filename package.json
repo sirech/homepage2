@@ -41,7 +41,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.23.3",
     "@babel/helper-get-function-arity": "^7.16.7",
-    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-react": "^8.0.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
